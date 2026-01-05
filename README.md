@@ -23,6 +23,8 @@ npm run crawl:dry
 
 > **Note:** The canonical crawler is `scripts/crawl.js`. Legacy scripts have been moved to `scripts/_archive/`.
 
+> **Firecrawl MCP Required:** By default, Firecrawl MCP is required. To allow direct HTTP document downloads (PDF/DOC), pass `--allow-http-doc-download` explicitly.
+
 ### Validate a KB File
 
 ```bash
@@ -128,11 +130,14 @@ Infobase/
 │   ├── save_kb_v2.ps1     # Save KB from clipboard (Windows)
 │   └── _archive/          # Deprecated legacy scripts
 ├── examples/              # Example files
-│   └── bangladesh_government_services_kb_v2_example.json
+│   ├── bangladesh_government_services_kb_v2_example.json
+│   └── agent_pilot/       # Agent-orchestrated pilot helpers (not part of canonical crawl)
 └── docs/                  # Documentation files
     ├── ARCHITECTURE.md
     └── MIGRATION_NOTES.md
 ```
+
+> **Note:** Agent-orchestrated pilot helpers (if kept) live under `examples/agent_pilot/` and are not part of the canonical crawl.
 
 ## Crawler Scripts
 

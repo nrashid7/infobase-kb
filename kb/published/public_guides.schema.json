@@ -1,0 +1,454 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://infobase.gov.bd/schemas/public-guides.json",
+  "title": "Public Guides Schema",
+  "description": "Schema for public_guides.json - the UI contract for infobase-web. This is the ONLY public interface between KB and web.",
+  "type": "object",
+  "required": [
+    "$schema_version",
+    "generated_at",
+    "source_kb_version",
+    "guides"
+  ],
+  "properties": {
+    "$schema_version": {
+      "type": "string",
+      "const": "3.0.0",
+      "description": "Schema version - must be 3.0.0"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when this file was generated"
+    },
+    "source_kb_version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Version of the source KB used to generate this file"
+    },
+    "guides": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "$ref": "#/definitions/guide"
+      }
+    }
+  },
+  "definitions": {
+    "guide": {
+      "type": "object",
+      "required": [
+        "guide_id",
+        "service_id",
+        "agency_id",
+        "title",
+        "meta"
+      ],
+      "properties": {
+        "guide_id": {
+          "type": "string",
+          "pattern": "^guide\\.",
+          "description": "Unique identifier for the guide (must start with 'guide.')"
+        },
+        "service_id": {
+          "type": "string",
+          "pattern": "^svc\\.",
+          "description": "Service identifier (must start with 'svc.')"
+        },
+        "agency_id": {
+          "type": "string",
+          "pattern": "^agency\\.",
+          "description": "Agency identifier (must start with 'agency.')"
+        },
+        "agency_name": {
+          "type": ["string", "null"],
+          "description": "Human-readable agency name"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Guide title"
+        },
+        "overview": {
+          "type": ["string", "null"],
+          "description": "Optional overview/description of the guide"
+        },
+        "steps": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/step"
+          },
+          "description": "Main step-by-step instructions (null if empty)"
+        },
+        "sections": {
+          "type": ["object", "null"],
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/step"
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/item"
+                }
+              }
+            ]
+          },
+          "description": "Additional sections (null if empty)"
+        },
+        "variants": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/variant"
+          },
+          "description": "Service variants (e.g., Regular/Express/Super Express) (null if empty)"
+        },
+        "required_documents": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/item"
+          },
+          "description": "Required documents list (null if empty)"
+        },
+        "fees": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/item"
+          },
+          "description": "Fee information (null if empty)"
+        },
+        "official_links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/official_link"
+          },
+          "description": "Official links to government portals"
+        },
+        "meta": {
+          "$ref": "#/definitions/meta"
+        }
+      }
+    },
+    "step": {
+      "type": "object",
+      "required": [
+        "step_number",
+        "title",
+        "citations"
+      ],
+      "properties": {
+        "step_number": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Step number (1-indexed)"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Step title"
+        },
+        "description": {
+          "type": ["string", "null"],
+          "description": "Step description"
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/citation"
+          },
+          "description": "Citations supporting this step"
+        }
+      }
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "label",
+        "citations"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Item label"
+        },
+        "description": {
+          "type": ["string", "null"],
+          "description": "Item description"
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/citation"
+          },
+          "description": "Citations supporting this item"
+        }
+      }
+    },
+    "variant": {
+      "type": "object",
+      "required": [
+        "variant_id",
+        "label",
+        "fees",
+        "processing_times"
+      ],
+      "properties": {
+        "variant_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Variant identifier (e.g., 'regular', 'express')"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable variant label"
+        },
+        "fees": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/variant_fee"
+          },
+          "description": "Fee information for this variant"
+        },
+        "processing_times": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/variant_processing_time"
+          },
+          "description": "Processing time information for this variant"
+        }
+      }
+    },
+    "variant_fee": {
+      "type": "object",
+      "required": [
+        "text",
+        "citations"
+      ],
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable fee text"
+        },
+        "structured_data": {
+          "type": ["object", "null"],
+          "additionalProperties": true,
+          "description": "Optional structured fee data (e.g., amount_bdt, delivery_type)"
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/citation"
+          },
+          "description": "Citations supporting this fee"
+        }
+      }
+    },
+    "variant_processing_time": {
+      "type": "object",
+      "required": [
+        "text",
+        "citations"
+      ],
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable processing time text"
+        },
+        "structured_data": {
+          "type": ["object", "null"],
+          "additionalProperties": true,
+          "description": "Optional structured processing time data"
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/citation"
+          },
+          "description": "Citations supporting this processing time"
+        }
+      }
+    },
+    "citation": {
+      "type": "object",
+      "required": [
+        "source_page_id",
+        "canonical_url",
+        "domain",
+        "page_title",
+        "locator",
+        "quoted_text",
+        "retrieved_at",
+        "language"
+      ],
+      "properties": {
+        "source_page_id": {
+          "type": "string",
+          "pattern": "^source\\.",
+          "description": "Source page identifier (must start with 'source.')"
+        },
+        "canonical_url": {
+          "type": ["string", "null"],
+          "format": "uri",
+          "description": "Canonical URL of the source page"
+        },
+        "domain": {
+          "type": ["string", "null"],
+          "description": "Domain name extracted from canonical_url"
+        },
+        "page_title": {
+          "type": ["string", "null"],
+          "description": "Title of the source page"
+        },
+        "locator": {
+          "type": ["string", "null"],
+          "description": "Human-readable locator (e.g., 'Heading > Subheading', 'Page 5')"
+        },
+        "quoted_text": {
+          "type": "string",
+          "description": "Quoted text from the source"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp when the source was retrieved"
+        },
+        "language": {
+          "type": "string",
+          "pattern": "^[a-z]{2}$",
+          "description": "Language code (ISO 639-1, e.g., 'en', 'bn')"
+        }
+      }
+    },
+    "official_link": {
+      "type": "object",
+      "required": [
+        "label",
+        "url"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Link label"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Link URL"
+        },
+        "source_page_id": {
+          "type": ["string", "null"],
+          "pattern": "^source\\.",
+          "description": "Optional source page identifier"
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "required": [
+        "total_steps",
+        "total_citations",
+        "verification_summary",
+        "last_crawled_at",
+        "source_domains",
+        "generated_at",
+        "last_updated_at",
+        "status"
+      ],
+      "properties": {
+        "total_steps": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total number of steps in this guide"
+        },
+        "total_citations": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total number of unique citations"
+        },
+        "verification_summary": {
+          "$ref": "#/definitions/verification_summary"
+        },
+        "last_crawled_at": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "description": "Most recent crawl timestamp from source pages"
+        },
+        "source_domains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of unique source domains"
+        },
+        "generated_at": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "description": "When the guide was generated"
+        },
+        "last_updated_at": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "description": "When the guide was last updated"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "published", "archived"],
+          "description": "Guide status"
+        }
+      }
+    },
+    "verification_summary": {
+      "type": "object",
+      "required": [
+        "total",
+        "verified",
+        "unverified",
+        "stale",
+        "deprecated",
+        "contradicted"
+      ],
+      "properties": {
+        "total": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total number of claims"
+        },
+        "verified": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of verified claims"
+        },
+        "unverified": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of unverified claims"
+        },
+        "stale": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of stale claims"
+        },
+        "deprecated": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of deprecated claims"
+        },
+        "contradicted": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of contradicted claims"
+        }
+      }
+    }
+  }
+}
+

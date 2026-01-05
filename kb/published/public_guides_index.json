@@ -1,7 +1,7 @@
 {
   "$schema_version": "3.0.0",
-  "generated_at": "2026-01-05T08:57:20.274Z",
-  "source_kb_version": 14,
+  "generated_at": "2026-01-05T11:15:54.455Z",
+  "source_kb_version": 28,
   "entries": [
     {
       "guide_id": "guide.epassport",
@@ -23,7 +23,7 @@
         "passports"
       ],
       "step_count": 5,
-      "citation_count": 8,
+      "citation_count": 20,
       "status": "draft"
     },
     {

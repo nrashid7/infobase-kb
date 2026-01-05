@@ -13,6 +13,9 @@ const { URL } = require('url');
 // Import shared utilities
 const { getDomain, makeDeterministicClaimId } = require('./utils');
 
+// Import service mapping
+const { getServiceIdOrDerive, getServiceKeyFromId } = require('./service_map');
+
 // Document extensions to harvest
 const DOCUMENT_EXTENSIONS = ['.pdf', '.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx'];
 
@@ -319,8 +322,8 @@ function extractFees(lines, currentHeadingPathFn) {
     // Extract fees using simple patterns (avoid global regex with exec loop)
     const extractedAmounts = [];
     
-    // Pattern 1: "1,000 BDT" or "1000 BDT" or "1,000 Taka"
-    const match1 = line.match(/(\d{1,7}(?:,\d{3})*)\s*(BDT|Taka|টাকা)/i);
+    // Pattern 1: "1,000 BDT" or "1000 BDT" or "1,000 Taka" or "TK 4,025"
+    const match1 = line.match(/(\d{1,7}(?:,\d{3})*)\s*(BDT|Taka|টাকা|TK)/i);
     if (match1) {
       extractedAmounts.push(match1[1]);
     }
@@ -331,8 +334,8 @@ function extractFees(lines, currentHeadingPathFn) {
       extractedAmounts.push(match2[1]);
     }
     
-    // Pattern 3: "BDT 1,000"
-    const match3 = line.match(/\b(?:BDT|Taka|টাকা)\s*(\d{1,7}(?:,\d{3})*)/i);
+    // Pattern 3: "BDT 1,000" or "TK 4,025"
+    const match3 = line.match(/\b(?:BDT|Taka|টাকা|TK)\s*(\d{1,7}(?:,\d{3})*)/i);
     if (match3 && !match1) {  // Avoid duplicate
       extractedAmounts.push(match3[1]);
     }
@@ -664,12 +667,17 @@ function createCitation(sourcePageId, url, quotedText, headingPath, language) {
  * @param {string} sourcePageId - Source page ID
  * @param {string} url - Page URL
  * @param {Object} structuredData - Extracted structured data
+ * @param {Object} [options] - Optional extraction options
+ * @param {string} [options.serviceId] - Override service ID (e.g., 'svc.epassport')
  * @returns {Array} - Array of claim objects
  */
-function extractClaims(markdown, sourcePageId, url, structuredData) {
+function extractClaims(markdown, sourcePageId, url, structuredData, options = {}) {
   const claims = [];
   const domain = getDomain(url);
-  const servicePrefix = domain ? domain.replace(/\.gov\.bd$|\.com\.bd$/i, '').replace(/\./g, '_') : 'unknown';
+  
+  // Determine service ID: use provided option, or derive from domain using canonical map
+  const serviceId = options.serviceId || getServiceIdOrDerive(domain);
+  const servicePrefix = getServiceKeyFromId(serviceId);
   
   // Extract fee claims
   for (const fee of structuredData.feeTable) {
@@ -691,7 +699,7 @@ function extractClaims(markdown, sourcePageId, url, structuredData) {
         locator: locator,
         payload: payload,
       }),
-      entity_ref: { type: 'service', id: `svc.${servicePrefix}` },
+      entity_ref: { type: 'service', id: serviceId },
       claim_type: 'fee',
       text: fee.label,
       status: 'unverified',
@@ -722,7 +730,7 @@ function extractClaims(markdown, sourcePageId, url, structuredData) {
         locator: locator,
         payload: payload,
       }),
-      entity_ref: { type: 'service', id: `svc.${servicePrefix}` },
+      entity_ref: { type: 'service', id: serviceId },
       claim_type: 'step',
       text: step.title,
       status: 'unverified',
@@ -750,7 +758,7 @@ function extractClaims(markdown, sourcePageId, url, structuredData) {
         locator: '',
         payload: payload,
       }),
-      entity_ref: { type: 'service', id: `svc.${servicePrefix}` },
+      entity_ref: { type: 'service', id: serviceId },
       claim_type: 'document_requirement',
       text: doc.text,
       status: 'unverified',
@@ -784,7 +792,7 @@ function extractClaims(markdown, sourcePageId, url, structuredData) {
         locator: locator,
         payload: payload,
       }),
-      entity_ref: { type: 'service', id: `svc.${servicePrefix}` },
+      entity_ref: { type: 'service', id: serviceId },
       claim_type: 'faq',
       text: faq.question,
       status: 'unverified',

@@ -697,15 +697,30 @@ async function main(mcpContext = null) {
   let currentDomain = null;
   
   try {
-    for (const seed of targetSeeds) {
-      currentDomain = seed.domain;
-      
+  for (const seed of targetSeeds) {
+    currentDomain = seed.domain;
+    runStats.domainsAttempted++;
+
+    try {
       await crawlDomain(seed, config, state, kb, firecrawlScrapeFunc, firecrawlMapFunc, runStats);
-      
-      // Save state after each domain
-      saveCrawlState(state, PATHS.stateFile);
-      saveKB(kb, PATHS.kbPath);
+    } catch (error) {
+      runStats.domainsFailed++;
+
+      // Track failure reasons
+      const reason = error.name === 'FirecrawlUnavailableError' ? 'firecrawl_unavailable' :
+                    error.name === 'FirecrawlMapError' ? 'firecrawl_map_failed' :
+                    'other_error';
+
+      runStats.domainsFailedReasons[reason] = (runStats.domainsFailedReasons[reason] || 0) + 1;
+
+      console.error(`\n❌ Domain ${seed.domain} failed: ${error.message}`);
+      // Continue with next domain instead of failing the entire crawl
     }
+
+    // Save state after each domain
+    saveCrawlState(state, PATHS.stateFile);
+    saveKB(kb, PATHS.kbPath);
+  }
     
     runStats.status = 'completed';
   } catch (error) {

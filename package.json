@@ -8,7 +8,8 @@
     "crawl:dry": "node scripts/crawl.js --seed-source bdgovlinks --category public_services --dry-run --verbose",
     "publish": "node scripts/build_public_guides.js",
     "validate:published": "node scripts/validate_published.js",
-    "publish:validate": "npm run publish && npm run validate:published"
+    "publish:validate": "npm run publish && npm run validate:published",
+    "pilot:epassport": "node scripts/_pilot/epassport_preflight_pilot.js"
   },
   "optionalDependencies": {
     "pdf-parse": "^1.1.1",

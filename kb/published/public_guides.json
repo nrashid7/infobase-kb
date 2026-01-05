@@ -1,7 +1,7 @@
 {
   "$schema_version": "3.0.0",
-  "generated_at": "2026-01-05T08:57:20.274Z",
-  "source_kb_version": 14,
+  "generated_at": "2026-01-05T11:15:54.455Z",
+  "source_kb_version": 28,
   "guides": [
     {
       "guide_id": "guide.epassport",
@@ -12,1004 +12,87 @@
       "overview": null,
       "steps": [
         {
-          "order": 1,
-          "citations": [
-            {
-              "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8"
-            }
-          ]
-        },
-        {
-          "order": 1,
-          "title": "For Online Application Click Here",
-          "description": "",
+          "step_number": 1,
+          "title": "Online Application",
+          "description": "Visit www.epassport.gov.bd and complete the application form online",
           "citations": [
             {
               "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
+              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "5 Steps to your e-Passport",
+              "locator": "5 Easy Steps > Step 1",
+              "quoted_text": "Online Application: Visit www.epassport.gov.bd and complete the application form",
+              "retrieved_at": "2025-12-31T14:45:00Z",
+              "language": "en"
             }
           ]
         },
         {
-          "order": 1,
-          "title": "Printed application summary including appointment (if any).",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 1,
-          "title": "*অনলাইন চেক :** ই-পাসপোর্ট পোর্টালে 'স্ট্যাটাস চেক' এখানে ।",
-          "description": "*অনলাইন চেক :** ই-পাসপোর্ট পোর্টালে 'স্ট্যাটাস চেক' এখানে । জন্ম তারিখ ও আবেদনের ক্রমিক সংখ্যা প্রবেশ করুন। এবার সার্চ অপশনে ক্লিক করুন ।",
-          "citations": [
-            {
-              "source_page_id": "source.f5b4e2bc1b7c322dc404e37c1821692b43b865ef",
-              "canonical_url": "https://www.epassport.gov.bd/landing/faqs/7"
-            }
-          ]
-        },
-        {
-          "order": 1,
-          "title": "আবেদনকারী কর্তৃক অনলাইনে আবেদনকৃত (পিডিএফ) ফরম প্রিন্টেড কপি।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 1,
-          "title": "Agargaon",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-            }
-          ]
-        },
-        {
-          "order": 1,
-          "title": "*If you have questions, Please click here to get to the FAQs**",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.b5c15082fe59f32804b8251440d4b63bb9773728",
-              "canonical_url": "https://www.epassport.gov.bd/contact"
-            }
-          ]
-        },
-        {
-          "order": 1,
-          "title": "*IMPORTANT:** please provide the required document like NID or BRC and previous passport (if available), or other official documents to proof the corr",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.4f66109e0d84e69215a442907dd8ca738c9cc550",
-              "canonical_url": "https://www.epassport.gov.bd/landing/faqs/20"
-            }
-          ]
-        },
-        {
-          "order": 1,
-          "title": "For Online Application Click [Here](https://www.",
-          "description": "For Online Application Click [Here](https://www.epassport.gov.bd/onboarding)",
+          "step_number": 2,
+          "title": "Payment",
+          "description": "Pay the e-Passport fees online or through Sonali Bank",
           "citations": [
             {
               "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
+              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "5 Steps to your e-Passport",
+              "locator": "5 Easy Steps > Step 2",
+              "quoted_text": "Payment: Pay the e-Passport fees online or through Sonali Bank",
+              "retrieved_at": "2025-12-31T14:45:00Z",
+              "language": "en"
             }
           ]
         },
         {
-          "order": 1,
-          "title": "PDF form needs to be downloaded to the computer first",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c",
-              "canonical_url": "https://www.epassport.gov.bd/instructions/application-form"
-            }
-          ]
-        },
-        {
-          "order": 1,
-          "title": "Printed application summary including appointment (if any).",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 1,
-          "title": "আবেদনকারী কর্তৃক অনলাইনে আবেদনকৃত (পিডিএফ) ফরম প্রিন্টেড কপি।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 2,
-          "citations": [
-            {
-              "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8"
-            }
-          ]
-        },
-        {
-          "order": 2,
-          "citations": [
-            {
-              "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c"
-            }
-          ]
-        },
-        {
-          "order": 2,
-          "title": "For Passport Fees and Bank List Click Here",
-          "description": "",
+          "step_number": 3,
+          "title": "Appointment",
+          "description": "Book an appointment at your preferred enrollment center",
           "citations": [
             {
               "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
+              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "5 Steps to your e-Passport",
+              "locator": "5 Easy Steps > Step 3",
+              "quoted_text": "Appointment: Book an appointment at your preferred enrollment center",
+              "retrieved_at": "2025-12-31T14:45:00Z",
+              "language": "en"
             }
           ]
         },
         {
-          "order": 2,
-          "title": "আবেদনপত্রের সারংশের প্রিন্ট কপি (অ্যাপয়েন্টমেন্ট সহ) ।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 2,
-          "title": "পাসপোর্টের ফি জমা প্রদানের চালান রশিদ (অফলাইন পেমেন্টের ক্ষেত্রে)।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 2,
-          "title": "Jatrabari",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-            }
-          ]
-        },
-        {
-          "order": 2,
-          "title": "*To know your application status please visit the online status check here**",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.b5c15082fe59f32804b8251440d4b63bb9773728",
-              "canonical_url": "https://www.epassport.gov.bd/contact"
-            }
-          ]
-        },
-        {
-          "order": 2,
-          "title": "For Passport Fees and Bank List Click [Here](https://www.",
-          "description": "For Passport Fees and Bank List Click [Here](https://www.epassport.gov.bd/instructions/passport-fees)",
+          "step_number": 4,
+          "title": "Enrollment",
+          "description": "Visit the enrollment center with required documents for biometric data capture",
           "citations": [
             {
               "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
+              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "5 Steps to your e-Passport",
+              "locator": "5 Easy Steps > Step 4",
+              "quoted_text": "Enrollment: Visit the enrollment center with required documents for biometric data",
+              "retrieved_at": "2025-12-31T14:45:00Z",
+              "language": "en"
             }
           ]
         },
         {
-          "order": 2,
-          "title": "Open and fille up with the tool \" **Adobe Acrobat Reader DC**\" to support all required functions.",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c",
-              "canonical_url": "https://www.epassport.gov.bd/instructions/application-form"
-            }
-          ]
-        },
-        {
-          "order": 2,
-          "title": "আবেদনপত্রের সারংশের প্রিন্ট কপি (অ্যাপয়েন্টমেন্ট সহ) ।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 2,
-          "title": "পাসপোর্টের ফি জমা প্রদানের চালান রশিদ (অফলাইন পেমেন্টের ক্ষেত্রে)।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 3,
-          "citations": [
-            {
-              "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8"
-            }
-          ]
-        },
-        {
-          "order": 3,
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1"
-            }
-          ]
-        },
-        {
-          "order": 3,
-          "title": "Make sure you have all required documents with you when you visit the passport office.",
-          "description": "",
+          "step_number": 5,
+          "title": "Delivery",
+          "description": "Collect your e-Passport from the regional passport office or receive via post",
           "citations": [
             {
               "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
-            }
-          ]
-        },
-        {
-          "order": 3,
-          "title": "Identification documents (NID card / Birth certificate - Original)",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 3,
-          "title": "অনলাইন জন্ম নিবন্ধন সনদ (ইংরেজী ভার্সন) মূলকপি এবং ফটোকপি।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 3,
-          "title": "Uttara",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-            }
-          ]
-        },
-        {
-          "order": 3,
-          "title": "Make sure you have all [required documents](https://www.",
-          "description": "Make sure you have all [required documents](https://www.epassport.gov.bd/landing/notices/34) with you when you visit the passport office.",
-          "citations": [
-            {
-              "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
-            }
-          ]
-        },
-        {
-          "order": 3,
-          "title": "Identification documents (NID card / Birth certificate - Original)",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 3,
-          "title": "অনলাইন জন্ম নিবন্ধন সনদ (ইংরেজী ভার্সন) মূলকপি এবং ফটোকপি।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 4,
-          "citations": [
-            {
-              "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8"
-            }
-          ]
-        },
-        {
-          "order": 4,
-          "title": "Authorized representatives (has to bring his/her NID card) can collect the applicant's new passport.",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
-            }
-          ]
-        },
-        {
-          "order": 4,
-          "title": "সনাক্তকরণ নথির প্রিন্ট কপি (জাতীয় পরিচয় পত্র/ জন্ম নিবন্ধন নং) ।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 4,
-          "title": "জাতীয় পরিচয় পত্রের মূল ও ফটোকপি (২০ বছরের উর্ধ্বের নাগরিকদের জন্য)।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 4,
-          "title": "Dhaka Cantonment",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-            }
-          ]
-        },
-        {
-          "order": 4,
-          "title": "**Authorized representatives(** has to bring his/her NID card) can collect the applicant's new passport.",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
-            }
-          ]
-        },
-        {
-          "order": 4,
-          "title": "সনাক্তকরণ নথির প্রিন্ট কপি (জাতীয় পরিচয় পত্র/ জন্ম নিবন্ধন নং) ।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 4,
-          "title": "জাতীয় পরিচয় পত্রের মূল ও ফটোকপি (২০ বছরের উর্ধ্বের নাগরিকদের জন্য)।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 5,
-          "citations": [
-            {
-              "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8"
-            }
-          ]
-        },
-        {
-          "order": 5,
-          "title": "Payment Slip for Offline Payment only.",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 5,
-          "title": "বর্তমান ঠিকানা প্রমাণের স্বপক্ষে Job ID/Student ID/গ্যাস বিলের কপি/ বিদ্যুৎ বিলের কপি",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 5,
-          "title": "Bangladesh Secretariate",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-            }
-          ]
-        },
-        {
-          "order": 5,
-          "title": "Payment Slip for Offline Payment only.",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 5,
-          "title": "বর্তমান ঠিকানা প্রমাণের স্বপক্ষে Job ID/Student ID/গ্যাস বিলের কপি/ বিদ্যুৎ বিলের কপি/ টেলিফোন বিলের কপি/পানির বিলের কপি যেটি প্রযোজ্য সেটার মূলকপি প্",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 6,
-          "title": "পেমেন্ট স্লিপ (for Offline Payment only) ।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 6,
-          "title": "দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে সুরক্ষা সেবা বিভাগ হতে জারীকৃত আদেশের কপি।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 6,
-          "title": "Gazipur",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-            }
-          ]
-        },
-        {
-          "order": 6,
-          "title": "পেমেন্ট স্লিপ (for Offline Payment only) ।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 6,
-          "title": "দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে সুরক্ষা সেবা বিভাগ, স্বরাষ্ট মন্ত্রণালয় হতে জারীকৃত আদেশের কপি।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 7,
-          "title": "Previous Passport (if any).",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 7,
-          "title": "টেকনিক্যাল পেশা প্রমাণের স্বপক্ষে টেকনিক্যাল সনদের কপি।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 7,
-          "title": "Mansurabad",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-            }
-          ]
-        },
-        {
-          "order": 7,
-          "title": "Previous Passport (if any).",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 7,
-          "title": "টেকনিক্যাল পেশা প্রমাণের স্বপক্ষে (ডাক্তার, ইঞ্জিনিয়ার, ড্রাইভার ইত্যাদি) টেকনিক্যাল সনদের কপি।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 8,
-          "title": "পূর্ববর্তী পাসপোর্ট এবং ডাটা পেজের প্রিন্ট কপি (যদি থাকে) ।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 8,
-          "title": "রি-ইস্যু আবেদনের ক্ষেত্রে মূল পাসপোর্ট এবং পাসপোর্টের ফটোকপি",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 8,
-          "title": "Mymensingh",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-            }
-          ]
-        },
-        {
-          "order": 8,
-          "title": "পূর্ববর্তী পাসপোর্ট এবং ডাটা পেজের প্রিন্ট কপি (যদি থাকে) ।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 8,
-          "title": "রি-ইস্যু আবেদনের ক্ষেত্রে মূল পাসপোর্ট (Original Passport) এবং পাসপোর্টের ফটোকপি",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 9,
-          "title": "GO/NOC for government service holder (as applicable).",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 9,
-          "title": "ধূসর ব্যাকগ্রাউন্ডের 3R সাইজের ফটো (০৬ বছরের নিচে শিশুদের ক্ষেত্রে)।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 9,
-          "title": "Ministry of Foreign Affairs",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-            }
-          ]
-        },
-        {
-          "order": 9,
-          "title": "GO/NOC for government service holder (as applicable).",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 9,
-          "title": "ধূসর ব্যাকগ্রাউন্ডের 3R সাইজের ফটো (০৬ বছরের নিচে শিশুদের ক্ষেত্রে)।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 10,
-          "title": "সরকারি চাকরিজীবীদের ক্ষেত্রে GO/NOC (যদি থাকে) ।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 10,
-          "title": "অপ্রাপ্ত বয়স্ক আবেদনকারীর ক্ষেত্রে পিতা/মাতার জাতীয় পরিচয়পত্রের কপি।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 10,
-          "title": "Gaibandha",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-            }
-          ]
-        },
-        {
-          "order": 10,
-          "title": "সরকারি চাকরিজীবীদের ক্ষেত্রে GO/NOC (যদি থাকে) ।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 10,
-          "title": "অপ্রাপ্ত বয়স্ক আবেদনকারীর ক্ষেত্রে পিতা/মাতার জাতীয় পরিচয়পত্রের কপি।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 11,
-          "title": "Printed application form.",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 11,
-          "title": "মেডিকেল সনদ (চোখের আইরিশ, ফিঙ্গারপ্রিন্ট মিসিং হবার ক্ষেত্রে)।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 11,
-          "title": "Printed application form.",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 11,
-          "title": "মেডিকেল সনদ (চোখের আইরিশ, ফিঙ্গারপ্রিন্ট মিসিং হবার ক্ষেত্রে)।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 12,
-          "title": "আবেদনপত্রের প্রিন্ট কপি ।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 12,
-          "title": "সরকারী আদেশ (GO)/অনাপত্তি সনদ (NOC)/প্রত্যয়নপত্র।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 12,
-          "title": "আবেদনপত্রের প্রিন্ট কপি ।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 12,
-          "title": "সরকারী আদেশ (GO)/অনাপত্তি সনদ (NOC)/প্রত্যয়নপত্র এর কপি যা ইস্যুকারী কর্তৃপক্ষের নিজ নিজ Website এ আপলোড থাকতে হবে।",
-          "description": "সরকারী আদেশ (GO)/অনাপত্তি সনদ (NOC)/প্রত্যয়নপত্র এর কপি যা ইস্যুকারী কর্তৃপক্ষের নিজ নিজ Website এ আপলোড থাকতে হবে। (প্রযোজ্য ক্ষেত্রে)",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 13,
-          "title": "Further necessity of documents depends on nature of application/corrections (if any).",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 13,
-          "title": "Further necessity of documents depends on nature of application/corrections (if any).",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 13,
-          "title": "PRL এর আদেশ/পেনশন বই এর কপি।",
-          "description": "PRL এর আদেশ/পেনশন বই এর কপি। (প্রযোজ্য ক্ষেত্রে)",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 14,
-          "title": "তথ্য সংশোধনের ক্ষেত্রে প্রয়োজনীয় কাগজপত্র (যদি থাকে) ।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 14,
-          "title": "তথ্য সংশোধনের ক্ষেত্রে প্রয়োজনীয় কাগজপত্র (যদি থাকে) ।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-            }
-          ]
-        },
-        {
-          "order": 14,
-          "title": "বৈবাহিক অবস্থার পরিবর্তন হলে বিবাহ সনদ/কাবিন নামার কপি।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 15,
-          "title": "বিবাহ বিচ্ছেদ হলে বিচ্ছেদের সনদ/তালাক নামার কপি।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 16,
-          "title": "হারানো পাসপোর্টের ক্ষেত্রে সাধারণ ডায়েরী (GD) এর মূল কপি।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 17,
-          "title": "পূর্বের পাসপোর্ট এবং NID/BRC-তে তথ্য গড়মিল থাকলে নির্ধারিত ফরম্যাটে পূরণকৃত অঙ্গীকারনামা।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 18,
-          "title": "Multiple Active পাসপোর্টের ক্ষেত্রে নির্ধারিত ফরম্যাটে পূরণকৃত অঙ্গীকারনামা।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 19,
-          "title": "তথ্য সংশোধনের জন্য অপ্রাপ্তবয়স্কদের ক্ষেত্রে শিক্ষাগত সনদ (JSC/SSC/HSC/সমমান)।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 20,
-          "title": "সরকারী চাকুরীজীবীদের তথ্য সংশোধনের ক্ষেত্রে NID, শিক্ষাগত সনদ ও সার্ভিস রেকর্ড অনুযায়ী অফিসের প্রত্যয়নপত্র এবং সার্ভিস রেকর্ডের ফটোকপি।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 21,
-          "title": "দ্বৈত নাগরিকত্বের ক্ষেত্রে স্বরাষ্ট্র মন্ত্রণালয়ের Dual Citizenship সনদ (প্রযোজ্য ক্ষেত্রে)।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-            }
-          ]
-        },
-        {
-          "order": 22,
-          "title": "অপ্রাপ্ত বয়স্কদের ক্ষেত্রে পিতা-মাতার অনুমতিপত্র এবং পিতা-মাতার উভয় বা যেকোন একজন উপস্থিত থাকা।",
-          "description": "",
-          "citations": [
-            {
-              "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-              "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
+              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "5 Steps to your e-Passport",
+              "locator": "5 Easy Steps > Step 5",
+              "quoted_text": "Delivery: Collect your e-Passport from the regional passport office or receive via post",
+              "retrieved_at": "2025-12-31T14:45:00Z",
+              "language": "en"
             }
           ]
         }
@@ -1017,1004 +100,87 @@
       "sections": {
         "application_steps": [
           {
-            "order": 1,
-            "citations": [
-              {
-                "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8"
-              }
-            ]
-          },
-          {
-            "order": 1,
-            "title": "For Online Application Click Here",
-            "description": "",
+            "step_number": 1,
+            "title": "Online Application",
+            "description": "Visit www.epassport.gov.bd and complete the application form online",
             "citations": [
               {
                 "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
+                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "5 Steps to your e-Passport",
+                "locator": "5 Easy Steps > Step 1",
+                "quoted_text": "Online Application: Visit www.epassport.gov.bd and complete the application form",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
               }
             ]
           },
           {
-            "order": 1,
-            "title": "Printed application summary including appointment (if any).",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 1,
-            "title": "*অনলাইন চেক :** ই-পাসপোর্ট পোর্টালে 'স্ট্যাটাস চেক' এখানে ।",
-            "description": "*অনলাইন চেক :** ই-পাসপোর্ট পোর্টালে 'স্ট্যাটাস চেক' এখানে । জন্ম তারিখ ও আবেদনের ক্রমিক সংখ্যা প্রবেশ করুন। এবার সার্চ অপশনে ক্লিক করুন ।",
-            "citations": [
-              {
-                "source_page_id": "source.f5b4e2bc1b7c322dc404e37c1821692b43b865ef",
-                "canonical_url": "https://www.epassport.gov.bd/landing/faqs/7"
-              }
-            ]
-          },
-          {
-            "order": 1,
-            "title": "আবেদনকারী কর্তৃক অনলাইনে আবেদনকৃত (পিডিএফ) ফরম প্রিন্টেড কপি।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 1,
-            "title": "Agargaon",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-              }
-            ]
-          },
-          {
-            "order": 1,
-            "title": "*If you have questions, Please click here to get to the FAQs**",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.b5c15082fe59f32804b8251440d4b63bb9773728",
-                "canonical_url": "https://www.epassport.gov.bd/contact"
-              }
-            ]
-          },
-          {
-            "order": 1,
-            "title": "*IMPORTANT:** please provide the required document like NID or BRC and previous passport (if available), or other official documents to proof the corr",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.4f66109e0d84e69215a442907dd8ca738c9cc550",
-                "canonical_url": "https://www.epassport.gov.bd/landing/faqs/20"
-              }
-            ]
-          },
-          {
-            "order": 1,
-            "title": "For Online Application Click [Here](https://www.",
-            "description": "For Online Application Click [Here](https://www.epassport.gov.bd/onboarding)",
+            "step_number": 2,
+            "title": "Payment",
+            "description": "Pay the e-Passport fees online or through Sonali Bank",
             "citations": [
               {
                 "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
+                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "5 Steps to your e-Passport",
+                "locator": "5 Easy Steps > Step 2",
+                "quoted_text": "Payment: Pay the e-Passport fees online or through Sonali Bank",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
               }
             ]
           },
           {
-            "order": 1,
-            "title": "PDF form needs to be downloaded to the computer first",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c",
-                "canonical_url": "https://www.epassport.gov.bd/instructions/application-form"
-              }
-            ]
-          },
-          {
-            "order": 1,
-            "title": "Printed application summary including appointment (if any).",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 1,
-            "title": "আবেদনকারী কর্তৃক অনলাইনে আবেদনকৃত (পিডিএফ) ফরম প্রিন্টেড কপি।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 2,
-            "citations": [
-              {
-                "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8"
-              }
-            ]
-          },
-          {
-            "order": 2,
-            "citations": [
-              {
-                "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c"
-              }
-            ]
-          },
-          {
-            "order": 2,
-            "title": "For Passport Fees and Bank List Click Here",
-            "description": "",
+            "step_number": 3,
+            "title": "Appointment",
+            "description": "Book an appointment at your preferred enrollment center",
             "citations": [
               {
                 "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
+                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "5 Steps to your e-Passport",
+                "locator": "5 Easy Steps > Step 3",
+                "quoted_text": "Appointment: Book an appointment at your preferred enrollment center",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
               }
             ]
           },
           {
-            "order": 2,
-            "title": "আবেদনপত্রের সারংশের প্রিন্ট কপি (অ্যাপয়েন্টমেন্ট সহ) ।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 2,
-            "title": "পাসপোর্টের ফি জমা প্রদানের চালান রশিদ (অফলাইন পেমেন্টের ক্ষেত্রে)।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 2,
-            "title": "Jatrabari",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-              }
-            ]
-          },
-          {
-            "order": 2,
-            "title": "*To know your application status please visit the online status check here**",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.b5c15082fe59f32804b8251440d4b63bb9773728",
-                "canonical_url": "https://www.epassport.gov.bd/contact"
-              }
-            ]
-          },
-          {
-            "order": 2,
-            "title": "For Passport Fees and Bank List Click [Here](https://www.",
-            "description": "For Passport Fees and Bank List Click [Here](https://www.epassport.gov.bd/instructions/passport-fees)",
+            "step_number": 4,
+            "title": "Enrollment",
+            "description": "Visit the enrollment center with required documents for biometric data capture",
             "citations": [
               {
                 "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
+                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "5 Steps to your e-Passport",
+                "locator": "5 Easy Steps > Step 4",
+                "quoted_text": "Enrollment: Visit the enrollment center with required documents for biometric data",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
               }
             ]
           },
           {
-            "order": 2,
-            "title": "Open and fille up with the tool \" **Adobe Acrobat Reader DC**\" to support all required functions.",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c",
-                "canonical_url": "https://www.epassport.gov.bd/instructions/application-form"
-              }
-            ]
-          },
-          {
-            "order": 2,
-            "title": "আবেদনপত্রের সারংশের প্রিন্ট কপি (অ্যাপয়েন্টমেন্ট সহ) ।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 2,
-            "title": "পাসপোর্টের ফি জমা প্রদানের চালান রশিদ (অফলাইন পেমেন্টের ক্ষেত্রে)।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 3,
-            "citations": [
-              {
-                "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8"
-              }
-            ]
-          },
-          {
-            "order": 3,
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1"
-              }
-            ]
-          },
-          {
-            "order": 3,
-            "title": "Make sure you have all required documents with you when you visit the passport office.",
-            "description": "",
+            "step_number": 5,
+            "title": "Delivery",
+            "description": "Collect your e-Passport from the regional passport office or receive via post",
             "citations": [
               {
                 "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
-              }
-            ]
-          },
-          {
-            "order": 3,
-            "title": "Identification documents (NID card / Birth certificate - Original)",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 3,
-            "title": "অনলাইন জন্ম নিবন্ধন সনদ (ইংরেজী ভার্সন) মূলকপি এবং ফটোকপি।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 3,
-            "title": "Uttara",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-              }
-            ]
-          },
-          {
-            "order": 3,
-            "title": "Make sure you have all [required documents](https://www.",
-            "description": "Make sure you have all [required documents](https://www.epassport.gov.bd/landing/notices/34) with you when you visit the passport office.",
-            "citations": [
-              {
-                "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
-              }
-            ]
-          },
-          {
-            "order": 3,
-            "title": "Identification documents (NID card / Birth certificate - Original)",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 3,
-            "title": "অনলাইন জন্ম নিবন্ধন সনদ (ইংরেজী ভার্সন) মূলকপি এবং ফটোকপি।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 4,
-            "citations": [
-              {
-                "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8"
-              }
-            ]
-          },
-          {
-            "order": 4,
-            "title": "Authorized representatives (has to bring his/her NID card) can collect the applicant's new passport.",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
-              }
-            ]
-          },
-          {
-            "order": 4,
-            "title": "সনাক্তকরণ নথির প্রিন্ট কপি (জাতীয় পরিচয় পত্র/ জন্ম নিবন্ধন নং) ।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 4,
-            "title": "জাতীয় পরিচয় পত্রের মূল ও ফটোকপি (২০ বছরের উর্ধ্বের নাগরিকদের জন্য)।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 4,
-            "title": "Dhaka Cantonment",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-              }
-            ]
-          },
-          {
-            "order": 4,
-            "title": "**Authorized representatives(** has to bring his/her NID card) can collect the applicant's new passport.",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
-                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport"
-              }
-            ]
-          },
-          {
-            "order": 4,
-            "title": "সনাক্তকরণ নথির প্রিন্ট কপি (জাতীয় পরিচয় পত্র/ জন্ম নিবন্ধন নং) ।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 4,
-            "title": "জাতীয় পরিচয় পত্রের মূল ও ফটোকপি (২০ বছরের উর্ধ্বের নাগরিকদের জন্য)।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 5,
-            "citations": [
-              {
-                "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8"
-              }
-            ]
-          },
-          {
-            "order": 5,
-            "title": "Payment Slip for Offline Payment only.",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 5,
-            "title": "বর্তমান ঠিকানা প্রমাণের স্বপক্ষে Job ID/Student ID/গ্যাস বিলের কপি/ বিদ্যুৎ বিলের কপি",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 5,
-            "title": "Bangladesh Secretariate",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-              }
-            ]
-          },
-          {
-            "order": 5,
-            "title": "Payment Slip for Offline Payment only.",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 5,
-            "title": "বর্তমান ঠিকানা প্রমাণের স্বপক্ষে Job ID/Student ID/গ্যাস বিলের কপি/ বিদ্যুৎ বিলের কপি/ টেলিফোন বিলের কপি/পানির বিলের কপি যেটি প্রযোজ্য সেটার মূলকপি প্",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 6,
-            "title": "পেমেন্ট স্লিপ (for Offline Payment only) ।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 6,
-            "title": "দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে সুরক্ষা সেবা বিভাগ হতে জারীকৃত আদেশের কপি।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 6,
-            "title": "Gazipur",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-              }
-            ]
-          },
-          {
-            "order": 6,
-            "title": "পেমেন্ট স্লিপ (for Offline Payment only) ।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 6,
-            "title": "দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে সুরক্ষা সেবা বিভাগ, স্বরাষ্ট মন্ত্রণালয় হতে জারীকৃত আদেশের কপি।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 7,
-            "title": "Previous Passport (if any).",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 7,
-            "title": "টেকনিক্যাল পেশা প্রমাণের স্বপক্ষে টেকনিক্যাল সনদের কপি।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 7,
-            "title": "Mansurabad",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-              }
-            ]
-          },
-          {
-            "order": 7,
-            "title": "Previous Passport (if any).",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 7,
-            "title": "টেকনিক্যাল পেশা প্রমাণের স্বপক্ষে (ডাক্তার, ইঞ্জিনিয়ার, ড্রাইভার ইত্যাদি) টেকনিক্যাল সনদের কপি।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 8,
-            "title": "পূর্ববর্তী পাসপোর্ট এবং ডাটা পেজের প্রিন্ট কপি (যদি থাকে) ।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 8,
-            "title": "রি-ইস্যু আবেদনের ক্ষেত্রে মূল পাসপোর্ট এবং পাসপোর্টের ফটোকপি",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 8,
-            "title": "Mymensingh",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-              }
-            ]
-          },
-          {
-            "order": 8,
-            "title": "পূর্ববর্তী পাসপোর্ট এবং ডাটা পেজের প্রিন্ট কপি (যদি থাকে) ।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 8,
-            "title": "রি-ইস্যু আবেদনের ক্ষেত্রে মূল পাসপোর্ট (Original Passport) এবং পাসপোর্টের ফটোকপি",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 9,
-            "title": "GO/NOC for government service holder (as applicable).",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 9,
-            "title": "ধূসর ব্যাকগ্রাউন্ডের 3R সাইজের ফটো (০৬ বছরের নিচে শিশুদের ক্ষেত্রে)।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 9,
-            "title": "Ministry of Foreign Affairs",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-              }
-            ]
-          },
-          {
-            "order": 9,
-            "title": "GO/NOC for government service holder (as applicable).",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 9,
-            "title": "ধূসর ব্যাকগ্রাউন্ডের 3R সাইজের ফটো (০৬ বছরের নিচে শিশুদের ক্ষেত্রে)।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 10,
-            "title": "সরকারি চাকরিজীবীদের ক্ষেত্রে GO/NOC (যদি থাকে) ।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 10,
-            "title": "অপ্রাপ্ত বয়স্ক আবেদনকারীর ক্ষেত্রে পিতা/মাতার জাতীয় পরিচয়পত্রের কপি।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 10,
-            "title": "Gaibandha",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/33"
-              }
-            ]
-          },
-          {
-            "order": 10,
-            "title": "সরকারি চাকরিজীবীদের ক্ষেত্রে GO/NOC (যদি থাকে) ।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 10,
-            "title": "অপ্রাপ্ত বয়স্ক আবেদনকারীর ক্ষেত্রে পিতা/মাতার জাতীয় পরিচয়পত্রের কপি।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 11,
-            "title": "Printed application form.",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 11,
-            "title": "মেডিকেল সনদ (চোখের আইরিশ, ফিঙ্গারপ্রিন্ট মিসিং হবার ক্ষেত্রে)।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 11,
-            "title": "Printed application form.",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 11,
-            "title": "মেডিকেল সনদ (চোখের আইরিশ, ফিঙ্গারপ্রিন্ট মিসিং হবার ক্ষেত্রে)।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 12,
-            "title": "আবেদনপত্রের প্রিন্ট কপি ।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 12,
-            "title": "সরকারী আদেশ (GO)/অনাপত্তি সনদ (NOC)/প্রত্যয়নপত্র।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 12,
-            "title": "আবেদনপত্রের প্রিন্ট কপি ।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 12,
-            "title": "সরকারী আদেশ (GO)/অনাপত্তি সনদ (NOC)/প্রত্যয়নপত্র এর কপি যা ইস্যুকারী কর্তৃপক্ষের নিজ নিজ Website এ আপলোড থাকতে হবে।",
-            "description": "সরকারী আদেশ (GO)/অনাপত্তি সনদ (NOC)/প্রত্যয়নপত্র এর কপি যা ইস্যুকারী কর্তৃপক্ষের নিজ নিজ Website এ আপলোড থাকতে হবে। (প্রযোজ্য ক্ষেত্রে)",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 13,
-            "title": "Further necessity of documents depends on nature of application/corrections (if any).",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 13,
-            "title": "Further necessity of documents depends on nature of application/corrections (if any).",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 13,
-            "title": "PRL এর আদেশ/পেনশন বই এর কপি।",
-            "description": "PRL এর আদেশ/পেনশন বই এর কপি। (প্রযোজ্য ক্ষেত্রে)",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 14,
-            "title": "তথ্য সংশোধনের ক্ষেত্রে প্রয়োজনীয় কাগজপত্র (যদি থাকে) ।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 14,
-            "title": "তথ্য সংশোধনের ক্ষেত্রে প্রয়োজনীয় কাগজপত্র (যদি থাকে) ।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/34"
-              }
-            ]
-          },
-          {
-            "order": 14,
-            "title": "বৈবাহিক অবস্থার পরিবর্তন হলে বিবাহ সনদ/কাবিন নামার কপি।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 15,
-            "title": "বিবাহ বিচ্ছেদ হলে বিচ্ছেদের সনদ/তালাক নামার কপি।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 16,
-            "title": "হারানো পাসপোর্টের ক্ষেত্রে সাধারণ ডায়েরী (GD) এর মূল কপি।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 17,
-            "title": "পূর্বের পাসপোর্ট এবং NID/BRC-তে তথ্য গড়মিল থাকলে নির্ধারিত ফরম্যাটে পূরণকৃত অঙ্গীকারনামা।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 18,
-            "title": "Multiple Active পাসপোর্টের ক্ষেত্রে নির্ধারিত ফরম্যাটে পূরণকৃত অঙ্গীকারনামা।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 19,
-            "title": "তথ্য সংশোধনের জন্য অপ্রাপ্তবয়স্কদের ক্ষেত্রে শিক্ষাগত সনদ (JSC/SSC/HSC/সমমান)।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 20,
-            "title": "সরকারী চাকুরীজীবীদের তথ্য সংশোধনের ক্ষেত্রে NID, শিক্ষাগত সনদ ও সার্ভিস রেকর্ড অনুযায়ী অফিসের প্রত্যয়নপত্র এবং সার্ভিস রেকর্ডের ফটোকপি।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 21,
-            "title": "দ্বৈত নাগরিকত্বের ক্ষেত্রে স্বরাষ্ট্র মন্ত্রণালয়ের Dual Citizenship সনদ (প্রযোজ্য ক্ষেত্রে)।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
-              }
-            ]
-          },
-          {
-            "order": 22,
-            "title": "অপ্রাপ্ত বয়স্কদের ক্ষেত্রে পিতা-মাতার অনুমতিপত্র এবং পিতা-মাতার উভয় বা যেকোন একজন উপস্থিত থাকা।",
-            "description": "",
-            "citations": [
-              {
-                "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
-                "canonical_url": "https://www.epassport.gov.bd/landing/notices/160"
+                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "5 Steps to your e-Passport",
+                "locator": "5 Easy Steps > Step 5",
+                "quoted_text": "Delivery: Collect your e-Passport from the regional passport office or receive via post",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
               }
             ]
           }
@@ -2022,44 +188,241 @@
         "fees": [
           {
             "label": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
-            "amount_bdt": 3450,
+            "description": "3450 BDT",
             "citations": [
               {
                 "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
-                "quoted_text": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT"
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees and Payment Options",
+                "locator": "Passport Fees > e-Passport Fees",
+                "quoted_text": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
               }
             ]
           },
           {
             "label": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
-            "amount_bdt": 6900,
+            "description": "6900 BDT",
             "citations": [
               {
                 "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
-                "quoted_text": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT"
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees and Payment Options",
+                "locator": "Passport Fees > e-Passport Fees",
+                "quoted_text": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
               }
             ]
           },
           {
             "label": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
-            "amount_bdt": 13800,
+            "description": "13800 BDT",
             "citations": [
               {
                 "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
-                "quoted_text": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT"
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees and Payment Options",
+                "locator": "Passport Fees > e-Passport Fees",
+                "quoted_text": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
               }
             ]
-          }
-        ],
-        "document_links": [
+          },
           {
-            "text": "Download a PDF form",
-            "url": "https://www.epassport.gov.bd/api/v1/registrations/download-offline-form",
-            "extension": ".unknown",
+            "label": "Regular delivery Taka 4,025",
+            "description": "regular: 4025 BDT",
             "citations": [
               {
-                "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c",
-                "canonical_url": "https://www.epassport.gov.bd/instructions/application-form"
+                "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees and Payment Options",
+                "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+                "quoted_text": "- Regular delivery: Taka 4,025",
+                "retrieved_at": "2026-01-05T10:42:41.219Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "Express delivery Taka 6,325",
+            "description": "express: 6325 BDT",
+            "citations": [
+              {
+                "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees and Payment Options",
+                "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+                "quoted_text": "- Express delivery: Taka 6,325",
+                "retrieved_at": "2026-01-05T10:42:41.219Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "Super Express delivery Taka 8,625",
+            "description": "super_express: 8625 BDT",
+            "citations": [
+              {
+                "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees and Payment Options",
+                "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+                "quoted_text": "- Super Express delivery: Taka 8,625",
+                "retrieved_at": "2026-01-05T10:42:41.219Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "Regular delivery Taka 5,750",
+            "description": "regular: 5750 BDT",
+            "citations": [
+              {
+                "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees and Payment Options",
+                "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+                "quoted_text": "- Regular delivery: Taka 5,750",
+                "retrieved_at": "2026-01-05T10:42:41.219Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "Express delivery Taka 8,050",
+            "description": "express: 8050 BDT",
+            "citations": [
+              {
+                "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees and Payment Options",
+                "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+                "quoted_text": "- Express delivery: Taka 8,050",
+                "retrieved_at": "2026-01-05T10:42:41.219Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "Super Express delivery Taka 10,350",
+            "description": "super_express: 10350 BDT",
+            "citations": [
+              {
+                "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees and Payment Options",
+                "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+                "quoted_text": "- Super Express delivery: Taka 10,350",
+                "retrieved_at": "2026-01-05T10:42:41.219Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "Regular delivery Taka 6,325",
+            "description": "regular: 6325 BDT",
+            "citations": [
+              {
+                "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees and Payment Options",
+                "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+                "quoted_text": "- Regular delivery: Taka 6,325",
+                "retrieved_at": "2026-01-05T10:42:41.219Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "Express delivery Taka 8,625",
+            "description": "express: 8625 BDT",
+            "citations": [
+              {
+                "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees and Payment Options",
+                "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+                "quoted_text": "- Express delivery: Taka 8,625",
+                "retrieved_at": "2026-01-05T10:42:41.220Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "Super Express delivery Taka 12,075",
+            "description": "super_express: 12075 BDT",
+            "citations": [
+              {
+                "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees and Payment Options",
+                "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+                "quoted_text": "- Super Express delivery: Taka 12,075",
+                "retrieved_at": "2026-01-05T10:42:41.220Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "Regular delivery Taka 8,050",
+            "description": "regular: 8050 BDT",
+            "citations": [
+              {
+                "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees and Payment Options",
+                "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+                "quoted_text": "- Regular delivery: Taka 8,050",
+                "retrieved_at": "2026-01-05T10:42:41.220Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "Express delivery Taka 10,350",
+            "description": "express: 10350 BDT",
+            "citations": [
+              {
+                "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees and Payment Options",
+                "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+                "quoted_text": "- Express delivery: Taka 10,350",
+                "retrieved_at": "2026-01-05T10:42:41.220Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "Super Express delivery Taka 13,800",
+            "description": "super_express: 13800 BDT",
+            "citations": [
+              {
+                "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees and Payment Options",
+                "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+                "quoted_text": "- Super Express delivery: Taka 13,800",
+                "retrieved_at": "2026-01-05T10:42:41.220Z",
+                "language": "en"
               }
             ]
           }
@@ -2083,7 +446,7 @@
                   "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
                   "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
                   "domain": "www.epassport.gov.bd",
-                  "page_title": "e-Passport Fees | ePassport Bangladesh",
+                  "page_title": "e-Passport Fees and Payment Options",
                   "locator": "Passport Fees > e-Passport Fees",
                   "quoted_text": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
                   "retrieved_at": "2025-12-31T14:45:00Z",
@@ -2111,7 +474,7 @@
                   "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
                   "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
                   "domain": "www.epassport.gov.bd",
-                  "page_title": "e-Passport Fees | ePassport Bangladesh",
+                  "page_title": "e-Passport Fees and Payment Options",
                   "locator": "Passport Fees > e-Passport Fees",
                   "quoted_text": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
                   "retrieved_at": "2025-12-31T14:45:00Z",
@@ -2139,7 +502,7 @@
                   "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
                   "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
                   "domain": "www.epassport.gov.bd",
-                  "page_title": "e-Passport Fees | ePassport Bangladesh",
+                  "page_title": "e-Passport Fees and Payment Options",
                   "locator": "Passport Fees > e-Passport Fees",
                   "quoted_text": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
                   "retrieved_at": "2025-12-31T14:45:00Z",
@@ -2154,32 +517,82 @@
       "required_documents": null,
       "fees": [
         {
-          "label": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
-          "amount_bdt": 3450,
+          "label": "Express Delivery - 8,625 BDT",
+          "description": "express: 8625 BDT",
           "citations": [
             {
               "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
-              "quoted_text": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT"
+              "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "e-Passport Fees and Payment Options",
+              "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+              "quoted_text": "- Express delivery: Taka 8,625",
+              "retrieved_at": "2026-01-05T10:42:41.220Z",
+              "language": "en"
             }
           ]
         },
         {
-          "label": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
-          "amount_bdt": 6900,
+          "label": "Super Express Delivery - 12,075 BDT",
+          "description": "super_express: 12075 BDT",
           "citations": [
             {
               "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
-              "quoted_text": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT"
+              "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "e-Passport Fees and Payment Options",
+              "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+              "quoted_text": "- Super Express delivery: Taka 12,075",
+              "retrieved_at": "2026-01-05T10:42:41.220Z",
+              "language": "en"
             }
           ]
         },
         {
-          "label": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
-          "amount_bdt": 13800,
+          "label": "Regular Delivery - 8,050 BDT",
+          "description": "regular: 8050 BDT",
           "citations": [
             {
               "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
-              "quoted_text": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT"
+              "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "e-Passport Fees and Payment Options",
+              "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+              "quoted_text": "- Regular delivery: Taka 8,050",
+              "retrieved_at": "2026-01-05T10:42:41.220Z",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "label": "Express Delivery - 10,350 BDT",
+          "description": "express: 10350 BDT",
+          "citations": [
+            {
+              "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+              "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "e-Passport Fees and Payment Options",
+              "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+              "quoted_text": "- Express delivery: Taka 10,350",
+              "retrieved_at": "2026-01-05T10:42:41.220Z",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "label": "Super Express Delivery - 13,800 BDT",
+          "description": "super_express: 13800 BDT",
+          "citations": [
+            {
+              "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+              "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "e-Passport Fees and Payment Options",
+              "locator": "e-Passport Fees and Payment Options > e-Passport Payment > e-Passport fees for inside Bangladesh (Including 15% VAT)",
+              "quoted_text": "- Super Express delivery: Taka 13,800",
+              "retrieved_at": "2026-01-05T10:42:41.220Z",
+              "language": "en"
             }
           ]
         }
@@ -2192,22 +605,22 @@
         }
       ],
       "meta": {
-        "total_steps": 93,
-        "total_citations": 110,
+        "total_steps": 5,
+        "total_citations": 20,
         "verification_summary": {
-          "total": 110,
+          "total": 20,
           "verified": 0,
-          "unverified": 110,
+          "unverified": 20,
           "stale": 0,
           "deprecated": 0,
           "contradicted": 0
         },
-        "last_crawled_at": "2026-01-05T09:09:41.977Z",
+        "last_crawled_at": "2026-01-05T11:07:09.188Z",
         "source_domains": [
           "www.epassport.gov.bd"
         ],
         "generated_at": "2026-01-01T21:23:39.364Z",
-        "last_updated_at": "2026-01-01T21:23:39.364Z",
+        "last_updated_at": "2026-01-05T10:42:42.193Z",
         "status": "draft"
       }
     },
@@ -2229,7 +642,7 @@
                 "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
                 "canonical_url": "https://nidw.gov.bd/",
                 "domain": "nidw.gov.bd",
-                "page_title": "NID Wing - Bangladesh Election Commission",
+                "page_title": "Page Title - https://nidw.gov.bd/",
                 "locator": "Services > New Voter Registration",
                 "quoted_text": "New voter registration",
                 "retrieved_at": "2025-12-31T14:45:00Z",
@@ -2245,7 +658,7 @@
                 "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
                 "canonical_url": "https://nidw.gov.bd/",
                 "domain": "nidw.gov.bd",
-                "page_title": "NID Wing - Bangladesh Election Commission",
+                "page_title": "Page Title - https://nidw.gov.bd/",
                 "locator": "Services > Duplicate NID",
                 "quoted_text": "Issuance of Duplicate NID",
                 "retrieved_at": "2025-12-31T14:45:00Z",
@@ -2261,7 +674,7 @@
                 "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
                 "canonical_url": "https://nidw.gov.bd/",
                 "domain": "nidw.gov.bd",
-                "page_title": "NID Wing - Bangladesh Election Commission",
+                "page_title": "Page Title - https://nidw.gov.bd/",
                 "locator": "Services > NID Correction",
                 "quoted_text": "Correction of NID",
                 "retrieved_at": "2025-12-31T14:45:00Z",
@@ -2277,7 +690,7 @@
                 "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
                 "canonical_url": "https://nidw.gov.bd/",
                 "domain": "nidw.gov.bd",
-                "page_title": "NID Wing - Bangladesh Election Commission",
+                "page_title": "Page Title - https://nidw.gov.bd/",
                 "locator": "Services > Voter Migration",
                 "quoted_text": "Migration of Voter Area",
                 "retrieved_at": "2025-12-31T14:45:00Z",
@@ -2308,7 +721,7 @@
           "deprecated": 0,
           "contradicted": 0
         },
-        "last_crawled_at": "2025-12-31T14:45:00.000Z",
+        "last_crawled_at": "2026-01-05T11:15:44.413Z",
         "source_domains": [
           "nidw.gov.bd"
         ],

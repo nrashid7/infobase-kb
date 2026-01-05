@@ -1,7 +1,7 @@
 {
   "$schema_version": "3.0.0",
-  "data_version": 17,
-  "last_updated_at": "2026-01-05T09:09:41.991Z",
+  "data_version": 28,
+  "last_updated_at": "2026-01-05T11:15:54.455Z",
   "updated_by": "script:migrate_v2_to_v3.js",
   "change_log": [
     {
@@ -50,15 +50,24 @@
       "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
       "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
       "agency_id": "agency.dip",
-      "page_type": "fee_schedule",
-      "title": "e-Passport Fees | ePassport Bangladesh",
+      "page_type": "tutorial",
+      "page_types": [
+        "tutorial",
+        "requirements",
+        "fees",
+        "processing_time",
+        "portal",
+        "form"
+      ],
+      "title": "e-Passport Fees and Payment Options",
       "language": [
-        "en"
+        "en",
+        "bn"
       ],
       "crawl_method": "html_static",
-      "last_crawled_at": "2025-12-31T14:45:00Z",
-      "content_hash": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3",
-      "snapshot_ref": "snapshots/source.3e85c919aeef3918a889d306a1c11deb23639bf9/2025-12-31",
+      "last_crawled_at": "2026-01-05T11:07:09.188Z",
+      "content_hash": "ea7460184b249634551eea296ae6fcb938fead256b1dc288773a9e6e13ff62d3",
+      "snapshot_ref": "pilot/2026-01-05",
       "status": "active",
       "change_log": []
     },
@@ -66,18 +75,27 @@
       "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
       "canonical_url": "https://nidw.gov.bd/",
       "agency_id": "agency.bec",
-      "page_type": "main_portal",
-      "title": "NID Wing - Bangladesh Election Commission",
+      "page_type": "requirements",
+      "page_types": [
+        "requirements"
+      ],
+      "title": "Page Title - https://nidw.gov.bd/",
       "language": [
-        "en",
-        "bn"
+        "en"
       ],
       "crawl_method": "html_static",
-      "last_crawled_at": "2025-12-31T14:45:00Z",
-      "content_hash": "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5",
-      "snapshot_ref": "snapshots/source.2b76dc5ccf95634ef088f71423ea3517a84ff511/2025-12-31",
+      "last_crawled_at": "2026-01-05T11:15:44.413Z",
+      "content_hash": "88a1db534a72b276d7b55a6a317a497027eb77d0ae0347f0bc072ebdacdc48f8",
+      "snapshot_ref": "mock_source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
       "status": "active",
-      "change_log": []
+      "change_log": [
+        {
+          "detected_at": "2026-01-05T11:15:44.413Z",
+          "hash_before": "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5",
+          "hash_after": "88a1db534a72b276d7b55a6a317a497027eb77d0ae0347f0bc072ebdacdc48f8"
+        }
+      ],
+      "previous_hash": "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5"
     },
     {
       "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0",
@@ -122,18 +140,20 @@
         "tutorial",
         "procedure",
         "requirements",
+        "portal",
         "office",
         "contact",
         "form"
       ],
       "title": "Application at RPO Bangladesh Secretariat and Dhaka Cantonment",
       "language": [
-        "en"
+        "en",
+        "bn"
       ],
       "crawl_method": "html_static",
-      "last_crawled_at": "2026-01-05T09:09:41.984Z",
-      "content_hash": "65edd35b34f34f58ac2aa7b313c768676d61d72be0144c132be49f5f3df3008e",
-      "snapshot_ref": "snapshots/source.9cacd3de1b16ae897930018caff86b2c68cbb63c/2026-01-05",
+      "last_crawled_at": "2026-01-05T11:07:09.192Z",
+      "content_hash": "a8b44950de7c8f23053ad7a69670d69781ce8d9c3d7f69f0e43a616f4cf7b71d",
+      "snapshot_ref": "pilot/2026-01-05",
       "status": "active",
       "change_log": []
     },
@@ -146,15 +166,15 @@
         "tutorial",
         "portal"
       ],
-      "title": "E‑Passport Online Registration Portal",
+      "title": "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:",
       "language": [
         "en",
         "bn"
       ],
       "crawl_method": "html_static",
-      "last_crawled_at": "2026-01-05T07:15:34.555Z",
-      "content_hash": "8a10be7e86caf151c1b88f635bda1e5aa377d9a6856d142f877ef1eeb2fcebc9",
-      "snapshot_ref": "snapshots/source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad/2026-01-05",
+      "last_crawled_at": "2026-01-05T11:07:09.193Z",
+      "content_hash": "54a4c035a006d13119385bd1838dd7249ac10ed2e45e1e6dc751e8db25d1f452",
+      "snapshot_ref": "pilot/2026-01-05",
       "status": "active",
       "change_log": []
     },
@@ -172,12 +192,13 @@
       ],
       "title": "Frequently Asked Questions",
       "language": [
-        "en"
+        "en",
+        "bn"
       ],
       "crawl_method": "html_static",
-      "last_crawled_at": "2026-01-05T09:09:41.991Z",
-      "content_hash": "45febdd07239ea0e44961ac68598090ae28c34835abbf811fddc624f46032754",
-      "snapshot_ref": "snapshots/source.7d8afb1bb534157d0220a9aed948b00b220e5b35/2026-01-05",
+      "last_crawled_at": "2026-01-05T11:07:09.194Z",
+      "content_hash": "3ddc551e9c03372f3b5c163196402fe6b2e6c0d5d7624b9cd45ce5ee5ca21261",
+      "snapshot_ref": "pilot/2026-01-05",
       "status": "active",
       "change_log": []
     },
@@ -494,6 +515,278 @@
       "last_crawled_at": "2026-01-05T09:09:41.989Z",
       "content_hash": "979cb35e6edaa47df60b5e61d8e515925cab3446555283b5da859d84e6cae7a9",
       "snapshot_ref": "snapshots/source.7cb044c0fa8ed9fbf981f7a1294eb3be1f41c843/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.898b1f86e5bb7b95f11b6c8b5453daaa78f8efec",
+      "canonical_url": "https://passport.gov.bd/",
+      "agency_id": "agency.dip",
+      "page_type": "requirements",
+      "page_types": [
+        "requirements"
+      ],
+      "title": "Page Title - https://passport.gov.bd/",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T11:15:24.304Z",
+      "content_hash": "bdac933fdd878715ef524c73198fbcf2d3f8cd0b688e88def1441c5416a337bd",
+      "snapshot_ref": "mock_source.898b1f86e5bb7b95f11b6c8b5453daaa78f8efec",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.207355a2860d80905c871ef7655578a51c187ab6",
+      "canonical_url": "https://passport.gov.bd//about",
+      "agency_id": "agency.dip",
+      "page_type": "requirements",
+      "page_types": [
+        "requirements"
+      ],
+      "title": "Page Title - https://passport.gov.bd//about",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T11:15:26.324Z",
+      "content_hash": "ae95aa751e9b5c7bb2af36853ce1671e626049fe894c72fbef83b3a652f25a52",
+      "snapshot_ref": "mock_source.207355a2860d80905c871ef7655578a51c187ab6",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.9b1e3a0cc03f27c19be464dd7f596e84cde91026",
+      "canonical_url": "https://passport.gov.bd//services",
+      "agency_id": "agency.dip",
+      "page_type": "requirements",
+      "page_types": [
+        "requirements"
+      ],
+      "title": "Page Title - https://passport.gov.bd//services",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T11:15:28.341Z",
+      "content_hash": "6a1cc5f0dd63cd4f9e6be26d28c3971888f19e33ca9f5e75477f64a0dae15551",
+      "snapshot_ref": "mock_source.9b1e3a0cc03f27c19be464dd7f596e84cde91026",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.89ace427dcfc4cf86f1c75bf8b5f8470a63320a9",
+      "canonical_url": "https://passport.gov.bd//contact",
+      "agency_id": "agency.dip",
+      "page_type": "requirements",
+      "page_types": [
+        "requirements",
+        "contact"
+      ],
+      "title": "Page Title - https://passport.gov.bd//contact",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T11:15:30.355Z",
+      "content_hash": "78d6da8f03fd1991bd832cbd12771aa807a4e89498915448a39252b72b284a0a",
+      "snapshot_ref": "mock_source.89ace427dcfc4cf86f1c75bf8b5f8470a63320a9",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.a62342af8efd9b7979e64ee8b34cf0084f166f0f",
+      "canonical_url": "https://passport.gov.bd//faq",
+      "agency_id": "agency.dip",
+      "page_type": "faq",
+      "page_types": [
+        "faq",
+        "requirements"
+      ],
+      "title": "Page Title - https://passport.gov.bd//faq",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T11:15:32.356Z",
+      "content_hash": "34e2e37709dba2d8aff42517b802d76fc08aa8b965f2c7785bd4bc2951c1fc82",
+      "snapshot_ref": "mock_source.a62342af8efd9b7979e64ee8b34cf0084f166f0f",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.9a759d047c8bff815dc7f3df56dc5254e2134de0",
+      "canonical_url": "https://epassport.gov.bd/",
+      "agency_id": "agency.dip",
+      "page_type": "requirements",
+      "page_types": [
+        "requirements"
+      ],
+      "title": "Page Title - https://epassport.gov.bd/",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T11:15:34.373Z",
+      "content_hash": "3f98e8a6037215d4b7be605b251dd722acc87c94ff37daaa79f89e60629d96c6",
+      "snapshot_ref": "mock_source.9a759d047c8bff815dc7f3df56dc5254e2134de0",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.67c81da1bc16d3c8f83d0463f74b5bb01a6d7a81",
+      "canonical_url": "https://epassport.gov.bd//about",
+      "agency_id": "agency.dip",
+      "page_type": "requirements",
+      "page_types": [
+        "requirements"
+      ],
+      "title": "Page Title - https://epassport.gov.bd//about",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T11:15:36.379Z",
+      "content_hash": "e7f70fe2c4b63f937c6b2f497e4f98b2f5b54ec738a711d63b621a171949ccb4",
+      "snapshot_ref": "mock_source.67c81da1bc16d3c8f83d0463f74b5bb01a6d7a81",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.eacea318dd8dba83b8ab1702de99cfa89790c99a",
+      "canonical_url": "https://epassport.gov.bd//services",
+      "agency_id": "agency.dip",
+      "page_type": "requirements",
+      "page_types": [
+        "requirements"
+      ],
+      "title": "Page Title - https://epassport.gov.bd//services",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T11:15:38.380Z",
+      "content_hash": "d1f2b075e26762ce35f8d3423155ae95e62ef4f41ca6e8126e1d66fb5dea6a9a",
+      "snapshot_ref": "mock_source.eacea318dd8dba83b8ab1702de99cfa89790c99a",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.c8ff93480bc83c388fcb1e6847df48c3d18a3240",
+      "canonical_url": "https://epassport.gov.bd//contact",
+      "agency_id": "agency.dip",
+      "page_type": "requirements",
+      "page_types": [
+        "requirements",
+        "contact"
+      ],
+      "title": "Page Title - https://epassport.gov.bd//contact",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T11:15:40.389Z",
+      "content_hash": "2442f7e308a43ef42fc8879fc7b88bc997505d5f52f2da40fea4284f7a140924",
+      "snapshot_ref": "mock_source.c8ff93480bc83c388fcb1e6847df48c3d18a3240",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.00ee557d677104f93868a871a3a1e7871fc0e78b",
+      "canonical_url": "https://epassport.gov.bd//faq",
+      "agency_id": "agency.dip",
+      "page_type": "faq",
+      "page_types": [
+        "faq",
+        "requirements"
+      ],
+      "title": "Page Title - https://epassport.gov.bd//faq",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T11:15:42.392Z",
+      "content_hash": "1956f421651c7a461be31550c69c8b3fa8980d67c664f255498524e4c6d999ef",
+      "snapshot_ref": "mock_source.00ee557d677104f93868a871a3a1e7871fc0e78b",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.c97250a633de9fa3cdbd0a8e6eff051688a4e30d",
+      "canonical_url": "https://nidw.gov.bd//about",
+      "agency_id": "agency.bec",
+      "page_type": "requirements",
+      "page_types": [
+        "requirements"
+      ],
+      "title": "Page Title - https://nidw.gov.bd//about",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T11:15:46.424Z",
+      "content_hash": "1685acec90d05478630043e3cef1556369ea7c3f94a8185bb6ab211c1d271763",
+      "snapshot_ref": "mock_source.c97250a633de9fa3cdbd0a8e6eff051688a4e30d",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.5c4c2579f6094167416431c3640716c93c9ca3cd",
+      "canonical_url": "https://nidw.gov.bd//services",
+      "agency_id": "agency.bec",
+      "page_type": "requirements",
+      "page_types": [
+        "requirements"
+      ],
+      "title": "Page Title - https://nidw.gov.bd//services",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T11:15:48.427Z",
+      "content_hash": "bd51a1c8283c0eb55b0c911058cba6cc20f84d7c07c8004a4571ad861a2f85db",
+      "snapshot_ref": "mock_source.5c4c2579f6094167416431c3640716c93c9ca3cd",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.c91fb75281d2145fbf48b465deb352ca2a96685a",
+      "canonical_url": "https://nidw.gov.bd//contact",
+      "agency_id": "agency.bec",
+      "page_type": "requirements",
+      "page_types": [
+        "requirements",
+        "contact"
+      ],
+      "title": "Page Title - https://nidw.gov.bd//contact",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T11:15:50.441Z",
+      "content_hash": "1ee09a8bd7864a919edd7895d59d419f9c899e2728ca835cc5dbbe338487807e",
+      "snapshot_ref": "mock_source.c91fb75281d2145fbf48b465deb352ca2a96685a",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.5c63ac934ee936d0afd1f6339c1940c7afbae458",
+      "canonical_url": "https://nidw.gov.bd//faq",
+      "agency_id": "agency.bec",
+      "page_type": "faq",
+      "page_types": [
+        "faq",
+        "requirements"
+      ],
+      "title": "Page Title - https://nidw.gov.bd//faq",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T11:15:52.455Z",
+      "content_hash": "22d5572737ebd3e1bfd60228b84c92d79229b4f760da486b3e5ff775702e5718",
+      "snapshot_ref": "mock_source.5c63ac934ee936d0afd1f6339c1940c7afbae458",
       "status": "active",
       "change_log": []
     }
@@ -4960,6 +5253,3665 @@
         "auto_extracted",
         "english"
       ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.0d115ef8cb9d1e60",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Regular delivery Taka 4,025",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 4025,
+        "currency": "BDT",
+        "variant": "regular",
+        "label": "Regular delivery Taka 4,025"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Regular delivery: Taka 4,025",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.219Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.219Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "regular"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.3df2fdc4299ae3d6",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Express delivery Taka 6,325",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 6325,
+        "currency": "BDT",
+        "variant": "express",
+        "label": "Express delivery Taka 6,325"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Express delivery: Taka 6,325",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.219Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.219Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.3f1582acdfa3918e",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Super Express delivery Taka 8,625",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 8625,
+        "currency": "BDT",
+        "variant": "super_express",
+        "label": "Super Express delivery Taka 8,625"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Super Express delivery: Taka 8,625",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.219Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.219Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "super_express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.ef2837da65d7ba24",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Regular delivery Taka 5,750",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 5750,
+        "currency": "BDT",
+        "variant": "regular",
+        "label": "Regular delivery Taka 5,750"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Regular delivery: Taka 5,750",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.219Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.219Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "regular"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.c2d9f7f225f269cd",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Express delivery Taka 8,050",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 8050,
+        "currency": "BDT",
+        "variant": "express",
+        "label": "Express delivery Taka 8,050"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Express delivery: Taka 8,050",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.219Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.219Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.c9fd0c1135577e1f",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Super Express delivery Taka 10,350",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 10350,
+        "currency": "BDT",
+        "variant": "super_express",
+        "label": "Super Express delivery Taka 10,350"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Super Express delivery: Taka 10,350",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.219Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.219Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "super_express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.a6680c73e9799963",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Regular delivery Taka 6,325",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 6325,
+        "currency": "BDT",
+        "variant": "regular",
+        "label": "Regular delivery Taka 6,325"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Regular delivery: Taka 6,325",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.219Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.219Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "regular"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.c2d771ccefa4b117",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Express delivery Taka 8,625",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 8625,
+        "currency": "BDT",
+        "variant": "express",
+        "label": "Express delivery Taka 8,625"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Express delivery: Taka 8,625",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.220Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.220Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.33594a8408c99cb7",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Super Express delivery Taka 12,075",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 12075,
+        "currency": "BDT",
+        "variant": "super_express",
+        "label": "Super Express delivery Taka 12,075"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Super Express delivery: Taka 12,075",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.220Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.220Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "super_express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.12474a655a47238f",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Regular delivery Taka 8,050",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 8050,
+        "currency": "BDT",
+        "variant": "regular",
+        "label": "Regular delivery Taka 8,050"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Regular delivery: Taka 8,050",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.220Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.220Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "regular"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.071641919b7d8fde",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Express delivery Taka 10,350",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 10350,
+        "currency": "BDT",
+        "variant": "express",
+        "label": "Express delivery Taka 10,350"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Express delivery: Taka 10,350",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.220Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.220Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.bc3618edd958d815",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Super Express delivery Taka 13,800",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 13800,
+        "currency": "BDT",
+        "variant": "super_express",
+        "label": "Super Express delivery Taka 13,800"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Super Express delivery: Taka 13,800",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.220Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.220Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "super_express"
+      ]
+    },
+    {
+      "claim_id": "claim.document_requirement.epassport.a910a797d71bb9bc",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "document_requirement",
+      "text": "Click Here",
+      "status": "unverified",
+      "structured_data": {
+        "url": "https://www.achallan.gov.bd/acs/v2/general/challan-payment?id=1",
+        "extension": ".unknown",
+        "discovery_method": "markdown_link"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "Click Here",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Page Content"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.220Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.220Z",
+      "tags": [
+        "document",
+        "download",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.document_requirement.epassport.eb377b4ecc82d906",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "document_requirement",
+      "text": "Download a PDF form",
+      "status": "unverified",
+      "structured_data": {
+        "url": "https://www.epassport.gov.bd/api/v1/registrations/download-offline-form",
+        "extension": ".unknown",
+        "discovery_method": "markdown_link"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/application-form",
+          "quoted_text": "Download a PDF form",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Page Content"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.221Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.221Z",
+      "tags": [
+        "document",
+        "download",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.02de5dcde3f3ace0",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.223Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.223Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.e68021f871cbefb4",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "ই-পাসপোর্ট আবেদনের ক্ষেত্রে কোন কাগজপত্র সত্যায়ন করার প্রয়োজন হবে না।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "ই-পাসপোর্ট আবেদনের ক্ষেত্রে কোন কাগজপত্র সত্যায়ন করার প্রয়োজন হবে না।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "ই-পাসপোর্ট আবেদনের ক্ষেত্রে কোন কাগজপত্র সত্যায়ন করার প্রয়োজন হবে না।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.223Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.223Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.b869506ff44e5672",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "ই-পাসপোর্ট ফরমে কোন ছবি সংযোজন এবং তা সত্যায়নের প্রয়োজন হবে না।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 3,
+        "title": "ই-পাসপোর্ট ফরমে কোন ছবি সংযোজন এবং তা সত্যায়নের প্রয়োজন হবে না।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "ই-পাসপোর্ট ফরমে কোন ছবি সংযোজন এবং তা সত্যায়নের প্রয়োজন হবে না।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.223Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.223Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.epassport.8eac61db5d6d8e6c",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "faq",
+      "text": "I forgot the password of my online application account – what should I do?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "I forgot the password of my online application account – what should I do?",
+        "answer": null,
+        "link": "https://www.epassport.gov.bd/landing/faqs/12"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7d8afb1bb534157d0220a9aed948b00b220e5b35",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs",
+          "quoted_text": "I forgot the password of my online application account – what should I do?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Frequently Asked Questions"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.224Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.224Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.epassport.08a56be6cb98fd5c",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "faq",
+      "text": "Can I change the mobile number registered in my online application account?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "Can I change the mobile number registered in my online application account?",
+        "answer": null,
+        "link": "https://www.epassport.gov.bd/landing/faqs/14"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7d8afb1bb534157d0220a9aed948b00b220e5b35",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs",
+          "quoted_text": "Can I change the mobile number registered in my online application account?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Frequently Asked Questions"
+            ]
+          },
+          "retrieved_at": "2026-01-05T10:42:41.224Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T10:42:41.224Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.1a410a9ab53b2103",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Fee 1",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 100,
+        "currency": "BDT",
+        "variant": null,
+        "label": "Fee 1"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Fee 1: 100 BDT",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Test Page",
+              "Fees"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:05:51.449Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:05:51.449Z",
+      "tags": [
+        "fee",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.d48c169564f7fbca",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Fee 2",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 200,
+        "currency": "BDT",
+        "variant": null,
+        "label": "Fee 2"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Fee 2: 200 BDT",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Test Page",
+              "Fees"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:05:51.449Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:05:51.449Z",
+      "tags": [
+        "fee",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.05b494202e80ca8c",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Fee 1",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 100,
+        "currency": "BDT",
+        "variant": null,
+        "label": "Fee 1"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/application-form",
+          "quoted_text": "- Fee 1: 100 BDT",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Test Page",
+              "Fees"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:05:51.449Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:05:51.449Z",
+      "tags": [
+        "fee",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.dca3cd9a511dd6fa",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Fee 2",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 200,
+        "currency": "BDT",
+        "variant": null,
+        "label": "Fee 2"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/application-form",
+          "quoted_text": "- Fee 2: 200 BDT",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Test Page",
+              "Fees"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:05:51.449Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:05:51.449Z",
+      "tags": [
+        "fee",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.089d52bbce410b62",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Fee 1",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 100,
+        "currency": "BDT",
+        "variant": null,
+        "label": "Fee 1"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "- Fee 1: 100 BDT",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Test Page",
+              "Fees"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:05:51.450Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:05:51.450Z",
+      "tags": [
+        "fee",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.bea53d0bb78f0cd9",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Fee 2",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 200,
+        "currency": "BDT",
+        "variant": null,
+        "label": "Fee 2"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "- Fee 2: 200 BDT",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Test Page",
+              "Fees"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:05:51.450Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:05:51.450Z",
+      "tags": [
+        "fee",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.ee1bd669186a3557",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Fee 1",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 100,
+        "currency": "BDT",
+        "variant": null,
+        "label": "Fee 1"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7d8afb1bb534157d0220a9aed948b00b220e5b35",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs",
+          "quoted_text": "- Fee 1: 100 BDT",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Test Page",
+              "Fees"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:05:51.450Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:05:51.450Z",
+      "tags": [
+        "fee",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.bed9fc959bbe7088",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Fee 2",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 200,
+        "currency": "BDT",
+        "variant": null,
+        "label": "Fee 2"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7d8afb1bb534157d0220a9aed948b00b220e5b35",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs",
+          "quoted_text": "- Fee 2: 200 BDT",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Test Page",
+              "Fees"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:05:51.450Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:05:51.450Z",
+      "tags": [
+        "fee",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.9d7ea9ff0c66f6df",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "PDF form needs to be downloaded to the computer first",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "PDF form needs to be downloaded to the computer first",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/application-form",
+          "quoted_text": "PDF form needs to be downloaded to the computer first",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Application at RPO Bangladesh Secretariat and Dhaka Cantonment"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.274Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.274Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.a415e937e0ae9cab",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Open and fille up with the tool \" **Adobe Acrobat Reader DC**\" to support all required functions.",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Open and fille up with the tool \" **Adobe Acrobat Reader DC**\" to support all required functions.",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/application-form",
+          "quoted_text": "Open and fille up with the tool \" **Adobe Acrobat Reader DC**\" to support all required functions.",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Application at RPO Bangladesh Secretariat and Dhaka Cantonment"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.274Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.274Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.a7f50b7043c5e7dd",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.b1ff6fe71ad24e28",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "ই-পাসপোর্ট আবেদনের ক্ষেত্রে কোন কাগজপত্র সত্যায়ন করার প্রয়োজন হবে না।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "ই-পাসপোর্ট আবেদনের ক্ষেত্রে কোন কাগজপত্র সত্যায়ন করার প্রয়োজন হবে না।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "ই-পাসপোর্ট আবেদনের ক্ষেত্রে কোন কাগজপত্র সত্যায়ন করার প্রয়োজন হবে না।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.831c2e0a34552be8",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "ই-পাসপোর্ট ফরমে কোন ছবি সংযোজন এবং তা সত্যায়নের প্রয়োজন হবে না।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 3,
+        "title": "ই-পাসপোর্ট ফরমে কোন ছবি সংযোজন এবং তা সত্যায়নের প্রয়োজন হবে না।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "ই-পাসপোর্ট ফরমে কোন ছবি সংযোজন এবং তা সত্যায়নের প্রয়োজন হবে না।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.9cbc4a8274480853",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) অনুযায়ী আবেদন পত্র পূরণ করতে হবে।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 4,
+        "title": "জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) অনুযায়ী আবেদন পত্র পূরণ করতে হবে।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) অনুযায়ী আবেদন পত্র পূরণ করতে হবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.dce479c53bb0ce9d",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "অপ্রাপ্ত বয়স্ক (১৮ বছরের কম) আবেদনকারী যার জাতীয় পরিচয়পত্র (NID) নাই, তার পিতা অথবা মাতার জাতীয় পরিচয়পত্র (NID) নম্বর অবশ্যই উল্লেখ করতে হবে।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 5,
+        "title": "অপ্রাপ্ত বয়স্ক (১৮ বছরের কম) আবেদনকারী যার জাতীয় পরিচয়পত্র (NID) নাই, তার পিতা অথবা মাতার জাতীয় পরিচয়পত্র (NID) নম্বর অবশ্যই উল্লেখ করতে হবে।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "অপ্রাপ্ত বয়স্ক (১৮ বছরের কম) আবেদনকারী যার জাতীয় পরিচয়পত্র (NID) নাই, তার পিতা অথবা মাতার জাতীয় পরিচয়পত্র (NID) নম্বর অবশ্যই উল্লেখ করতে হবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.2939040cc93126a4",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) নিম্নোক্ত বয়স অনুসারে দাখিল করতে হবে-",
+      "status": "unverified",
+      "structured_data": {
+        "order": 6,
+        "title": "জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) নিম্নোক্ত বয়স অনুসারে দাখিল করতে হবে-",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "জাতীয় ‍পরিচয়পত্র (NID) অথবা অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) নিম্নোক্ত বয়স অনুসারে দাখিল করতে হবে-",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.04a9259dbe737fba",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "তারকা চিহ্নিত ক্রমিক নম্বরগুলো অবশ্যই পূরণীয়।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 7,
+        "title": "তারকা চিহ্নিত ক্রমিক নম্বরগুলো অবশ্যই পূরণীয়।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "তারকা চিহ্নিত ক্রমিক নম্বরগুলো অবশ্যই পূরণীয়।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.ea9edc088fe3d51e",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে পাসপোর্টের আবেদনের সাথে সুরক্ষা সেবা বিভাগ, স্বরাষ্ট্র মন্ত্রণালয় হতে জারিকৃত আদেশ দাখিল করতে হবে।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 8,
+        "title": "দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে পাসপোর্টের আবেদনের সাথে সুরক্ষা সেবা বিভাগ, স্বরাষ্ট্র মন্ত্রণালয় হতে জারিকৃত আদেশ দাখিল করতে হবে।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে পাসপোর্টের আবেদনের সাথে সুরক্ষা সেবা বিভাগ, স্বরাষ্ট্র মন্ত্রণালয় হতে জারিকৃত আদেশ দাখিল করতে হবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.ec0a8c3d29aaa27b",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "আবেদন বর্তমান ঠিকানা সংশ্লিষ্ঠ বিভাগীয় পাসপোর্ট ও ভিসা অফিস/আঞ্চলিক পাসপোর্ট অফিস/বিদেশস্থ বাংলাদেশ মিশনে দাখিল করতে হবে।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 9,
+        "title": "আবেদন বর্তমান ঠিকানা সংশ্লিষ্ঠ বিভাগীয় পাসপোর্ট ও ভিসা অফিস/আঞ্চলিক পাসপোর্ট অফিস/বিদেশস্থ বাংলাদেশ মিশনে দাখিল করতে হবে।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "আবেদন বর্তমান ঠিকানা সংশ্লিষ্ঠ বিভাগীয় পাসপোর্ট ও ভিসা অফিস/আঞ্চলিক পাসপোর্ট অফিস/বিদেশস্থ বাংলাদেশ মিশনে দাখিল করতে হবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.83392b364123d65e",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "১৮ বছরের নিম্নের সকল আবেদনে ই-পাসপোর্টের মেয়াদ হবে ০৫ বছর এবং ৪৮ পৃষ্ঠার।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 10,
+        "title": "১৮ বছরের নিম্নের সকল আবেদনে ই-পাসপোর্টের মেয়াদ হবে ০৫ বছর এবং ৪৮ পৃষ্ঠার।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "১৮ বছরের নিম্নের সকল আবেদনে ই-পাসপোর্টের মেয়াদ হবে ০৫ বছর এবং ৪৮ পৃষ্ঠার।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.d1ef8fd1a718b0cb",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "প্রাসঙ্গিক টেকনিক্যাল সনদসমূহ (যেমন: ডাক্তার, ইঞ্জিনিয়ার, ড্রাইভার ইত্যাদি) আপলোড/সংযোজন করতে হবে।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 11,
+        "title": "প্রাসঙ্গিক টেকনিক্যাল সনদসমূহ (যেমন: ডাক্তার, ইঞ্জিনিয়ার, ড্রাইভার ইত্যাদি) আপলোড/সংযোজন করতে হবে।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "প্রাসঙ্গিক টেকনিক্যাল সনদসমূহ (যেমন: ডাক্তার, ইঞ্জিনিয়ার, ড্রাইভার ইত্যাদি) আপলোড/সংযোজন করতে হবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.a099883f33d9c3a8",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "প্রযোজ্য ক্ষেত্রে প্রাসঙ্গিক জিও (GO)/এনওসি (NOC)/ প্রত্যয়নপত্র/ অবসরোত্তর ছুটির আদেশ (PRL Order)/ পেনশন বই আপলোড/সংযোজন করতে হবে যা ইস্যুকারী কর্তৃপ",
+      "status": "unverified",
+      "structured_data": {
+        "order": 12,
+        "title": "প্রযোজ্য ক্ষেত্রে প্রাসঙ্গিক জিও (GO)/এনওসি (NOC)/ প্রত্যয়নপত্র/ অবসরোত্তর ছুটির আদেশ (PRL Order)/ পেনশন বই আপলোড/সংযোজন করতে হবে যা ইস্যুকারী কর্তৃপ",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "প্রযোজ্য ক্ষেত্রে প্রাসঙ্গিক জিও (GO)/এনওসি (NOC)/ প্রত্যয়নপত্র/ অবসরোত্তর ছুটির আদেশ (PRL Order)/ পেনশন বই আপলোড/সংযোজন করতে হবে যা ইস্যুকারী কর্তৃপক্ষের নিজ নিজ Website এ আপলোড থাকতে হবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.6c342198671a8495",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "প্রযোজ্য ক্ষেত্রে বিবাহ সনদ/নিকাহনামা এবং বিবাহ বিচ্ছেদের ক্ষেত্রে তালাকনামা দাখিল করতে হবে।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 13,
+        "title": "প্রযোজ্য ক্ষেত্রে বিবাহ সনদ/নিকাহনামা এবং বিবাহ বিচ্ছেদের ক্ষেত্রে তালাকনামা দাখিল করতে হবে।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "প্রযোজ্য ক্ষেত্রে বিবাহ সনদ/নিকাহনামা এবং বিবাহ বিচ্ছেদের ক্ষেত্রে তালাকনামা দাখিল করতে হবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.3e4b84b8199b761d",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "দেশের অভ্যন্তরে আবেদনের ক্ষেত্রে প্রযোজ্য ফি এর উপর নির্ধারিত হারে ভ্যাট (VAT) সহ অন্যান্য চার্জ (যদি থাকে) অতিরিক্ত হিসাবে প্রদেয় হবে।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 14,
+        "title": "দেশের অভ্যন্তরে আবেদনের ক্ষেত্রে প্রযোজ্য ফি এর উপর নির্ধারিত হারে ভ্যাট (VAT) সহ অন্যান্য চার্জ (যদি থাকে) অতিরিক্ত হিসাবে প্রদেয় হবে।",
+        "description": "দেশের অভ্যন্তরে আবেদনের ক্ষেত্রে প্রযোজ্য ফি এর উপর নির্ধারিত হারে ভ্যাট (VAT) সহ অন্যান্য চার্জ (যদি থাকে) অতিরিক্ত হিসাবে প্রদেয় হবে। বিদেশে আবেদনের ক্ষেত্রেও সরকার কর্তৃক নির্ধারিত ফি প্রদেয় হবে।",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "দেশের অভ্যন্তরে আবেদনের ক্ষেত্রে প্রযোজ্য ফি এর উপর নির্ধারিত হারে ভ্যাট (VAT) সহ অন্যান্য চার্জ (যদি থাকে) অতিরিক্ত হিসাবে প্রদেয় হবে। বিদেশে আবেদনের ক্ষেত্রেও সরকার কর্তৃক নির্ধারিত ফি প্রদেয় হবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.d6b54f790c1b1e9b",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "কূটনৈতিক পাসপোর্টের জন্য পররাষ্ট্র মন্ত্রণালয়ের কনস্যুলার ও ওয়েলফেয়ার উইং (Consular and Welfare Wing) অথবা ইমিগ্রেশন ও পাসপোর্ট অধিদপ্তরের প্রধান ক",
+      "status": "unverified",
+      "structured_data": {
+        "order": 15,
+        "title": "কূটনৈতিক পাসপোর্টের জন্য পররাষ্ট্র মন্ত্রণালয়ের কনস্যুলার ও ওয়েলফেয়ার উইং (Consular and Welfare Wing) অথবা ইমিগ্রেশন ও পাসপোর্ট অধিদপ্তরের প্রধান ক",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "কূটনৈতিক পাসপোর্টের জন্য পররাষ্ট্র মন্ত্রণালয়ের কনস্যুলার ও ওয়েলফেয়ার উইং (Consular and Welfare Wing) অথবা ইমিগ্রেশন ও পাসপোর্ট অধিদপ্তরের প্রধান কার্যালয় বরাবর আবেদনপত্র দাখিল করতে হবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.3732c2cc06a8284f",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "বৈদেশিক মিশন হতে নতুন পাসপোর্টের জন্য আবেদন করা হলে স্থায়ী ঠিকানার কলামে বাংলাদেশের যোগাযোগের ঠিকানা উল্লেখ করতে হবে।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 16,
+        "title": "বৈদেশিক মিশন হতে নতুন পাসপোর্টের জন্য আবেদন করা হলে স্থায়ী ঠিকানার কলামে বাংলাদেশের যোগাযোগের ঠিকানা উল্লেখ করতে হবে।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "বৈদেশিক মিশন হতে নতুন পাসপোর্টের জন্য আবেদন করা হলে স্থায়ী ঠিকানার কলামে বাংলাদেশের যোগাযোগের ঠিকানা উল্লেখ করতে হবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.cf2a320ce5afac43",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "অতি জরুরী পাসপোর্টের আবেদনের ক্ষেত্রে (নতুন ইস্যু) নিজ উদ্যোগে পুলিশ ক্লিয়ারেন্স সনদ সংগ্রহ পূর্বক আবশ্যিকভাবে আবেদনের সাথে দাখিল করতে হবে।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 17,
+        "title": "অতি জরুরী পাসপোর্টের আবেদনের ক্ষেত্রে (নতুন ইস্যু) নিজ উদ্যোগে পুলিশ ক্লিয়ারেন্স সনদ সংগ্রহ পূর্বক আবশ্যিকভাবে আবেদনের সাথে দাখিল করতে হবে।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "অতি জরুরী পাসপোর্টের আবেদনের ক্ষেত্রে (নতুন ইস্যু) নিজ উদ্যোগে পুলিশ ক্লিয়ারেন্স সনদ সংগ্রহ পূর্বক আবশ্যিকভাবে আবেদনের সাথে দাখিল করতে হবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.e281b03c2d50f385",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "(ক) দেশের অভ্যন্তরে অতি জরুরী পাসপোর্ট প্রাপ্তির লক্ষ্যে আবেদনের সাথে পুলিশ ক্লিয়ারেন্স দাখিল করা হলে অন্যান্য সকল তথ্য সঠিক থাকা সাপেক্ষে ২ কর্মদিবস",
+      "status": "unverified",
+      "structured_data": {
+        "order": 18,
+        "title": "(ক) দেশের অভ্যন্তরে অতি জরুরী পাসপোর্ট প্রাপ্তির লক্ষ্যে আবেদনের সাথে পুলিশ ক্লিয়ারেন্স দাখিল করা হলে অন্যান্য সকল তথ্য সঠিক থাকা সাপেক্ষে ২ কর্মদিবস",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "(ক) দেশের অভ্যন্তরে অতি জরুরী পাসপোর্ট প্রাপ্তির লক্ষ্যে আবেদনের সাথে পুলিশ ক্লিয়ারেন্স দাখিল করা হলে অন্যান্য সকল তথ্য সঠিক থাকা সাপেক্ষে ২ কর্মদিবসের মধ্যে পাসপোর্ট প্রদান করা হবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.fe220067f63ac7f6",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "আবেদনের সময় মূল জাতীয় ‍পরিচয়পত্র (NID), অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) এবং প্রযোজ্য ক্ষেত্রে টেকনিক্যাল সনদ, সরকারি আদেশ (GO)/অনাপত্ত",
+      "status": "unverified",
+      "structured_data": {
+        "order": 19,
+        "title": "আবেদনের সময় মূল জাতীয় ‍পরিচয়পত্র (NID), অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) এবং প্রযোজ্য ক্ষেত্রে টেকনিক্যাল সনদ, সরকারি আদেশ (GO)/অনাপত্ত",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "আবেদনের সময় মূল জাতীয় ‍পরিচয়পত্র (NID), অনলাইন জন্মনিবন্ধন সনদ (BRC English Version) এবং প্রযোজ্য ক্ষেত্রে টেকনিক্যাল সনদ, সরকারি আদেশ (GO)/অনাপত্তি (NOC) প্রদর্শন/দাখিল করতে হবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.9ac4702cf8974ec8",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "পাসপোর্ট রি-ইস্যুর ক্ষেত্রে মূল পাসপোর্ট প্রদর্শন করতে হবে।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 20,
+        "title": "পাসপোর্ট রি-ইস্যুর ক্ষেত্রে মূল পাসপোর্ট প্রদর্শন করতে হবে।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "পাসপোর্ট রি-ইস্যুর ক্ষেত্রে মূল পাসপোর্ট প্রদর্শন করতে হবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.3895cab7a6563161",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "হারানো পাসপোর্টের ক্ষেত্রে মূল জিডির কপি প্রদর্শন/দাখিল করতে হবে।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 21,
+        "title": "হারানো পাসপোর্টের ক্ষেত্রে মূল জিডির কপি প্রদর্শন/দাখিল করতে হবে।",
+        "description": "হারানো পাসপোর্টের ক্ষেত্রে মূল জিডির কপি প্রদর্শন/দাখিল করতে হবে। পাসপোর্ট হারিয়ে গেলে অথবা চুরি হলে দ্রুত নিকটস্থ থানায় জিডি করতে হবে। পুনরায় পাসপোর্টের জন্য আবেদনের সময় পুরাতন পাসপোর্টের ফটোকপি এবং জিডি কপিসহ আবেদনপত্র দাখিল করতে হবে ।",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "হারানো পাসপোর্টের ক্ষেত্রে মূল জিডির কপি প্রদর্শন/দাখিল করতে হবে। পাসপোর্ট হারিয়ে গেলে অথবা চুরি হলে দ্রুত নিকটস্থ থানায় জিডি করতে হবে। পুনরায় পাসপোর্টের জন্য আবেদনের সময় পুরাতন পাসপোর্টের ফটোকপি এবং জিডি কপিসহ আবেদনপত্র দাখিল করতে হবে ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.88e0981abe545c02",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "০৬ বছর বয়সের নিম্নের আবেদনের ক্ষেত্রে ৩ আর (3R Size) সাইজের ( ল্যাব প্রিন্ট গ্রে ব্যাকগ্রউন্ড ) ছবি দাখিল করতে হবে।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 22,
+        "title": "০৬ বছর বয়সের নিম্নের আবেদনের ক্ষেত্রে ৩ আর (3R Size) সাইজের ( ল্যাব প্রিন্ট গ্রে ব্যাকগ্রউন্ড ) ছবি দাখিল করতে হবে।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+          "quoted_text": "০৬ বছর বয়সের নিম্নের আবেদনের ক্ষেত্রে ৩ আর (3R Size) সাইজের ( ল্যাব প্রিন্ট গ্রে ব্যাকগ্রউন্ড ) ছবি দাখিল করতে হবে।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.275Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.275Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.epassport.7da8717ce04f6471",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "faq",
+      "text": "I forgot the password of my online application account – what should I do?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "I forgot the password of my online application account – what should I do?",
+        "answer": null,
+        "link": "https://www.epassport.gov.bd/landing/faqs/12"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7d8afb1bb534157d0220a9aed948b00b220e5b35",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs",
+          "quoted_text": "I forgot the password of my online application account – what should I do?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Frequently Asked Questions"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.276Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.276Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.epassport.99ef109faef0f525",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "faq",
+      "text": "Can I change the mobile number registered in my online application account?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "Can I change the mobile number registered in my online application account?",
+        "answer": null,
+        "link": "https://www.epassport.gov.bd/landing/faqs/14"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7d8afb1bb534157d0220a9aed948b00b220e5b35",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs",
+          "quoted_text": "Can I change the mobile number registered in my online application account?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Frequently Asked Questions"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.276Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.276Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.epassport.d11858c6b62d8b04",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "faq",
+      "text": "Can I change the email address for my online application account?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "Can I change the email address for my online application account?",
+        "answer": null,
+        "link": "https://www.epassport.gov.bd/landing/faqs/13"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7d8afb1bb534157d0220a9aed948b00b220e5b35",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs",
+          "quoted_text": "Can I change the email address for my online application account?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Frequently Asked Questions"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.276Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.276Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.epassport.97a1eb389ff0f2b0",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "faq",
+      "text": "I did not receive the account activation email when using online application – what should I do?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "I did not receive the account activation email when using online application – what should I do?",
+        "answer": null,
+        "link": "https://www.epassport.gov.bd/landing/faqs/11"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7d8afb1bb534157d0220a9aed948b00b220e5b35",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs",
+          "quoted_text": "I did not receive the account activation email when using online application – what should I do?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Frequently Asked Questions"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:06:43.276Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:06:43.276Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.ba57736d2802bbb6",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Regular delivery TK 4,025",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 4025,
+        "currency": "BDT",
+        "variant": "regular",
+        "label": "Regular delivery TK 4,025"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Regular delivery: TK 4,025",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:07:09.191Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:07:09.191Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "regular"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.9b3204a88d53d322",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Express delivery TK 6,325",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 6325,
+        "currency": "BDT",
+        "variant": "express",
+        "label": "Express delivery TK 6,325"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Express delivery: TK 6,325",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:07:09.191Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:07:09.191Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.19c20fde8aeb21e2",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Super Express delivery TK 8,625",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 8625,
+        "currency": "BDT",
+        "variant": "super_express",
+        "label": "Super Express delivery TK 8,625"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Super Express delivery: TK 8,625",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:07:09.191Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:07:09.191Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "super_express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.a8c4f88ab42529f8",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Regular delivery TK 5,750",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 5750,
+        "currency": "BDT",
+        "variant": "regular",
+        "label": "Regular delivery TK 5,750"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Regular delivery: TK 5,750",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:07:09.191Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:07:09.191Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "regular"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.ff331f85a04cc6fe",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Express delivery TK 8,050",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 8050,
+        "currency": "BDT",
+        "variant": "express",
+        "label": "Express delivery TK 8,050"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Express delivery: TK 8,050",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:07:09.191Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:07:09.191Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.87f56f0a58634e4c",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Super Express delivery TK 10,350",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 10350,
+        "currency": "BDT",
+        "variant": "super_express",
+        "label": "Super Express delivery TK 10,350"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Super Express delivery: TK 10,350",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:07:09.191Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:07:09.191Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "super_express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.5eb51ec342735d22",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Regular delivery TK 6,325",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 6325,
+        "currency": "BDT",
+        "variant": "regular",
+        "label": "Regular delivery TK 6,325"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Regular delivery: TK 6,325",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:07:09.191Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:07:09.191Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "regular"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.34491ce0b82472a5",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Express delivery TK 8,625",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 8625,
+        "currency": "BDT",
+        "variant": "express",
+        "label": "Express delivery TK 8,625"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Express delivery: TK 8,625",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:07:09.191Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:07:09.191Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.567be9e5f59683c2",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Super Express delivery TK 12,075",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 12075,
+        "currency": "BDT",
+        "variant": "super_express",
+        "label": "Super Express delivery TK 12,075"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Super Express delivery: TK 12,075",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:07:09.192Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:07:09.192Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "super_express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.c012a51e95b08814",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Regular delivery TK 8,050",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 8050,
+        "currency": "BDT",
+        "variant": "regular",
+        "label": "Regular delivery TK 8,050"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Regular delivery: TK 8,050",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:07:09.192Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:07:09.192Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "regular"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.0a4565b9a0604704",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Express delivery TK 10,350",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 10350,
+        "currency": "BDT",
+        "variant": "express",
+        "label": "Express delivery TK 10,350"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Express delivery: TK 10,350",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:07:09.192Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:07:09.192Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.epassport.445879c386502870",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Super Express delivery TK 13,800",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 13800,
+        "currency": "BDT",
+        "variant": "super_express",
+        "label": "Super Express delivery TK 13,800"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Super Express delivery: TK 13,800",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:07:09.192Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:07:09.192Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "super_express"
+      ]
+    },
+    {
+      "claim_id": "claim.step.passport.3f746d4760c6e955",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.passport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 1",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Requirement 1",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.898b1f86e5bb7b95f11b6c8b5453daaa78f8efec",
+          "canonical_url": "https://passport.gov.bd/",
+          "quoted_text": "Requirement 1",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://passport.gov.bd/",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:24.312Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:24.312Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.passport.a2e005a9f5a74df5",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.passport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 2",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Requirement 2",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.898b1f86e5bb7b95f11b6c8b5453daaa78f8efec",
+          "canonical_url": "https://passport.gov.bd/",
+          "quoted_text": "Requirement 2",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://passport.gov.bd/",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:24.312Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:24.312Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.passport.90e25f83df8446f4",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.passport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 1",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Requirement 1",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.207355a2860d80905c871ef7655578a51c187ab6",
+          "canonical_url": "https://passport.gov.bd//about",
+          "quoted_text": "Requirement 1",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://passport.gov.bd//about",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:26.325Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:26.325Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.passport.50697da7aebc0730",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.passport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 2",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Requirement 2",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.207355a2860d80905c871ef7655578a51c187ab6",
+          "canonical_url": "https://passport.gov.bd//about",
+          "quoted_text": "Requirement 2",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://passport.gov.bd//about",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:26.326Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:26.326Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.passport.c49b4368f4ecc0d3",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.passport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 1",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Requirement 1",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.9b1e3a0cc03f27c19be464dd7f596e84cde91026",
+          "canonical_url": "https://passport.gov.bd//services",
+          "quoted_text": "Requirement 1",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://passport.gov.bd//services",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:28.341Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:28.342Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.passport.cc4b0f20297653e1",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.passport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 2",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Requirement 2",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.9b1e3a0cc03f27c19be464dd7f596e84cde91026",
+          "canonical_url": "https://passport.gov.bd//services",
+          "quoted_text": "Requirement 2",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://passport.gov.bd//services",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:28.342Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:28.342Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.passport.33e98544ae4fa69b",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.passport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 1",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Requirement 1",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.89ace427dcfc4cf86f1c75bf8b5f8470a63320a9",
+          "canonical_url": "https://passport.gov.bd//contact",
+          "quoted_text": "Requirement 1",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://passport.gov.bd//contact",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:30.356Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:30.356Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.passport.5ffde0df0bb9fedf",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.passport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 2",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Requirement 2",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.89ace427dcfc4cf86f1c75bf8b5f8470a63320a9",
+          "canonical_url": "https://passport.gov.bd//contact",
+          "quoted_text": "Requirement 2",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://passport.gov.bd//contact",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:30.356Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:30.356Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.passport.c831d0721b9f76be",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.passport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 1",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Requirement 1",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.a62342af8efd9b7979e64ee8b34cf0084f166f0f",
+          "canonical_url": "https://passport.gov.bd//faq",
+          "quoted_text": "Requirement 1",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://passport.gov.bd//faq",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:32.357Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:32.357Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.passport.fc73ec9cf0d0526e",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.passport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 2",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Requirement 2",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.a62342af8efd9b7979e64ee8b34cf0084f166f0f",
+          "canonical_url": "https://passport.gov.bd//faq",
+          "quoted_text": "Requirement 2",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://passport.gov.bd//faq",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:32.358Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:32.358Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.119e1ff1064a08d2",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 1",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Requirement 1",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.9a759d047c8bff815dc7f3df56dc5254e2134de0",
+          "canonical_url": "https://epassport.gov.bd/",
+          "quoted_text": "Requirement 1",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://epassport.gov.bd/",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:34.374Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:34.374Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.f8a040e37d3af53e",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 2",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Requirement 2",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.9a759d047c8bff815dc7f3df56dc5254e2134de0",
+          "canonical_url": "https://epassport.gov.bd/",
+          "quoted_text": "Requirement 2",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://epassport.gov.bd/",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:34.374Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:34.374Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.5597a603df4d46fd",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 1",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Requirement 1",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.67c81da1bc16d3c8f83d0463f74b5bb01a6d7a81",
+          "canonical_url": "https://epassport.gov.bd//about",
+          "quoted_text": "Requirement 1",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://epassport.gov.bd//about",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:36.379Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:36.379Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.2f4aec57fdfa66da",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 2",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Requirement 2",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.67c81da1bc16d3c8f83d0463f74b5bb01a6d7a81",
+          "canonical_url": "https://epassport.gov.bd//about",
+          "quoted_text": "Requirement 2",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://epassport.gov.bd//about",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:36.379Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:36.379Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.1cd5878c0ec6ff32",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 1",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Requirement 1",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.eacea318dd8dba83b8ab1702de99cfa89790c99a",
+          "canonical_url": "https://epassport.gov.bd//services",
+          "quoted_text": "Requirement 1",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://epassport.gov.bd//services",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:38.380Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:38.380Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.25387a977cb7a3da",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 2",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Requirement 2",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.eacea318dd8dba83b8ab1702de99cfa89790c99a",
+          "canonical_url": "https://epassport.gov.bd//services",
+          "quoted_text": "Requirement 2",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://epassport.gov.bd//services",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:38.380Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:38.380Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.52528a60bb3bcc5a",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 1",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Requirement 1",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.c8ff93480bc83c388fcb1e6847df48c3d18a3240",
+          "canonical_url": "https://epassport.gov.bd//contact",
+          "quoted_text": "Requirement 1",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://epassport.gov.bd//contact",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:40.390Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:40.390Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.d2393561f40027e0",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 2",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Requirement 2",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.c8ff93480bc83c388fcb1e6847df48c3d18a3240",
+          "canonical_url": "https://epassport.gov.bd//contact",
+          "quoted_text": "Requirement 2",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://epassport.gov.bd//contact",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:40.390Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:40.390Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.c25a90f221f022ba",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 1",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Requirement 1",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.00ee557d677104f93868a871a3a1e7871fc0e78b",
+          "canonical_url": "https://epassport.gov.bd//faq",
+          "quoted_text": "Requirement 1",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://epassport.gov.bd//faq",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:42.393Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:42.393Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.epassport.8ea6bc2ae8310f7d",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Requirement 2",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Requirement 2",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.00ee557d677104f93868a871a3a1e7871fc0e78b",
+          "canonical_url": "https://epassport.gov.bd//faq",
+          "quoted_text": "Requirement 2",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://epassport.gov.bd//faq",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:42.393Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:42.393Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.nid.dffc108477b1eced",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.nid"
+      },
+      "claim_type": "step",
+      "text": "Requirement 1",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Requirement 1",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
+          "canonical_url": "https://nidw.gov.bd/",
+          "quoted_text": "Requirement 1",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://nidw.gov.bd/",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:44.414Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:44.414Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.nid.66d40971d78c87db",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.nid"
+      },
+      "claim_type": "step",
+      "text": "Requirement 2",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Requirement 2",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
+          "canonical_url": "https://nidw.gov.bd/",
+          "quoted_text": "Requirement 2",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://nidw.gov.bd/",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:44.414Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:44.414Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.nid.8c10bb08a6ca8264",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.nid"
+      },
+      "claim_type": "step",
+      "text": "Requirement 1",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Requirement 1",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.c97250a633de9fa3cdbd0a8e6eff051688a4e30d",
+          "canonical_url": "https://nidw.gov.bd//about",
+          "quoted_text": "Requirement 1",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://nidw.gov.bd//about",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:46.425Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:46.425Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.nid.333fb2d04099211d",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.nid"
+      },
+      "claim_type": "step",
+      "text": "Requirement 2",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Requirement 2",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.c97250a633de9fa3cdbd0a8e6eff051688a4e30d",
+          "canonical_url": "https://nidw.gov.bd//about",
+          "quoted_text": "Requirement 2",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://nidw.gov.bd//about",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:46.425Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:46.425Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.nid.8a6a5afac7291635",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.nid"
+      },
+      "claim_type": "step",
+      "text": "Requirement 1",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Requirement 1",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.5c4c2579f6094167416431c3640716c93c9ca3cd",
+          "canonical_url": "https://nidw.gov.bd//services",
+          "quoted_text": "Requirement 1",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://nidw.gov.bd//services",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:48.427Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:48.427Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.nid.e8d1ebcb7418fb43",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.nid"
+      },
+      "claim_type": "step",
+      "text": "Requirement 2",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Requirement 2",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.5c4c2579f6094167416431c3640716c93c9ca3cd",
+          "canonical_url": "https://nidw.gov.bd//services",
+          "quoted_text": "Requirement 2",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://nidw.gov.bd//services",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:48.427Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:48.427Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.nid.d450542d8fd5b57c",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.nid"
+      },
+      "claim_type": "step",
+      "text": "Requirement 1",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Requirement 1",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.c91fb75281d2145fbf48b465deb352ca2a96685a",
+          "canonical_url": "https://nidw.gov.bd//contact",
+          "quoted_text": "Requirement 1",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://nidw.gov.bd//contact",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:50.441Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:50.442Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.nid.3c930a820983621c",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.nid"
+      },
+      "claim_type": "step",
+      "text": "Requirement 2",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Requirement 2",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.c91fb75281d2145fbf48b465deb352ca2a96685a",
+          "canonical_url": "https://nidw.gov.bd//contact",
+          "quoted_text": "Requirement 2",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://nidw.gov.bd//contact",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:50.442Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:50.442Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.nid.466f2e3eb5a500c9",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.nid"
+      },
+      "claim_type": "step",
+      "text": "Requirement 1",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Requirement 1",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.5c63ac934ee936d0afd1f6339c1940c7afbae458",
+          "canonical_url": "https://nidw.gov.bd//faq",
+          "quoted_text": "Requirement 1",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://nidw.gov.bd//faq",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:52.455Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:52.455Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.nid.bb9d71d3dc3f48e1",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.nid"
+      },
+      "claim_type": "step",
+      "text": "Requirement 2",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Requirement 2",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.5c63ac934ee936d0afd1f6339c1940c7afbae458",
+          "canonical_url": "https://nidw.gov.bd//faq",
+          "quoted_text": "Requirement 2",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Content from https://nidw.gov.bd//faq",
+              "Requirements"
+            ]
+          },
+          "retrieved_at": "2026-01-05T11:15:52.455Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T11:15:52.455Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
     }
   ],
   "agencies": [
@@ -5247,20 +9199,107 @@
         "fees": [
           {
             "label": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
+            "description": "3450 BDT",
             "claim_ids": [
               "claim.fee.svc_epassport.regular_48page"
             ]
           },
           {
             "label": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
+            "description": "6900 BDT",
             "claim_ids": [
               "claim.fee.svc_epassport.express_48page"
             ]
           },
           {
             "label": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
+            "description": "13800 BDT",
             "claim_ids": [
               "claim.fee.svc_epassport.super_express_48page"
+            ]
+          },
+          {
+            "label": "Regular delivery Taka 4,025",
+            "description": "regular: 4025 BDT",
+            "claim_ids": [
+              "claim.fee.epassport.0d115ef8cb9d1e60"
+            ]
+          },
+          {
+            "label": "Express delivery Taka 6,325",
+            "description": "express: 6325 BDT",
+            "claim_ids": [
+              "claim.fee.epassport.3df2fdc4299ae3d6"
+            ]
+          },
+          {
+            "label": "Super Express delivery Taka 8,625",
+            "description": "super_express: 8625 BDT",
+            "claim_ids": [
+              "claim.fee.epassport.3f1582acdfa3918e"
+            ]
+          },
+          {
+            "label": "Regular delivery Taka 5,750",
+            "description": "regular: 5750 BDT",
+            "claim_ids": [
+              "claim.fee.epassport.ef2837da65d7ba24"
+            ]
+          },
+          {
+            "label": "Express delivery Taka 8,050",
+            "description": "express: 8050 BDT",
+            "claim_ids": [
+              "claim.fee.epassport.c2d9f7f225f269cd"
+            ]
+          },
+          {
+            "label": "Super Express delivery Taka 10,350",
+            "description": "super_express: 10350 BDT",
+            "claim_ids": [
+              "claim.fee.epassport.c9fd0c1135577e1f"
+            ]
+          },
+          {
+            "label": "Regular delivery Taka 6,325",
+            "description": "regular: 6325 BDT",
+            "claim_ids": [
+              "claim.fee.epassport.a6680c73e9799963"
+            ]
+          },
+          {
+            "label": "Express delivery Taka 8,625",
+            "description": "express: 8625 BDT",
+            "claim_ids": [
+              "claim.fee.epassport.c2d771ccefa4b117"
+            ]
+          },
+          {
+            "label": "Super Express delivery Taka 12,075",
+            "description": "super_express: 12075 BDT",
+            "claim_ids": [
+              "claim.fee.epassport.33594a8408c99cb7"
+            ]
+          },
+          {
+            "label": "Regular delivery Taka 8,050",
+            "description": "regular: 8050 BDT",
+            "claim_ids": [
+              "claim.fee.epassport.12474a655a47238f"
+            ]
+          },
+          {
+            "label": "Express delivery Taka 10,350",
+            "description": "express: 10350 BDT",
+            "claim_ids": [
+              "claim.fee.epassport.071641919b7d8fde"
+            ]
+          },
+          {
+            "label": "Super Express delivery Taka 13,800",
+            "description": "super_express: 13800 BDT",
+            "claim_ids": [
+              "claim.fee.epassport.bc3618edd958d815"
             ]
           }
         ]
@@ -5310,20 +9349,107 @@
       "fees": [
         {
           "label": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
+          "description": "3450 BDT",
           "claim_ids": [
             "claim.fee.svc_epassport.regular_48page"
           ]
         },
         {
           "label": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
+          "description": "6900 BDT",
           "claim_ids": [
             "claim.fee.svc_epassport.express_48page"
           ]
         },
         {
           "label": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
+          "description": "13800 BDT",
           "claim_ids": [
             "claim.fee.svc_epassport.super_express_48page"
+          ]
+        },
+        {
+          "label": "Regular delivery Taka 4,025",
+          "description": "regular: 4025 BDT",
+          "claim_ids": [
+            "claim.fee.epassport.0d115ef8cb9d1e60"
+          ]
+        },
+        {
+          "label": "Express delivery Taka 6,325",
+          "description": "express: 6325 BDT",
+          "claim_ids": [
+            "claim.fee.epassport.3df2fdc4299ae3d6"
+          ]
+        },
+        {
+          "label": "Super Express delivery Taka 8,625",
+          "description": "super_express: 8625 BDT",
+          "claim_ids": [
+            "claim.fee.epassport.3f1582acdfa3918e"
+          ]
+        },
+        {
+          "label": "Regular delivery Taka 5,750",
+          "description": "regular: 5750 BDT",
+          "claim_ids": [
+            "claim.fee.epassport.ef2837da65d7ba24"
+          ]
+        },
+        {
+          "label": "Express delivery Taka 8,050",
+          "description": "express: 8050 BDT",
+          "claim_ids": [
+            "claim.fee.epassport.c2d9f7f225f269cd"
+          ]
+        },
+        {
+          "label": "Super Express delivery Taka 10,350",
+          "description": "super_express: 10350 BDT",
+          "claim_ids": [
+            "claim.fee.epassport.c9fd0c1135577e1f"
+          ]
+        },
+        {
+          "label": "Regular delivery Taka 6,325",
+          "description": "regular: 6325 BDT",
+          "claim_ids": [
+            "claim.fee.epassport.a6680c73e9799963"
+          ]
+        },
+        {
+          "label": "Express delivery Taka 8,625",
+          "description": "express: 8625 BDT",
+          "claim_ids": [
+            "claim.fee.epassport.c2d771ccefa4b117"
+          ]
+        },
+        {
+          "label": "Super Express delivery Taka 12,075",
+          "description": "super_express: 12075 BDT",
+          "claim_ids": [
+            "claim.fee.epassport.33594a8408c99cb7"
+          ]
+        },
+        {
+          "label": "Regular delivery Taka 8,050",
+          "description": "regular: 8050 BDT",
+          "claim_ids": [
+            "claim.fee.epassport.12474a655a47238f"
+          ]
+        },
+        {
+          "label": "Express delivery Taka 10,350",
+          "description": "express: 10350 BDT",
+          "claim_ids": [
+            "claim.fee.epassport.071641919b7d8fde"
+          ]
+        },
+        {
+          "label": "Super Express delivery Taka 13,800",
+          "description": "super_express: 13800 BDT",
+          "claim_ids": [
+            "claim.fee.epassport.bc3618edd958d815"
           ]
         }
       ],
@@ -5361,7 +9487,7 @@
         }
       ],
       "generated_at": "2026-01-01T21:23:39.364Z",
-      "last_updated_at": "2026-01-01T21:23:39.364Z",
+      "last_updated_at": "2026-01-05T10:42:42.193Z",
       "status": "draft"
     },
     {

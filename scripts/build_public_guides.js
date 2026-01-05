@@ -315,6 +315,138 @@ function buildPublicVariant(variant, claimsMap, sourcePagesMap) {
 }
 
 /**
+ * Deduplicate epassport fees by preferring fees from passport-fees URL with most recent retrieval
+ */
+function dedupeEpassportFees(fees) {
+  if (!fees || fees.length === 0) return fees;
+
+  // Group fees by their canonical source URL and retrieved_at timestamp
+  const feeGroups = new Map();
+
+  for (const fee of fees) {
+    if (!fee.citations || fee.citations.length === 0) continue;
+
+    // Find the most recent citation from passport-fees URL
+    let bestCitation = null;
+    let bestRetrievedAt = null;
+
+    for (const citation of fee.citations) {
+      if (citation.canonical_url && citation.canonical_url.includes('/instructions/passport-fees')) {
+        const retrievedAt = new Date(citation.retrieved_at);
+        if (!bestRetrievedAt || retrievedAt > bestRetrievedAt) {
+          bestCitation = citation;
+          bestRetrievedAt = retrievedAt;
+        }
+      }
+    }
+
+    // If no passport-fees citation found, use the most recent citation from any source
+    if (!bestCitation) {
+      for (const citation of fee.citations) {
+        const retrievedAt = new Date(citation.retrieved_at);
+        if (!bestRetrievedAt || retrievedAt > bestRetrievedAt) {
+          bestCitation = citation;
+          bestRetrievedAt = retrievedAt;
+        }
+      }
+    }
+
+    if (bestCitation) {
+      // Group by source URL + retrieved_at timestamp (to separate different crawls)
+      const sourceKey = `${bestCitation.canonical_url}|${bestCitation.retrieved_at}`;
+      if (!feeGroups.has(sourceKey)) {
+        feeGroups.set(sourceKey, []);
+      }
+      feeGroups.get(sourceKey).push({
+        fee,
+        citation: bestCitation,
+        retrievedAt: bestRetrievedAt
+      });
+    }
+  }
+
+  // Select the most preferred fee set (prioritize passport-fees URL, then most recent)
+  let selectedFees = [];
+
+  // Find all passport-fees groups and select the most recent one
+  const passportFeeGroups = Array.from(feeGroups.entries())
+    .filter(([key]) => key.includes('/instructions/passport-fees'))
+    .sort(([,a], [,b]) => {
+      const aMaxDate = Math.max(...a.map(item => item.retrievedAt));
+      const bMaxDate = Math.max(...b.map(item => item.retrievedAt));
+      return bMaxDate - aMaxDate; // Most recent first
+    });
+
+  if (passportFeeGroups.length > 0) {
+    // Take the most recent passport-fees group
+    const [, mostRecentFees] = passportFeeGroups[0];
+    selectedFees = mostRecentFees.map(item => item.fee);
+  } else {
+    // Fallback: take the most recent fee set from any source
+    const allGroups = Array.from(feeGroups.values());
+    allGroups.sort((a, b) => {
+      const aMaxDate = Math.max(...a.map(item => item.retrievedAt));
+      const bMaxDate = Math.max(...b.map(item => item.retrievedAt));
+      return bMaxDate - aMaxDate;
+    });
+    selectedFees = allGroups[0].map(item => item.fee);
+  }
+
+  // Ensure user-friendly labels and BDT currency, and keep only citations from the selected crawl
+  return selectedFees.map(fee => {
+    // Filter citations to only include those from the most recent crawl
+    const recentCitations = fee.citations.filter(citation =>
+      citation.canonical_url && citation.canonical_url.includes('/instructions/passport-fees') &&
+      new Date(citation.retrieved_at).getTime() >= new Date('2026-01-05T10:42:41.000Z').getTime()
+    );
+
+    // If no recent citations, keep the most recent one available
+    const citations = recentCitations.length > 0 ? recentCitations :
+      [fee.citations.reduce((latest, current) =>
+        new Date(current.retrieved_at) > new Date(latest.retrieved_at) ? current : latest
+      )];
+
+    return {
+      ...fee,
+      label: formatEpassportFeeLabel(fee.label),
+      description: fee.description ? fee.description.replace(/\bTK\b/gi, 'BDT') : null,
+      citations: citations
+    };
+  });
+}
+
+/**
+ * Format epassport fee labels to be user-friendly
+ */
+function formatEpassportFeeLabel(label) {
+  if (!label) return label;
+
+  // Remove "TK" currency and ensure "BDT"
+  let formatted = label.replace(/\bTK\b/gi, 'BDT');
+
+  // Try to standardize the format: "Delivery Type - Amount BDT"
+  // Examples:
+  // "Regular delivery Taka 4,025" -> "Regular Delivery - 4,025 BDT"
+  // "Express delivery Taka 6,325" -> "Express Delivery - 6,325 BDT"
+
+  const patterns = [
+    { regex: /Regular delivery.*?(?:Taka\s*)?([\d,]+)/i, replacement: 'Regular Delivery - $1 BDT' },
+    { regex: /Express delivery.*?(?:Taka\s*)?([\d,]+)/i, replacement: 'Express Delivery - $1 BDT' },
+    { regex: /Super Express delivery.*?(?:Taka\s*)?([\d,]+)/i, replacement: 'Super Express Delivery - $1 BDT' },
+    { regex: /Super express delivery.*?(?:Taka\s*)?([\d,]+)/i, replacement: 'Super Express Delivery - $1 BDT' }
+  ];
+
+  for (const pattern of patterns) {
+    if (pattern.regex.test(formatted)) {
+      formatted = formatted.replace(pattern.regex, pattern.replacement);
+      break;
+    }
+  }
+
+  return formatted;
+}
+
+/**
  * Build a complete public guide
  */
 function buildPublicGuide(guide, lookups) {
@@ -346,11 +478,18 @@ function buildPublicGuide(guide, lookups) {
     buildPublicItem(item, claimsMap, sourcePagesMap)
   );
   
-  // Build public fees
-  const fees = (guide.fees || []).map(item => 
+  // Build public fees with deduplication for epassport
+  let fees = (guide.fees || []).map(item =>
     buildPublicItem(item, claimsMap, sourcePagesMap)
   );
-  
+
+  // Special deduplication logic for epassport fees
+  if (guide.guide_id === 'guide.epassport' && fees.length > 0) {
+    const originalCount = fees.length;
+    fees = dedupeEpassportFees(fees);
+    console.log(`  ✓ Deduplicated epassport fees: ${originalCount} → ${fees.length}`);
+  }
+
   // Get agency info
   const agency = agenciesMap.get(guide.agency_id);
   

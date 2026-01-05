@@ -15,6 +15,7 @@ const kbWriter = require('./kb_writer');
 const crawlState = require('./crawl_state');
 const crawlReport = require('./crawl_report');
 const firecrawlOverrides = require('./firecrawl_overrides');
+const serviceMap = require('./service_map');
 
 module.exports = {
   // Shared utilities module
@@ -43,6 +44,9 @@ module.exports = {
   
   // Firecrawl Overrides module
   firecrawlOverrides,
+  
+  // Service Map module
+  serviceMap,
   
   // Re-export error classes for convenience
   FirecrawlUnavailableError: scraping.FirecrawlUnavailableError,

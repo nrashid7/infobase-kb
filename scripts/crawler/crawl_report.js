@@ -44,7 +44,14 @@ function generateRunReport(runStats, runsDir) {
     rateLimitMs: config.rateLimit || 1500,
     config: config,
     summary: {
-      domains_crawled: runStats.domainsCrawled,
+      // Domain counts with reasons
+      domains_attempted: runStats.domainsAttempted || 0,
+      domains_crawled: runStats.domainsCrawled || 0,
+      domains_failed: runStats.domainsFailed || 0,
+      domains_skipped: runStats.domainsSkipped || 0,
+      domains_failed_reasons: runStats.domainsFailedReasons || {},
+      domains_skipped_reasons: runStats.domainsSkippedReasons || {},
+      // Page stats
       pages_total: runStats.pagesTotal,
       pages_kept: runStats.pagesKept,
       pages_excluded: runStats.pagesExcluded,
@@ -54,7 +61,7 @@ function generateRunReport(runStats, runsDir) {
       documents_fetched_via_http_fallback: runStats.documentsFetchedViaHttpFallback || 0,
       claims_extracted: runStats.claimsExtracted,
       errors: runStats.errors.length,
-      // New extraction counters
+      // Extraction counters across all domains
       steps_extracted: runStats.stepsExtracted || 0,
       fees_extracted: runStats.feesExtracted || 0,
       faq_pairs_extracted: runStats.faqPairsExtracted || 0,
@@ -134,7 +141,14 @@ function createRunStats(config) {
     startedAt: new Date().toISOString(),
     status: 'running',
     config: config,
+    // Domain tracking
+    domainsAttempted: 0,
     domainsCrawled: 0,
+    domainsFailed: 0,
+    domainsSkipped: 0,
+    domainsFailedReasons: {},
+    domainsSkippedReasons: {},
+    // Page stats
     pagesTotal: 0,
     pagesKept: 0,
     pagesExcluded: 0,
@@ -143,7 +157,7 @@ function createRunStats(config) {
     documentsFetchedViaFirecrawl: 0,
     documentsFetchedViaHttpFallback: 0,
     claimsExtracted: 0,
-    // New extraction counters
+    // Extraction counters
     stepsExtracted: 0,
     feesExtracted: 0,
     faqPairsExtracted: 0,
@@ -199,16 +213,19 @@ function printSummary(report, paths) {
   console.log('  CRAWL SUMMARY');
   console.log('═'.repeat(70));
   console.log(`
-  Domains Crawled:  ${report.summary.domains_crawled}
-  Pages Total:      ${report.summary.pages_total}
-  Pages Saved:      ${report.summary.pages_kept}
-  Pages Unchanged:  ${report.summary.pages_unchanged}
-  Pages Excluded:   ${report.summary.pages_excluded}
-  Docs Found:       ${report.summary.docs_downloaded}
-  Claims Extracted: ${report.summary.claims_extracted}
-  Errors:           ${report.summary.errors}
+  Domains Attempted: ${report.summary.domains_attempted}
+  Domains Crawled:   ${report.summary.domains_crawled}
+  Domains Failed:    ${report.summary.domains_failed}
+  Domains Skipped:   ${report.summary.domains_skipped}
+  Pages Total:       ${report.summary.pages_total}
+  Pages Saved:       ${report.summary.pages_kept}
+  Pages Unchanged:   ${report.summary.pages_unchanged}
+  Pages Excluded:    ${report.summary.pages_excluded}
+  Docs Found:        ${report.summary.docs_downloaded}
+  Claims Extracted:  ${report.summary.claims_extracted}
+  Errors:            ${report.summary.errors}
 `);
-  
+
   // Print extraction breakdown
   console.log('  EXTRACTION DETAILS:');
   console.log(`    Steps Extracted:     ${report.summary.steps_extracted}`);
@@ -216,7 +233,23 @@ function printSummary(report, paths) {
   console.log(`    FAQ Pairs:           ${report.summary.faq_pairs_extracted}`);
   console.log(`    Doc Links Found:     ${report.summary.doc_links_found}`);
   console.log('');
-  
+
+  // Print per-domain breakdown if available
+  if (report.domains && report.domains.length > 0) {
+    console.log('  PER-DOMAIN BREAKDOWN:');
+    console.log('  Domain                    Pages  Steps  Fees  FAQs  Docs  Claims  Errors');
+    console.log('  ───────────────────────── ────── ────── ───── ───── ───── ─────── ──────');
+
+    for (const domain of report.domains) {
+      const extraction = report.extraction_details[domain.domain] || {};
+      const label = domain.label || domain.domain;
+      const truncatedLabel = label.length > 24 ? label.substring(0, 21) + '...' : label.padEnd(24);
+
+      console.log(`  ${truncatedLabel} ${String(domain.pagesProcessed || 0).padStart(5)} ${String(extraction.steps_extracted || 0).padStart(6)} ${String(extraction.fees_extracted || 0).padStart(5)} ${String(extraction.faq_pairs_extracted || 0).padStart(5)} ${String(extraction.doc_links_found || 0).padStart(5)} ${String(domain.claimsExtracted || 0).padStart(7)} ${String((domain.errors || []).length).padStart(6)}`);
+    }
+    console.log('');
+  }
+
   console.log('═'.repeat(70));
   if (paths) {
     console.log(`  📁 KB saved to: ${paths.kbPath}`);

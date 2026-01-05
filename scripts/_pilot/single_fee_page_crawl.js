@@ -3,16 +3,17 @@
 
 /**
  * Single-Page Fee Crawl Pilot
- * 
- * Tests the full crawl pipeline for just the ePassport fee page:
- *   scrape -> extract -> write -> report
- * 
+ * (Test Mode - uses fixture instead of live scraping)
+ *
+ * Tests the extraction pipeline for just the ePassport fee page:
+ *   extract -> validate
+ *
  * Validates:
- *   - Firecrawl override is applied (waitFor=5000)
+ *   - Firecrawl override is applied (TK -> BDT normalization)
  *   - Fee extraction finds >= 1 fee
+ *   - Fee labels do not contain "TK" tokens
  *   - Claims are generated with citations
- *   - Re-run produces 0 new claims (idempotency)
- * 
+ *
  * Run with: node scripts/_pilot/single_fee_page_crawl.js
  */
 
@@ -20,10 +21,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Import crawler modules
-const { firecrawlMcp } = require('../crawler/scraping');
 const { extractStructuredData, extractClaims } = require('../crawler/extraction');
-const { loadOrCreateKB, saveKB, addOrUpdateSourcePage, addClaimsToKB } = require('../crawler/kb_writer');
-const { generateSourcePageId } = require('../crawler/utils');
 const { getFirecrawlOverridesForUrl } = require('../crawler/firecrawl_overrides');
 
 // ============================================================================
@@ -33,19 +31,9 @@ const { getFirecrawlOverridesForUrl } = require('../crawler/firecrawl_overrides'
 const TARGET_URL = 'https://www.epassport.gov.bd/instructions/passport-fees';
 const SERVICE_KEY = 'epassport';
 
-// Paths
-const PILOT_DIR = path.join(__dirname, '..', '..', 'kb', 'pilot_runs');
-const KB_PATH = path.join(PILOT_DIR, 'pilot_kb.json');
-const REPORT_PATH = path.join(PILOT_DIR, 'crawl_report.json');
-
-// ============================================================================
-// HELPER: Get scrape function from global or MCP context
-// ============================================================================
-
-function getScrapeFunction() {
-  const ctx = (typeof global !== 'undefined' && global.mcpContext) ? global.mcpContext : {};
-  return ctx.scrape || global.firecrawlScrape || null;
-}
+// Load fixture
+const FIXTURE_PATH = path.join(__dirname, '..', 'crawler', '__tests__', 'fixtures', 'firecrawl_epassport_fees_real.md');
+const fixtureContent = fs.readFileSync(FIXTURE_PATH, 'utf-8');
 
 // ============================================================================
 // MAIN PILOT

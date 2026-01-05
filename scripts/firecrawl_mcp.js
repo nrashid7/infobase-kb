@@ -187,30 +187,52 @@ function assertAvailable(operation) {
  */
 async function firecrawlScrape(url, options = {}) {
   assertAvailable('scrape');
-  
+
   if (!isAvailable('scrape')) {
     console.log(`⚠️  Firecrawl scrape not available for: ${url}`);
     return null;
   }
-  
+
+  // Whitelist of allowed Firecrawl scrape option keys
+  const ALLOWED_SCRAPE_KEYS = [
+    'formats', 'onlyMainContent', 'removeBase64Images', 'waitFor', 'timeout',
+    'includeTags', 'excludeTags', 'headers'
+  ];
+
+  /**
+   * Pick only allowed scrape options from an object
+   * @param {Object} obj - Object to filter
+   * @returns {Object} - Filtered object with only allowed keys
+   */
+  function pickAllowedScrapeOptions(obj) {
+    if (!obj || typeof obj !== 'object') return {};
+    const result = {};
+    for (const key of ALLOWED_SCRAPE_KEYS) {
+      if (obj.hasOwnProperty(key)) {
+        result[key] = obj[key];
+      }
+    }
+    return result;
+  }
+
   // Get URL-specific overrides (e.g., waitFor for SPA pages)
   const urlOverrides = getFirecrawlOverridesForUrl(url);
 
-  // Build base options from defaults + caller options
-  const baseOptions = {
+  // Build base options from defaults + caller options (only allowed keys)
+  const baseOptionsSafe = pickAllowedScrapeOptions({
     formats: options.formats || ['markdown'],
     onlyMainContent: options.onlyMainContent !== false,
     removeBase64Images: options.removeBase64Images !== false,
-    ...options,
-  };
+    ...options
+  });
 
   // Strip non-Firecrawl keys from URL overrides to avoid passing functions to MCP
   const { postprocessMarkdown, ...urlOverridesSafe } = urlOverrides || {};
 
-  // Merge URL-specific overrides (highest priority)
+  // Merge URL-specific overrides (highest priority) - also filtered to allowed keys
   const scrapeOptions = urlOverrides
-    ? { ...baseOptions, ...urlOverridesSafe }
-    : baseOptions;
+    ? { ...baseOptionsSafe, ...pickAllowedScrapeOptions(urlOverridesSafe) }
+    : baseOptionsSafe;
 
   // Log if override was applied
   if (urlOverrides) {

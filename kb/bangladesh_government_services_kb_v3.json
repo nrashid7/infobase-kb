@@ -1,0 +1,1366 @@
+{
+  "$schema_version": "3.0.0",
+  "data_version": 3,
+  "last_updated_at": "2026-01-01T21:23:39.366Z",
+  "updated_by": "script:migrate_v2_to_v3.js",
+  "change_log": [
+    {
+      "version": 1,
+      "date": "2025-12-31",
+      "changes": [
+        "Initial crawl of public service portals: epassport.gov.bd, nidw.gov.bd, brta.gov.bd, bsp.brta.gov.bd"
+      ]
+    },
+    {
+      "version": 3,
+      "date": "2026-01-01",
+      "changes": [
+        "Migrated from v2.0.0 to v3.0.0 schema",
+        "Added 7 service_guides",
+        "Guide layer provides user-friendly navigation while claims remain audit backbone"
+      ]
+    }
+  ],
+  "source_pages": [
+    {
+      "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+      "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+      "agency_id": "agency.dip",
+      "page_type": "instruction",
+      "title": "Five Steps to Your e-Passport | ePassport Bangladesh",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2025-12-31T14:45:00Z",
+      "content_hash": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2",
+      "snapshot_ref": "snapshots/source.947176686bf0965726403b957c96cb34267fa1d8/2025-12-31",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+      "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+      "agency_id": "agency.dip",
+      "page_type": "fee_schedule",
+      "title": "e-Passport Fees | ePassport Bangladesh",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2025-12-31T14:45:00Z",
+      "content_hash": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3",
+      "snapshot_ref": "snapshots/source.3e85c919aeef3918a889d306a1c11deb23639bf9/2025-12-31",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
+      "canonical_url": "https://nidw.gov.bd/",
+      "agency_id": "agency.bec",
+      "page_type": "main_portal",
+      "title": "NID Wing - Bangladesh Election Commission",
+      "language": [
+        "en",
+        "bn"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2025-12-31T14:45:00Z",
+      "content_hash": "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5",
+      "snapshot_ref": "snapshots/source.2b76dc5ccf95634ef088f71423ea3517a84ff511/2025-12-31",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0",
+      "canonical_url": "https://brta.gov.bd/",
+      "agency_id": "agency.brta",
+      "page_type": "main_portal",
+      "title": "Bangladesh Road Transport Authority - Official Website",
+      "language": [
+        "bn",
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2025-12-31T14:45:00Z",
+      "content_hash": "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
+      "snapshot_ref": "snapshots/source.900eaee954dee9531f26ca362419cab9579810e0/2025-12-31",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029",
+      "canonical_url": "https://bsp.brta.gov.bd/",
+      "agency_id": "agency.brta",
+      "page_type": "main_portal",
+      "title": "BRTA Service Portal (BSP)",
+      "language": [
+        "en",
+        "bn"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2025-12-31T14:45:00Z",
+      "content_hash": "f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7",
+      "snapshot_ref": "snapshots/source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029/2025-12-31",
+      "status": "active",
+      "change_log": []
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim.step.svc_epassport.1",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Online Application: Visit www.epassport.gov.bd and complete the application form online",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "Online Application: Visit www.epassport.gov.bd and complete the application form",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "5 Easy Steps",
+              "Step 1"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "step",
+        "application",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.step.svc_epassport.2",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Payment: Pay the e-Passport fees online or through Sonali Bank",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "Payment: Pay the e-Passport fees online or through Sonali Bank",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "5 Easy Steps",
+              "Step 2"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "step",
+        "payment",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.step.svc_epassport.3",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Appointment: Book an appointment at your preferred enrollment center",
+      "status": "unverified",
+      "structured_data": {
+        "order": 3
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "Appointment: Book an appointment at your preferred enrollment center",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "5 Easy Steps",
+              "Step 3"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "step",
+        "appointment",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.step.svc_epassport.4",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Enrollment: Visit the enrollment center with required documents for biometric data capture",
+      "status": "unverified",
+      "structured_data": {
+        "order": 4
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "Enrollment: Visit the enrollment center with required documents for biometric data",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "5 Easy Steps",
+              "Step 4"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "step",
+        "enrollment",
+        "biometric",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.step.svc_epassport.5",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "step",
+      "text": "Delivery: Collect your e-Passport from the regional passport office or receive via post",
+      "status": "unverified",
+      "structured_data": {
+        "order": 5
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "Delivery: Collect your e-Passport from the regional passport office or receive via post",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "5 Easy Steps",
+              "Step 5"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "step",
+        "delivery",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.svc_epassport.regular_48page",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 3450,
+        "pages": 48,
+        "delivery_type": "regular",
+        "delivery_days": 15
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "quoted_text": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Passport Fees",
+              "e-Passport Fees"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "fee",
+        "passport",
+        "regular",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.svc_epassport.express_48page",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 6900,
+        "pages": 48,
+        "delivery_type": "express",
+        "delivery_days": 7
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "quoted_text": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Passport Fees",
+              "e-Passport Fees"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "fee",
+        "passport",
+        "express",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.svc_epassport.super_express_48page",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport"
+      },
+      "claim_type": "fee",
+      "text": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 13800,
+        "pages": 48,
+        "delivery_type": "super_express",
+        "delivery_days": 2
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "quoted_text": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Passport Fees",
+              "e-Passport Fees"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "fee",
+        "passport",
+        "super_express",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.portal.svc_nid.new_voter",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.nid"
+      },
+      "claim_type": "service_info",
+      "text": "New Voter Registration available through NID Wing - Bangladesh Election Commission",
+      "status": "unverified",
+      "citations": [
+        {
+          "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
+          "quoted_text": "New voter registration",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Services",
+              "New Voter Registration"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "service",
+        "nid",
+        "voter",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.portal.svc_nid.duplicate_issuance",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.nid"
+      },
+      "claim_type": "service_info",
+      "text": "Duplicate NID issuance available for lost or damaged NID cards",
+      "status": "unverified",
+      "citations": [
+        {
+          "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
+          "quoted_text": "Issuance of Duplicate NID",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Services",
+              "Duplicate NID"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "service",
+        "nid",
+        "duplicate",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.portal.svc_nid.correction",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.nid"
+      },
+      "claim_type": "service_info",
+      "text": "NID correction service available for name, date of birth, and other information corrections",
+      "status": "unverified",
+      "citations": [
+        {
+          "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
+          "quoted_text": "Correction of NID",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Services",
+              "NID Correction"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "service",
+        "nid",
+        "correction",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.portal.svc_nid.migration",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.nid"
+      },
+      "claim_type": "service_info",
+      "text": "Voter area migration service available for address changes",
+      "status": "unverified",
+      "citations": [
+        {
+          "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
+          "quoted_text": "Migration of Voter Area",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Services",
+              "Voter Migration"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "service",
+        "nid",
+        "migration",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.portal.svc_brta.service_hours",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.brta"
+      },
+      "claim_type": "operational_info",
+      "text": "BRTA Service Portal (BSP) is available from 8:00am to 10:00pm Bangladesh Standard Time",
+      "status": "unverified",
+      "structured_data": {
+        "start_time": "08:00",
+        "end_time": "22:00",
+        "timezone": "BST"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029",
+          "quoted_text": "BRTA Service Portal (BSP) will be available from 8:00am to 10:00pm (Bangladesh Standard Time)",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Service Hours"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "portal",
+        "hours",
+        "brta",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.portal.svc_brta_dl.driving_license",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.brta_driving_license"
+      },
+      "claim_type": "service_info",
+      "text": "Driving License services available through BRTA including new license, renewal, and duplicate license",
+      "status": "unverified",
+      "citations": [
+        {
+          "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0",
+          "quoted_text": "ড্রাইভিং লাইসেন্সের আবেদন প্রক্রিয়া (Driving License application process)",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "ড্রাইভিং লাইসেন্স",
+              "Driving License"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "service",
+        "brta",
+        "driving_license",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.portal.svc_brta_vr.vehicle_registration",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.brta_vehicle_registration"
+      },
+      "claim_type": "service_info",
+      "text": "Motor Vehicle Registration services available for new vehicles, reconditioned vehicles, and auction purchases",
+      "status": "unverified",
+      "citations": [
+        {
+          "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0",
+          "quoted_text": "নতুন মোটরযান নিবন্ধন (New Motor Vehicle Registration)",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "মোটরযান নিবন্ধন সংক্রান্ত",
+              "Vehicle Registration"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "service",
+        "brta",
+        "vehicle_registration",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.portal.svc_brta_fit.fitness_renewal",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.brta_fitness"
+      },
+      "claim_type": "service_info",
+      "text": "Vehicle Fitness Certificate renewal available through online appointment system",
+      "status": "unverified",
+      "citations": [
+        {
+          "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0",
+          "quoted_text": "ফিটনেস নবায়ন (Fitness Renewal)",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "মোটরযানের কাগজপত্র নবায়ন",
+              "Fitness Renewal"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "service",
+        "brta",
+        "fitness",
+        "renewal",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.portal.svc_brta_tax.tax_token",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.brta_tax_token"
+      },
+      "claim_type": "service_info",
+      "text": "Tax Token renewal service available for vehicle road tax",
+      "status": "unverified",
+      "citations": [
+        {
+          "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0",
+          "quoted_text": "ট্যাক্স টোকেন নবায়ন (Tax Token Renewal)",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "মোটরযানের কাগজপত্র নবায়ন",
+              "Tax Token"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "service",
+        "brta",
+        "tax_token",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.portal.svc_brta.bsp_login",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.brta"
+      },
+      "claim_type": "portal_url",
+      "text": "BRTA Service Portal login available at https://bsp.brta.gov.bd/login",
+      "status": "unverified",
+      "structured_data": {
+        "url": "https://bsp.brta.gov.bd/login"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0",
+          "quoted_text": "বিএসপি'র লগইন লিংক: https://bsp.brta.gov.bd/login",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "বিআরটিএ সার্ভিস পোর্টাল",
+              "BSP Login"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "portal",
+        "url",
+        "brta",
+        "login",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.portal.svc_brta.fee_calculator",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.brta"
+      },
+      "claim_type": "portal_url",
+      "text": "BRTA Fee Calculator available at https://bsp.brta.gov.bd/feeCalculator",
+      "status": "unverified",
+      "structured_data": {
+        "url": "https://bsp.brta.gov.bd/feeCalculator"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0",
+          "quoted_text": "বিআরটিএ'র ফি ক্যালকুলেটর",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "অভ্যন্তরীণ ই-সেবাসমূহ",
+              "Fee Calculator"
+            ]
+          },
+          "retrieved_at": "2025-12-31T14:45:00Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2025-12-31T14:45:00Z",
+      "tags": [
+        "portal",
+        "url",
+        "brta",
+        "fee",
+        "calculator",
+        "auto_extracted"
+      ]
+    }
+  ],
+  "agencies": [
+    {
+      "agency_id": "agency.dip",
+      "name": "Department of Immigration and Passports",
+      "domain_allowlist": [
+        "epassport.gov.bd",
+        "www.epassport.gov.bd",
+        "passport.gov.bd"
+      ],
+      "claims": [
+        "claim.step.svc_epassport.1",
+        "claim.step.svc_epassport.2",
+        "claim.step.svc_epassport.3",
+        "claim.step.svc_epassport.4",
+        "claim.step.svc_epassport.5",
+        "claim.fee.svc_epassport.regular_48page",
+        "claim.fee.svc_epassport.express_48page",
+        "claim.fee.svc_epassport.super_express_48page"
+      ]
+    },
+    {
+      "agency_id": "agency.bec",
+      "name": "Bangladesh Election Commission - NID Wing",
+      "domain_allowlist": [
+        "nidw.gov.bd",
+        "www.nidw.gov.bd",
+        "services.nidw.gov.bd"
+      ],
+      "claims": [
+        "claim.portal.svc_nid.new_voter",
+        "claim.portal.svc_nid.duplicate_issuance",
+        "claim.portal.svc_nid.correction",
+        "claim.portal.svc_nid.migration"
+      ]
+    },
+    {
+      "agency_id": "agency.brta",
+      "name": "Bangladesh Road Transport Authority",
+      "domain_allowlist": [
+        "brta.gov.bd",
+        "www.brta.gov.bd",
+        "bsp.brta.gov.bd"
+      ],
+      "claims": [
+        "claim.portal.svc_brta.service_hours",
+        "claim.portal.svc_brta_dl.driving_license",
+        "claim.portal.svc_brta_vr.vehicle_registration",
+        "claim.portal.svc_brta_fit.fitness_renewal",
+        "claim.portal.svc_brta_tax.tax_token",
+        "claim.portal.svc_brta.bsp_login",
+        "claim.portal.svc_brta.fee_calculator"
+      ]
+    }
+  ],
+  "documents": [],
+  "services": [
+    {
+      "service_id": "svc.epassport",
+      "service_name": "e-Passport Application",
+      "agency_id": "agency.dip",
+      "claims": [
+        "claim.step.svc_epassport.1",
+        "claim.step.svc_epassport.2",
+        "claim.step.svc_epassport.3",
+        "claim.step.svc_epassport.4",
+        "claim.step.svc_epassport.5",
+        "claim.fee.svc_epassport.regular_48page",
+        "claim.fee.svc_epassport.express_48page",
+        "claim.fee.svc_epassport.super_express_48page"
+      ],
+      "portal_mapping": {
+        "entry_urls": [
+          {
+            "url": "https://www.epassport.gov.bd/",
+            "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8"
+          }
+        ],
+        "portal_steps": []
+      },
+      "official_entrypoints": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8"
+        },
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9"
+        }
+      ]
+    },
+    {
+      "service_id": "svc.nid",
+      "service_name": "National ID Card Services",
+      "agency_id": "agency.bec",
+      "claims": [
+        "claim.portal.svc_nid.new_voter",
+        "claim.portal.svc_nid.duplicate_issuance",
+        "claim.portal.svc_nid.correction",
+        "claim.portal.svc_nid.migration"
+      ],
+      "portal_mapping": {
+        "entry_urls": [
+          {
+            "url": "https://nidw.gov.bd/",
+            "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511"
+          }
+        ],
+        "portal_steps": []
+      },
+      "official_entrypoints": [
+        {
+          "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511"
+        }
+      ]
+    },
+    {
+      "service_id": "svc.brta",
+      "service_name": "BRTA Online Services",
+      "agency_id": "agency.brta",
+      "claims": [
+        "claim.portal.svc_brta.service_hours",
+        "claim.portal.svc_brta.bsp_login",
+        "claim.portal.svc_brta.fee_calculator"
+      ],
+      "portal_mapping": {
+        "entry_urls": [
+          {
+            "url": "https://brta.gov.bd/",
+            "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0"
+          },
+          {
+            "url": "https://bsp.brta.gov.bd/",
+            "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+          }
+        ],
+        "portal_steps": []
+      },
+      "official_entrypoints": [
+        {
+          "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0"
+        },
+        {
+          "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+        }
+      ]
+    },
+    {
+      "service_id": "svc.brta_driving_license",
+      "service_name": "Driving License Services",
+      "agency_id": "agency.brta",
+      "claims": [
+        "claim.portal.svc_brta_dl.driving_license"
+      ],
+      "portal_mapping": {
+        "entry_urls": [
+          {
+            "url": "https://bsp.brta.gov.bd/",
+            "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+          }
+        ],
+        "portal_steps": []
+      },
+      "official_entrypoints": [
+        {
+          "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0"
+        }
+      ]
+    },
+    {
+      "service_id": "svc.brta_vehicle_registration",
+      "service_name": "Vehicle Registration Services",
+      "agency_id": "agency.brta",
+      "claims": [
+        "claim.portal.svc_brta_vr.vehicle_registration"
+      ],
+      "portal_mapping": {
+        "entry_urls": [
+          {
+            "url": "https://bsp.brta.gov.bd/",
+            "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+          }
+        ],
+        "portal_steps": []
+      },
+      "official_entrypoints": [
+        {
+          "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0"
+        }
+      ]
+    },
+    {
+      "service_id": "svc.brta_fitness",
+      "service_name": "Vehicle Fitness Certificate",
+      "agency_id": "agency.brta",
+      "claims": [
+        "claim.portal.svc_brta_fit.fitness_renewal"
+      ],
+      "portal_mapping": {
+        "entry_urls": [
+          {
+            "url": "https://bsp.brta.gov.bd/",
+            "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+          }
+        ],
+        "portal_steps": []
+      },
+      "official_entrypoints": [
+        {
+          "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0"
+        }
+      ]
+    },
+    {
+      "service_id": "svc.brta_tax_token",
+      "service_name": "Vehicle Tax Token",
+      "agency_id": "agency.brta",
+      "claims": [
+        "claim.portal.svc_brta_tax.tax_token"
+      ],
+      "portal_mapping": {
+        "entry_urls": [
+          {
+            "url": "https://bsp.brta.gov.bd/",
+            "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+          }
+        ],
+        "portal_steps": []
+      },
+      "official_entrypoints": [
+        {
+          "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0"
+        }
+      ]
+    }
+  ],
+  "service_guides": [
+    {
+      "guide_id": "guide.epassport",
+      "service_id": "svc.epassport",
+      "agency_id": "agency.dip",
+      "title": "e-Passport Application",
+      "sections": {
+        "application_steps": [
+          {
+            "step_number": 1,
+            "title": "Online Application",
+            "description": "Visit www.epassport.gov.bd and complete the application form online",
+            "claim_ids": [
+              "claim.step.svc_epassport.1"
+            ]
+          },
+          {
+            "step_number": 2,
+            "title": "Payment",
+            "description": "Pay the e-Passport fees online or through Sonali Bank",
+            "claim_ids": [
+              "claim.step.svc_epassport.2"
+            ]
+          },
+          {
+            "step_number": 3,
+            "title": "Appointment",
+            "description": "Book an appointment at your preferred enrollment center",
+            "claim_ids": [
+              "claim.step.svc_epassport.3"
+            ]
+          },
+          {
+            "step_number": 4,
+            "title": "Enrollment",
+            "description": "Visit the enrollment center with required documents for biometric data capture",
+            "claim_ids": [
+              "claim.step.svc_epassport.4"
+            ]
+          },
+          {
+            "step_number": 5,
+            "title": "Delivery",
+            "description": "Collect your e-Passport from the regional passport office or receive via post",
+            "claim_ids": [
+              "claim.step.svc_epassport.5"
+            ]
+          }
+        ],
+        "fees": [
+          {
+            "label": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
+            "claim_ids": [
+              "claim.fee.svc_epassport.regular_48page"
+            ]
+          },
+          {
+            "label": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
+            "claim_ids": [
+              "claim.fee.svc_epassport.express_48page"
+            ]
+          },
+          {
+            "label": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
+            "claim_ids": [
+              "claim.fee.svc_epassport.super_express_48page"
+            ]
+          }
+        ]
+      },
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Online Application",
+          "description": "Visit www.epassport.gov.bd and complete the application form online",
+          "claim_ids": [
+            "claim.step.svc_epassport.1"
+          ]
+        },
+        {
+          "step_number": 2,
+          "title": "Payment",
+          "description": "Pay the e-Passport fees online or through Sonali Bank",
+          "claim_ids": [
+            "claim.step.svc_epassport.2"
+          ]
+        },
+        {
+          "step_number": 3,
+          "title": "Appointment",
+          "description": "Book an appointment at your preferred enrollment center",
+          "claim_ids": [
+            "claim.step.svc_epassport.3"
+          ]
+        },
+        {
+          "step_number": 4,
+          "title": "Enrollment",
+          "description": "Visit the enrollment center with required documents for biometric data capture",
+          "claim_ids": [
+            "claim.step.svc_epassport.4"
+          ]
+        },
+        {
+          "step_number": 5,
+          "title": "Delivery",
+          "description": "Collect your e-Passport from the regional passport office or receive via post",
+          "claim_ids": [
+            "claim.step.svc_epassport.5"
+          ]
+        }
+      ],
+      "fees": [
+        {
+          "label": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
+          "claim_ids": [
+            "claim.fee.svc_epassport.regular_48page"
+          ]
+        },
+        {
+          "label": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
+          "claim_ids": [
+            "claim.fee.svc_epassport.express_48page"
+          ]
+        },
+        {
+          "label": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
+          "claim_ids": [
+            "claim.fee.svc_epassport.super_express_48page"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "variant_id": "regular",
+          "label": "Regular",
+          "fee_claim_ids": [
+            "claim.fee.svc_epassport.regular_48page"
+          ],
+          "processing_time_claim_ids": []
+        },
+        {
+          "variant_id": "express",
+          "label": "Express",
+          "fee_claim_ids": [
+            "claim.fee.svc_epassport.express_48page"
+          ],
+          "processing_time_claim_ids": []
+        },
+        {
+          "variant_id": "super_express",
+          "label": "Super Express",
+          "fee_claim_ids": [
+            "claim.fee.svc_epassport.super_express_48page"
+          ],
+          "processing_time_claim_ids": []
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Official Portal",
+          "url": "https://www.epassport.gov.bd/",
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8"
+        }
+      ],
+      "generated_at": "2026-01-01T21:23:39.364Z",
+      "last_updated_at": "2026-01-01T21:23:39.364Z",
+      "status": "draft"
+    },
+    {
+      "guide_id": "guide.nid",
+      "service_id": "svc.nid",
+      "agency_id": "agency.bec",
+      "title": "National ID Card Services",
+      "sections": {
+        "service_info": [
+          {
+            "label": "New Voter Registration available through NID Wing - Bangladesh Election Commission",
+            "claim_ids": [
+              "claim.portal.svc_nid.new_voter"
+            ]
+          },
+          {
+            "label": "Duplicate NID issuance available for lost or damaged NID cards",
+            "claim_ids": [
+              "claim.portal.svc_nid.duplicate_issuance"
+            ]
+          },
+          {
+            "label": "NID correction service available for name, date of birth, and other information corrections",
+            "claim_ids": [
+              "claim.portal.svc_nid.correction"
+            ]
+          },
+          {
+            "label": "Voter area migration service available for address changes",
+            "claim_ids": [
+              "claim.portal.svc_nid.migration"
+            ]
+          }
+        ]
+      },
+      "official_links": [
+        {
+          "label": "Official Portal",
+          "url": "https://nidw.gov.bd/",
+          "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511"
+        }
+      ],
+      "generated_at": "2026-01-01T21:23:39.365Z",
+      "last_updated_at": "2026-01-01T21:23:39.365Z",
+      "status": "draft"
+    },
+    {
+      "guide_id": "guide.brta",
+      "service_id": "svc.brta",
+      "agency_id": "agency.brta",
+      "title": "BRTA Online Services",
+      "sections": {
+        "portal_links": [
+          {
+            "label": "BRTA Service Portal login available at https://bsp.brta.gov.bd/login",
+            "claim_ids": [
+              "claim.portal.svc_brta.bsp_login"
+            ]
+          },
+          {
+            "label": "BRTA Fee Calculator available at https://bsp.brta.gov.bd/feeCalculator",
+            "claim_ids": [
+              "claim.portal.svc_brta.fee_calculator"
+            ]
+          }
+        ],
+        "service_info": [
+          {
+            "label": "BRTA Service Portal (BSP) is available from 8:00am to 10:00pm Bangladesh Standard Time",
+            "claim_ids": [
+              "claim.portal.svc_brta.service_hours"
+            ]
+          }
+        ]
+      },
+      "official_links": [
+        {
+          "label": "Official Portal",
+          "url": "https://brta.gov.bd/",
+          "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0"
+        },
+        {
+          "label": "Official Portal",
+          "url": "https://bsp.brta.gov.bd/",
+          "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+        },
+        {
+          "label": "Portal Link",
+          "url": "https://bsp.brta.gov.bd/login"
+        },
+        {
+          "label": "Portal Link",
+          "url": "https://bsp.brta.gov.bd/feeCalculator"
+        }
+      ],
+      "generated_at": "2026-01-01T21:23:39.366Z",
+      "last_updated_at": "2026-01-01T21:23:39.366Z",
+      "status": "draft"
+    },
+    {
+      "guide_id": "guide.brta_driving_license",
+      "service_id": "svc.brta_driving_license",
+      "agency_id": "agency.brta",
+      "title": "Driving License Services",
+      "sections": {
+        "service_info": [
+          {
+            "label": "Driving License services available through BRTA including new license, renewal, and duplicate license",
+            "claim_ids": [
+              "claim.portal.svc_brta_dl.driving_license"
+            ]
+          }
+        ]
+      },
+      "official_links": [
+        {
+          "label": "Official Portal",
+          "url": "https://bsp.brta.gov.bd/",
+          "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+        }
+      ],
+      "generated_at": "2026-01-01T21:23:39.366Z",
+      "last_updated_at": "2026-01-01T21:23:39.366Z",
+      "status": "draft"
+    },
+    {
+      "guide_id": "guide.brta_vehicle_registration",
+      "service_id": "svc.brta_vehicle_registration",
+      "agency_id": "agency.brta",
+      "title": "Vehicle Registration Services",
+      "sections": {
+        "service_info": [
+          {
+            "label": "Motor Vehicle Registration services available for new vehicles, reconditioned vehicles, and auction purchases",
+            "claim_ids": [
+              "claim.portal.svc_brta_vr.vehicle_registration"
+            ]
+          }
+        ]
+      },
+      "official_links": [
+        {
+          "label": "Official Portal",
+          "url": "https://bsp.brta.gov.bd/",
+          "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+        }
+      ],
+      "generated_at": "2026-01-01T21:23:39.366Z",
+      "last_updated_at": "2026-01-01T21:23:39.366Z",
+      "status": "draft"
+    },
+    {
+      "guide_id": "guide.brta_fitness",
+      "service_id": "svc.brta_fitness",
+      "agency_id": "agency.brta",
+      "title": "Vehicle Fitness Certificate",
+      "sections": {
+        "service_info": [
+          {
+            "label": "Vehicle Fitness Certificate renewal available through online appointment system",
+            "claim_ids": [
+              "claim.portal.svc_brta_fit.fitness_renewal"
+            ]
+          }
+        ]
+      },
+      "official_links": [
+        {
+          "label": "Official Portal",
+          "url": "https://bsp.brta.gov.bd/",
+          "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+        }
+      ],
+      "generated_at": "2026-01-01T21:23:39.366Z",
+      "last_updated_at": "2026-01-01T21:23:39.366Z",
+      "status": "draft"
+    },
+    {
+      "guide_id": "guide.brta_tax_token",
+      "service_id": "svc.brta_tax_token",
+      "agency_id": "agency.brta",
+      "title": "Vehicle Tax Token",
+      "sections": {
+        "service_info": [
+          {
+            "label": "Tax Token renewal service available for vehicle road tax",
+            "claim_ids": [
+              "claim.portal.svc_brta_tax.tax_token"
+            ]
+          }
+        ]
+      },
+      "official_links": [
+        {
+          "label": "Official Portal",
+          "url": "https://bsp.brta.gov.bd/",
+          "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+        }
+      ],
+      "generated_at": "2026-01-01T21:23:39.366Z",
+      "last_updated_at": "2026-01-01T21:23:39.366Z",
+      "status": "draft"
+    }
+  ]
+}

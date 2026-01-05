@@ -1,0 +1,618 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://infobase.gov.bd/schemas/kb-v2.json",
+  "title": "Bangladesh Government Services Knowledge Base - Provenance-First Schema v2.0",
+  "description": "A canonical, provenance-first knowledge base where every fact is traceable to official government sources",
+  "type": "object",
+  "required": [
+    "$schema_version",
+    "data_version",
+    "last_updated_at",
+    "source_pages",
+    "claims",
+    "agencies",
+    "documents",
+    "services"
+  ],
+  "properties": {
+    "$schema_version": {
+      "type": "string",
+      "const": "2.0.0",
+      "description": "Schema version - must be 2.0.0 for provenance-first model"
+    },
+    "data_version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Monotonically increasing data version number"
+    },
+    "last_updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of last update"
+    },
+    "updated_by": {
+      "type": "string",
+      "description": "Identifier of entity/system that made the update"
+    },
+    "change_log": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["version", "date", "changes"],
+        "properties": {
+          "version": { "type": "integer" },
+          "date": { "type": "string", "format": "date" },
+          "changes": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "audit_log": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["event_id", "event_type", "timestamp", "affected_entities", "actor"],
+        "additionalProperties": false,
+        "properties": {
+          "event_id": {
+            "type": "string",
+            "pattern": "^evt\\.[a-f0-9]{40}$",
+            "description": "Deterministic event ID: evt. + SHA1(event_type + timestamp + JSON(affected_entities))"
+          },
+          "event_type": {
+            "type": "string",
+            "enum": ["source_change", "claim_invalidation", "verification", "migration"],
+            "description": "Type of audit event"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO 8601 timestamp when the event occurred"
+          },
+          "affected_entities": {
+            "type": "object",
+            "required": [],
+            "additionalProperties": false,
+            "properties": {
+              "source_pages": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^source\\.[a-f0-9]{40}$"
+                },
+                "description": "Source page IDs affected by this event"
+              },
+              "claims": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^claim\\.[a-z0-9_]+(\\.[a-z0-9_]+)*$"
+                },
+                "description": "Claim IDs affected by this event"
+              },
+              "services": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^svc\\.[a-z0-9_]+$"
+                },
+                "description": "Service IDs affected by this event"
+              },
+              "documents": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^doc\\.[a-z0-9_]+$"
+                },
+                "description": "Document IDs affected by this event"
+              },
+              "agencies": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^agency\\.[a-z0-9_]+$"
+                },
+                "description": "Agency IDs affected by this event"
+              }
+            },
+            "description": "Typed object containing entity IDs affected by this event"
+          },
+          "actor": {
+            "type": "string",
+            "pattern": "^(system|user|script:[a-zA-Z0-9_\\-\\.]+)$",
+            "description": "Who/what triggered this event: 'system', 'user', or 'script:<script_name>'"
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional human-readable description of the event"
+          },
+          "metadata": {
+            "type": "object",
+            "description": "Optional additional metadata specific to the event type",
+            "properties": {
+              "hash_before": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+              "hash_after": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+              "migration_source": { "type": "string" },
+              "schema_version_from": { "type": "string" },
+              "schema_version_to": { "type": "string" }
+            }
+          }
+        }
+      },
+      "description": "Machine-queryable audit trail of all changes to the knowledge base. Each entry has a deterministic event_id for deduplication and tracking."
+    },
+    "source_pages": {
+      "type": "array",
+      "description": "Global registry of all government source pages - first-class entity",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_page_id",
+          "canonical_url",
+          "agency_id",
+          "page_type",
+          "language",
+          "content_hash",
+          "last_crawled_at"
+        ],
+        "properties": {
+          "source_page_id": {
+            "type": "string",
+            "pattern": "^source\\.[a-f0-9]{40}$",
+            "description": "Deterministic ID: source. + SHA1(canonical_url)"
+          },
+          "canonical_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Official government URL - the source of truth"
+          },
+          "agency_id": {
+            "type": "string",
+            "pattern": "^agency\\.[a-z0-9_]+$",
+            "description": "Reference to the agency that owns this page"
+          },
+          "page_type": {
+            "enum": ["main_portal", "instruction", "fee_schedule", "form", "notice", "regulation", "other"],
+            "description": "Type of government page"
+          },
+          "title": {
+            "type": "string",
+            "description": "Human-readable title of the page"
+          },
+          "language": {
+            "type": "array",
+            "items": {
+              "enum": ["bn", "en"]
+            },
+            "minItems": 1,
+            "description": "Languages present on the page"
+          },
+          "crawl_method": {
+            "enum": ["html_static", "html_dynamic", "pdf", "api", "manual"],
+            "description": "How the page content was retrieved"
+          },
+          "last_crawled_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When the page was last successfully crawled"
+          },
+          "content_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "SHA-256 hash of page content for change detection"
+          },
+          "previous_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "Previous content hash - used to detect changes"
+          },
+          "snapshot_ref": {
+            "type": "string",
+            "description": "Pointer to stored snapshot/copy of the page content"
+          },
+          "extracted_text_ref": {
+            "type": "string",
+            "description": "Pointer to extracted text content (if stored separately)"
+          },
+          "change_log": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["detected_at", "hash_before", "hash_after"],
+              "properties": {
+                "detected_at": { "type": "string", "format": "date-time" },
+                "hash_before": { "type": "string" },
+                "hash_after": { "type": "string" },
+                "notes": { "type": "string" }
+              }
+            }
+          },
+          "status": {
+            "enum": ["active", "archived", "broken", "deprecated"],
+            "description": "Current status of the source page"
+          },
+          "notes": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "description": "Atomic claims - each represents one fact with citations",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "entity_ref",
+          "claim_type",
+          "text",
+          "citations",
+          "status"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "pattern": "^claim\\.(fee|step|doc|portal|eligibility|processing_time|rule|condition|definition|location|contact_info|other)\\.[a-z0-9_]+(\\.[a-z0-9_]+)*$",
+            "description": "Deterministic claim ID with pattern prefix"
+          },
+          "entity_ref": {
+            "type": "object",
+            "required": ["type", "id"],
+            "properties": {
+              "type": {
+                "enum": ["service", "document"]
+              },
+              "id": {
+                "type": "string"
+              }
+            },
+            "description": "Reference to the entity (service or document) this claim belongs to"
+          },
+          "claim_type": {
+            "enum": [
+              "eligibility_requirement",
+              "document_requirement",
+              "step",
+              "fee",
+              "processing_time",
+              "rule",
+              "condition",
+              "definition",
+              "location",
+              "contact_info",
+              "portal_link",
+              "other"
+            ],
+            "description": "Category of the claim"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Human-readable statement of the claim"
+          },
+          "structured_data": {
+            "type": "object",
+            "description": "Required for numeric facts (fees, times, amounts). Structured representation of the claim data."
+          },
+          "citations": {
+            "type": "array",
+            "minItems": 1,
+            "description": "At least one citation required - links claim to source(s)",
+            "items": {
+              "type": "object",
+              "required": [
+                "source_page_id",
+                "quoted_text",
+                "retrieved_at"
+              ],
+              "properties": {
+                "source_page_id": {
+                  "type": "string",
+                  "pattern": "^source\\.[a-f0-9]{40}$",
+                  "description": "Reference to source_pages registry"
+                },
+                "quoted_text": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Exact text from the source that supports this claim"
+                },
+                "locator": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "required": ["type", "heading_path"],
+                      "properties": {
+                        "type": { "const": "heading_path" },
+                        "heading_path": {
+                          "type": "array",
+                          "items": { "type": "string" },
+                          "minItems": 1
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "required": ["type", "css_selector"],
+                      "properties": {
+                        "type": { "const": "css_selector" },
+                        "css_selector": { "type": "string" }
+                      },
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "required": ["type", "xpath"],
+                      "properties": {
+                        "type": { "const": "xpath" },
+                        "xpath": { "type": "string" }
+                      },
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "required": ["type", "url_fragment"],
+                      "properties": {
+                        "type": { "const": "url_fragment" },
+                        "url_fragment": { "type": "string" }
+                      },
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "required": ["type", "pdf_page"],
+                      "properties": {
+                        "type": { "const": "pdf_page" },
+                        "pdf_page": { "type": "integer", "minimum": 1 }
+                      },
+                      "additionalProperties": false
+                    }
+                  ],
+                  "description": "Strict union type locator - must be one of: heading_path, css_selector, xpath, url_fragment, pdf_page"
+                },
+                "retrieved_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "When this citation was extracted from the source"
+                },
+                "language": {
+                  "enum": ["bn", "en"],
+                  "description": "Language of the quoted text"
+                }
+              }
+            }
+          },
+          "status": {
+            "enum": ["verified", "unverified", "stale", "deprecated", "contradicted"],
+            "description": "Verification status of the claim"
+          },
+          "last_verified_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When claim was last verified against sources"
+          },
+          "last_verified_source_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "Content hash of source page when claim was last verified. Preserved during invalidation."
+          },
+          "stale_marked_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO 8601 timestamp when claim was marked stale due to source change"
+          },
+          "stale_due_to_source_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "The new source content hash that triggered invalidation (differs from last_verified_source_hash)"
+          },
+          "previous_status": {
+            "enum": ["verified", "unverified", "stale", "deprecated", "contradicted"],
+            "description": "Status before invalidation, preserved for audit trail"
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "notes": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "agencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["agency_id", "name", "domain_allowlist"],
+        "properties": {
+          "agency_id": {
+            "type": "string",
+            "pattern": "^agency\\.[a-z0-9_]+$"
+          },
+          "name": { "type": "string" },
+          "short_name": { "type": "string" },
+          "website": { "type": "string", "format": "uri" },
+          "domain_allowlist": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1,
+            "description": "List of allowed domains for this agency (e.g., ['epassport.gov.bd', 'dip.gov.bd'])"
+          },
+          "claims": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^claim\\.[a-z0-9_]+$" },
+            "description": "Claims that define this agency (references claim_ids)"
+          }
+        }
+      }
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["document_id", "document_name", "claims"],
+        "properties": {
+          "document_id": {
+            "type": "string",
+            "pattern": "^doc\\.[a-z0-9_]+$"
+          },
+          "document_name": { "type": "string" },
+          "issued_by": {
+            "type": "string",
+            "pattern": "^agency\\.[a-z0-9_]+$"
+          },
+          "claims": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^claim\\.[a-z0-9_]+$" },
+            "minItems": 1,
+            "description": "Claims that define this document - NO free text, only claim references"
+          },
+          "status": {
+            "enum": ["verified", "partial", "unverified", "stale", "deprecated", "contradicted"],
+            "description": "DERIVED verification status: 'verified' only if all referenced claims are verified, 'partial' if mixed, otherwise inherits worst status from claims"
+          },
+          "last_updated_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "service_id",
+          "service_name",
+          "agency_id",
+          "claims",
+          "portal_mapping",
+          "official_entrypoints"
+        ],
+        "properties": {
+          "service_id": {
+            "type": "string",
+            "pattern": "^svc\\.[a-z0-9_]+$"
+          },
+          "service_name": { "type": "string" },
+          "service_family": { "type": "string" },
+          "agency_id": {
+            "type": "string",
+            "pattern": "^agency\\.[a-z0-9_]+$"
+          },
+          "claims": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^claim\\.[a-z0-9_]+$" },
+            "minItems": 1,
+            "description": "All facts about this service - NO free text, only claim references"
+          },
+          "portal_mapping": {
+            "type": "object",
+            "required": ["entry_urls"],
+            "properties": {
+              "entry_urls": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["url", "source_page_id"],
+                  "properties": {
+                    "url": { "type": "string", "format": "uri" },
+                    "source_page_id": { "type": "string", "pattern": "^source\\.[a-f0-9]{40}$" },
+                    "description": { "type": "string" }
+                  }
+                },
+                "minItems": 1
+              },
+              "portal_steps": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["order", "claim_id"],
+                  "properties": {
+                    "order": { "type": "integer", "minimum": 1 },
+                    "claim_id": { "type": "string", "pattern": "^claim\\.[a-z0-9_]+$" },
+                    "fragile": {
+                      "type": "boolean",
+                      "description": "True if this step is known to have issues (uploads, payments, etc.)"
+                    },
+                    "notes": { "type": "array", "items": { "type": "string" } }
+                  }
+                }
+              },
+              "field_mappings": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "canonical_field": { "type": "string" },
+                    "portal_label_bn": { "type": "string" },
+                    "portal_label_en": { "type": "string" },
+                    "claim_id": { "type": "string", "pattern": "^claim\\.[a-z0-9_]+$" }
+                  }
+                }
+              }
+            }
+          },
+          "official_entrypoints": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["source_page_id"],
+              "properties": {
+                "source_page_id": {
+                  "type": "string",
+                  "pattern": "^source\\.[a-f0-9]{40}$"
+                },
+                "description": { "type": "string" }
+              }
+            },
+            "minItems": 1,
+            "description": "Official entry points for this service, referencing source_page_ids"
+          },
+          "document_requirements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["document_id", "requirement_type"],
+              "properties": {
+                "document_id": { "type": "string", "pattern": "^doc\\.[a-z0-9_]+$" },
+                "requirement_type": {
+                  "enum": ["required", "conditional", "optional"]
+                },
+                "condition_claim_id": {
+                  "type": "string",
+                  "pattern": "^claim\\.[a-z0-9_]+$",
+                  "description": "If conditional, reference to the claim that defines when it's needed"
+                }
+              }
+            }
+          },
+          "status": {
+            "enum": ["verified", "partial", "unverified", "stale", "deprecated", "contradicted"],
+            "description": "DERIVED verification status: 'verified' only if all referenced claims are verified, 'partial' if mixed, otherwise inherits worst status from claims"
+          },
+          "last_updated_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "enums": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "array",
+          "items": { "enum": ["online", "offline", "hybrid", "n/a"] }
+        },
+        "status": {
+          "type": "array",
+          "items": { "enum": ["verified", "partial", "unverified", "stale", "deprecated", "contradicted"] },
+          "description": "Standardized status enum. Claims use: verified | unverified | stale | deprecated | contradicted. Services/documents also allow 'partial' (derived when claims have mixed statuses)."
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

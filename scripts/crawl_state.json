@@ -1,0 +1,23 @@
+{
+  "startedAt": "2025-12-31T14:30:00Z",
+  "lastUpdated": "2025-12-31T20:45:02.791Z",
+  "domainsCompleted": [
+    "www.epassport.gov.bd",
+    "nidw.gov.bd",
+    "brta.gov.bd",
+    "bsp.brta.gov.bd"
+  ],
+  "domainsInProgress": {},
+  "pagesProcessed": 6,
+  "pagesSaved": 6,
+  "claimsExtracted": 22,
+  "excludedUrls": [
+    "https://brta.gov.bd/site/view/news",
+    "https://brta.gov.bd/site/view/notices",
+    "https://brta.gov.bd/site/view/tenders"
+  ],
+  "errors": [
+    "404 Not Found: https://bsp.brta.gov.bd/drivingLicense",
+    "404 Not Found: https://bsp.brta.gov.bd/vehicleRegistration"
+  ]
+}

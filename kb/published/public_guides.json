@@ -1,0 +1,848 @@
+{
+  "$schema_version": "3.0.0",
+  "generated_at": "2026-01-01T21:23:49.889Z",
+  "source_kb_version": 3,
+  "guides": [
+    {
+      "guide_id": "guide.epassport",
+      "service_id": "svc.epassport",
+      "agency_id": "agency.dip",
+      "agency_name": "Department of Immigration and Passports",
+      "title": "e-Passport Application",
+      "overview": null,
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Online Application",
+          "description": "Visit www.epassport.gov.bd and complete the application form online",
+          "citations": [
+            {
+              "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "Five Steps to Your e-Passport | ePassport Bangladesh",
+              "locator": "5 Easy Steps > Step 1",
+              "quoted_text": "Online Application: Visit www.epassport.gov.bd and complete the application form",
+              "retrieved_at": "2025-12-31T14:45:00Z",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "step_number": 2,
+          "title": "Payment",
+          "description": "Pay the e-Passport fees online or through Sonali Bank",
+          "citations": [
+            {
+              "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "Five Steps to Your e-Passport | ePassport Bangladesh",
+              "locator": "5 Easy Steps > Step 2",
+              "quoted_text": "Payment: Pay the e-Passport fees online or through Sonali Bank",
+              "retrieved_at": "2025-12-31T14:45:00Z",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "step_number": 3,
+          "title": "Appointment",
+          "description": "Book an appointment at your preferred enrollment center",
+          "citations": [
+            {
+              "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "Five Steps to Your e-Passport | ePassport Bangladesh",
+              "locator": "5 Easy Steps > Step 3",
+              "quoted_text": "Appointment: Book an appointment at your preferred enrollment center",
+              "retrieved_at": "2025-12-31T14:45:00Z",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "step_number": 4,
+          "title": "Enrollment",
+          "description": "Visit the enrollment center with required documents for biometric data capture",
+          "citations": [
+            {
+              "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "Five Steps to Your e-Passport | ePassport Bangladesh",
+              "locator": "5 Easy Steps > Step 4",
+              "quoted_text": "Enrollment: Visit the enrollment center with required documents for biometric data",
+              "retrieved_at": "2025-12-31T14:45:00Z",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "step_number": 5,
+          "title": "Delivery",
+          "description": "Collect your e-Passport from the regional passport office or receive via post",
+          "citations": [
+            {
+              "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+              "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "Five Steps to Your e-Passport | ePassport Bangladesh",
+              "locator": "5 Easy Steps > Step 5",
+              "quoted_text": "Delivery: Collect your e-Passport from the regional passport office or receive via post",
+              "retrieved_at": "2025-12-31T14:45:00Z",
+              "language": "en"
+            }
+          ]
+        }
+      ],
+      "sections": {
+        "application_steps": [
+          {
+            "step_number": 1,
+            "title": "Online Application",
+            "description": "Visit www.epassport.gov.bd and complete the application form online",
+            "citations": [
+              {
+                "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "Five Steps to Your e-Passport | ePassport Bangladesh",
+                "locator": "5 Easy Steps > Step 1",
+                "quoted_text": "Online Application: Visit www.epassport.gov.bd and complete the application form",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "step_number": 2,
+            "title": "Payment",
+            "description": "Pay the e-Passport fees online or through Sonali Bank",
+            "citations": [
+              {
+                "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "Five Steps to Your e-Passport | ePassport Bangladesh",
+                "locator": "5 Easy Steps > Step 2",
+                "quoted_text": "Payment: Pay the e-Passport fees online or through Sonali Bank",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "step_number": 3,
+            "title": "Appointment",
+            "description": "Book an appointment at your preferred enrollment center",
+            "citations": [
+              {
+                "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "Five Steps to Your e-Passport | ePassport Bangladesh",
+                "locator": "5 Easy Steps > Step 3",
+                "quoted_text": "Appointment: Book an appointment at your preferred enrollment center",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "step_number": 4,
+            "title": "Enrollment",
+            "description": "Visit the enrollment center with required documents for biometric data capture",
+            "citations": [
+              {
+                "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "Five Steps to Your e-Passport | ePassport Bangladesh",
+                "locator": "5 Easy Steps > Step 4",
+                "quoted_text": "Enrollment: Visit the enrollment center with required documents for biometric data",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "step_number": 5,
+            "title": "Delivery",
+            "description": "Collect your e-Passport from the regional passport office or receive via post",
+            "citations": [
+              {
+                "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "Five Steps to Your e-Passport | ePassport Bangladesh",
+                "locator": "5 Easy Steps > Step 5",
+                "quoted_text": "Delivery: Collect your e-Passport from the regional passport office or receive via post",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
+              }
+            ]
+          }
+        ],
+        "fees": [
+          {
+            "label": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
+            "description": null,
+            "citations": [
+              {
+                "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees | ePassport Bangladesh",
+                "locator": "Passport Fees > e-Passport Fees",
+                "quoted_text": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
+            "description": null,
+            "citations": [
+              {
+                "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees | ePassport Bangladesh",
+                "locator": "Passport Fees > e-Passport Fees",
+                "quoted_text": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
+            "description": null,
+            "citations": [
+              {
+                "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                "domain": "www.epassport.gov.bd",
+                "page_title": "e-Passport Fees | ePassport Bangladesh",
+                "locator": "Passport Fees > e-Passport Fees",
+                "quoted_text": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
+              }
+            ]
+          }
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "regular",
+          "label": "Regular",
+          "fees": [
+            {
+              "text": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
+              "structured_data": {
+                "amount_bdt": 3450,
+                "pages": 48,
+                "delivery_type": "regular",
+                "delivery_days": 15
+              },
+              "citations": [
+                {
+                  "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                  "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                  "domain": "www.epassport.gov.bd",
+                  "page_title": "e-Passport Fees | ePassport Bangladesh",
+                  "locator": "Passport Fees > e-Passport Fees",
+                  "quoted_text": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
+                  "retrieved_at": "2025-12-31T14:45:00Z",
+                  "language": "en"
+                }
+              ]
+            }
+          ],
+          "processing_times": []
+        },
+        {
+          "variant_id": "express",
+          "label": "Express",
+          "fees": [
+            {
+              "text": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
+              "structured_data": {
+                "amount_bdt": 6900,
+                "pages": 48,
+                "delivery_type": "express",
+                "delivery_days": 7
+              },
+              "citations": [
+                {
+                  "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                  "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                  "domain": "www.epassport.gov.bd",
+                  "page_title": "e-Passport Fees | ePassport Bangladesh",
+                  "locator": "Passport Fees > e-Passport Fees",
+                  "quoted_text": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
+                  "retrieved_at": "2025-12-31T14:45:00Z",
+                  "language": "en"
+                }
+              ]
+            }
+          ],
+          "processing_times": []
+        },
+        {
+          "variant_id": "super_express",
+          "label": "Super Express",
+          "fees": [
+            {
+              "text": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
+              "structured_data": {
+                "amount_bdt": 13800,
+                "pages": 48,
+                "delivery_type": "super_express",
+                "delivery_days": 2
+              },
+              "citations": [
+                {
+                  "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+                  "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+                  "domain": "www.epassport.gov.bd",
+                  "page_title": "e-Passport Fees | ePassport Bangladesh",
+                  "locator": "Passport Fees > e-Passport Fees",
+                  "quoted_text": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
+                  "retrieved_at": "2025-12-31T14:45:00Z",
+                  "language": "en"
+                }
+              ]
+            }
+          ],
+          "processing_times": []
+        }
+      ],
+      "required_documents": null,
+      "fees": [
+        {
+          "label": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
+          "description": null,
+          "citations": [
+            {
+              "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+              "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "e-Passport Fees | ePassport Bangladesh",
+              "locator": "Passport Fees > e-Passport Fees",
+              "quoted_text": "Regular Delivery (15 working days) - 48 Pages: 3,450 BDT",
+              "retrieved_at": "2025-12-31T14:45:00Z",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "label": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
+          "description": null,
+          "citations": [
+            {
+              "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+              "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "e-Passport Fees | ePassport Bangladesh",
+              "locator": "Passport Fees > e-Passport Fees",
+              "quoted_text": "Express Delivery (7 working days) - 48 Pages: 6,900 BDT",
+              "retrieved_at": "2025-12-31T14:45:00Z",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "label": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
+          "description": null,
+          "citations": [
+            {
+              "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+              "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+              "domain": "www.epassport.gov.bd",
+              "page_title": "e-Passport Fees | ePassport Bangladesh",
+              "locator": "Passport Fees > e-Passport Fees",
+              "quoted_text": "Super Express Delivery (2 working days) - 48 Pages: 13,800 BDT",
+              "retrieved_at": "2025-12-31T14:45:00Z",
+              "language": "en"
+            }
+          ]
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Official Portal",
+          "url": "https://www.epassport.gov.bd/",
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8"
+        }
+      ],
+      "meta": {
+        "total_steps": 5,
+        "total_citations": 8,
+        "verification_summary": {
+          "total": 8,
+          "verified": 0,
+          "unverified": 8,
+          "stale": 0,
+          "deprecated": 0,
+          "contradicted": 0
+        },
+        "last_crawled_at": "2025-12-31T14:45:00.000Z",
+        "source_domains": [
+          "www.epassport.gov.bd"
+        ],
+        "generated_at": "2026-01-01T21:23:39.364Z",
+        "last_updated_at": "2026-01-01T21:23:39.364Z",
+        "status": "draft"
+      }
+    },
+    {
+      "guide_id": "guide.nid",
+      "service_id": "svc.nid",
+      "agency_id": "agency.bec",
+      "agency_name": "Bangladesh Election Commission - NID Wing",
+      "title": "National ID Card Services",
+      "overview": null,
+      "steps": null,
+      "sections": {
+        "service_info": [
+          {
+            "label": "New Voter Registration available through NID Wing - Bangladesh Election Commission",
+            "description": null,
+            "citations": [
+              {
+                "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
+                "canonical_url": "https://nidw.gov.bd/",
+                "domain": "nidw.gov.bd",
+                "page_title": "NID Wing - Bangladesh Election Commission",
+                "locator": "Services > New Voter Registration",
+                "quoted_text": "New voter registration",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "Duplicate NID issuance available for lost or damaged NID cards",
+            "description": null,
+            "citations": [
+              {
+                "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
+                "canonical_url": "https://nidw.gov.bd/",
+                "domain": "nidw.gov.bd",
+                "page_title": "NID Wing - Bangladesh Election Commission",
+                "locator": "Services > Duplicate NID",
+                "quoted_text": "Issuance of Duplicate NID",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "NID correction service available for name, date of birth, and other information corrections",
+            "description": null,
+            "citations": [
+              {
+                "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
+                "canonical_url": "https://nidw.gov.bd/",
+                "domain": "nidw.gov.bd",
+                "page_title": "NID Wing - Bangladesh Election Commission",
+                "locator": "Services > NID Correction",
+                "quoted_text": "Correction of NID",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
+              }
+            ]
+          },
+          {
+            "label": "Voter area migration service available for address changes",
+            "description": null,
+            "citations": [
+              {
+                "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511",
+                "canonical_url": "https://nidw.gov.bd/",
+                "domain": "nidw.gov.bd",
+                "page_title": "NID Wing - Bangladesh Election Commission",
+                "locator": "Services > Voter Migration",
+                "quoted_text": "Migration of Voter Area",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
+              }
+            ]
+          }
+        ]
+      },
+      "variants": null,
+      "required_documents": null,
+      "fees": null,
+      "official_links": [
+        {
+          "label": "Official Portal",
+          "url": "https://nidw.gov.bd/",
+          "source_page_id": "source.2b76dc5ccf95634ef088f71423ea3517a84ff511"
+        }
+      ],
+      "meta": {
+        "total_steps": 0,
+        "total_citations": 4,
+        "verification_summary": {
+          "total": 4,
+          "verified": 0,
+          "unverified": 4,
+          "stale": 0,
+          "deprecated": 0,
+          "contradicted": 0
+        },
+        "last_crawled_at": "2025-12-31T14:45:00.000Z",
+        "source_domains": [
+          "nidw.gov.bd"
+        ],
+        "generated_at": "2026-01-01T21:23:39.365Z",
+        "last_updated_at": "2026-01-01T21:23:39.365Z",
+        "status": "draft"
+      }
+    },
+    {
+      "guide_id": "guide.brta",
+      "service_id": "svc.brta",
+      "agency_id": "agency.brta",
+      "agency_name": "Bangladesh Road Transport Authority",
+      "title": "BRTA Online Services",
+      "overview": null,
+      "steps": null,
+      "sections": {
+        "portal_links": [
+          {
+            "label": "BRTA Service Portal login available at https://bsp.brta.gov.bd/login",
+            "description": null,
+            "citations": [
+              {
+                "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0",
+                "canonical_url": "https://brta.gov.bd/",
+                "domain": "brta.gov.bd",
+                "page_title": "Bangladesh Road Transport Authority - Official Website",
+                "locator": "বিআরটিএ সার্ভিস পোর্টাল > BSP Login",
+                "quoted_text": "বিএসপি'র লগইন লিংক: https://bsp.brta.gov.bd/login",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "bn"
+              }
+            ]
+          },
+          {
+            "label": "BRTA Fee Calculator available at https://bsp.brta.gov.bd/feeCalculator",
+            "description": null,
+            "citations": [
+              {
+                "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0",
+                "canonical_url": "https://brta.gov.bd/",
+                "domain": "brta.gov.bd",
+                "page_title": "Bangladesh Road Transport Authority - Official Website",
+                "locator": "অভ্যন্তরীণ ই-সেবাসমূহ > Fee Calculator",
+                "quoted_text": "বিআরটিএ'র ফি ক্যালকুলেটর",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "bn"
+              }
+            ]
+          }
+        ],
+        "service_info": [
+          {
+            "label": "BRTA Service Portal (BSP) is available from 8:00am to 10:00pm Bangladesh Standard Time",
+            "description": null,
+            "citations": [
+              {
+                "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029",
+                "canonical_url": "https://bsp.brta.gov.bd/",
+                "domain": "bsp.brta.gov.bd",
+                "page_title": "BRTA Service Portal (BSP)",
+                "locator": "Service Hours",
+                "quoted_text": "BRTA Service Portal (BSP) will be available from 8:00am to 10:00pm (Bangladesh Standard Time)",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "en"
+              }
+            ]
+          }
+        ]
+      },
+      "variants": null,
+      "required_documents": null,
+      "fees": null,
+      "official_links": [
+        {
+          "label": "Official Portal",
+          "url": "https://brta.gov.bd/",
+          "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0"
+        },
+        {
+          "label": "Official Portal",
+          "url": "https://bsp.brta.gov.bd/",
+          "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+        },
+        {
+          "label": "Portal Link",
+          "url": "https://bsp.brta.gov.bd/login"
+        },
+        {
+          "label": "Portal Link",
+          "url": "https://bsp.brta.gov.bd/feeCalculator"
+        }
+      ],
+      "meta": {
+        "total_steps": 0,
+        "total_citations": 3,
+        "verification_summary": {
+          "total": 3,
+          "verified": 0,
+          "unverified": 3,
+          "stale": 0,
+          "deprecated": 0,
+          "contradicted": 0
+        },
+        "last_crawled_at": "2025-12-31T14:45:00.000Z",
+        "source_domains": [
+          "brta.gov.bd",
+          "bsp.brta.gov.bd"
+        ],
+        "generated_at": "2026-01-01T21:23:39.366Z",
+        "last_updated_at": "2026-01-01T21:23:39.366Z",
+        "status": "draft"
+      }
+    },
+    {
+      "guide_id": "guide.brta_driving_license",
+      "service_id": "svc.brta_driving_license",
+      "agency_id": "agency.brta",
+      "agency_name": "Bangladesh Road Transport Authority",
+      "title": "Driving License Services",
+      "overview": null,
+      "steps": null,
+      "sections": {
+        "service_info": [
+          {
+            "label": "Driving License services available through BRTA including new license, renewal, and duplicate license",
+            "description": null,
+            "citations": [
+              {
+                "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0",
+                "canonical_url": "https://brta.gov.bd/",
+                "domain": "brta.gov.bd",
+                "page_title": "Bangladesh Road Transport Authority - Official Website",
+                "locator": "ড্রাইভিং লাইসেন্স > Driving License",
+                "quoted_text": "ড্রাইভিং লাইসেন্সের আবেদন প্রক্রিয়া (Driving License application process)",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "bn"
+              }
+            ]
+          }
+        ]
+      },
+      "variants": null,
+      "required_documents": null,
+      "fees": null,
+      "official_links": [
+        {
+          "label": "Official Portal",
+          "url": "https://bsp.brta.gov.bd/",
+          "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+        }
+      ],
+      "meta": {
+        "total_steps": 0,
+        "total_citations": 1,
+        "verification_summary": {
+          "total": 1,
+          "verified": 0,
+          "unverified": 1,
+          "stale": 0,
+          "deprecated": 0,
+          "contradicted": 0
+        },
+        "last_crawled_at": "2025-12-31T14:45:00.000Z",
+        "source_domains": [
+          "brta.gov.bd"
+        ],
+        "generated_at": "2026-01-01T21:23:39.366Z",
+        "last_updated_at": "2026-01-01T21:23:39.366Z",
+        "status": "draft"
+      }
+    },
+    {
+      "guide_id": "guide.brta_vehicle_registration",
+      "service_id": "svc.brta_vehicle_registration",
+      "agency_id": "agency.brta",
+      "agency_name": "Bangladesh Road Transport Authority",
+      "title": "Vehicle Registration Services",
+      "overview": null,
+      "steps": null,
+      "sections": {
+        "service_info": [
+          {
+            "label": "Motor Vehicle Registration services available for new vehicles, reconditioned vehicles, and auction purchases",
+            "description": null,
+            "citations": [
+              {
+                "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0",
+                "canonical_url": "https://brta.gov.bd/",
+                "domain": "brta.gov.bd",
+                "page_title": "Bangladesh Road Transport Authority - Official Website",
+                "locator": "মোটরযান নিবন্ধন সংক্রান্ত > Vehicle Registration",
+                "quoted_text": "নতুন মোটরযান নিবন্ধন (New Motor Vehicle Registration)",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "bn"
+              }
+            ]
+          }
+        ]
+      },
+      "variants": null,
+      "required_documents": null,
+      "fees": null,
+      "official_links": [
+        {
+          "label": "Official Portal",
+          "url": "https://bsp.brta.gov.bd/",
+          "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+        }
+      ],
+      "meta": {
+        "total_steps": 0,
+        "total_citations": 1,
+        "verification_summary": {
+          "total": 1,
+          "verified": 0,
+          "unverified": 1,
+          "stale": 0,
+          "deprecated": 0,
+          "contradicted": 0
+        },
+        "last_crawled_at": "2025-12-31T14:45:00.000Z",
+        "source_domains": [
+          "brta.gov.bd"
+        ],
+        "generated_at": "2026-01-01T21:23:39.366Z",
+        "last_updated_at": "2026-01-01T21:23:39.366Z",
+        "status": "draft"
+      }
+    },
+    {
+      "guide_id": "guide.brta_fitness",
+      "service_id": "svc.brta_fitness",
+      "agency_id": "agency.brta",
+      "agency_name": "Bangladesh Road Transport Authority",
+      "title": "Vehicle Fitness Certificate",
+      "overview": null,
+      "steps": null,
+      "sections": {
+        "service_info": [
+          {
+            "label": "Vehicle Fitness Certificate renewal available through online appointment system",
+            "description": null,
+            "citations": [
+              {
+                "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0",
+                "canonical_url": "https://brta.gov.bd/",
+                "domain": "brta.gov.bd",
+                "page_title": "Bangladesh Road Transport Authority - Official Website",
+                "locator": "মোটরযানের কাগজপত্র নবায়ন > Fitness Renewal",
+                "quoted_text": "ফিটনেস নবায়ন (Fitness Renewal)",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "bn"
+              }
+            ]
+          }
+        ]
+      },
+      "variants": null,
+      "required_documents": null,
+      "fees": null,
+      "official_links": [
+        {
+          "label": "Official Portal",
+          "url": "https://bsp.brta.gov.bd/",
+          "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+        }
+      ],
+      "meta": {
+        "total_steps": 0,
+        "total_citations": 1,
+        "verification_summary": {
+          "total": 1,
+          "verified": 0,
+          "unverified": 1,
+          "stale": 0,
+          "deprecated": 0,
+          "contradicted": 0
+        },
+        "last_crawled_at": "2025-12-31T14:45:00.000Z",
+        "source_domains": [
+          "brta.gov.bd"
+        ],
+        "generated_at": "2026-01-01T21:23:39.366Z",
+        "last_updated_at": "2026-01-01T21:23:39.366Z",
+        "status": "draft"
+      }
+    },
+    {
+      "guide_id": "guide.brta_tax_token",
+      "service_id": "svc.brta_tax_token",
+      "agency_id": "agency.brta",
+      "agency_name": "Bangladesh Road Transport Authority",
+      "title": "Vehicle Tax Token",
+      "overview": null,
+      "steps": null,
+      "sections": {
+        "service_info": [
+          {
+            "label": "Tax Token renewal service available for vehicle road tax",
+            "description": null,
+            "citations": [
+              {
+                "source_page_id": "source.900eaee954dee9531f26ca362419cab9579810e0",
+                "canonical_url": "https://brta.gov.bd/",
+                "domain": "brta.gov.bd",
+                "page_title": "Bangladesh Road Transport Authority - Official Website",
+                "locator": "মোটরযানের কাগজপত্র নবায়ন > Tax Token",
+                "quoted_text": "ট্যাক্স টোকেন নবায়ন (Tax Token Renewal)",
+                "retrieved_at": "2025-12-31T14:45:00Z",
+                "language": "bn"
+              }
+            ]
+          }
+        ]
+      },
+      "variants": null,
+      "required_documents": null,
+      "fees": null,
+      "official_links": [
+        {
+          "label": "Official Portal",
+          "url": "https://bsp.brta.gov.bd/",
+          "source_page_id": "source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029"
+        }
+      ],
+      "meta": {
+        "total_steps": 0,
+        "total_citations": 1,
+        "verification_summary": {
+          "total": 1,
+          "verified": 0,
+          "unverified": 1,
+          "stale": 0,
+          "deprecated": 0,
+          "contradicted": 0
+        },
+        "last_crawled_at": "2025-12-31T14:45:00.000Z",
+        "source_domains": [
+          "brta.gov.bd"
+        ],
+        "generated_at": "2026-01-01T21:23:39.366Z",
+        "last_updated_at": "2026-01-01T21:23:39.366Z",
+        "status": "draft"
+      }
+    }
+  ]
+}

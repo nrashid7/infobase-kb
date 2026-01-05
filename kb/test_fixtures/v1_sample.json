@@ -1,0 +1,93 @@
+{
+  "version": "1.0.0",
+  "agencies": [
+    {
+      "agency_id": "agency.dip",
+      "name": "Department of Immigration and Passports",
+      "short_name": "DIP",
+      "website": "https://www.epassport.gov.bd"
+    },
+    {
+      "agency_id": "agency.bec",
+      "name": "Bangladesh Election Commission",
+      "short_name": "BEC",
+      "website": "https://www.nidw.gov.bd"
+    }
+  ],
+  "services": [
+    {
+      "service_id": "epassport_new",
+      "name": "e-Passport Application (New)",
+      "category": "Passport",
+      "agency_id": "agency.dip",
+      "website": "https://www.epassport.gov.bd",
+      "source_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+      "fees": [
+        {
+          "amount": 4025,
+          "currency": "BDT",
+          "description": "48 pages, 5 years, Regular processing"
+        },
+        {
+          "amount": 6325,
+          "currency": "BDT",
+          "description": "48 pages, 5 years, Express processing"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "title": "Check Availability",
+          "description": "Check if e-Passport is available in your area",
+          "mode": "online"
+        },
+        {
+          "order": 2,
+          "title": "Fill Application",
+          "description": "Fill in e-Passport application online",
+          "mode": "online"
+        },
+        {
+          "order": 3,
+          "title": "Pay Fees",
+          "description": "Pay passport fees online through ekpay or offline at bank",
+          "mode": "hybrid"
+        }
+      ]
+    },
+    {
+      "service_id": "nid_correction",
+      "name": "NID Card Correction",
+      "category": "Identity",
+      "agency_id": "agency.bec",
+      "website": "https://www.nidw.gov.bd",
+      "fees": [
+        {
+          "amount": 345,
+          "currency": "BDT",
+          "description": "Correction fee"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "description": "Apply online at NID portal",
+          "mode": "online"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "document_id": "nid_card",
+      "name": "National Identity Card",
+      "issued_by": "agency.bec"
+    },
+    {
+      "document_id": "passport",
+      "name": "Passport",
+      "issued_by": "agency.dip"
+    }
+  ]
+}
+

@@ -1,0 +1,612 @@
+{
+  "$schema_version": "2.0.0",
+  "data_version": 1,
+  "last_updated_at": "2025-01-15T10:00:00Z",
+  "updated_by": "kb-ingestion-system",
+  "change_log": [
+    {
+      "version": 1,
+      "date": "2025-01-15",
+      "changes": [
+        "Initial v2.0 schema implementation - provenance-first model",
+        "All facts refactored into atomic claims with citations",
+        "Source pages registry established",
+        "Services and documents now reference claims only"
+      ]
+    }
+  ],
+  "source_pages": [
+    {
+      "source_page_id": "source.110d7afa9b2c8c39f3b55a125a73dc4c85f62869",
+      "canonical_url": "https://www.epassport.gov.bd",
+      "agency_id": "agency.dip",
+      "page_type": "main_portal",
+      "title": "e-Passport Official Portal",
+      "language": ["en", "bn"],
+      "crawl_method": "html_dynamic",
+      "last_crawled_at": "2025-01-15T08:00:00Z",
+      "content_hash": "c4d5e43574893c3cc3d4baba65589248479a9fbfaf1f608eb1541ec0c6fe636f",
+      "snapshot_ref": "snapshots/source.110d7afa9b2c8c39f3b55a125a73dc4c85f62869_2025-01-15.html",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+      "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+      "agency_id": "agency.dip",
+      "page_type": "instruction",
+      "title": "Five Steps to Your e-Passport",
+      "language": ["en"],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2025-01-15T08:05:00Z",
+      "content_hash": "992f4eb241ee6eefe4928025a2747db08b919834c93c5f5741725fa26b633841",
+      "snapshot_ref": "snapshots/source.947176686bf0965726403b957c96cb34267fa1d8_2025-01-15.html",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+      "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+      "agency_id": "agency.dip",
+      "page_type": "fee_schedule",
+      "title": "Passport Fees",
+      "language": ["en"],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2025-01-15T08:10:00Z",
+      "content_hash": "1d77863e33b26c9454ddffd65a8e64053f1ed58c4faa8971b82ee945723f17a5",
+      "snapshot_ref": "snapshots/source.3e85c919aeef3918a889d306a1c11deb23639bf9_2025-01-15.html",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+      "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+      "agency_id": "agency.dip",
+      "page_type": "notice",
+      "title": "Notice 34 - Government Employee Benefits",
+      "language": ["bn", "en"],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2025-01-15T08:15:00Z",
+      "content_hash": "578877cff581199177fe0f3b3f2aba6d8c837f305ff38601dac447358c0ce933",
+      "snapshot_ref": "snapshots/source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1_2025-01-15.html",
+      "status": "active",
+      "change_log": []
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim.eligibility.epassport_new.citizen",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport_new"
+      },
+      "claim_type": "eligibility_requirement",
+      "text": "Applicant must be a citizen of Bangladesh",
+      "status": "unverified",
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "Citizens of Bangladesh can apply for e-Passport",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": ["Eligibility"]
+          },
+          "retrieved_at": "2025-01-15T08:05:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-01-15T08:05:00Z",
+      "tags": ["eligibility", "citizenship"]
+    },
+    {
+      "claim_id": "claim.eligibility.epassport_new.nid",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport_new"
+      },
+      "claim_type": "eligibility_requirement",
+      "text": "Applicant must have valid NID card or Birth Certificate",
+      "status": "unverified",
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "Valid NID card or Birth Certificate is required",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": ["Required Documents"]
+          },
+          "retrieved_at": "2025-01-15T08:05:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-01-15T08:05:00Z",
+      "tags": ["eligibility", "documents"]
+    },
+    {
+      "claim_id": "claim.step.epassport_new.1",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport_new"
+      },
+      "claim_type": "step",
+      "text": "Check if e-Passport is available in your area",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "mode": "online"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "Step 1: Check if e-Passport is available in your area",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": ["Step 1"]
+          },
+          "retrieved_at": "2025-01-15T08:05:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-01-15T08:05:00Z",
+      "tags": ["step", "online"]
+    },
+    {
+      "claim_id": "claim.step.epassport_new.2",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport_new"
+      },
+      "claim_type": "step",
+      "text": "Fill in e-Passport application online",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "mode": "online"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "Step 2: Fill in e-Passport application online",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": ["Step 2"]
+          },
+          "retrieved_at": "2025-01-15T08:05:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-01-15T08:05:00Z",
+      "tags": ["step", "online"]
+    },
+    {
+      "claim_id": "claim.step.epassport_new.3",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport_new"
+      },
+      "claim_type": "step",
+      "text": "Pay passport fees (online through ekpay or offline at bank)",
+      "status": "unverified",
+      "structured_data": {
+        "order": 3,
+        "mode": "hybrid"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "Step 3: Pay passport fees (online through ekpay or offline at bank)",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": ["Step 3"]
+          },
+          "retrieved_at": "2025-01-15T08:05:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-01-15T08:05:00Z",
+      "tags": ["step", "payment", "hybrid"]
+    },
+    {
+      "claim_id": "claim.step.epassport_new.4",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport_new"
+      },
+      "claim_type": "step",
+      "text": "Visit Passport Office for biometric enrolment with required documents",
+      "status": "unverified",
+      "structured_data": {
+        "order": 4,
+        "mode": "offline"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "Step 4: Visit Passport Office for biometric enrolment with required documents",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": ["Step 4"]
+          },
+          "retrieved_at": "2025-01-15T08:05:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-01-15T08:05:00Z",
+      "tags": ["step", "offline", "biometric"]
+    },
+    {
+      "claim_id": "claim.step.epassport_new.5",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport_new"
+      },
+      "claim_type": "step",
+      "text": "Collect e-Passport at passport office with delivery slip",
+      "status": "unverified",
+      "structured_data": {
+        "order": 5,
+        "mode": "offline"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "Step 5: Collect e-Passport at passport office with delivery slip",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": ["Step 5"]
+          },
+          "retrieved_at": "2025-01-15T08:05:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-01-15T08:05:00Z",
+      "tags": ["step", "offline", "collection"]
+    },
+    {
+      "claim_id": "claim.fee.epassport_new.48p_5y_regular",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport_new"
+      },
+      "claim_type": "fee",
+      "text": "Fee for 48 pages, 5 years validity, Regular processing: 4,025 BDT",
+      "status": "unverified",
+      "structured_data": {
+        "pages": 48,
+        "validity_years": 5,
+        "processing_tier": "regular",
+        "amount_bdt": 4025
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "quoted_text": "48 pages, 5 years, Regular: 4,025 BDT",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": ["Fee Structure"]
+          },
+          "retrieved_at": "2025-01-15T08:10:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-01-15T08:10:00Z",
+      "tags": ["fee", "48_pages", "5_years", "regular"]
+    },
+    {
+      "claim_id": "claim.fee.epassport_new.48p_5y_express",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport_new"
+      },
+      "claim_type": "fee",
+      "text": "Fee for 48 pages, 5 years validity, Express processing: 6,325 BDT",
+      "status": "unverified",
+      "structured_data": {
+        "pages": 48,
+        "validity_years": 5,
+        "processing_tier": "express",
+        "amount_bdt": 6325
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "quoted_text": "48 pages, 5 years, Express: 6,325 BDT",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": ["Fee Structure"]
+          },
+          "retrieved_at": "2025-01-15T08:10:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-01-15T08:10:00Z",
+      "tags": ["fee", "48_pages", "5_years", "express"]
+    },
+    {
+      "claim_id": "claim.processing_time.epassport_new.regular",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport_new"
+      },
+      "claim_type": "processing_time",
+      "text": "Regular processing takes 15 working days / 21 days from biometric enrolment",
+      "status": "unverified",
+      "structured_data": {
+        "processing_tier": "regular",
+        "working_days": 15,
+        "calendar_days": 21,
+        "reference_point": "from_biometric_enrolment"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "Regular processing: 15 working days / 21 days from biometric enrolment",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": ["Processing Time"]
+          },
+          "retrieved_at": "2025-01-15T08:05:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-01-15T08:05:00Z",
+      "tags": ["processing_time", "regular"]
+    },
+    {
+      "claim_id": "claim.rule.epassport_new.govt_employee_express",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.epassport_new"
+      },
+      "claim_type": "rule",
+      "text": "Government employees with NOC/PRL get Express facilities with Regular fees",
+      "status": "unverified",
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "quoted_text": "Government employees with NOC/PRL get Express facilities with Regular fees",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": ["Special Benefits"]
+          },
+          "retrieved_at": "2025-01-15T08:15:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-01-15T08:15:00Z",
+      "tags": ["rule", "special_benefit", "government_employee"]
+    },
+    {
+      "claim_id": "claim.doc.nid.required",
+      "entity_ref": {
+        "type": "document",
+        "id": "doc.nid"
+      },
+      "claim_type": "document_requirement",
+      "text": "NID card (Original) is required",
+      "status": "unverified",
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "Identification documents (NID card - Original)",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": ["Required Documents"]
+          },
+          "retrieved_at": "2025-01-15T08:05:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-01-15T08:05:00Z",
+      "tags": ["document", "required", "nid"]
+    },
+    {
+      "claim_id": "claim.doc.previous_passport.conditional",
+      "entity_ref": {
+        "type": "document",
+        "id": "doc.previous_passport"
+      },
+      "claim_type": "document_requirement",
+      "text": "Previous Passport is required if applicant has a previous passport",
+      "status": "unverified",
+      "structured_data": {
+        "requirement_type": "conditional",
+        "condition": "has_previous_passport"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "Previous Passport (if any)",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": ["Required Documents"]
+          },
+          "retrieved_at": "2025-01-15T08:05:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-01-15T08:05:00Z",
+      "tags": ["document", "conditional", "previous_passport"]
+    },
+    {
+      "claim_id": "claim.doc.noc.conditional_govt",
+      "entity_ref": {
+        "type": "document",
+        "id": "doc.noc"
+      },
+      "claim_type": "document_requirement",
+      "text": "GO/NOC is required for government service holders",
+      "status": "unverified",
+      "structured_data": {
+        "requirement_type": "conditional",
+        "condition": "is_government_employee"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "quoted_text": "GO/NOC for government service holder (as applicable)",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": ["Required Documents"]
+          },
+          "retrieved_at": "2025-01-15T08:05:00Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2025-01-15T08:05:00Z",
+      "tags": ["document", "conditional", "noc", "government_employee"]
+    }
+  ],
+  "agencies": [
+    {
+      "agency_id": "agency.dip",
+      "name": "Department of Immigration and Passports",
+      "short_name": "DIP",
+      "website": "https://www.epassport.gov.bd",
+      "domain_allowlist": ["epassport.gov.bd", "www.epassport.gov.bd"],
+      "claims": []
+    },
+    {
+      "agency_id": "agency.bec",
+      "name": "Bangladesh Election Commission",
+      "short_name": "BEC/NIDW",
+      "website": "https://www.nidw.gov.bd",
+      "domain_allowlist": ["nidw.gov.bd", "www.nidw.gov.bd"],
+      "claims": []
+    }
+  ],
+  "documents": [
+    {
+      "document_id": "doc.nid",
+      "document_name": "National Identity Card (NID)",
+      "issued_by": "agency.bec",
+      "claims": [
+        "claim.doc.nid.required"
+      ],
+      "status": "unverified",
+      "last_updated_at": "2025-01-15T10:00:00Z"
+    },
+    {
+      "document_id": "doc.previous_passport",
+      "document_name": "Previous Passport",
+      "issued_by": "agency.dip",
+      "claims": [
+        "claim.doc.previous_passport.conditional"
+      ],
+      "status": "unverified",
+      "last_updated_at": "2025-01-15T10:00:00Z"
+    },
+    {
+      "document_id": "doc.noc",
+      "document_name": "No Objection Certificate (NOC) / Government Order (GO)",
+      "issued_by": "agency.dip",
+      "claims": [
+        "claim.doc.noc.conditional_govt"
+      ],
+      "status": "unverified",
+      "last_updated_at": "2025-01-15T10:00:00Z"
+    }
+  ],
+  "services": [
+    {
+      "service_id": "svc.epassport_new",
+      "service_name": "e-Passport Application (New)",
+      "service_family": "Passport",
+      "agency_id": "agency.dip",
+      "claims": [
+        "claim.eligibility.epassport_new.citizen",
+        "claim.eligibility.epassport_new.nid",
+        "claim.step.epassport_new.1",
+        "claim.step.epassport_new.2",
+        "claim.step.epassport_new.3",
+        "claim.step.epassport_new.4",
+        "claim.step.epassport_new.5",
+        "claim.fee.epassport_new.48p_5y_regular",
+        "claim.fee.epassport_new.48p_5y_express",
+        "claim.processing_time.epassport_new.regular",
+        "claim.rule.epassport_new.govt_employee_express",
+        "claim.doc.nid.required",
+        "claim.doc.previous_passport.conditional",
+        "claim.doc.noc.conditional_govt"
+      ],
+      "portal_mapping": {
+        "entry_urls": [
+          {
+            "url": "https://www.epassport.gov.bd",
+            "source_page_id": "source.110d7afa9b2c8c39f3b55a125a73dc4c85f62869",
+            "description": "Main e-Passport portal"
+          },
+          {
+            "url": "https://www.epassport.gov.bd/onboarding",
+            "source_page_id": "source.110d7afa9b2c8c39f3b55a125a73dc4c85f62869",
+            "description": "Application onboarding page"
+          }
+        ],
+        "portal_steps": [
+          {
+            "order": 1,
+            "claim_id": "claim.step.epassport_new.1",
+            "fragile": false
+          },
+          {
+            "order": 2,
+            "claim_id": "claim.step.epassport_new.2",
+            "fragile": false
+          },
+          {
+            "order": 3,
+            "claim_id": "claim.step.epassport_new.3",
+            "fragile": true,
+            "notes": ["Payment gateway may timeout - save transaction ID"]
+          },
+          {
+            "order": 4,
+            "claim_id": "claim.step.epassport_new.4",
+            "fragile": false
+          },
+          {
+            "order": 5,
+            "claim_id": "claim.step.epassport_new.5",
+            "fragile": false
+          }
+        ],
+        "field_mappings": [
+          {
+            "canonical_field": "full_name",
+            "portal_label_en": "Full Name",
+            "portal_label_bn": "পূর্ণ নাম",
+            "claim_id": "claim.step.epassport_new.2"
+          }
+        ]
+      },
+      "official_entrypoints": [
+        {
+          "source_page_id": "source.110d7afa9b2c8c39f3b55a125a73dc4c85f62869",
+          "description": "Main e-Passport portal entry point"
+        },
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "description": "Instructions page with application steps"
+        }
+      ],
+      "document_requirements": [
+        {
+          "document_id": "doc.nid",
+          "requirement_type": "required"
+        },
+        {
+          "document_id": "doc.previous_passport",
+          "requirement_type": "conditional",
+          "condition_claim_id": "claim.doc.previous_passport.conditional"
+        },
+        {
+          "document_id": "doc.noc",
+          "requirement_type": "conditional",
+          "condition_claim_id": "claim.doc.noc.conditional_govt"
+        }
+      ],
+      "status": "unverified",
+      "last_updated_at": "2025-01-15T10:00:00Z"
+    }
+  ]
+}

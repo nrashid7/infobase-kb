@@ -1,0 +1,145 @@
+{
+  "$schema_version": "3.0.0",
+  "generated_at": "2026-01-01T21:23:49.891Z",
+  "source_kb_version": 3,
+  "entries": [
+    {
+      "guide_id": "guide.epassport",
+      "service_id": "svc.epassport",
+      "agency_id": "agency.dip",
+      "title": "e-Passport Application",
+      "agency_name": "Department of Immigration and Passports",
+      "keywords": [
+        "e-passport",
+        "application",
+        "online",
+        "payment",
+        "appointment",
+        "enrollment",
+        "delivery",
+        "department",
+        "immigration",
+        "and",
+        "passports"
+      ],
+      "step_count": 5,
+      "citation_count": 8,
+      "status": "draft"
+    },
+    {
+      "guide_id": "guide.nid",
+      "service_id": "svc.nid",
+      "agency_id": "agency.bec",
+      "title": "National ID Card Services",
+      "agency_name": "Bangladesh Election Commission - NID Wing",
+      "keywords": [
+        "national",
+        "card",
+        "services",
+        "bangladesh",
+        "election",
+        "commission",
+        "nid",
+        "wing"
+      ],
+      "step_count": 0,
+      "citation_count": 4,
+      "status": "draft"
+    },
+    {
+      "guide_id": "guide.brta",
+      "service_id": "svc.brta",
+      "agency_id": "agency.brta",
+      "title": "BRTA Online Services",
+      "agency_name": "Bangladesh Road Transport Authority",
+      "keywords": [
+        "brta",
+        "online",
+        "services",
+        "bangladesh",
+        "road",
+        "transport",
+        "authority"
+      ],
+      "step_count": 0,
+      "citation_count": 3,
+      "status": "draft"
+    },
+    {
+      "guide_id": "guide.brta_driving_license",
+      "service_id": "svc.brta_driving_license",
+      "agency_id": "agency.brta",
+      "title": "Driving License Services",
+      "agency_name": "Bangladesh Road Transport Authority",
+      "keywords": [
+        "driving",
+        "license",
+        "services",
+        "bangladesh",
+        "road",
+        "transport",
+        "authority"
+      ],
+      "step_count": 0,
+      "citation_count": 1,
+      "status": "draft"
+    },
+    {
+      "guide_id": "guide.brta_vehicle_registration",
+      "service_id": "svc.brta_vehicle_registration",
+      "agency_id": "agency.brta",
+      "title": "Vehicle Registration Services",
+      "agency_name": "Bangladesh Road Transport Authority",
+      "keywords": [
+        "vehicle",
+        "registration",
+        "services",
+        "bangladesh",
+        "road",
+        "transport",
+        "authority"
+      ],
+      "step_count": 0,
+      "citation_count": 1,
+      "status": "draft"
+    },
+    {
+      "guide_id": "guide.brta_fitness",
+      "service_id": "svc.brta_fitness",
+      "agency_id": "agency.brta",
+      "title": "Vehicle Fitness Certificate",
+      "agency_name": "Bangladesh Road Transport Authority",
+      "keywords": [
+        "vehicle",
+        "fitness",
+        "certificate",
+        "bangladesh",
+        "road",
+        "transport",
+        "authority"
+      ],
+      "step_count": 0,
+      "citation_count": 1,
+      "status": "draft"
+    },
+    {
+      "guide_id": "guide.brta_tax_token",
+      "service_id": "svc.brta_tax_token",
+      "agency_id": "agency.brta",
+      "title": "Vehicle Tax Token",
+      "agency_name": "Bangladesh Road Transport Authority",
+      "keywords": [
+        "vehicle",
+        "tax",
+        "token",
+        "bangladesh",
+        "road",
+        "transport",
+        "authority"
+      ],
+      "step_count": 0,
+      "citation_count": 1,
+      "status": "draft"
+    }
+  ]
+}

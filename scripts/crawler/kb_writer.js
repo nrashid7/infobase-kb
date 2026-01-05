@@ -8,7 +8,53 @@
 
 const fs = require('fs');
 const path = require('path');
-const crypto = require('crypto');
+
+// Import shared utilities
+const {
+  generateHash,
+  generateSourcePageId,
+  getDateString,
+  ensureDir,
+} = require('./utils');
+
+// ============================================================================
+// IN-MEMORY INDEXES (Performance optimization - NOT persisted to disk)
+// ============================================================================
+
+/**
+ * Runtime indexes for O(1) lookups. Built after loading KB, not serialized.
+ * @private
+ */
+let _claimsIndex = null;       // Map<claim_id, index in kb.claims>
+let _sourcePagesIndex = null;  // Map<source_page_id, index in kb.source_pages>
+
+/**
+ * Build in-memory indexes for a loaded KB
+ * @private
+ * @param {Object} kb - KB data structure
+ */
+function _buildIndexes(kb) {
+  // Build claims index
+  _claimsIndex = new Map();
+  for (let i = 0; i < kb.claims.length; i++) {
+    _claimsIndex.set(kb.claims[i].claim_id, i);
+  }
+  
+  // Build source_pages index
+  _sourcePagesIndex = new Map();
+  for (let i = 0; i < kb.source_pages.length; i++) {
+    _sourcePagesIndex.set(kb.source_pages[i].source_page_id, i);
+  }
+}
+
+/**
+ * Clear in-memory indexes (called when KB is unloaded/replaced)
+ * @private
+ */
+function _clearIndexes() {
+  _claimsIndex = null;
+  _sourcePagesIndex = null;
+}
 
 // ============================================================================
 // AGENCY MAPPINGS
@@ -36,28 +82,6 @@ const AGENCY_MAP = {
 };
 
 // ============================================================================
-// UTILITY FUNCTIONS
-// ============================================================================
-
-function generateHash(content, algorithm = 'sha256') {
-  return crypto.createHash(algorithm).update(content, 'utf8').digest('hex');
-}
-
-function generateSourcePageId(url) {
-  return `source.${generateHash(url, 'sha1')}`;
-}
-
-function getDateString() {
-  return new Date().toISOString().split('T')[0];
-}
-
-function ensureDir(dirPath) {
-  if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true });
-  }
-}
-
-// ============================================================================
 // KB LOADING/SAVING
 // ============================================================================
 
@@ -68,6 +92,9 @@ function ensureDir(dirPath) {
  * @returns {Object} - KB data structure
  */
 function loadOrCreateKB(kbPath, kbPathV2) {
+  // Clear any existing indexes
+  _clearIndexes();
+  
   // Try v3 first, then v2
   let loadPath = kbPath;
   if (!fs.existsSync(loadPath) && kbPathV2 && fs.existsSync(kbPathV2)) {
@@ -78,6 +105,8 @@ function loadOrCreateKB(kbPath, kbPathV2) {
     try {
       const kb = JSON.parse(fs.readFileSync(loadPath, 'utf-8'));
       console.log(`📁 Loaded KB from: ${loadPath}`);
+      // Build in-memory indexes for O(1) lookups (not persisted)
+      _buildIndexes(kb);
       return kb;
     } catch (e) {
       console.warn('⚠️  Failed to load KB, creating new');
@@ -85,7 +114,7 @@ function loadOrCreateKB(kbPath, kbPathV2) {
   }
   
   // Create new v3 KB
-  return {
+  const kb = {
     "$schema_version": "3.0.0",
     "data_version": 1,
     "last_updated_at": new Date().toISOString(),
@@ -102,6 +131,10 @@ function loadOrCreateKB(kbPath, kbPathV2) {
     "services": [],
     "service_guides": [],
   };
+  
+  // Build indexes for new KB (empty but initialized)
+  _buildIndexes(kb);
+  return kb;
 }
 
 /**
@@ -202,7 +235,14 @@ function addOrUpdateSourcePage(kb, pageData, classifyPage) {
     change_log: [],
   };
   
-  const existingIdx = kb.source_pages.findIndex(sp => sp.source_page_id === sourcePageId);
+  // Use index for O(1) lookup if available, fallback to linear search
+  let existingIdx = -1;
+  if (_sourcePagesIndex && _sourcePagesIndex.has(sourcePageId)) {
+    existingIdx = _sourcePagesIndex.get(sourcePageId);
+  } else {
+    existingIdx = kb.source_pages.findIndex(sp => sp.source_page_id === sourcePageId);
+  }
+  
   if (existingIdx >= 0) {
     const existing = kb.source_pages[existingIdx];
     if (existing.content_hash !== pageData.contentHash) {
@@ -215,8 +255,14 @@ function addOrUpdateSourcePage(kb, pageData, classifyPage) {
       });
     }
     kb.source_pages[existingIdx] = sourcePage;
+    // Index remains valid (same position)
   } else {
+    // Add new page and update index
+    const newIdx = kb.source_pages.length;
     kb.source_pages.push(sourcePage);
+    if (_sourcePagesIndex) {
+      _sourcePagesIndex.set(sourcePageId, newIdx);
+    }
   }
   
   return sourcePageId;
@@ -231,9 +277,21 @@ function addOrUpdateSourcePage(kb, pageData, classifyPage) {
 function addClaimsToKB(kb, claims) {
   let added = 0;
   for (const claim of claims) {
-    const existing = kb.claims.find(c => c.claim_id === claim.claim_id);
-    if (!existing) {
+    // Use index for O(1) existence check if available, fallback to linear search
+    let exists = false;
+    if (_claimsIndex && _claimsIndex.has(claim.claim_id)) {
+      exists = true;
+    } else {
+      exists = kb.claims.some(c => c.claim_id === claim.claim_id);
+    }
+    
+    if (!exists) {
+      // Add new claim and update index
+      const newIdx = kb.claims.length;
       kb.claims.push(claim);
+      if (_claimsIndex) {
+        _claimsIndex.set(claim.claim_id, newIdx);
+      }
       added++;
     }
   }

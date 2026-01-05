@@ -9,6 +9,9 @@ kb/snapshots/
 kb/runs/
 kb/indexes/
 
+# Distribution/export directory
+dist/
+
 # Node.js
 node_modules/
 
@@ -17,9 +20,10 @@ node_modules/
 Thumbs.db
 Desktop.ini
 
-# IDE files
+# IDE and editor files
 .vscode/
 .idea/
+.cursor/
 *.swp
 *.swo
 *~

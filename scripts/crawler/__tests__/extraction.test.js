@@ -20,6 +20,9 @@ const {
   extractDocumentLinks,
 } = require('../extraction');
 
+// Import Firecrawl overrides for postprocess testing
+const { getFirecrawlOverridesForUrl } = require('../firecrawl_overrides');
+
 // Test utilities
 let passed = 0;
 let failed = 0;
@@ -60,9 +63,11 @@ function assertGreater(actual, min, message) {
 
 console.log('\n📋 Running extraction.js tests...\n');
 
-// Load fixture
+// Load fixtures
 const fixturesDir = path.join(__dirname, 'fixtures');
 const epassportFixture = fs.readFileSync(path.join(fixturesDir, 'epassport_instructions.md'), 'utf-8');
+const firecrawlRealFixture = fs.readFileSync(path.join(fixturesDir, 'firecrawl_real_epassport.md'), 'utf-8');
+const firecrawlFeesFixture = fs.readFileSync(path.join(fixturesDir, 'firecrawl_epassport_fees_real.md'), 'utf-8');
 
 // ============================================================================
 // Utility Function Tests
@@ -211,6 +216,31 @@ test('extractFees extracts from fixture', () => {
   assertGreater(fees.length, 5, 'Should extract multiple fees from fixture');
 });
 
+test('extractFees finds data and citations from Firecrawl fee page fixture', () => {
+  // Use production override to postprocess markdown (TK -> Taka)
+  const feeUrl = 'https://www.epassport.gov.bd/instructions/passport-fees';
+  const overrides = getFirecrawlOverridesForUrl(feeUrl);
+  const normalizedFixture = overrides?.postprocessMarkdown
+    ? overrides.postprocessMarkdown(firecrawlFeesFixture)
+    : firecrawlFeesFixture;
+  
+  const lines = normalizedFixture.split('\n');
+  const fees = extractFees(lines, () => []);
+  assertGreater(fees.length, 0, 'Should find at least one fee in Firecrawl fee page');
+
+  const structured = extractStructuredData(normalizedFixture, feeUrl);
+  const claims = extractClaims(
+    normalizedFixture,
+    'source.firecrawl_fee_fixture',
+    feeUrl,
+    structured
+  );
+
+  const feeClaim = claims.find(c => c.claim_type === 'fee');
+  assert(feeClaim, 'Should generate a fee claim');
+  assert(feeClaim.citations && feeClaim.citations.length > 0, 'Fee claim should include citations');
+});
+
 // ============================================================================
 // FAQ Extraction Tests
 // ============================================================================
@@ -344,6 +374,151 @@ test('extractClaims includes proper citations', () => {
   assert(feeClaim.citations.length > 0, 'Should have at least one citation');
   assertEqual(feeClaim.citations[0].canonical_url, 'https://www.epassport.gov.bd', 'Citation should have URL');
   assert(feeClaim.citations[0].retrieved_at, 'Citation should have timestamp');
+});
+
+// ============================================================================
+// Deterministic Claim ID Tests
+// ============================================================================
+
+console.log('\n🔹 Deterministic Claim ID Tests:');
+
+test('claim_id is deterministic across multiple runs', () => {
+  const url = 'https://www.epassport.gov.bd/instructions/instructions';
+  
+  // Run extraction twice
+  const result1 = extractStructuredData(epassportFixture, url);
+  const claims1 = extractClaims(epassportFixture, 'source.test123', url, result1);
+  
+  const result2 = extractStructuredData(epassportFixture, url);
+  const claims2 = extractClaims(epassportFixture, 'source.test123', url, result2);
+  
+  // Same number of claims
+  assertEqual(claims1.length, claims2.length, 'Should have same number of claims');
+  
+  // Same claim IDs in same order
+  for (let i = 0; i < claims1.length; i++) {
+    assertEqual(
+      claims1[i].claim_id,
+      claims2[i].claim_id,
+      `Claim ${i} ID should be identical across runs`
+    );
+  }
+});
+
+test('claim_id has no duplicates within a single run', () => {
+  const url = 'https://www.epassport.gov.bd/instructions/instructions';
+  const result = extractStructuredData(epassportFixture, url);
+  const claims = extractClaims(epassportFixture, 'source.test123', url, result);
+  
+  const claimIds = claims.map(c => c.claim_id);
+  const uniqueIds = new Set(claimIds);
+  
+  assertEqual(uniqueIds.size, claimIds.length, 'All claim IDs should be unique');
+});
+
+test('claim_id format is correct', () => {
+  const url = 'https://www.epassport.gov.bd';
+  const result = extractStructuredData(epassportFixture, url);
+  const claims = extractClaims(epassportFixture, 'source.test123', url, result);
+  
+  for (const claim of claims) {
+    assert(claim.claim_id, 'Claim should have claim_id');
+    assert(typeof claim.claim_id === 'string', 'claim_id should be a string');
+    assert(claim.claim_id.startsWith('claim.'), 'claim_id should start with claim.');
+    
+    // Format: claim.<type>.<serviceKey>.<hash>
+    const parts = claim.claim_id.split('.');
+    assert(parts.length >= 4, 'claim_id should have at least 4 parts');
+    assert(parts[0] === 'claim', 'First part should be "claim"');
+    assert(['fee', 'step', 'faq', 'document_requirement'].includes(parts[1]), 'Second part should be claim type');
+  }
+});
+
+test('claim_id does not contain auto_ prefix', () => {
+  const url = 'https://www.epassport.gov.bd';
+  const result = extractStructuredData(epassportFixture, url);
+  const claims = extractClaims(epassportFixture, 'source.test123', url, result);
+  
+  for (const claim of claims) {
+    assert(!claim.claim_id.includes('auto_'), 'claim_id should not contain auto_ (non-deterministic)');
+  }
+});
+
+// ============================================================================
+// Real Firecrawl Fixture Quality Tests
+// ============================================================================
+
+console.log('\n🔹 Real Firecrawl Fixture Quality Tests:');
+
+test('real fixture extracts minimum number of steps', () => {
+  const url = 'https://www.epassport.gov.bd/instructions/instructions';
+  const result = extractStructuredData(firecrawlRealFixture, url);
+  
+  // This real fixture has 22 Bengali numbered instructions
+  // We assert at least 10 steps are extracted (reasonable threshold)
+  assertGreater(result.steps.length, 9, 'Should extract at least 10 steps from real fixture');
+});
+
+test('real fixture steps have valid structure', () => {
+  const url = 'https://www.epassport.gov.bd/instructions/instructions';
+  const result = extractStructuredData(firecrawlRealFixture, url);
+  
+  for (const step of result.steps) {
+    // Every step should have non-empty title
+    assert(step.title, 'Step should have a title');
+    assert(step.title.trim().length > 0, 'Step title should not be empty');
+    
+    // Title should not be excessively long
+    assert(step.title.length <= 200, `Step title should not exceed 200 chars: ${step.title.slice(0, 50)}...`);
+    
+    // Description should have reasonable length if present
+    if (step.description) {
+      assert(step.description.length <= 1200, 'Step description should not exceed 1200 chars');
+    }
+    
+    // Order should be a positive number
+    assert(step.order > 0, 'Step order should be positive');
+  }
+});
+
+test('real fixture claims have citations with canonical_url', () => {
+  const url = 'https://www.epassport.gov.bd/instructions/instructions';
+  const result = extractStructuredData(firecrawlRealFixture, url);
+  const claims = extractClaims(firecrawlRealFixture, 'source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad', url, result);
+  
+  // Every claim should have at least one citation with canonical_url
+  for (const claim of claims) {
+    assert(claim.citations, 'Claim should have citations array');
+    assert(claim.citations.length > 0, 'Claim should have at least one citation');
+    assert(claim.citations[0].canonical_url, 'Citation should have canonical_url');
+    assertEqual(claim.citations[0].canonical_url, url, 'Citation URL should match source');
+  }
+});
+
+test('real fixture extraction is deterministic', () => {
+  const url = 'https://www.epassport.gov.bd/instructions/instructions';
+  const sourceId = 'source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad';
+  
+  // Run extraction twice on real fixture
+  const result1 = extractStructuredData(firecrawlRealFixture, url);
+  const claims1 = extractClaims(firecrawlRealFixture, sourceId, url, result1);
+  
+  const result2 = extractStructuredData(firecrawlRealFixture, url);
+  const claims2 = extractClaims(firecrawlRealFixture, sourceId, url, result2);
+  
+  // Extract claim IDs
+  const ids1 = claims1.map(c => c.claim_id);
+  const ids2 = claims2.map(c => c.claim_id);
+  
+  // Verify identical
+  assertEqual(ids1.length, ids2.length, 'Should have same number of claims');
+  for (let i = 0; i < ids1.length; i++) {
+    assertEqual(ids1[i], ids2[i], `Real fixture claim ${i} ID should be deterministic`);
+  }
+  
+  // Verify no duplicates
+  const uniqueIds = new Set(ids1);
+  assertEqual(uniqueIds.size, ids1.length, 'Real fixture should have no duplicate claim IDs');
 });
 
 // ============================================================================

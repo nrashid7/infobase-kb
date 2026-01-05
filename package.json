@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Bangladesh Government Services Knowledge Base - Publish Pipeline",
   "scripts": {
-    "crawl:full": "node scripts/crawl.js --refresh all",
-    "crawl:refresh": "node scripts/crawl.js --refresh changed",
-    "crawl:dry": "node scripts/crawl.js --dry-run --verbose",
+    "crawl:full": "node scripts/crawl.js --seed-source bdgovlinks --category public_services --refresh all",
+    "crawl:refresh": "node scripts/crawl.js --seed-source bdgovlinks --category public_services --refresh changed",
+    "crawl:dry": "node scripts/crawl.js --seed-source bdgovlinks --category public_services --dry-run --verbose",
     "publish": "node scripts/build_public_guides.js",
     "validate:published": "node scripts/validate_published.js",
     "publish:validate": "npm run publish && npm run validate:published"

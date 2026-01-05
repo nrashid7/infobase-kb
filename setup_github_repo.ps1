@@ -1,5 +1,8 @@
 # Script to create GitHub repository and push code
 # Requires GitHub Personal Access Token with repo scope
+#
+# Prerequisites: PortableGit must be in PATH (see GIT_WORKFLOW.md)
+# Fallback path: C:\Git\PortableGit\bin\git.exe (for debugging only)
 
 param(
     [Parameter(Mandatory=$false)]
@@ -27,7 +30,7 @@ if (-not $GitHubToken) {
     # Try git credential helper for github.com
     try {
         $credInput = "protocol=https`nhost=github.com`n`n"
-        $credOutput = $credInput | C:\Git\PortableGit\bin\git.exe credential fill 2>&1
+        $credOutput = $credInput | git credential fill 2>&1
         if ($credOutput -match "password=(.+)") {
             $GitHubToken = $matches[1].Trim()
             Write-Host "Retrieved credentials from git credential helper" -ForegroundColor Green
@@ -67,13 +70,12 @@ try {
     
     # Add remote and push
     Write-Host "`nAdding remote origin..." -ForegroundColor Green
-    $gitPath = "C:\Git\PortableGit\bin\git.exe"
     
-    & $gitPath remote remove origin 2>$null
-    & $gitPath remote add origin $response.clone_url
+    git remote remove origin 2>$null
+    git remote add origin $response.clone_url
     
     Write-Host "Pushing code to GitHub..." -ForegroundColor Green
-    & $gitPath push -u origin master
+    git push -u origin master
     
     Write-Host "`nDone! Repository is available at: $($response.html_url)" -ForegroundColor Green
 } catch {

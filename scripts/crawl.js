@@ -24,60 +24,33 @@ const { URL } = require('url');
 
 // Import crawler sub-modules
 const crawler = require('./crawler');
-const {
-  // Discovery
-  parsePublicServicesFromMarkdown,
-  extractPublicServicesSeeds,
-  loadExistingSeeds,
-  getDomain,
-  
-  // Filtering
-  getUrlPriority,
-  sortUrlsByPriority,
-  getUrlDepth,
-  parseRobotsTxt,
-  isPathAllowed,
-  parseSitemapXml,
-  PRIORITY_PATTERNS,
-  
-  // Extraction
-  classifyPage,
-  extractStructuredData,
-  extractClaims,
-  DOCUMENT_EXTENSIONS,
-  
-  // Scraping
-  firecrawlMcp,
-  FirecrawlUnavailableError,
-  FirecrawlMapError,
-  FirecrawlScrapeError,
-  
-  // KB Writer
-  loadOrCreateKB,
-  saveKB,
-  addOrUpdateSourcePage,
-  addClaimsToKB,
-  AGENCY_MAP,
-  generateHash,
-  generateSourcePageId,
-  ensureDir,
-  
-  // Crawl State
-  loadCrawlState,
-  saveCrawlState,
-  getDomainState,
-  saveSnapshot,
-  snapshotExistsToday,
-  getExistingHash,
-  
-  // Crawl Report
-  generateRunReport,
-  generateFailureReport,
-  createRunStats,
-  updateExtractionStats,
-  printSummary,
-  getDateString,
-} = crawler;
+
+// Import only what's needed for orchestration
+const { discovery, filtering, extraction, scraping, kbWriter, crawlState, crawlReport } = crawler;
+
+// Shared utilities
+const { generateHash, generateSourcePageId, ensureDir, getDomain, sleep } = require('./crawler/utils');
+
+// Discovery
+const { parsePublicServicesFromMarkdown, extractPublicServicesSeeds, loadExistingSeeds } = discovery;
+
+// Filtering
+const { getUrlPriority, sortUrlsByPriority, getUrlDepth, parseRobotsTxt, isPathAllowed, parseSitemapXml, PRIORITY_PATTERNS } = filtering;
+
+// Extraction
+const { classifyPage, extractStructuredData, extractClaims, DOCUMENT_EXTENSIONS } = extraction;
+
+// Scraping
+const { firecrawlMcp, FirecrawlUnavailableError, FirecrawlMapError, FirecrawlScrapeError } = scraping;
+
+// KB Writer
+const { loadOrCreateKB, saveKB, addOrUpdateSourcePage, addClaimsToKB, AGENCY_MAP } = kbWriter;
+
+// Crawl State
+const { loadCrawlState, saveCrawlState, getDomainState, saveSnapshot, snapshotExistsToday, getExistingHash } = crawlState;
+
+// Crawl Report
+const { generateRunReport, generateFailureReport, createRunStats, updateExtractionStats, printSummary, getDateString } = crawlReport;
 
 // Document harvesting module
 const documentHarvester = require('./document_harvester');
@@ -230,7 +203,7 @@ const PATHS = {
 };
 
 // ============================================================================
-// UTILITY FUNCTIONS
+// UTILITY FUNCTIONS (local helpers)
 // ============================================================================
 
 function normalizeUrl(urlStr) {
@@ -244,10 +217,6 @@ function normalizeUrl(urlStr) {
   } catch (e) {
     return null;
   }
-}
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 // ============================================================================
@@ -777,38 +746,14 @@ module.exports = {
   // Domain crawler
   crawlDomain,
   
-  // Re-exports from crawler modules (for backward compatibility)
-  parsePublicServicesFromMarkdown,
-  extractPublicServicesSeeds,
-  loadExistingSeeds,
-  classifyPage,
-  extractStructuredData,
-  extractClaims,
-  getUrlPriority,
-  sortUrlsByPriority,
-  parseRobotsTxt,
-  parseSitemapXml,
-  generateRunReport,
-  generateFailureReport,
-  loadCrawlState,
-  saveCrawlState,
-  loadOrCreateKB,
-  saveKB,
-  addOrUpdateSourcePage,
-  addClaimsToKB,
-  saveSnapshot,
-  
   // Configuration
   PATHS,
-  AGENCY_MAP,
-  PRIORITY_PATTERNS,
-  DOCUMENT_EXTENSIONS,
   
-  // Firecrawl MCP module re-export for convenience
-  firecrawlMcp,
-  
-  // Crawler sub-modules
+  // Crawler sub-modules (use these for access to all functions)
   crawler,
+  
+  // Firecrawl MCP module for orchestration
+  firecrawlMcp,
 };
 
 // Run if executed directly

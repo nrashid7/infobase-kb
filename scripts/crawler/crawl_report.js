@@ -9,19 +9,8 @@
 const fs = require('fs');
 const path = require('path');
 
-// ============================================================================
-// UTILITY FUNCTIONS
-// ============================================================================
-
-function getDateString() {
-  return new Date().toISOString().split('T')[0];
-}
-
-function ensureDir(dirPath) {
-  if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true });
-  }
-}
+// Import shared utilities
+const { getDateString, ensureDir } = require('./utils');
 
 // ============================================================================
 // RUN REPORT GENERATION

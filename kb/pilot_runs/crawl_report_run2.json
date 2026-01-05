@@ -1,0 +1,35 @@
+{
+  "run_id": "pilot_fee_run2_1767606861068",
+  "run_number": 2,
+  "started_at": "2026-01-05T09:54:21.068Z",
+  "completed_at": "2026-01-05T09:54:21.068Z",
+  "target_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+  "service_key": "epassport",
+  "scrape": {
+    "markdown_length": 4137,
+    "override_applied": true,
+    "waitFor": 5000,
+    "postprocess_applied": true
+  },
+  "extraction": {
+    "steps_extracted": 2,
+    "fees_extracted": 12,
+    "faq_pairs_extracted": 0,
+    "doc_links_found": 1
+  },
+  "claims": {
+    "total_generated": 15,
+    "fee_claims": 12,
+    "claims_with_citations": 12,
+    "new_claims_added": 0
+  },
+  "kb": {
+    "total_source_pages": 1,
+    "total_claims": 15,
+    "claims_before_run": 15
+  },
+  "idempotency": {
+    "is_rerun": true,
+    "new_claims_on_rerun": 0
+  }
+}

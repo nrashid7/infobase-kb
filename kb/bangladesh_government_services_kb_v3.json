@@ -1,7 +1,7 @@
 {
   "$schema_version": "3.0.0",
-  "data_version": 3,
-  "last_updated_at": "2026-01-01T21:23:39.366Z",
+  "data_version": 17,
+  "last_updated_at": "2026-01-05T09:09:41.991Z",
   "updated_by": "script:migrate_v2_to_v3.js",
   "change_log": [
     {
@@ -26,15 +26,23 @@
       "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
       "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
       "agency_id": "agency.dip",
-      "page_type": "instruction",
-      "title": "Five Steps to Your e-Passport | ePassport Bangladesh",
+      "page_type": "tutorial",
+      "page_types": [
+        "tutorial",
+        "procedure",
+        "requirements",
+        "fees",
+        "processing_time",
+        "office"
+      ],
+      "title": "5 Steps to your e-Passport",
       "language": [
         "en"
       ],
       "crawl_method": "html_static",
-      "last_crawled_at": "2025-12-31T14:45:00Z",
-      "content_hash": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2",
-      "snapshot_ref": "snapshots/source.947176686bf0965726403b957c96cb34267fa1d8/2025-12-31",
+      "last_crawled_at": "2026-01-05T09:09:41.982Z",
+      "content_hash": "f35964f1436fd634a0f578c9383464eaae0425b09f14994173b95efaa2f15e91",
+      "snapshot_ref": "snapshots/source.947176686bf0965726403b957c96cb34267fa1d8/2026-01-05",
       "status": "active",
       "change_log": []
     },
@@ -102,6 +110,390 @@
       "last_crawled_at": "2025-12-31T14:45:00Z",
       "content_hash": "f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7",
       "snapshot_ref": "snapshots/source.3ba45a7b75e2a0a9c5e082ef75d9cb5326a11029/2025-12-31",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c",
+      "canonical_url": "https://www.epassport.gov.bd/instructions/application-form",
+      "agency_id": "agency.dip",
+      "page_type": "tutorial",
+      "page_types": [
+        "tutorial",
+        "procedure",
+        "requirements",
+        "office",
+        "contact",
+        "form"
+      ],
+      "title": "Application at RPO Bangladesh Secretariat and Dhaka Cantonment",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T09:09:41.984Z",
+      "content_hash": "65edd35b34f34f58ac2aa7b313c768676d61d72be0144c132be49f5f3df3008e",
+      "snapshot_ref": "snapshots/source.9cacd3de1b16ae897930018caff86b2c68cbb63c/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad",
+      "canonical_url": "https://www.epassport.gov.bd/instructions/instructions",
+      "agency_id": "agency.dip",
+      "page_type": "tutorial",
+      "page_types": [
+        "tutorial",
+        "portal"
+      ],
+      "title": "E‑Passport Online Registration Portal",
+      "language": [
+        "en",
+        "bn"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T07:15:34.555Z",
+      "content_hash": "8a10be7e86caf151c1b88f635bda1e5aa377d9a6856d142f877ef1eeb2fcebc9",
+      "snapshot_ref": "snapshots/source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.7d8afb1bb534157d0220a9aed948b00b220e5b35",
+      "canonical_url": "https://www.epassport.gov.bd/landing/faqs",
+      "agency_id": "agency.dip",
+      "page_type": "procedure",
+      "page_types": [
+        "procedure",
+        "faq",
+        "fees",
+        "portal",
+        "office"
+      ],
+      "title": "Frequently Asked Questions",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T09:09:41.991Z",
+      "content_hash": "45febdd07239ea0e44961ac68598090ae28c34835abbf811fddc624f46032754",
+      "snapshot_ref": "snapshots/source.7d8afb1bb534157d0220a9aed948b00b220e5b35/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.bec768015b78bd53a8b503339bb933a4d7a03f1f",
+      "canonical_url": "https://www.epassport.gov.bd/instructions/urgent-applications",
+      "agency_id": "agency.dip",
+      "page_type": "tutorial",
+      "page_types": [
+        "tutorial",
+        "procedure",
+        "fees",
+        "processing_time",
+        "portal",
+        "office",
+        "contact"
+      ],
+      "title": "Urgent Applications",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T09:09:41.985Z",
+      "content_hash": "9766bc7c05d9404b68a66e74a45e6f71624264786682f00f61c04f1fb922e8c1",
+      "snapshot_ref": "snapshots/source.bec768015b78bd53a8b503339bb933a4d7a03f1f/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+      "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+      "agency_id": "agency.dip",
+      "page_type": "requirements",
+      "page_types": [
+        "requirements"
+      ],
+      "title": "Documents Checklist for e-Passport Enrollment",
+      "language": [
+        "en",
+        "bn"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T09:09:41.988Z",
+      "content_hash": "6acad5002c70e1d05f65c35ba15f69db37de68afd76f563631900e6056af8a56",
+      "snapshot_ref": "snapshots/source.882848b3af57fdc1f18e3f18bbe8fb15a837e603/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+      "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+      "agency_id": "agency.dip",
+      "page_type": "procedure",
+      "page_types": [
+        "procedure",
+        "requirements",
+        "fees",
+        "office",
+        "form"
+      ],
+      "title": "Documents need to be carried while enrolment at Passport offices",
+      "language": [
+        "en",
+        "bn"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T09:09:41.986Z",
+      "content_hash": "fe565ad829d868684828f042cdb178b26db8c369a506efbebc070fd1672dc0a1",
+      "snapshot_ref": "snapshots/source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.3810cf2be0b49180254583cd6ce6cb107b4cbf33",
+      "canonical_url": "https://www.epassport.gov.bd/authorization/application-status",
+      "agency_id": "agency.dip",
+      "page_type": "procedure",
+      "page_types": [
+        "procedure",
+        "processing_time",
+        "portal",
+        "office"
+      ],
+      "title": "E‑Passport Online Registration Portal",
+      "language": [
+        "en",
+        "bn"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T07:15:34.580Z",
+      "content_hash": "0659e5672dc8e3815dc122045a2ca10def07b0ca0ddebd7dde2bf5be3287cee5",
+      "snapshot_ref": "snapshots/source.3810cf2be0b49180254583cd6ce6cb107b4cbf33/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.110d7afa9b2c8c39f3b55a125a73dc4c85f62869",
+      "canonical_url": "https://www.epassport.gov.bd",
+      "agency_id": "agency.dip",
+      "page_type": "tutorial",
+      "page_types": [
+        "tutorial",
+        "procedure",
+        "fees",
+        "portal",
+        "form"
+      ],
+      "title": "E‑Passport Online Registration Portal",
+      "language": [
+        "en",
+        "bn"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T07:15:34.587Z",
+      "content_hash": "6de5880adf8c3ac12b34b247f3d949db338304bdb9c4e0f987c514e4a3312754",
+      "snapshot_ref": "snapshots/source.110d7afa9b2c8c39f3b55a125a73dc4c85f62869/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.f5b4e2bc1b7c322dc404e37c1821692b43b865ef",
+      "canonical_url": "https://www.epassport.gov.bd/landing/faqs/7",
+      "agency_id": "agency.dip",
+      "page_type": "procedure",
+      "page_types": [
+        "procedure",
+        "faq",
+        "processing_time",
+        "portal",
+        "office"
+      ],
+      "title": "E‑Passport Online Registration Portal",
+      "language": [
+        "en",
+        "bn"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T08:59:26.521Z",
+      "content_hash": "ed7b0227a529c2d98b85915149e232ff946a63ae21a050850bf1edd43c3413d1",
+      "snapshot_ref": "snapshots/source.f5b4e2bc1b7c322dc404e37c1821692b43b865ef/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.c962004d31a2f683d9c2702ba8319fbbef032a56",
+      "canonical_url": "https://www.epassport.gov.bd/landing/faqs/72",
+      "agency_id": "agency.dip",
+      "page_type": "tutorial",
+      "page_types": [
+        "tutorial",
+        "faq",
+        "portal"
+      ],
+      "title": "E‑Passport Online Registration Portal",
+      "language": [
+        "en",
+        "bn"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T08:59:26.522Z",
+      "content_hash": "2d8f7412611ff0fb22f6764ed7d200a439920212d00ec064f1dece1a7355f8dd",
+      "snapshot_ref": "snapshots/source.c962004d31a2f683d9c2702ba8319fbbef032a56/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
+      "canonical_url": "https://www.epassport.gov.bd/landing/notices/33",
+      "agency_id": "agency.dip",
+      "page_type": "portal",
+      "page_types": [
+        "portal",
+        "office"
+      ],
+      "title": "E‑Passport Online Registration Portal",
+      "language": [
+        "en",
+        "bn"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T08:59:26.523Z",
+      "content_hash": "61fa269815c29e1d4795a8008a3b4736b245c749de39a3bcffd8929867b1bee9",
+      "snapshot_ref": "snapshots/source.3f22552962d2df32269bccd812d892bfde9c7685/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.b5c15082fe59f32804b8251440d4b63bb9773728",
+      "canonical_url": "https://www.epassport.gov.bd/contact",
+      "agency_id": "agency.dip",
+      "page_type": "procedure",
+      "page_types": [
+        "procedure",
+        "faq",
+        "portal",
+        "office",
+        "contact"
+      ],
+      "title": "Contact to Online Portal Support",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T08:59:26.523Z",
+      "content_hash": "24930c82ecab7d207262b0158afb2df9bcb9036e1dfae5f898d2f849cbab968f",
+      "snapshot_ref": "snapshots/source.b5c15082fe59f32804b8251440d4b63bb9773728/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.4f66109e0d84e69215a442907dd8ca738c9cc550",
+      "canonical_url": "https://www.epassport.gov.bd/landing/faqs/20",
+      "agency_id": "agency.dip",
+      "page_type": "procedure",
+      "page_types": [
+        "procedure",
+        "faq",
+        "requirements",
+        "fees",
+        "portal",
+        "office"
+      ],
+      "title": "E‑Passport Online Registration Portal",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T08:59:26.523Z",
+      "content_hash": "0742ce6c5b8b3dd603e5828b2f82c53184d50b5ce2d8a7054c3f3a22ae6b00cb",
+      "snapshot_ref": "snapshots/source.4f66109e0d84e69215a442907dd8ca738c9cc550/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.e13178a19e94985b1961cbd40556aab7f68e7c6d",
+      "canonical_url": "https://www.epassport.gov.bd/landing/faqs/24",
+      "agency_id": "agency.dip",
+      "page_type": "procedure",
+      "page_types": [
+        "procedure",
+        "faq",
+        "fees",
+        "portal",
+        "contact"
+      ],
+      "title": "E‑Passport Online Registration Portal",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T08:59:26.524Z",
+      "content_hash": "1030eb91ebd4b19cefd99303cf197ed6cde5d6fbb22796f2653e03ea274d31c0",
+      "snapshot_ref": "snapshots/source.e13178a19e94985b1961cbd40556aab7f68e7c6d/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.71ebe977392507133c711c48a7d3089a76ec4ac6",
+      "canonical_url": "https://www.epassport.gov.bd/landing/faqs/285",
+      "agency_id": "agency.dip",
+      "page_type": "faq",
+      "page_types": [
+        "faq",
+        "requirements",
+        "portal"
+      ],
+      "title": "E‑Passport Online Registration Portal",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T08:59:26.524Z",
+      "content_hash": "e1058ec8e31a730c2eca08047b07358ab51a2753e5e24c0e38291b023f69a0b8",
+      "snapshot_ref": "snapshots/source.71ebe977392507133c711c48a7d3089a76ec4ac6/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.4b182b22ec62ebf0a64dbe3a95e4fe0dceaada4a",
+      "canonical_url": "https://www.epassport.gov.bd/landing/csca",
+      "agency_id": "agency.dip",
+      "page_type": "general",
+      "page_types": [
+        "general"
+      ],
+      "title": "Country Signing Certificate Authority (CSCA)",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T08:59:26.524Z",
+      "content_hash": "1f7ec5134b32243f0086e595d9c3d127688689a1183c6db7f156bb7a5162d0b1",
+      "snapshot_ref": "snapshots/source.4b182b22ec62ebf0a64dbe3a95e4fe0dceaada4a/2026-01-05",
+      "status": "active",
+      "change_log": []
+    },
+    {
+      "source_page_id": "source.7cb044c0fa8ed9fbf981f7a1294eb3be1f41c843",
+      "canonical_url": "https://www.epassport.gov.bd/landing/notices",
+      "agency_id": "agency.dip",
+      "page_type": "tutorial",
+      "page_types": [
+        "tutorial",
+        "procedure",
+        "requirements",
+        "processing_time",
+        "office"
+      ],
+      "title": "All Notices",
+      "language": [
+        "en"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T09:09:41.989Z",
+      "content_hash": "979cb35e6edaa47df60b5e61d8e515925cab3446555283b5da859d84e6cae7a9",
+      "snapshot_ref": "snapshots/source.7cb044c0fa8ed9fbf981f7a1294eb3be1f41c843/2026-01-05",
       "status": "active",
       "change_log": []
     }
@@ -756,6 +1148,3817 @@
         "fee",
         "calculator",
         "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.auto_2",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Open and fille up with the tool \" **Adobe Acrobat Reader DC**\" to support all required functions.",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2
+      },
+      "citations": [
+        {
+          "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c",
+          "quoted_text": "Open and fille up with the tool \" **Adobe Acrobat Reader DC**\" to support all required functions.",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Application at RPO Bangladesh Secretariat and Dhaka Cantonment"
+            ]
+          },
+          "retrieved_at": "2026-01-05T07:15:34.545Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T07:15:34.545Z",
+      "tags": [
+        "step",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.auto_3",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Payment Slip for Offline Payment only.",
+      "status": "unverified",
+      "structured_data": {
+        "order": 3
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "quoted_text": "Payment Slip for Offline Payment only.",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "**Required documents:**"
+            ]
+          },
+          "retrieved_at": "2026-01-05T07:15:34.576Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T07:15:34.576Z",
+      "tags": [
+        "step",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.952bafce9b38f0ae",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "For Online Application Click Here",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "For Online Application Click Here",
+        "description": "",
+        "marker_type": "bullet_imperative"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+          "quoted_text": "For Online Application Click Here",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "5 Steps to your e-Passport",
+              "Step 1: Check if the new e-Passport is already available in your area",
+              "Step 2: Fill in your e-Passport application online"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.265Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.265Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.83c285e66635dfd7",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "For Passport Fees and Bank List Click Here",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "For Passport Fees and Bank List Click Here",
+        "description": "",
+        "marker_type": "bullet_imperative"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+          "quoted_text": "For Passport Fees and Bank List Click Here",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "5 Steps to your e-Passport",
+              "Step 1: Check if the new e-Passport is already available in your area",
+              "Step 3: Pay passport fees"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.265Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.265Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.5933a674072f51c6",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Make sure you have all required documents with you when you visit the passport office.",
+      "status": "unverified",
+      "structured_data": {
+        "order": 3,
+        "title": "Make sure you have all required documents with you when you visit the passport office.",
+        "description": "",
+        "marker_type": "bullet_imperative"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+          "quoted_text": "Make sure you have all required documents with you when you visit the passport office.",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "5 Steps to your e-Passport",
+              "Step 1: Check if the new e-Passport is already available in your area",
+              "Step 4: Visit your Passport Office for biometric enrolment"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.265Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.265Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.b66abc0ad898eedd",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Authorized representatives (has to bring his/her NID card) can collect the applicant's new passport.",
+      "status": "unverified",
+      "structured_data": {
+        "order": 4,
+        "title": "Authorized representatives (has to bring his/her NID card) can collect the applicant's new passport.",
+        "description": "",
+        "marker_type": "bullet_imperative"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+          "quoted_text": "Authorized representatives (has to bring his/her NID card) can collect the applicant's new passport.",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "5 Steps to your e-Passport",
+              "Step 1: Check if the new e-Passport is already available in your area",
+              "Step 5: Collect your e-Passport at the passport office"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.265Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.265Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.www_epassport.f66c0c15b8c0d632",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "faq",
+      "text": "What is Super Express passport delivery service?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "What is Super Express passport delivery service?",
+        "answer": "There are occasions when a citizen needs passport urgently. In such situation, citizens can apply for **Super Express** delivery (specific conditions and fees apply). Passport will be issued within 2 (two) working days for Super Express delivery."
+      },
+      "citations": [
+        {
+          "source_page_id": "source.bec768015b78bd53a8b503339bb933a4d7a03f1f",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/urgent-applications",
+          "quoted_text": "What is Super Express passport delivery service?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Urgent Applications"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.266Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.266Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.www_epassport.439451ad732bf44a",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "faq",
+      "text": "Who can apply for Super Express delivery?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "Who can apply for Super Express delivery?",
+        "answer": "Any citizen of Bangladesh can apply for Super Express delivery."
+      },
+      "citations": [
+        {
+          "source_page_id": "source.bec768015b78bd53a8b503339bb933a4d7a03f1f",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/urgent-applications",
+          "quoted_text": "Who can apply for Super Express delivery?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Urgent Applications"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.266Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.266Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.www_epassport.7d0156aa4f82f231",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "faq",
+      "text": "Where can I apply for Super Express passport?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "Where can I apply for Super Express passport?",
+        "answer": "Super Express service is applicable for citizens applying from Bangladesh. This service is not available outside Bangladesh i.e. Bangladesh Missions abroad. Applications for Super Express delivery can be made through the Online Application Portal and it can be processed through any passport office of Bangladesh."
+      },
+      "citations": [
+        {
+          "source_page_id": "source.bec768015b78bd53a8b503339bb933a4d7a03f1f",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/urgent-applications",
+          "quoted_text": "Where can I apply for Super Express passport?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Urgent Applications"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.266Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.266Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.www_epassport.cf1c4b6a65b5cba2",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "faq",
+      "text": "What is the Super Express passport delivery process?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "What is the Super Express passport delivery process?",
+        "answer": "Super Express passports are delivered only from the Divisional Passport and Visa Office, Agargaon, Dhaka-1207. Citizens will have to collect Super Express passport from there. Shipment to other passport offices is not possible."
+      },
+      "citations": [
+        {
+          "source_page_id": "source.bec768015b78bd53a8b503339bb933a4d7a03f1f",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/urgent-applications",
+          "quoted_text": "What is the Super Express passport delivery process?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Urgent Applications"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.266Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.266Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.74f6689c157f06a3",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Printed application summary including appointment (if any).",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Printed application summary including appointment (if any).",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "Printed application summary including appointment (if any).",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.267Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.267Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.9ea102740cb8a96c",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "আবেদনপত্রের সারংশের প্রিন্ট কপি (অ্যাপয়েন্টমেন্ট সহ) ।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "আবেদনপত্রের সারংশের প্রিন্ট কপি (অ্যাপয়েন্টমেন্ট সহ) ।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "আবেদনপত্রের সারংশের প্রিন্ট কপি (অ্যাপয়েন্টমেন্ট সহ) ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:",
+              "প্রয়োজনীয় কাগজপত্র:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.267Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.267Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.de112ff1c13814e9",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Identification documents (NID card / Birth certificate - Original)",
+      "status": "unverified",
+      "structured_data": {
+        "order": 3,
+        "title": "Identification documents (NID card / Birth certificate - Original)",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "Identification documents (NID card / Birth certificate - Original)",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.267Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.267Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.874fe5ad74e5e1b4",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "সনাক্তকরণ নথির প্রিন্ট কপি (জাতীয় পরিচয় পত্র/ জন্ম নিবন্ধন নং) ।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 4,
+        "title": "সনাক্তকরণ নথির প্রিন্ট কপি (জাতীয় পরিচয় পত্র/ জন্ম নিবন্ধন নং) ।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "সনাক্তকরণ নথির প্রিন্ট কপি (জাতীয় পরিচয় পত্র/ জন্ম নিবন্ধন নং) ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:",
+              "প্রয়োজনীয় কাগজপত্র:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.267Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.267Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.4c946f028213cab8",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Payment Slip for Offline Payment only.",
+      "status": "unverified",
+      "structured_data": {
+        "order": 5,
+        "title": "Payment Slip for Offline Payment only.",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "Payment Slip for Offline Payment only.",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.268Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.268Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.75c7d732b91e0985",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "পেমেন্ট স্লিপ (for Offline Payment only) ।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 6,
+        "title": "পেমেন্ট স্লিপ (for Offline Payment only) ।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "পেমেন্ট স্লিপ (for Offline Payment only) ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:",
+              "প্রয়োজনীয় কাগজপত্র:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.268Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.268Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.a4f7b9c33b24df58",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Previous Passport (if any).",
+      "status": "unverified",
+      "structured_data": {
+        "order": 7,
+        "title": "Previous Passport (if any).",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "Previous Passport (if any).",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.268Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.268Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.ce75229566b89286",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "পূর্ববর্তী পাসপোর্ট এবং ডাটা পেজের প্রিন্ট কপি (যদি থাকে) ।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 8,
+        "title": "পূর্ববর্তী পাসপোর্ট এবং ডাটা পেজের প্রিন্ট কপি (যদি থাকে) ।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "পূর্ববর্তী পাসপোর্ট এবং ডাটা পেজের প্রিন্ট কপি (যদি থাকে) ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:",
+              "প্রয়োজনীয় কাগজপত্র:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.268Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.268Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.7aafe39f24f7b262",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "GO/NOC for government service holder (as applicable).",
+      "status": "unverified",
+      "structured_data": {
+        "order": 9,
+        "title": "GO/NOC for government service holder (as applicable).",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "GO/NOC for government service holder (as applicable).",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.268Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.268Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.a15c64d3276e7a5f",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "সরকারি চাকরিজীবীদের ক্ষেত্রে GO/NOC (যদি থাকে) ।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 10,
+        "title": "সরকারি চাকরিজীবীদের ক্ষেত্রে GO/NOC (যদি থাকে) ।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "সরকারি চাকরিজীবীদের ক্ষেত্রে GO/NOC (যদি থাকে) ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:",
+              "প্রয়োজনীয় কাগজপত্র:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.268Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.268Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.e8fa4bc01dffe71d",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Printed application form.",
+      "status": "unverified",
+      "structured_data": {
+        "order": 11,
+        "title": "Printed application form.",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "Printed application form.",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.268Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.268Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.c6a3c3c65070395a",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "আবেদনপত্রের প্রিন্ট কপি ।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 12,
+        "title": "আবেদনপত্রের প্রিন্ট কপি ।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "আবেদনপত্রের প্রিন্ট কপি ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:",
+              "প্রয়োজনীয় কাগজপত্র:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.268Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.268Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.a1e493b773add86e",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Further necessity of documents depends on nature of application/corrections (if any).",
+      "status": "unverified",
+      "structured_data": {
+        "order": 13,
+        "title": "Further necessity of documents depends on nature of application/corrections (if any).",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "Further necessity of documents depends on nature of application/corrections (if any).",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.268Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.268Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.1d84539a750fd62a",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "তথ্য সংশোধনের ক্ষেত্রে প্রয়োজনীয় কাগজপত্র (যদি থাকে) ।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 14,
+        "title": "তথ্য সংশোধনের ক্ষেত্রে প্রয়োজনীয় কাগজপত্র (যদি থাকে) ।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "তথ্য সংশোধনের ক্ষেত্রে প্রয়োজনীয় কাগজপত্র (যদি থাকে) ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:",
+              "প্রয়োজনীয় কাগজপত্র:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.268Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.268Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.eb2cbabd280bf7d6",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "*অনলাইন চেক :** ই-পাসপোর্ট পোর্টালে 'স্ট্যাটাস চেক' এখানে ।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "*অনলাইন চেক :** ই-পাসপোর্ট পোর্টালে 'স্ট্যাটাস চেক' এখানে ।",
+        "description": "*অনলাইন চেক :** ই-পাসপোর্ট পোর্টালে 'স্ট্যাটাস চেক' এখানে । জন্ম তারিখ ও আবেদনের ক্রমিক সংখ্যা প্রবেশ করুন। এবার সার্চ অপশনে ক্লিক করুন ।",
+        "marker_type": "bullet_imperative"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.f5b4e2bc1b7c322dc404e37c1821692b43b865ef",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs/7",
+          "quoted_text": "*অনলাইন চেক :** ই-পাসপোর্ট পোর্টালে 'স্ট্যাটাস চেক' এখানে । জন্ম তারিখ ও আবেদনের ক্রমিক সংখ্যা প্রবেশ করুন। এবার সার্চ অপশনে ক্লিক করুন ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "আমার পাসপোর্ট আবেদনের অগ্রগতি কিভাবে দেখতে পারব ?",
+              "Online Check"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.269Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.269Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.www_epassport.4e168681bb3b5d8a",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "faq",
+      "text": "আমার পাসপোর্ট আবেদনের অগ্রগতি কিভাবে দেখতে পারব ?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "আমার পাসপোর্ট আবেদনের অগ্রগতি কিভাবে দেখতে পারব ?",
+        "answer": "Last updated: 28 August 2020"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.f5b4e2bc1b7c322dc404e37c1821692b43b865ef",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs/7",
+          "quoted_text": "আমার পাসপোর্ট আবেদনের অগ্রগতি কিভাবে দেখতে পারব ?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Page Content"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.269Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.269Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.www_epassport.b879bf02976ada57",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "faq",
+      "text": "নামের \"Given Name\" এবং \"Surname\" অংশটি কিভাবে পূরণ করব ?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "নামের \"Given Name\" এবং \"Surname\" অংশটি কিভাবে পূরণ করব ?",
+        "answer": "Last updated: 1 September 2021"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.c962004d31a2f683d9c2702ba8319fbbef032a56",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs/72",
+          "quoted_text": "নামের \"Given Name\" এবং \"Surname\" অংশটি কিভাবে পূরণ করব ?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Page Content"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.269Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.269Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.54bcec38278b07b3",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "আবেদনকারী কর্তৃক অনলাইনে আবেদনকৃত (পিডিএফ) ফরম প্রিন্টেড কপি।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "আবেদনকারী কর্তৃক অনলাইনে আবেদনকৃত (পিডিএফ) ফরম প্রিন্টেড কপি।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "আবেদনকারী কর্তৃক অনলাইনে আবেদনকৃত (পিডিএফ) ফরম প্রিন্টেড কপি।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.270Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.270Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.d1c07b667c97788f",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "পাসপোর্টের ফি জমা প্রদানের চালান রশিদ (অফলাইন পেমেন্টের ক্ষেত্রে)।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "পাসপোর্টের ফি জমা প্রদানের চালান রশিদ (অফলাইন পেমেন্টের ক্ষেত্রে)।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "পাসপোর্টের ফি জমা প্রদানের চালান রশিদ (অফলাইন পেমেন্টের ক্ষেত্রে)।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.270Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.270Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.678f0514f872e330",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "অনলাইন জন্ম নিবন্ধন সনদ (ইংরেজী ভার্সন) মূলকপি এবং ফটোকপি।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 3,
+        "title": "অনলাইন জন্ম নিবন্ধন সনদ (ইংরেজী ভার্সন) মূলকপি এবং ফটোকপি।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "অনলাইন জন্ম নিবন্ধন সনদ (ইংরেজী ভার্সন) মূলকপি এবং ফটোকপি।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.270Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.270Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.28e97426939642af",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "জাতীয় পরিচয় পত্রের মূল ও ফটোকপি (২০ বছরের উর্ধ্বের নাগরিকদের জন্য)।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 4,
+        "title": "জাতীয় পরিচয় পত্রের মূল ও ফটোকপি (২০ বছরের উর্ধ্বের নাগরিকদের জন্য)।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "জাতীয় পরিচয় পত্রের মূল ও ফটোকপি (২০ বছরের উর্ধ্বের নাগরিকদের জন্য)।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.270Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.270Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.662d786b7bb86d48",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "বর্তমান ঠিকানা প্রমাণের স্বপক্ষে Job ID/Student ID/গ্যাস বিলের কপি/ বিদ্যুৎ বিলের কপি",
+      "status": "unverified",
+      "structured_data": {
+        "order": 5,
+        "title": "বর্তমান ঠিকানা প্রমাণের স্বপক্ষে Job ID/Student ID/গ্যাস বিলের কপি/ বিদ্যুৎ বিলের কপি",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "বর্তমান ঠিকানা প্রমাণের স্বপক্ষে Job ID/Student ID/গ্যাস বিলের কপি/ বিদ্যুৎ বিলের কপি",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.270Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.270Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.cce4763919ac11f9",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে সুরক্ষা সেবা বিভাগ হতে জারীকৃত আদেশের কপি।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 6,
+        "title": "দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে সুরক্ষা সেবা বিভাগ হতে জারীকৃত আদেশের কপি।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে সুরক্ষা সেবা বিভাগ হতে জারীকৃত আদেশের কপি।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.270Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.270Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.436db87e4f71c340",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "টেকনিক্যাল পেশা প্রমাণের স্বপক্ষে টেকনিক্যাল সনদের কপি।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 7,
+        "title": "টেকনিক্যাল পেশা প্রমাণের স্বপক্ষে টেকনিক্যাল সনদের কপি।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "টেকনিক্যাল পেশা প্রমাণের স্বপক্ষে টেকনিক্যাল সনদের কপি।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.270Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.270Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.7ea159a52951a414",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "রি-ইস্যু আবেদনের ক্ষেত্রে মূল পাসপোর্ট এবং পাসপোর্টের ফটোকপি",
+      "status": "unverified",
+      "structured_data": {
+        "order": 8,
+        "title": "রি-ইস্যু আবেদনের ক্ষেত্রে মূল পাসপোর্ট এবং পাসপোর্টের ফটোকপি",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "রি-ইস্যু আবেদনের ক্ষেত্রে মূল পাসপোর্ট এবং পাসপোর্টের ফটোকপি",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.270Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.270Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.dcfebd7f0b48eca9",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "ধূসর ব্যাকগ্রাউন্ডের 3R সাইজের ফটো (০৬ বছরের নিচে শিশুদের ক্ষেত্রে)।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 9,
+        "title": "ধূসর ব্যাকগ্রাউন্ডের 3R সাইজের ফটো (০৬ বছরের নিচে শিশুদের ক্ষেত্রে)।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "ধূসর ব্যাকগ্রাউন্ডের 3R সাইজের ফটো (০৬ বছরের নিচে শিশুদের ক্ষেত্রে)।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.270Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.270Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.d093943db3979d37",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "অপ্রাপ্ত বয়স্ক আবেদনকারীর ক্ষেত্রে পিতা/মাতার জাতীয় পরিচয়পত্রের কপি।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 10,
+        "title": "অপ্রাপ্ত বয়স্ক আবেদনকারীর ক্ষেত্রে পিতা/মাতার জাতীয় পরিচয়পত্রের কপি।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "অপ্রাপ্ত বয়স্ক আবেদনকারীর ক্ষেত্রে পিতা/মাতার জাতীয় পরিচয়পত্রের কপি।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.270Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.270Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.e76032a5a9afb75c",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "মেডিকেল সনদ (চোখের আইরিশ, ফিঙ্গারপ্রিন্ট মিসিং হবার ক্ষেত্রে)।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 11,
+        "title": "মেডিকেল সনদ (চোখের আইরিশ, ফিঙ্গারপ্রিন্ট মিসিং হবার ক্ষেত্রে)।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "মেডিকেল সনদ (চোখের আইরিশ, ফিঙ্গারপ্রিন্ট মিসিং হবার ক্ষেত্রে)।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.270Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.270Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.88e6e402864355d6",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "সরকারী আদেশ (GO)/অনাপত্তি সনদ (NOC)/প্রত্যয়নপত্র।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 12,
+        "title": "সরকারী আদেশ (GO)/অনাপত্তি সনদ (NOC)/প্রত্যয়নপত্র।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "সরকারী আদেশ (GO)/অনাপত্তি সনদ (NOC)/প্রত্যয়নপত্র।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.270Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.270Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.d9fb1bde4aa504bc",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Agargaon",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Agargaon",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/33",
+          "quoted_text": "Agargaon",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "চালুকৃত ই-পাসপোর্ট অফিসগুলির তালিকা।",
+              "Currently following e-Passport Offices are functional:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.271Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.271Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.368479f291152557",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Jatrabari",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Jatrabari",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/33",
+          "quoted_text": "Jatrabari",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "চালুকৃত ই-পাসপোর্ট অফিসগুলির তালিকা।",
+              "Currently following e-Passport Offices are functional:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.271Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.271Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.d54d64c68705c31e",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Uttara",
+      "status": "unverified",
+      "structured_data": {
+        "order": 3,
+        "title": "Uttara",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/33",
+          "quoted_text": "Uttara",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "চালুকৃত ই-পাসপোর্ট অফিসগুলির তালিকা।",
+              "Currently following e-Passport Offices are functional:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.271Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.271Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.f904b2433ca56f3d",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Dhaka Cantonment",
+      "status": "unverified",
+      "structured_data": {
+        "order": 4,
+        "title": "Dhaka Cantonment",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/33",
+          "quoted_text": "Dhaka Cantonment",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "চালুকৃত ই-পাসপোর্ট অফিসগুলির তালিকা।",
+              "Currently following e-Passport Offices are functional:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.271Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.271Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.9f4bf11b75cdfaf9",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Bangladesh Secretariate",
+      "status": "unverified",
+      "structured_data": {
+        "order": 5,
+        "title": "Bangladesh Secretariate",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/33",
+          "quoted_text": "Bangladesh Secretariate",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "চালুকৃত ই-পাসপোর্ট অফিসগুলির তালিকা।",
+              "Currently following e-Passport Offices are functional:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.271Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.271Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.2cb4577387f3068b",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Gazipur",
+      "status": "unverified",
+      "structured_data": {
+        "order": 6,
+        "title": "Gazipur",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/33",
+          "quoted_text": "Gazipur",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "চালুকৃত ই-পাসপোর্ট অফিসগুলির তালিকা।",
+              "Currently following e-Passport Offices are functional:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.271Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.271Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.2ad038429ff0000d",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Mansurabad",
+      "status": "unverified",
+      "structured_data": {
+        "order": 7,
+        "title": "Mansurabad",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/33",
+          "quoted_text": "Mansurabad",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "চালুকৃত ই-পাসপোর্ট অফিসগুলির তালিকা।",
+              "Currently following e-Passport Offices are functional:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.271Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.271Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.b6692a4bb8b73fc4",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Mymensingh",
+      "status": "unverified",
+      "structured_data": {
+        "order": 8,
+        "title": "Mymensingh",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/33",
+          "quoted_text": "Mymensingh",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "চালুকৃত ই-পাসপোর্ট অফিসগুলির তালিকা।",
+              "Currently following e-Passport Offices are functional:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.271Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.271Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.3845e02be6c7ca89",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Ministry of Foreign Affairs",
+      "status": "unverified",
+      "structured_data": {
+        "order": 9,
+        "title": "Ministry of Foreign Affairs",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/33",
+          "quoted_text": "Ministry of Foreign Affairs",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "চালুকৃত ই-পাসপোর্ট অফিসগুলির তালিকা।",
+              "Currently following e-Passport Offices are functional:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.271Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.271Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.3e094319ddc2f5f6",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Gaibandha",
+      "status": "unverified",
+      "structured_data": {
+        "order": 10,
+        "title": "Gaibandha",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3f22552962d2df32269bccd812d892bfde9c7685",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/33",
+          "quoted_text": "Gaibandha",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "চালুকৃত ই-পাসপোর্ট অফিসগুলির তালিকা।",
+              "Currently following e-Passport Offices are functional:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.271Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.271Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.35bc8bb842d748d3",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "*If you have questions, Please click here to get to the FAQs**",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "*If you have questions, Please click here to get to the FAQs**",
+        "description": "",
+        "marker_type": "bullet_imperative"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.b5c15082fe59f32804b8251440d4b63bb9773728",
+          "canonical_url": "https://www.epassport.gov.bd/contact",
+          "quoted_text": "*If you have questions, Please click here to get to the FAQs**",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Contact to Online Portal Support"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.272Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.272Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.b66e0a0a042d4af5",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "*To know your application status please visit the online status check here**",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "*To know your application status please visit the online status check here**",
+        "description": "",
+        "marker_type": "bullet_imperative"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.b5c15082fe59f32804b8251440d4b63bb9773728",
+          "canonical_url": "https://www.epassport.gov.bd/contact",
+          "quoted_text": "*To know your application status please visit the online status check here**",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Contact to Online Portal Support"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.272Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.272Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.fea25a451792fc02",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "*IMPORTANT:** please provide the required document like NID or BRC and previous passport (if available), or other official documents to proof the corr",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "*IMPORTANT:** please provide the required document like NID or BRC and previous passport (if available), or other official documents to proof the corr",
+        "description": "",
+        "marker_type": "bullet_imperative"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.4f66109e0d84e69215a442907dd8ca738c9cc550",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs/20",
+          "quoted_text": "*IMPORTANT:** please provide the required document like NID or BRC and previous passport (if available), or other official documents to proof the correct data.",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "I made mistakes in my application data and my application is already submitted - what can I do?"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.272Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.272Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.www_epassport.2feb5676f08eda2d",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "faq",
+      "text": "I made mistakes in my application data and my application is already submitted - what can I do?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "I made mistakes in my application data and my application is already submitted - what can I do?",
+        "answer": "Last updated: 1 September 2021 If you recognize that you have submitted your ePassport application, but some of the application data is not correct you should do the following:"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.4f66109e0d84e69215a442907dd8ca738c9cc550",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs/20",
+          "quoted_text": "I made mistakes in my application data and my application is already submitted - what can I do?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Page Content"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.272Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.272Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.www_epassport.c52c4b54ca6b2e7e",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "faq",
+      "text": "I experienced issues with Online Payment - what can I do?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "I experienced issues with Online Payment - what can I do?",
+        "answer": "Last updated: 24 May 2025 Contact to your bank for refund if status is failed but payment done. After having refund from bank then delete this application and apply a new."
+      },
+      "citations": [
+        {
+          "source_page_id": "source.e13178a19e94985b1961cbd40556aab7f68e7c6d",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs/24",
+          "quoted_text": "I experienced issues with Online Payment - what can I do?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Page Content"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.273Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.273Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.www_epassport.4cceae41402ad526",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "faq",
+      "text": "After how many years e-passport must be re-issued?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "After how many years e-passport must be re-issued?",
+        "answer": "Last updated: 18 October 2023 Generally, e-passport is issued with the validity of 5/10 years. You can re-issue a new passport by mentioning the previous passport number before or after the expiry date as per your requirement."
+      },
+      "citations": [
+        {
+          "source_page_id": "source.71ebe977392507133c711c48a7d3089a76ec4ac6",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs/285",
+          "quoted_text": "After how many years e-passport must be re-issued?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Page Content"
+            ]
+          },
+          "retrieved_at": "2026-01-05T08:57:20.273Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T08:57:20.273Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.758407279a036f85",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "For Online Application Click [Here](https://www.",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "For Online Application Click [Here](https://www.",
+        "description": "For Online Application Click [Here](https://www.epassport.gov.bd/onboarding)",
+        "marker_type": "bullet_imperative"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+          "quoted_text": "For Online Application Click [Here](https://www.epassport.gov.bd/onboarding)",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "5 Steps to your e-Passport",
+              "Step 1: Check if the new e-Passport is already available in your area",
+              "Step 2: Fill in your e-Passport application online"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.958Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.958Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.83efb869c9ca5a46",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "For Passport Fees and Bank List Click [Here](https://www.",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "For Passport Fees and Bank List Click [Here](https://www.",
+        "description": "For Passport Fees and Bank List Click [Here](https://www.epassport.gov.bd/instructions/passport-fees)",
+        "marker_type": "bullet_imperative"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+          "quoted_text": "For Passport Fees and Bank List Click [Here](https://www.epassport.gov.bd/instructions/passport-fees)",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "5 Steps to your e-Passport",
+              "Step 1: Check if the new e-Passport is already available in your area",
+              "Step 3: Pay passport fees"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.958Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.958Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.e1b3a44d5b0fb6ff",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Make sure you have all [required documents](https://www.",
+      "status": "unverified",
+      "structured_data": {
+        "order": 3,
+        "title": "Make sure you have all [required documents](https://www.",
+        "description": "Make sure you have all [required documents](https://www.epassport.gov.bd/landing/notices/34) with you when you visit the passport office.",
+        "marker_type": "bullet_imperative"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+          "quoted_text": "Make sure you have all [required documents](https://www.epassport.gov.bd/landing/notices/34) with you when you visit the passport office.",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "5 Steps to your e-Passport",
+              "Step 1: Check if the new e-Passport is already available in your area",
+              "Step 4: Visit your Passport Office for biometric enrolment"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.958Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.958Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.b3039be5ab07cf0c",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "**Authorized representatives(** has to bring his/her NID card) can collect the applicant's new passport.",
+      "status": "unverified",
+      "structured_data": {
+        "order": 4,
+        "title": "**Authorized representatives(** has to bring his/her NID card) can collect the applicant's new passport.",
+        "description": "",
+        "marker_type": "bullet_imperative"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.947176686bf0965726403b957c96cb34267fa1d8",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/five-step-to-your-epassport",
+          "quoted_text": "**Authorized representatives(** has to bring his/her NID card) can collect the applicant's new passport.",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "5 Steps to your e-Passport",
+              "Step 1: Check if the new e-Passport is already available in your area",
+              "Step 5: Collect your e-Passport at the passport office"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.958Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.958Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.33c5b42692b2c2f3",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "PDF form needs to be downloaded to the computer first",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "PDF form needs to be downloaded to the computer first",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/application-form",
+          "quoted_text": "PDF form needs to be downloaded to the computer first",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Application at RPO Bangladesh Secretariat and Dhaka Cantonment"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.960Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.960Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.321973c02567555b",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Open and fille up with the tool \" **Adobe Acrobat Reader DC**\" to support all required functions.",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Open and fille up with the tool \" **Adobe Acrobat Reader DC**\" to support all required functions.",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/application-form",
+          "quoted_text": "Open and fille up with the tool \" **Adobe Acrobat Reader DC**\" to support all required functions.",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Application at RPO Bangladesh Secretariat and Dhaka Cantonment"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.960Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.960Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.document_requirement.www_epassport.eb377b4ecc82d906",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "document_requirement",
+      "text": "Download a PDF form",
+      "status": "unverified",
+      "structured_data": {
+        "url": "https://www.epassport.gov.bd/api/v1/registrations/download-offline-form",
+        "extension": ".unknown",
+        "discovery_method": "markdown_link"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.9cacd3de1b16ae897930018caff86b2c68cbb63c",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/application-form",
+          "quoted_text": "Download a PDF form",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Page Content"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.960Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.960Z",
+      "tags": [
+        "document",
+        "download",
+        "auto_extracted"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.b18f4c8574a444d7",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Printed application summary including appointment (if any).",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Printed application summary including appointment (if any).",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "Printed application summary including appointment (if any).",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.965Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.965Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.dc0b4728cd265e86",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "আবেদনপত্রের সারংশের প্রিন্ট কপি (অ্যাপয়েন্টমেন্ট সহ) ।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "আবেদনপত্রের সারংশের প্রিন্ট কপি (অ্যাপয়েন্টমেন্ট সহ) ।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "আবেদনপত্রের সারংশের প্রিন্ট কপি (অ্যাপয়েন্টমেন্ট সহ) ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:",
+              "প্রয়োজনীয় কাগজপত্র:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.965Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.965Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.36ad55e688f5b309",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Identification documents (NID card / Birth certificate - Original)",
+      "status": "unverified",
+      "structured_data": {
+        "order": 3,
+        "title": "Identification documents (NID card / Birth certificate - Original)",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "Identification documents (NID card / Birth certificate - Original)",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.965Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.965Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.e661c54804c9228a",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "সনাক্তকরণ নথির প্রিন্ট কপি (জাতীয় পরিচয় পত্র/ জন্ম নিবন্ধন নং) ।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 4,
+        "title": "সনাক্তকরণ নথির প্রিন্ট কপি (জাতীয় পরিচয় পত্র/ জন্ম নিবন্ধন নং) ।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "সনাক্তকরণ নথির প্রিন্ট কপি (জাতীয় পরিচয় পত্র/ জন্ম নিবন্ধন নং) ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:",
+              "প্রয়োজনীয় কাগজপত্র:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.965Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.965Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.c3feb13475541074",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Payment Slip for Offline Payment only.",
+      "status": "unverified",
+      "structured_data": {
+        "order": 5,
+        "title": "Payment Slip for Offline Payment only.",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "Payment Slip for Offline Payment only.",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.965Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.965Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.58e9aedd2f8ec61b",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "পেমেন্ট স্লিপ (for Offline Payment only) ।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 6,
+        "title": "পেমেন্ট স্লিপ (for Offline Payment only) ।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "পেমেন্ট স্লিপ (for Offline Payment only) ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:",
+              "প্রয়োজনীয় কাগজপত্র:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.965Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.965Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.1173cd6918cf103f",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Previous Passport (if any).",
+      "status": "unverified",
+      "structured_data": {
+        "order": 7,
+        "title": "Previous Passport (if any).",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "Previous Passport (if any).",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.965Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.965Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.8d278203e2e4bb12",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "পূর্ববর্তী পাসপোর্ট এবং ডাটা পেজের প্রিন্ট কপি (যদি থাকে) ।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 8,
+        "title": "পূর্ববর্তী পাসপোর্ট এবং ডাটা পেজের প্রিন্ট কপি (যদি থাকে) ।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "পূর্ববর্তী পাসপোর্ট এবং ডাটা পেজের প্রিন্ট কপি (যদি থাকে) ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:",
+              "প্রয়োজনীয় কাগজপত্র:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.965Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.965Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.2f79bbad4940fe6d",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "GO/NOC for government service holder (as applicable).",
+      "status": "unverified",
+      "structured_data": {
+        "order": 9,
+        "title": "GO/NOC for government service holder (as applicable).",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "GO/NOC for government service holder (as applicable).",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.965Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.965Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.e8119fbb9915227a",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "সরকারি চাকরিজীবীদের ক্ষেত্রে GO/NOC (যদি থাকে) ।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 10,
+        "title": "সরকারি চাকরিজীবীদের ক্ষেত্রে GO/NOC (যদি থাকে) ।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "সরকারি চাকরিজীবীদের ক্ষেত্রে GO/NOC (যদি থাকে) ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:",
+              "প্রয়োজনীয় কাগজপত্র:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.965Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.965Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.fa7f611df9d6416d",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Printed application form.",
+      "status": "unverified",
+      "structured_data": {
+        "order": 11,
+        "title": "Printed application form.",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "Printed application form.",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.965Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.965Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.9dcbac6d65752e38",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "আবেদনপত্রের প্রিন্ট কপি ।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 12,
+        "title": "আবেদনপত্রের প্রিন্ট কপি ।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "আবেদনপত্রের প্রিন্ট কপি ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:",
+              "প্রয়োজনীয় কাগজপত্র:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.965Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.965Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.831b20ebefddaadc",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Further necessity of documents depends on nature of application/corrections (if any).",
+      "status": "unverified",
+      "structured_data": {
+        "order": 13,
+        "title": "Further necessity of documents depends on nature of application/corrections (if any).",
+        "description": "",
+        "marker_type": "ordered_list"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "Further necessity of documents depends on nature of application/corrections (if any).",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.966Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.966Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.7d27be6814dc7c74",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "তথ্য সংশোধনের ক্ষেত্রে প্রয়োজনীয় কাগজপত্র (যদি থাকে) ।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 14,
+        "title": "তথ্য সংশোধনের ক্ষেত্রে প্রয়োজনীয় কাগজপত্র (যদি থাকে) ।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/34",
+          "quoted_text": "তথ্য সংশোধনের ক্ষেত্রে প্রয়োজনীয় কাগজপত্র (যদি থাকে) ।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্ট অফিসে আবেদনপত্র জমা দেওয়ার সময় যে সকল প্রয়োজনীয় কাগজপত্র নিয়ে যেতে হবে :",
+              "Required documents:",
+              "প্রয়োজনীয় কাগজপত্র:"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.966Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.966Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.01e979ab8bf008a2",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "আবেদনকারী কর্তৃক অনলাইনে আবেদনকৃত (পিডিএফ) ফরম প্রিন্টেড কপি।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "আবেদনকারী কর্তৃক অনলাইনে আবেদনকৃত (পিডিএফ) ফরম প্রিন্টেড কপি।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "আবেদনকারী কর্তৃক অনলাইনে আবেদনকৃত (পিডিএফ) ফরম প্রিন্টেড কপি।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.5777edf78a44f617",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "পাসপোর্টের ফি জমা প্রদানের চালান রশিদ (অফলাইন পেমেন্টের ক্ষেত্রে)।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "পাসপোর্টের ফি জমা প্রদানের চালান রশিদ (অফলাইন পেমেন্টের ক্ষেত্রে)।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "পাসপোর্টের ফি জমা প্রদানের চালান রশিদ (অফলাইন পেমেন্টের ক্ষেত্রে)।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.a0d49aa6f5c8dc1d",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "অনলাইন জন্ম নিবন্ধন সনদ (ইংরেজী ভার্সন) মূলকপি এবং ফটোকপি।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 3,
+        "title": "অনলাইন জন্ম নিবন্ধন সনদ (ইংরেজী ভার্সন) মূলকপি এবং ফটোকপি।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "অনলাইন জন্ম নিবন্ধন সনদ (ইংরেজী ভার্সন) মূলকপি এবং ফটোকপি।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.a68ebd13de0d0843",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "জাতীয় পরিচয় পত্রের মূল ও ফটোকপি (২০ বছরের উর্ধ্বের নাগরিকদের জন্য)।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 4,
+        "title": "জাতীয় পরিচয় পত্রের মূল ও ফটোকপি (২০ বছরের উর্ধ্বের নাগরিকদের জন্য)।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "জাতীয় পরিচয় পত্রের মূল ও ফটোকপি (২০ বছরের উর্ধ্বের নাগরিকদের জন্য)।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.ba5d66046da70e4b",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "বর্তমান ঠিকানা প্রমাণের স্বপক্ষে Job ID/Student ID/গ্যাস বিলের কপি/ বিদ্যুৎ বিলের কপি/ টেলিফোন বিলের কপি/পানির বিলের কপি যেটি প্রযোজ্য সেটার মূলকপি প্",
+      "status": "unverified",
+      "structured_data": {
+        "order": 5,
+        "title": "বর্তমান ঠিকানা প্রমাণের স্বপক্ষে Job ID/Student ID/গ্যাস বিলের কপি/ বিদ্যুৎ বিলের কপি/ টেলিফোন বিলের কপি/পানির বিলের কপি যেটি প্রযোজ্য সেটার মূলকপি প্",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "বর্তমান ঠিকানা প্রমাণের স্বপক্ষে Job ID/Student ID/গ্যাস বিলের কপি/ বিদ্যুৎ বিলের কপি/ টেলিফোন বিলের কপি/পানির বিলের কপি যেটি প্রযোজ্য সেটার মূলকপি প্রদর্শন করা।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.488ff6da1fe27977",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে সুরক্ষা সেবা বিভাগ, স্বরাষ্ট মন্ত্রণালয় হতে জারীকৃত আদেশের কপি।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 6,
+        "title": "দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে সুরক্ষা সেবা বিভাগ, স্বরাষ্ট মন্ত্রণালয় হতে জারীকৃত আদেশের কপি।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "দত্তক/অভিভাবকত্ব গ্রহণের ক্ষেত্রে সুরক্ষা সেবা বিভাগ, স্বরাষ্ট মন্ত্রণালয় হতে জারীকৃত আদেশের কপি।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.68a33192bca8c407",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "টেকনিক্যাল পেশা প্রমাণের স্বপক্ষে (ডাক্তার, ইঞ্জিনিয়ার, ড্রাইভার ইত্যাদি) টেকনিক্যাল সনদের কপি।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 7,
+        "title": "টেকনিক্যাল পেশা প্রমাণের স্বপক্ষে (ডাক্তার, ইঞ্জিনিয়ার, ড্রাইভার ইত্যাদি) টেকনিক্যাল সনদের কপি।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "টেকনিক্যাল পেশা প্রমাণের স্বপক্ষে (ডাক্তার, ইঞ্জিনিয়ার, ড্রাইভার ইত্যাদি) টেকনিক্যাল সনদের কপি।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.eea759a60fdcc742",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "রি-ইস্যু আবেদনের ক্ষেত্রে মূল পাসপোর্ট (Original Passport) এবং পাসপোর্টের ফটোকপি",
+      "status": "unverified",
+      "structured_data": {
+        "order": 8,
+        "title": "রি-ইস্যু আবেদনের ক্ষেত্রে মূল পাসপোর্ট (Original Passport) এবং পাসপোর্টের ফটোকপি",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "রি-ইস্যু আবেদনের ক্ষেত্রে মূল পাসপোর্ট (Original Passport) এবং পাসপোর্টের ফটোকপি",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.d0f5f16f72a0cf4a",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "ধূসর ব্যাকগ্রাউন্ডের 3R সাইজের ফটো (০৬ বছরের নিচে শিশুদের ক্ষেত্রে)।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 9,
+        "title": "ধূসর ব্যাকগ্রাউন্ডের 3R সাইজের ফটো (০৬ বছরের নিচে শিশুদের ক্ষেত্রে)।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "ধূসর ব্যাকগ্রাউন্ডের 3R সাইজের ফটো (০৬ বছরের নিচে শিশুদের ক্ষেত্রে)।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.c971abf316493d7f",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "অপ্রাপ্ত বয়স্ক আবেদনকারীর ক্ষেত্রে পিতা/মাতার জাতীয় পরিচয়পত্রের কপি।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 10,
+        "title": "অপ্রাপ্ত বয়স্ক আবেদনকারীর ক্ষেত্রে পিতা/মাতার জাতীয় পরিচয়পত্রের কপি।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "অপ্রাপ্ত বয়স্ক আবেদনকারীর ক্ষেত্রে পিতা/মাতার জাতীয় পরিচয়পত্রের কপি।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.6237ead4d1c5de2f",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "মেডিকেল সনদ (চোখের আইরিশ, ফিঙ্গারপ্রিন্ট মিসিং হবার ক্ষেত্রে)।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 11,
+        "title": "মেডিকেল সনদ (চোখের আইরিশ, ফিঙ্গারপ্রিন্ট মিসিং হবার ক্ষেত্রে)।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "মেডিকেল সনদ (চোখের আইরিশ, ফিঙ্গারপ্রিন্ট মিসিং হবার ক্ষেত্রে)।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.322a9010adb5fff7",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "সরকারী আদেশ (GO)/অনাপত্তি সনদ (NOC)/প্রত্যয়নপত্র এর কপি যা ইস্যুকারী কর্তৃপক্ষের নিজ নিজ Website এ আপলোড থাকতে হবে।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 12,
+        "title": "সরকারী আদেশ (GO)/অনাপত্তি সনদ (NOC)/প্রত্যয়নপত্র এর কপি যা ইস্যুকারী কর্তৃপক্ষের নিজ নিজ Website এ আপলোড থাকতে হবে।",
+        "description": "সরকারী আদেশ (GO)/অনাপত্তি সনদ (NOC)/প্রত্যয়নপত্র এর কপি যা ইস্যুকারী কর্তৃপক্ষের নিজ নিজ Website এ আপলোড থাকতে হবে। (প্রযোজ্য ক্ষেত্রে)",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "সরকারী আদেশ (GO)/অনাপত্তি সনদ (NOC)/প্রত্যয়নপত্র এর কপি যা ইস্যুকারী কর্তৃপক্ষের নিজ নিজ Website এ আপলোড থাকতে হবে। (প্রযোজ্য ক্ষেত্রে)",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.c42a52a2ef86702a",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "PRL এর আদেশ/পেনশন বই এর কপি।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 13,
+        "title": "PRL এর আদেশ/পেনশন বই এর কপি।",
+        "description": "PRL এর আদেশ/পেনশন বই এর কপি। (প্রযোজ্য ক্ষেত্রে)",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "PRL এর আদেশ/পেনশন বই এর কপি। (প্রযোজ্য ক্ষেত্রে)",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.c5dabc648a848551",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "বৈবাহিক অবস্থার পরিবর্তন হলে বিবাহ সনদ/কাবিন নামার কপি।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 14,
+        "title": "বৈবাহিক অবস্থার পরিবর্তন হলে বিবাহ সনদ/কাবিন নামার কপি।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "বৈবাহিক অবস্থার পরিবর্তন হলে বিবাহ সনদ/কাবিন নামার কপি।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.f77d329d0445ce76",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "বিবাহ বিচ্ছেদ হলে বিচ্ছেদের সনদ/তালাক নামার কপি।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 15,
+        "title": "বিবাহ বিচ্ছেদ হলে বিচ্ছেদের সনদ/তালাক নামার কপি।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "বিবাহ বিচ্ছেদ হলে বিচ্ছেদের সনদ/তালাক নামার কপি।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.0d7b1c4eb341d5a4",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "হারানো পাসপোর্টের ক্ষেত্রে সাধারণ ডায়েরী (GD) এর মূল কপি।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 16,
+        "title": "হারানো পাসপোর্টের ক্ষেত্রে সাধারণ ডায়েরী (GD) এর মূল কপি।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "হারানো পাসপোর্টের ক্ষেত্রে সাধারণ ডায়েরী (GD) এর মূল কপি।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.60513cc02215aa68",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "পূর্বের পাসপোর্ট এবং NID/BRC-তে তথ্য গড়মিল থাকলে নির্ধারিত ফরম্যাটে পূরণকৃত অঙ্গীকারনামা।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 17,
+        "title": "পূর্বের পাসপোর্ট এবং NID/BRC-তে তথ্য গড়মিল থাকলে নির্ধারিত ফরম্যাটে পূরণকৃত অঙ্গীকারনামা।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "পূর্বের পাসপোর্ট এবং NID/BRC-তে তথ্য গড়মিল থাকলে নির্ধারিত ফরম্যাটে পূরণকৃত অঙ্গীকারনামা।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.3104dfd6fabd435b",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Multiple Active পাসপোর্টের ক্ষেত্রে নির্ধারিত ফরম্যাটে পূরণকৃত অঙ্গীকারনামা।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 18,
+        "title": "Multiple Active পাসপোর্টের ক্ষেত্রে নির্ধারিত ফরম্যাটে পূরণকৃত অঙ্গীকারনামা।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "Multiple Active পাসপোর্টের ক্ষেত্রে নির্ধারিত ফরম্যাটে পূরণকৃত অঙ্গীকারনামা।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.39b4a47edd5becf8",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "তথ্য সংশোধনের জন্য অপ্রাপ্তবয়স্কদের ক্ষেত্রে শিক্ষাগত সনদ (JSC/SSC/HSC/সমমান)।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 19,
+        "title": "তথ্য সংশোধনের জন্য অপ্রাপ্তবয়স্কদের ক্ষেত্রে শিক্ষাগত সনদ (JSC/SSC/HSC/সমমান)।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "তথ্য সংশোধনের জন্য অপ্রাপ্তবয়স্কদের ক্ষেত্রে শিক্ষাগত সনদ (JSC/SSC/HSC/সমমান)।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.befdcb131770591b",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "সরকারী চাকুরীজীবীদের তথ্য সংশোধনের ক্ষেত্রে NID, শিক্ষাগত সনদ ও সার্ভিস রেকর্ড অনুযায়ী অফিসের প্রত্যয়নপত্র এবং সার্ভিস রেকর্ডের ফটোকপি।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 20,
+        "title": "সরকারী চাকুরীজীবীদের তথ্য সংশোধনের ক্ষেত্রে NID, শিক্ষাগত সনদ ও সার্ভিস রেকর্ড অনুযায়ী অফিসের প্রত্যয়নপত্র এবং সার্ভিস রেকর্ডের ফটোকপি।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "সরকারী চাকুরীজীবীদের তথ্য সংশোধনের ক্ষেত্রে NID, শিক্ষাগত সনদ ও সার্ভিস রেকর্ড অনুযায়ী অফিসের প্রত্যয়নপত্র এবং সার্ভিস রেকর্ডের ফটোকপি।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.e251142d51e70c7d",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "দ্বৈত নাগরিকত্বের ক্ষেত্রে স্বরাষ্ট্র মন্ত্রণালয়ের Dual Citizenship সনদ (প্রযোজ্য ক্ষেত্রে)।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 21,
+        "title": "দ্বৈত নাগরিকত্বের ক্ষেত্রে স্বরাষ্ট্র মন্ত্রণালয়ের Dual Citizenship সনদ (প্রযোজ্য ক্ষেত্রে)।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "দ্বৈত নাগরিকত্বের ক্ষেত্রে স্বরাষ্ট্র মন্ত্রণালয়ের Dual Citizenship সনদ (প্রযোজ্য ক্ষেত্রে)।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.3f5db2b4f3dfc4a2",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "অপ্রাপ্ত বয়স্কদের ক্ষেত্রে পিতা-মাতার অনুমতিপত্র এবং পিতা-মাতার উভয় বা যেকোন একজন উপস্থিত থাকা।",
+      "status": "unverified",
+      "structured_data": {
+        "order": 22,
+        "title": "অপ্রাপ্ত বয়স্কদের ক্ষেত্রে পিতা-মাতার অনুমতিপত্র এবং পিতা-মাতার উভয় বা যেকোন একজন উপস্থিত থাকা।",
+        "description": "",
+        "marker_type": "bengali_ordered"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603",
+          "canonical_url": "https://www.epassport.gov.bd/landing/notices/160",
+          "quoted_text": "অপ্রাপ্ত বয়স্কদের ক্ষেত্রে পিতা-মাতার অনুমতিপত্র এবং পিতা-মাতার উভয় বা যেকোন একজন উপস্থিত থাকা।",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "পাসপোর্টের আবেদন জমা নেওয়ার ক্ষেত্রে চেকলিস্ট"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.968Z",
+          "language": "bn"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.968Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "bengali"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.www_epassport.8eac61db5d6d8e6c",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "faq",
+      "text": "I forgot the password of my online application account – what should I do?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "I forgot the password of my online application account – what should I do?",
+        "answer": null,
+        "link": "https://www.epassport.gov.bd/landing/faqs/12"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7d8afb1bb534157d0220a9aed948b00b220e5b35",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs",
+          "quoted_text": "I forgot the password of my online application account – what should I do?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Frequently Asked Questions"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.972Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.972Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.www_epassport.08a56be6cb98fd5c",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "faq",
+      "text": "Can I change the mobile number registered in my online application account?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "Can I change the mobile number registered in my online application account?",
+        "answer": null,
+        "link": "https://www.epassport.gov.bd/landing/faqs/14"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7d8afb1bb534157d0220a9aed948b00b220e5b35",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs",
+          "quoted_text": "Can I change the mobile number registered in my online application account?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Frequently Asked Questions"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.972Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.972Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.www_epassport.7bf011d9dd10ca6c",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "faq",
+      "text": "Can I change the email address for my online application account?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "Can I change the email address for my online application account?",
+        "answer": null,
+        "link": "https://www.epassport.gov.bd/landing/faqs/13"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7d8afb1bb534157d0220a9aed948b00b220e5b35",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs",
+          "quoted_text": "Can I change the email address for my online application account?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Frequently Asked Questions"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.972Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.972Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.faq.www_epassport.8585deefe1e2c73c",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "faq",
+      "text": "I did not receive the account activation email when using online application – what should I do?",
+      "status": "unverified",
+      "structured_data": {
+        "question": "I did not receive the account activation email when using online application – what should I do?",
+        "answer": null,
+        "link": "https://www.epassport.gov.bd/landing/faqs/11"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.7d8afb1bb534157d0220a9aed948b00b220e5b35",
+          "canonical_url": "https://www.epassport.gov.bd/landing/faqs",
+          "quoted_text": "I did not receive the account activation email when using online application – what should I do?",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Frequently Asked Questions"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:09:41.972Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:09:41.972Z",
+      "tags": [
+        "faq",
+        "auto_extracted",
+        "english"
       ]
     }
   ],

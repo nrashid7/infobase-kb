@@ -10,8 +10,9 @@ const path = require('path');
 const crypto = require('crypto');
 const { URL } = require('url');
 
-// Import extraction logic from crawl.js
-const crawlModule = require('./crawl');
+// Import extraction logic from production crawl.js
+// NOTE: This pilot file is NON-PRODUCTION - see README.md
+const crawlModule = require('../../scripts/crawl');
 
 // URL Priority patterns (from crawl.js)
 const PRIORITY_PATTERNS = {

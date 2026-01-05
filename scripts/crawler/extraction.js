@@ -10,6 +10,9 @@
 const path = require('path');
 const { URL } = require('url');
 
+// Import shared utilities
+const { getDomain, makeDeterministicClaimId } = require('./utils');
+
 // Document extensions to harvest
 const DOCUMENT_EXTENSIONS = ['.pdf', '.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx'];
 
@@ -633,19 +636,6 @@ function extractStructuredData(markdown, url, html = '') {
 }
 
 /**
- * Get domain from URL
- * @param {string} urlStr - URL string
- * @returns {string|null} - Domain or null if invalid
- */
-function getDomain(urlStr) {
-  try {
-    return new URL(urlStr).hostname.toLowerCase();
-  } catch (e) {
-    return null;
-  }
-}
-
-/**
  * Create a citation object
  * @param {string} sourcePageId - Source page ID
  * @param {string} url - Page URL
@@ -680,24 +670,32 @@ function extractClaims(markdown, sourcePageId, url, structuredData) {
   const claims = [];
   const domain = getDomain(url);
   const servicePrefix = domain ? domain.replace(/\.gov\.bd$|\.com\.bd$/i, '').replace(/\./g, '_') : 'unknown';
-  let claimCounter = 0;
   
   // Extract fee claims
   for (const fee of structuredData.feeTable) {
-    claimCounter++;
-    const variantSuffix = fee.variant ? `_${fee.variant}` : '';
+    const payload = {
+      amount_bdt: fee.amount_bdt,
+      currency: 'BDT',
+      variant: fee.variant,
+      label: fee.label,
+    };
+    
+    // Create locator from heading path and line number for determinism
+    const locator = (fee.headingPath || []).join(' > ') + (fee.lineNumber ? `:${fee.lineNumber}` : '');
+    
     claims.push({
-      claim_id: `claim.fee.${servicePrefix}.auto_${claimCounter}${variantSuffix}`,
+      claim_id: makeDeterministicClaimId({
+        type: 'fee',
+        serviceKey: servicePrefix,
+        canonicalUrl: url,
+        locator: locator,
+        payload: payload,
+      }),
       entity_ref: { type: 'service', id: `svc.${servicePrefix}` },
       claim_type: 'fee',
       text: fee.label,
       status: 'unverified',
-      structured_data: {
-        amount_bdt: fee.amount_bdt,
-        currency: 'BDT',
-        variant: fee.variant,
-        label: fee.label,
-      },
+      structured_data: payload,
       citations: [createCitation(sourcePageId, url, fee.text, fee.headingPath)],
       last_verified_at: new Date().toISOString(),
       tags: ['fee', 'auto_extracted', fee.variant].filter(Boolean),
@@ -706,19 +704,29 @@ function extractClaims(markdown, sourcePageId, url, structuredData) {
   
   // Extract step claims - create individual claims for each step
   for (const step of structuredData.steps) {
-    claimCounter++;
+    const payload = {
+      order: step.order,
+      title: step.title,
+      description: step.description,
+      marker_type: step.marker,
+    };
+    
+    // Create locator from heading path and line number for determinism
+    const locator = (step.headingPath || []).join(' > ') + (step.lineNumber ? `:${step.lineNumber}` : '');
+    
     claims.push({
-      claim_id: `claim.step.${servicePrefix}.auto_${claimCounter}`,
+      claim_id: makeDeterministicClaimId({
+        type: 'step',
+        serviceKey: servicePrefix,
+        canonicalUrl: url,
+        locator: locator,
+        payload: payload,
+      }),
       entity_ref: { type: 'service', id: `svc.${servicePrefix}` },
       claim_type: 'step',
       text: step.title,
       status: 'unverified',
-      structured_data: {
-        order: step.order,
-        title: step.title,
-        description: step.description,
-        marker_type: step.marker,
-      },
+      structured_data: payload,
       citations: [createCitation(sourcePageId, url, step.text, step.headingPath)],
       last_verified_at: new Date().toISOString(),
       tags: ['step', 'auto_extracted', containsBengali(step.text) ? 'bengali' : 'english'],
@@ -727,9 +735,21 @@ function extractClaims(markdown, sourcePageId, url, structuredData) {
   
   // Extract document requirement claims
   for (const doc of structuredData.documentList) {
-    claimCounter++;
+    const payload = {
+      url: doc.url,
+      text: doc.text,
+      extension: doc.extension,
+      discovery_method: doc.discoveryMethod,
+    };
+    
     claims.push({
-      claim_id: `claim.doc.${servicePrefix}.download_${claimCounter}`,
+      claim_id: makeDeterministicClaimId({
+        type: 'document_requirement',
+        serviceKey: servicePrefix,
+        canonicalUrl: url,
+        locator: '',
+        payload: payload,
+      }),
       entity_ref: { type: 'service', id: `svc.${servicePrefix}` },
       claim_type: 'document_requirement',
       text: doc.text,
@@ -747,18 +767,28 @@ function extractClaims(markdown, sourcePageId, url, structuredData) {
   
   // Extract FAQ claims
   for (const faq of structuredData.faqPairs) {
-    claimCounter++;
+    const payload = {
+      question: faq.question,
+      answer: faq.answer,
+      link: faq.link,
+    };
+    
+    // Create locator from heading path and line number for determinism
+    const locator = (faq.headingPath || []).join(' > ') + (faq.lineNumber ? `:${faq.lineNumber}` : '');
+    
     claims.push({
-      claim_id: `claim.faq.${servicePrefix}.auto_${claimCounter}`,
+      claim_id: makeDeterministicClaimId({
+        type: 'faq',
+        serviceKey: servicePrefix,
+        canonicalUrl: url,
+        locator: locator,
+        payload: payload,
+      }),
       entity_ref: { type: 'service', id: `svc.${servicePrefix}` },
       claim_type: 'faq',
       text: faq.question,
       status: 'unverified',
-      structured_data: {
-        question: faq.question,
-        answer: faq.answer,
-        link: faq.link,
-      },
+      structured_data: payload,
       citations: [createCitation(sourcePageId, url, faq.question, faq.headingPath)],
       last_verified_at: new Date().toISOString(),
       tags: ['faq', 'auto_extracted', containsBengali(faq.question) ? 'bengali' : 'english'],

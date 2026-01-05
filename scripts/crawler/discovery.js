@@ -10,6 +10,9 @@ const fs = require('fs');
 const path = require('path');
 const { URL } = require('url');
 
+// Import shared utilities
+const { getDomain } = require('./utils');
+
 // ============================================================================
 // SEED EXTRACTION FROM BDGOVLINKS
 // ============================================================================
@@ -75,19 +78,6 @@ function parsePublicServicesFromMarkdown(markdown) {
   }
   
   return services;
-}
-
-/**
- * Get domain from URL
- * @param {string} urlStr - URL string
- * @returns {string|null} - Domain or null if invalid
- */
-function getDomain(urlStr) {
-  try {
-    return new URL(urlStr).hostname.toLowerCase();
-  } catch (e) {
-    return null;
-  }
 }
 
 /**

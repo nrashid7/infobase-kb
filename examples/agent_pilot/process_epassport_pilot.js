@@ -10,7 +10,8 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
-const crawlModule = require('./crawl');
+// NOTE: This pilot file is NON-PRODUCTION - see README.md
+const crawlModule = require('../../scripts/crawl');
 
 // Utility functions (not exported from crawl.js)
 function generateHash(content, algorithm = 'sha256') {

@@ -6,6 +6,66 @@ A **canonical knowledge-base system** for Bangladeshi government services. Every
 
 ---
 
+## ⚠️ Canonical Data Flow
+
+> **IMPORTANT: Read this section before making any changes to the codebase.**
+
+### Production Script
+
+The **ONLY** production-ready crawler is:
+
+```
+scripts/crawl.js
+```
+
+All other crawl-related scripts are either:
+- **Archived** (in `scripts/_archive/`)
+- **Examples/Pilots** (in `examples/agent_pilot/` - NOT for production use)
+- **Utilities** (supporting modules, not entry points)
+
+### Forbidden Patterns
+
+The following patterns are **strictly forbidden** in production:
+
+| Pattern | Why Forbidden |
+|---------|---------------|
+| MCP bridges or message queues | Non-deterministic, hard to audit |
+| Agent-orchestrated parallel crawls | Race conditions, duplicate data |
+| External scheduling systems | Loss of provenance control |
+| Uncited data extraction | Violates provenance-first principle |
+| HTTP fallback without explicit flag | Security and consistency risks |
+
+### Data Flow
+
+```
+┌─────────────────┐      ┌──────────────────┐      ┌─────────────────┐
+│   Seeds File    │      │   crawl.js       │      │   KB v3 JSON    │
+│   (seeds/)      │─────▶│   (Firecrawl)    │─────▶│   (kb/)         │
+└─────────────────┘      └──────────────────┘      └─────────────────┘
+                                  │
+                                  ▼
+                         ┌──────────────────┐
+                         │   Snapshots      │
+                         │   (kb/snapshots/)│
+                         └──────────────────┘
+```
+
+### Module Structure
+
+The crawler is organized into focused modules under `scripts/crawler/`:
+
+| Module | Responsibility |
+|--------|----------------|
+| `discovery.js` | Seed extraction from bdgovlinks.com |
+| `filtering.js` | URL prioritization, robots.txt, sitemaps |
+| `extraction.js` | Structured data and claim extraction |
+| `scraping.js` | Firecrawl MCP integration |
+| `kb_writer.js` | KB file operations |
+| `crawl_state.js` | State persistence across sessions |
+| `crawl_report.js` | Run report generation |
+
+---
+
 ## Quick Start
 
 ### Crawl Public Services (Canonical)
@@ -28,6 +88,10 @@ npm run crawl:dry
 ### Validate a KB File
 
 ```bash
+# Validate v3 KB (current)
+node scripts/validate_kb_v3.js kb/bangladesh_government_services_kb_v3.json
+
+# Validate v2 KB (legacy)
 node kb/validate_kb_v2.js examples/bangladesh_government_services_kb_v2_example.json
 ```
 
@@ -37,11 +101,7 @@ node kb/validate_kb_v2.js examples/bangladesh_government_services_kb_v2_example.
 node kb/migrate_v1_to_v2.js v1_kb.json output_v2.json
 ```
 
-### Run Migration Self-Check
-
-```bash
-node kb/migrate_v1_to_v2.js --self-check
-```
+> **Note:** v2 to v3 migration script is archived in `scripts/_archive/migrate_v2_to_v3.js`. v3 is now the active schema.
 
 ### Build Chatbot Indexes
 
@@ -115,29 +175,42 @@ Services and documents have **derived status** based on their claims. Validation
 ```
 Infobase/
 ├── kb/                    # Core knowledge base tools
-│   ├── schema_v2.json     # JSON Schema definition
-│   ├── validate_kb_v2.js  # Strict provenance validator
+│   ├── schema_v3.json     # JSON Schema definition (current)
+│   ├── schema_v2.json     # JSON Schema definition (legacy)
+│   ├── validate_kb_v2.js  # Base provenance validator
+│   ├── validate_kb_v3.js  # v3 guide-first validator
 │   ├── migrate_v1_to_v2.js # Migration script (v1 → v2)
 │   ├── index_builder.js   # Chatbot index builder
+│   ├── published/         # Published guides for web app
 │   ├── snapshots/         # Crawled page snapshots (gitignored)
 │   ├── runs/              # Crawl run reports (gitignored)
 │   └── indexes/           # Generated indexes (gitignored)
 ├── scripts/               # Utility scripts
-│   ├── crawl.js           # 🔹 CANONICAL CRAWLER
+│   ├── crawl.js           # 🔹 CANONICAL CRAWLER (entry point)
+│   ├── crawler/           # 🔹 Crawler sub-modules
+│   │   ├── discovery.js       # Seed extraction
+│   │   ├── filtering.js       # URL prioritization
+│   │   ├── extraction.js      # Structured data extraction
+│   │   ├── scraping.js        # Firecrawl MCP integration
+│   │   ├── kb_writer.js       # KB file operations
+│   │   ├── crawl_state.js     # State persistence
+│   │   ├── crawl_report.js    # Report generation
+│   │   └── index.js           # Module exports
 │   ├── document_harvester.js  # Document download & text extraction
 │   ├── firecrawl_mcp.js   # Firecrawl MCP integration
 │   ├── build_public_guides.js # Publish pipeline
-│   ├── save_kb_v2.ps1     # Save KB from clipboard (Windows)
+│   ├── validate_kb_v3.js  # v3 validation CLI
+│   ├── validate_published.js # Published guides validation
 │   └── _archive/          # Deprecated legacy scripts
-├── examples/              # Example files
+├── examples/              # Example files (NON-PRODUCTION)
 │   ├── bangladesh_government_services_kb_v2_example.json
-│   └── agent_pilot/       # Agent-orchestrated pilot helpers (not part of canonical crawl)
+│   └── agent_pilot/       # ⚠️ Pilot helpers - NOT for production
 └── docs/                  # Documentation files
     ├── ARCHITECTURE.md
     └── MIGRATION_NOTES.md
 ```
 
-> **Note:** Agent-orchestrated pilot helpers (if kept) live under `examples/agent_pilot/` and are not part of the canonical crawl.
+> **⚠️ WARNING:** Files in `examples/agent_pilot/` are experimental pilot helpers and are **NOT** part of the production crawl pipeline. See `examples/agent_pilot/README.md` for details.
 
 ## Crawler Scripts
 
@@ -271,6 +344,45 @@ npm run publish          # Generate public_guides.json and index
 npm run validate:published  # Validate against schema
 npm run publish:validate    # Both in one command
 ```
+
+---
+
+## Clean Zip Export
+
+To create a shareable zip file without repository bloat (useful for sharing the codebase without large generated/cached files):
+
+### Windows (PowerShell)
+
+```powershell
+.\scripts\export_clean_zip.ps1
+```
+
+### Linux/macOS (Bash)
+
+```bash
+chmod +x scripts/export_clean_zip.sh
+./scripts/export_clean_zip.sh
+```
+
+### Output
+
+The script creates `dist/infobase-kb-clean.zip` containing:
+- Source code and scripts
+- Package files (`package.json`, `package-lock.json`)
+- Documentation (`README.md`, `ARCHITECTURE.md`, etc.)
+- KB published outputs (`kb/published/`)
+- Schema files
+
+### Excluded from zip
+
+The following are excluded to minimize size:
+- `.git/` - Git history
+- `.cursor/` - IDE configuration
+- `node_modules/` - Dependencies (reinstall with `npm install`)
+- `kb/runs/` - Crawl run reports
+- `kb/snapshots/` - Crawled page snapshots
+- `kb/indexes/` - Generated indexes
+- OS junk files (`Thumbs.db`, `.DS_Store`)
 
 ---
 

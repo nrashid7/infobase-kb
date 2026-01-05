@@ -10,7 +10,8 @@ const crypto = require('crypto');
 const { URL } = require('url');
 
 // Import extraction logic from crawl.js
-const crawlModule = require('./crawl');
+// NOTE: This pilot file is NON-PRODUCTION - see README.md
+const crawlModule = require('../../scripts/crawl');
 
 const PATHS = {
   kbDir: path.join(__dirname, '..', 'kb'),

@@ -1,0 +1,116 @@
+{
+  "$generated_at": "2026-01-04T12:00:00.000Z",
+  "$source": "bdgovlinks.com",
+  "$category": "public_services",
+  "$extraction_method": "live_firecrawl",
+  "$last_verified": "2026-01-04",
+  "seeds": [
+    {
+      "label": "Passport Office",
+      "domain": "passport.gov.bd",
+      "start_urls": [
+        "https://passport.gov.bd/"
+      ],
+      "source_page_url": "https://bdgovlinks.com/"
+    },
+    {
+      "label": "e-Passport Portal",
+      "domain": "epassport.gov.bd",
+      "start_urls": [
+        "https://www.epassport.gov.bd/"
+      ],
+      "source_page_url": "https://bdgovlinks.com/"
+    },
+    {
+      "label": "National ID Wing",
+      "domain": "nidw.gov.bd",
+      "start_urls": [
+        "https://nidw.gov.bd/",
+        "https://services.nidw.gov.bd/"
+      ],
+      "source_page_url": "https://bdgovlinks.com/"
+    },
+    {
+      "label": "NBR e-Tax",
+      "domain": "etaxnbr.gov.bd",
+      "start_urls": [
+        "https://etaxnbr.gov.bd/"
+      ],
+      "source_page_url": "https://bdgovlinks.com/"
+    },
+    {
+      "label": "BRTA Service Portal",
+      "domain": "bsp.brta.gov.bd",
+      "start_urls": [
+        "https://bsp.brta.gov.bd/",
+        "https://brta.gov.bd/"
+      ],
+      "source_page_url": "https://bdgovlinks.com/"
+    },
+    {
+      "label": "Bangladesh Post Office",
+      "domain": "bdpost.gov.bd",
+      "start_urls": [
+        "https://bdpost.gov.bd/"
+      ],
+      "source_page_url": "https://bdgovlinks.com/"
+    },
+    {
+      "label": "Land Administration",
+      "domain": "landadministration.gov.bd",
+      "start_urls": [
+        "https://landadministration.gov.bd/"
+      ],
+      "source_page_url": "https://bdgovlinks.com/"
+    },
+    {
+      "label": "Teletalk Bangladesh",
+      "domain": "teletalk.com.bd",
+      "start_urls": [
+        "https://teletalk.com.bd/"
+      ],
+      "source_page_url": "https://bdgovlinks.com/"
+    },
+    {
+      "label": "Department of Immigration & Passports",
+      "domain": "dip.gov.bd",
+      "start_urls": [
+        "https://dip.gov.bd/"
+      ],
+      "source_page_url": "https://bdgovlinks.com/"
+    },
+    {
+      "label": "Online Visa Portal",
+      "domain": "visa.gov.bd",
+      "start_urls": [
+        "https://visa.gov.bd/"
+      ],
+      "source_page_url": "https://bdgovlinks.com/"
+    },
+    {
+      "label": "Bangladesh Customs",
+      "domain": "customs.gov.bd",
+      "start_urls": [
+        "https://customs.gov.bd/"
+      ],
+      "source_page_url": "https://bdgovlinks.com/"
+    },
+    {
+      "label": "Birth & Death Registration",
+      "domain": "bdris.gov.bd",
+      "start_urls": [
+        "https://bdris.gov.bd/"
+      ],
+      "source_page_url": "https://bdgovlinks.com/"
+    },
+    {
+      "label": "Bangladesh Police",
+      "domain": "police.gov.bd",
+      "start_urls": [
+        "https://police.gov.bd/",
+        "https://www.police.gov.bd/"
+      ],
+      "source_page_url": "https://bdgovlinks.com/"
+    }
+  ]
+}

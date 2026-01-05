@@ -9,7 +9,8 @@
 
 const fs = require('fs');
 const path = require('path');
-const crawlModule = require('./crawl');
+// NOTE: This pilot file is NON-PRODUCTION - see README.md
+const crawlModule = require('../../scripts/crawl');
 
 const domain = 'epassport.gov.bd';
 const startTime = new Date().toISOString();

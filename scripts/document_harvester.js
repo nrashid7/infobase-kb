@@ -18,8 +18,16 @@
 
 const fs = require('fs');
 const path = require('path');
-const crypto = require('crypto');
 const { URL } = require('url');
+
+// Import shared utilities
+const {
+  generateHash,
+  ensureDir,
+  getDateString,
+  getMimeType,
+  MIME_TYPES,
+} = require('./crawler/utils');
 
 // Firecrawl MCP integration
 const firecrawlMcp = require('./firecrawl_mcp');
@@ -68,32 +76,8 @@ const CONFIG = {
 };
 
 // ============================================================================
-// MIME TYPE MAPPING
+// UTILITY FUNCTIONS (using shared utils, plus local helpers)
 // ============================================================================
-
-const MIME_TYPES = {
-  '.pdf': 'application/pdf',
-  '.doc': 'application/msword',
-  '.docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-  '.xls': 'application/vnd.ms-excel',
-  '.xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-  '.ppt': 'application/vnd.ms-powerpoint',
-  '.pptx': 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
-};
-
-// ============================================================================
-// UTILITY FUNCTIONS
-// ============================================================================
-
-function ensureDir(dirPath) {
-  if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true });
-  }
-}
-
-function generateHash(content, algorithm = 'sha256') {
-  return crypto.createHash(algorithm).update(content).digest('hex');
-}
 
 function getExtension(url) {
   try {
@@ -103,14 +87,6 @@ function getExtension(url) {
   } catch (e) {
     return '.pdf';
   }
-}
-
-function getMimeType(extension) {
-  return MIME_TYPES[extension.toLowerCase()] || 'application/octet-stream';
-}
-
-function getDateString() {
-  return new Date().toISOString().split('T')[0];
 }
 
 // ============================================================================
@@ -183,67 +159,7 @@ async function downloadFile(url, options = {}) {
  * @deprecated Use downloadFile() which routes through Firecrawl MCP
  * @private
  */
-function httpDownloadLegacy(url) {
-  const https = require('https');
-  const http = require('http');
-  
-  console.warn('    ⚠️  Using legacy HTTP download (deprecated)');
-  
-  return new Promise((resolve, reject) => {
-    const protocol = url.startsWith('https') ? https : http;
-    
-    const request = protocol.get(url, {
-      timeout: CONFIG.downloadTimeout,
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; InfobaseBot/1.0; +https://infobase.gov.bd)',
-      },
-    }, (response) => {
-      // Handle redirects
-      if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
-        const redirectUrl = new URL(response.headers.location, url).href;
-        httpDownloadLegacy(redirectUrl).then(resolve).catch(reject);
-        return;
-      }
-      
-      if (response.statusCode !== 200) {
-        reject(new Error(`HTTP ${response.statusCode}: ${response.statusMessage}`));
-        return;
-      }
-      
-      // Check content length
-      const contentLength = parseInt(response.headers['content-length'], 10);
-      if (contentLength > CONFIG.maxFileSize) {
-        reject(new Error(`File too large: ${contentLength} bytes`));
-        return;
-      }
-      
-      const chunks = [];
-      let totalLength = 0;
-      
-      response.on('data', (chunk) => {
-        totalLength += chunk.length;
-        if (totalLength > CONFIG.maxFileSize) {
-          request.destroy();
-          reject(new Error('File too large'));
-          return;
-        }
-        chunks.push(chunk);
-      });
-      
-      response.on('end', () => {
-        resolve(Buffer.concat(chunks));
-      });
-      
-      response.on('error', reject);
-    });
-    
-    request.on('error', reject);
-    request.on('timeout', () => {
-      request.destroy();
-      reject(new Error('Download timeout'));
-    });
-  });
-}
+const { httpDownload: httpDownloadLegacy } = require('./crawler/utils');
 
 // ============================================================================
 // PDF TEXT EXTRACTION

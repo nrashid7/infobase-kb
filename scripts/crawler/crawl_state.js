@@ -8,29 +8,14 @@
 
 const fs = require('fs');
 const path = require('path');
-const crypto = require('crypto');
 
-// ============================================================================
-// UTILITY FUNCTIONS
-// ============================================================================
-
-function generateHash(content, algorithm = 'sha256') {
-  return crypto.createHash(algorithm).update(content, 'utf8').digest('hex');
-}
-
-function generateSourcePageId(url) {
-  return `source.${generateHash(url, 'sha1')}`;
-}
-
-function getDateString() {
-  return new Date().toISOString().split('T')[0];
-}
-
-function ensureDir(dirPath) {
-  if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true });
-  }
-}
+// Import shared utilities
+const {
+  generateHash,
+  generateSourcePageId,
+  getDateString,
+  ensureDir,
+} = require('./utils');
 
 // ============================================================================
 // CRAWL STATE MANAGEMENT

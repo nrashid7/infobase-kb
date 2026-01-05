@@ -1,0 +1,631 @@
+{
+  "$schema_version": "3.0.0",
+  "data_version": 3,
+  "last_updated_at": "2026-01-05T09:54:21.066Z",
+  "updated_by": "script:crawl.js",
+  "change_log": [
+    {
+      "version": 1,
+      "date": "2026-01-05",
+      "changes": [
+        "Initial crawl"
+      ]
+    }
+  ],
+  "source_pages": [
+    {
+      "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+      "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+      "agency_id": "agency.dip",
+      "page_type": "fee_schedule",
+      "page_types": [
+        "fee_schedule"
+      ],
+      "title": "Passport Fees",
+      "language": [
+        "en",
+        "bn"
+      ],
+      "crawl_method": "html_static",
+      "last_crawled_at": "2026-01-05T09:54:21.066Z",
+      "content_hash": "e33c0bd7438cc326",
+      "snapshot_ref": null,
+      "status": "active",
+      "change_log": []
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim.fee.www_epassport.956beddbfd23f119",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "fee",
+      "text": "Regular delivery Taka 4,025",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 4025,
+        "currency": "BDT",
+        "variant": "regular",
+        "label": "Regular delivery Taka 4,025"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Regular delivery: Taka 4,025",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:54:21.053Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:54:21.053Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "regular"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.www_epassport.e05964325b67f328",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "fee",
+      "text": "Express delivery Taka 6,325",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 6325,
+        "currency": "BDT",
+        "variant": "express",
+        "label": "Express delivery Taka 6,325"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Express delivery: Taka 6,325",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:54:21.053Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:54:21.053Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.www_epassport.8ac1d7777b91f7ed",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "fee",
+      "text": "Super Express delivery Taka 8,625",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 8625,
+        "currency": "BDT",
+        "variant": "super_express",
+        "label": "Super Express delivery Taka 8,625"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Super Express delivery: Taka 8,625",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:54:21.053Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:54:21.053Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "super_express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.www_epassport.c8545f2abe2d2e61",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "fee",
+      "text": "Regular delivery Taka 5,750",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 5750,
+        "currency": "BDT",
+        "variant": "regular",
+        "label": "Regular delivery Taka 5,750"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Regular delivery: Taka 5,750",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:54:21.053Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:54:21.053Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "regular"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.www_epassport.45f9c2d15bebeb66",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "fee",
+      "text": "Express delivery Taka 8,050",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 8050,
+        "currency": "BDT",
+        "variant": "express",
+        "label": "Express delivery Taka 8,050"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Express delivery: Taka 8,050",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:54:21.053Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:54:21.053Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.www_epassport.04ac3e476c995e45",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "fee",
+      "text": "Super Express delivery Taka 10,350",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 10350,
+        "currency": "BDT",
+        "variant": "super_express",
+        "label": "Super Express delivery Taka 10,350"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Super Express delivery: Taka 10,350",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:54:21.053Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:54:21.053Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "super_express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.www_epassport.829c6a347b0b1659",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "fee",
+      "text": "Regular delivery Taka 6,325",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 6325,
+        "currency": "BDT",
+        "variant": "regular",
+        "label": "Regular delivery Taka 6,325"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Regular delivery: Taka 6,325",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:54:21.053Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:54:21.053Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "regular"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.www_epassport.e3d874e44e84ea63",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "fee",
+      "text": "Express delivery Taka 8,625",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 8625,
+        "currency": "BDT",
+        "variant": "express",
+        "label": "Express delivery Taka 8,625"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Express delivery: Taka 8,625",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:54:21.053Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:54:21.053Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.www_epassport.50b9d33f3a9f8c86",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "fee",
+      "text": "Super Express delivery Taka 12,075",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 12075,
+        "currency": "BDT",
+        "variant": "super_express",
+        "label": "Super Express delivery Taka 12,075"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Super Express delivery: Taka 12,075",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:54:21.053Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:54:21.053Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "super_express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.www_epassport.c98612a7e1b0e035",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "fee",
+      "text": "Regular delivery Taka 8,050",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 8050,
+        "currency": "BDT",
+        "variant": "regular",
+        "label": "Regular delivery Taka 8,050"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Regular delivery: Taka 8,050",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:54:21.053Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:54:21.053Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "regular"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.www_epassport.5292f5911e363a12",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "fee",
+      "text": "Express delivery Taka 10,350",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 10350,
+        "currency": "BDT",
+        "variant": "express",
+        "label": "Express delivery Taka 10,350"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Express delivery: Taka 10,350",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:54:21.053Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:54:21.053Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "express"
+      ]
+    },
+    {
+      "claim_id": "claim.fee.www_epassport.4c48663879e1e90e",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "fee",
+      "text": "Super Express delivery Taka 13,800",
+      "status": "unverified",
+      "structured_data": {
+        "amount_bdt": 13800,
+        "currency": "BDT",
+        "variant": "super_express",
+        "label": "Super Express delivery Taka 13,800"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "- Super Express delivery: Taka 13,800",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "e-Passport Fees and Payment Options",
+              "e-Passport Payment",
+              "e-Passport fees for inside Bangladesh (Including 15% VAT)"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:54:21.053Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:54:21.053Z",
+      "tags": [
+        "fee",
+        "auto_extracted",
+        "super_express"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.e3d7a6c216edcc01",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Apply online",
+      "status": "unverified",
+      "structured_data": {
+        "order": 1,
+        "title": "Apply online",
+        "description": "",
+        "marker_type": "bullet_imperative"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "Apply online",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Page Content"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:54:21.053Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:54:21.053Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.step.www_epassport.bfbc92c06effabff",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "step",
+      "text": "Check status",
+      "status": "unverified",
+      "structured_data": {
+        "order": 2,
+        "title": "Check status",
+        "description": "",
+        "marker_type": "bullet_imperative"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "Check status",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Page Content"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:54:21.053Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:54:21.053Z",
+      "tags": [
+        "step",
+        "auto_extracted",
+        "english"
+      ]
+    },
+    {
+      "claim_id": "claim.document_requirement.www_epassport.a910a797d71bb9bc",
+      "entity_ref": {
+        "type": "service",
+        "id": "svc.www_epassport"
+      },
+      "claim_type": "document_requirement",
+      "text": "Click Here",
+      "status": "unverified",
+      "structured_data": {
+        "url": "https://www.achallan.gov.bd/acs/v2/general/challan-payment?id=1",
+        "extension": ".unknown",
+        "discovery_method": "markdown_link"
+      },
+      "citations": [
+        {
+          "source_page_id": "source.3e85c919aeef3918a889d306a1c11deb23639bf9",
+          "canonical_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "quoted_text": "Click Here",
+          "locator": {
+            "type": "heading_path",
+            "heading_path": [
+              "Page Content"
+            ]
+          },
+          "retrieved_at": "2026-01-05T09:54:21.053Z",
+          "language": "en"
+        }
+      ],
+      "last_verified_at": "2026-01-05T09:54:21.053Z",
+      "tags": [
+        "document",
+        "download",
+        "auto_extracted"
+      ]
+    }
+  ],
+  "agencies": [
+    {
+      "agency_id": "agency.dip",
+      "name": "Department of Immigration and Passports",
+      "domain_allowlist": [
+        "www.epassport.gov.bd",
+        "epassport.gov.bd"
+      ],
+      "claims": []
+    }
+  ],
+  "documents": [],
+  "services": [],
+  "service_guides": []
+}

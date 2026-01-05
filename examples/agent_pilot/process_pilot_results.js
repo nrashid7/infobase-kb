@@ -7,7 +7,8 @@
 const fs = require('fs');
 const path = require('path');
 const processor = require('./agent_crawl_processor');
-const crawlModule = require('./crawl');
+// NOTE: This pilot file is NON-PRODUCTION - see README.md
+const crawlModule = require('../../scripts/crawl');
 
 // Scraped pages data (from Firecrawl MCP scrape results)
 const scrapedPages = [

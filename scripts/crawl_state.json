@@ -1,23 +1,57 @@
 {
   "startedAt": "2025-12-31T14:30:00Z",
-  "lastUpdated": "2025-12-31T20:45:02.791Z",
-  "domainsCompleted": [
-    "www.epassport.gov.bd",
-    "nidw.gov.bd",
-    "brta.gov.bd",
-    "bsp.brta.gov.bd"
-  ],
-  "domainsInProgress": {},
-  "pagesProcessed": 6,
-  "pagesSaved": 6,
-  "claimsExtracted": 22,
-  "excludedUrls": [
-    "https://brta.gov.bd/site/view/news",
-    "https://brta.gov.bd/site/view/notices",
-    "https://brta.gov.bd/site/view/tenders"
-  ],
-  "errors": [
-    "404 Not Found: https://bsp.brta.gov.bd/drivingLicense",
-    "404 Not Found: https://bsp.brta.gov.bd/vehicleRegistration"
-  ]
+  "lastUpdated": "2026-01-05T08:23:56.668Z",
+  "domainStates": {
+    "passport.gov.bd": {
+      "lastCrawled": null,
+      "pagesCrawled": 0,
+      "robotsRules": {
+        "disallow": [],
+        "allow": [],
+        "sitemaps": []
+      },
+      "sitemapUrls": [],
+      "discoveredUrls": [],
+      "processedUrls": [],
+      "excludedUrls": [],
+      "errors": []
+    },
+    "epassport.gov.bd": {
+      "lastCrawled": "2026-01-05T07:15:34.592Z",
+      "pagesCrawled": 9,
+      "robotsRules": {
+        "disallow": [],
+        "allow": [],
+        "sitemaps": []
+      },
+      "sitemapUrls": [],
+      "discoveredUrls": [],
+      "processedUrls": [
+        "https://www.epassport.gov.bd/instructions/application-form",
+        "https://www.epassport.gov.bd/instructions/instructions",
+        "https://www.epassport.gov.bd/landing/faqs",
+        "https://www.epassport.gov.bd/instructions/urgent-applications",
+        "https://www.epassport.gov.bd/landing/notices/160",
+        "https://www.epassport.gov.bd/landing/notices/34",
+        "https://www.epassport.gov.bd/authorization/application-status",
+        "https://www.epassport.gov.bd",
+        "https://www.epassport.gov.bd/landing/faqs/7"
+      ],
+      "excludedUrls": [],
+      "errors": []
+    }
+  },
+  "pageHashes": {
+    "source.9cacd3de1b16ae897930018caff86b2c68cbb63c": "a8b44950de7c8f23053ad7a69670d69781ce8d9c3d7f69f0e43a616f4cf7b71d",
+    "source.7425a5f139eb0d0fac07dcc6354a4a1c4a2b30ad": "8a10be7e86caf151c1b88f635bda1e5aa377d9a6856d142f877ef1eeb2fcebc9",
+    "source.7d8afb1bb534157d0220a9aed948b00b220e5b35": "3ddc551e9c03372f3b5c163196402fe6b2e6c0d5d7624b9cd45ce5ee5ca21261",
+    "source.bec768015b78bd53a8b503339bb933a4d7a03f1f": "db6443265523ab3a0eb41611d3e5752e0370d186214e6506d5840cd53184e9cf",
+    "source.882848b3af57fdc1f18e3f18bbe8fb15a837e603": "f9043f4234abc3afbf952113e9c06566b87d12f8f964ae5eb988ff94ff838e63",
+    "source.8cc67aa3e5c5954fdd8172b8bb7255d50be24db1": "01ca8b251835500f4a2090c2a2668b69ca4d9d15f1a2aa5a6399ff808660e0fa",
+    "source.3810cf2be0b49180254583cd6ce6cb107b4cbf33": "0659e5672dc8e3815dc122045a2ca10def07b0ca0ddebd7dde2bf5be3287cee5",
+    "source.110d7afa9b2c8c39f3b55a125a73dc4c85f62869": "6de5880adf8c3ac12b34b247f3d949db338304bdb9c4e0f987c514e4a3312754",
+    "source.f5b4e2bc1b7c322dc404e37c1821692b43b865ef": "510ecd3b58135f17e215742826e9fe0e3b534d0fe4a61abeadb4dc887694fb29"
+  },
+  "documentHashes": {},
+  "runs": []
 }

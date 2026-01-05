@@ -24,8 +24,8 @@ const EXACT_URL_OVERRIDES = {
     onlyMainContent: false,
     formats: ['markdown', 'rawHtml'],
     waitFor: 5000,
-    // Normalize "TK" currency token to "Taka" for fee extraction heuristics
-    postprocessMarkdown: (markdown) => markdown.replace(/\bTK\b/gi, 'Taka'),
+    // Normalize "TK" currency token to "BDT" for fee extraction heuristics
+    postprocessMarkdown: (markdown) => markdown.replace(/\bTK\b/gi, 'BDT'),
   },
 };
 

@@ -195,7 +195,7 @@ async function firecrawlScrape(url, options = {}) {
   
   // Get URL-specific overrides (e.g., waitFor for SPA pages)
   const urlOverrides = getFirecrawlOverridesForUrl(url);
-  
+
   // Build base options from defaults + caller options
   const baseOptions = {
     formats: options.formats || ['markdown'],
@@ -203,12 +203,15 @@ async function firecrawlScrape(url, options = {}) {
     removeBase64Images: options.removeBase64Images !== false,
     ...options,
   };
-  
+
+  // Strip non-Firecrawl keys from URL overrides to avoid passing functions to MCP
+  const { postprocessMarkdown, ...urlOverridesSafe } = urlOverrides || {};
+
   // Merge URL-specific overrides (highest priority)
   const scrapeOptions = urlOverrides
-    ? { ...baseOptions, ...urlOverrides }
+    ? { ...baseOptions, ...urlOverridesSafe }
     : baseOptions;
-  
+
   // Log if override was applied
   if (urlOverrides) {
     console.log(formatOverrideLog(urlOverrides, url));

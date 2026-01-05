@@ -217,16 +217,21 @@ test('extractFees extracts from fixture', () => {
 });
 
 test('extractFees finds data and citations from Firecrawl fee page fixture', () => {
-  // Use production override to postprocess markdown (TK -> Taka)
+  // Use production override to postprocess markdown (TK -> BDT)
   const feeUrl = 'https://www.epassport.gov.bd/instructions/passport-fees';
   const overrides = getFirecrawlOverridesForUrl(feeUrl);
   const normalizedFixture = overrides?.postprocessMarkdown
     ? overrides.postprocessMarkdown(firecrawlFeesFixture)
     : firecrawlFeesFixture;
-  
+
   const lines = normalizedFixture.split('\n');
   const fees = extractFees(lines, () => []);
   assertGreater(fees.length, 0, 'Should find at least one fee in Firecrawl fee page');
+
+  // Ensure no TK tokens remain in fee labels (should be normalized to BDT)
+  for (const fee of fees) {
+    assert(!fee.label.includes('TK'), `Fee label should not contain TK: "${fee.label}"`);
+  }
 
   const structured = extractStructuredData(normalizedFixture, feeUrl);
   const claims = extractClaims(

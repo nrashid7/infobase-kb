@@ -8,6 +8,21 @@ A **canonical knowledge-base system** for Bangladeshi government services. Every
 
 ## Quick Start
 
+### Crawl Public Services (Canonical)
+
+```bash
+# Full crawl (all pages)
+npm run crawl:full
+
+# Refresh changed pages only
+npm run crawl:refresh
+
+# Dry run (see what would be crawled)
+npm run crawl:dry
+```
+
+> **Note:** The canonical crawler is `scripts/crawl.js`. Legacy scripts have been moved to `scripts/_archive/`.
+
 ### Validate a KB File
 
 ```bash
@@ -102,10 +117,16 @@ Infobase/
 │   ├── validate_kb_v2.js  # Strict provenance validator
 │   ├── migrate_v1_to_v2.js # Migration script (v1 → v2)
 │   ├── index_builder.js   # Chatbot index builder
-│   └── ...
+│   ├── snapshots/         # Crawled page snapshots (gitignored)
+│   ├── runs/              # Crawl run reports (gitignored)
+│   └── indexes/           # Generated indexes (gitignored)
 ├── scripts/               # Utility scripts
-│   ├── create_kb_v2.js    # Create KB file from stdin
-│   └── save_kb_v2.ps1     # Save KB from clipboard (Windows)
+│   ├── crawl.js           # 🔹 CANONICAL CRAWLER
+│   ├── document_harvester.js  # Document download & text extraction
+│   ├── firecrawl_mcp.js   # Firecrawl MCP integration
+│   ├── build_public_guides.js # Publish pipeline
+│   ├── save_kb_v2.ps1     # Save KB from clipboard (Windows)
+│   └── _archive/          # Deprecated legacy scripts
 ├── examples/              # Example files
 │   └── bangladesh_government_services_kb_v2_example.json
 └── docs/                  # Documentation files
@@ -113,14 +134,40 @@ Infobase/
     └── MIGRATION_NOTES.md
 ```
 
-## Utility Scripts
+## Crawler Scripts
 
-### Create KB from stdin
+### Canonical Crawler (`scripts/crawl.js`)
+
+The main crawler for government service portals. Supports:
 
 ```bash
-node scripts/create_kb_v2.js
-# Paste JSON and press Ctrl+D (Ctrl+Z on Windows)
+# Full crawl of all domains
+npm run crawl:full
+# or: node scripts/crawl.js --refresh all
+
+# Refresh only changed pages  
+npm run crawl:refresh
+# or: node scripts/crawl.js --refresh changed
+
+# Dry run to preview crawl plan
+npm run crawl:dry
+# or: node scripts/crawl.js --dry-run --verbose
+
+# Crawl specific domain
+node scripts/crawl.js --domain epassport.gov.bd --maxPages 100
 ```
+
+### Optional Dependencies
+
+For document text extraction, install:
+
+```bash
+npm install pdf-parse mammoth xlsx
+```
+
+These are optional - documents will still be downloaded and stored even if extraction fails.
+
+## Utility Scripts
 
 ### Save KB from clipboard (Windows)
 
@@ -141,17 +188,17 @@ node scripts/create_kb_v2.js
 
 ## How Updates Happen
 
-The KB file is a **snapshot** (static) until explicitly updated. The system is **dynamic-capable** through external tooling:
+The KB file is a **snapshot** (static) until explicitly updated. The system is **dynamic-capable** through the built-in crawler:
 
 | Step | Tool/Process | Description |
 |------|-------------|-------------|
-| 1. Crawl | External (not in-repo) | Fetch current content from government pages |
+| 1. Crawl | `scripts/crawl.js` | Fetch current content from government pages via Firecrawl MCP |
 | 2. Detect | `change_detector_v2.js` | Compare new content hash with stored `content_hash` |
 | 3. Invalidate | `claim_invalidator.js` | Mark dependent claims as `stale` if hash changed |
 | 4. Re-verify | Manual review | Human confirms claims still match sources |
 
 **Key points:**
-- No automatic crawling exists in this repo - you must wire in an external crawler
+- Use `npm run crawl:refresh` to refresh changed pages
 - When a source page's `content_hash` changes, all citing claims become `stale`
 - The `audit_log` tracks all changes for provenance
 

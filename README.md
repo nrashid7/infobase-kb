@@ -157,6 +157,71 @@ The KB file is a **snapshot** (static) until explicitly updated. The system is *
 
 ---
 
+## Automatic Sync to Web App
+
+Published guides are automatically synced to the `infobase-web` repository via GitHub Actions.
+
+### Sync Pipeline
+
+```
+┌─────────────────┐      ┌──────────────────┐      ┌─────────────────┐
+│   infobase-kb   │      │  GitHub Actions  │      │  infobase-web   │
+│                 │      │                  │      │                 │
+│ kb/published/   │─────▶│  sync-guides-    │─────▶│ src/data/       │
+│   *.json        │      │  to-web.yml      │      │   *.json        │
+└─────────────────┘      └──────────────────┘      └─────────────────┘
+```
+
+### Triggers
+
+The sync workflow runs when:
+
+1. **Push to master/main** - When files in `kb/published/**` change
+2. **Daily schedule** - 6 AM UTC as a backup
+3. **Manual dispatch** - Via GitHub Actions UI
+
+### Required Secrets
+
+You must configure the following secret in the `infobase-kb` repository:
+
+| Secret Name | Description |
+|-------------|-------------|
+| `WEB_REPO_PAT` | GitHub Personal Access Token with write access to `infobase-web` |
+
+#### Creating the Token
+
+1. Go to **GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens**
+2. Click **Generate new token**
+3. Configure:
+   - **Token name**: `infobase-web-sync`
+   - **Expiration**: 90 days (or your preference)
+   - **Repository access**: Select `infobase-web`
+   - **Permissions**: Contents → Read and Write
+4. Copy the token and add it as a secret:
+   - Go to `infobase-kb` → **Settings → Secrets and variables → Actions**
+   - Click **New repository secret**
+   - Name: `WEB_REPO_PAT`
+   - Value: (paste the token)
+
+### Files Synced
+
+| Source (infobase-kb) | Destination (infobase-web) |
+|---------------------|---------------------------|
+| `kb/published/public_guides.json` | `src/data/public_guides.json` |
+| `kb/published/public_guides_index.json` | `src/data/public_guides_index.json` |
+
+### Manual Publishing
+
+To regenerate and validate published files locally:
+
+```bash
+npm run publish          # Generate public_guides.json and index
+npm run validate:published  # Validate against schema
+npm run publish:validate    # Both in one command
+```
+
+---
+
 ## Non-Goals
 
 - ❌ No UI (data layer only)

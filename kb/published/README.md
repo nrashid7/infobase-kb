@@ -8,12 +8,23 @@ This folder contains the **only public UI contract** between `infobase-kb` and `
 - **`public_guides_index.json`** - Search index by title/keywords
 - **`public_guides.schema.json`** - JSON schema for validation
 
+## Automatic Sync
+
+These files are **automatically synced** to `infobase-web` via GitHub Actions:
+
+- **Trigger**: Push to master/main when files here change
+- **Workflow**: `.github/workflows/sync-guides-to-web.yml`
+- **Destination**: `infobase-web/src/data/`
+
+See the main [README.md](../../README.md) for setup instructions.
+
 ## Contract Rules
 
 ### ✅ DO
 
-- **Web should consume the raw GitHub URL** for these files
-- Example: `https://raw.githubusercontent.com/your-org/infobase-kb/master/kb/published/public_guides.json`
+- **Prefer automatic sync** - The GitHub Action handles copying to infobase-web
+- Alternatively, web can consume the raw GitHub URL:
+  `https://raw.githubusercontent.com/your-org/infobase-kb/master/kb/published/public_guides.json`
 - Use `npm run publish` to regenerate these files
 - Validate with `npm run validate:published` before committing
 

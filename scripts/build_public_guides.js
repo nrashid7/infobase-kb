@@ -584,10 +584,15 @@ function main() {
   }
   
   // Write public_guides.json
+  // Use deterministic timestamp: SOURCE_TIMESTAMP env var > KB last_updated > current time
+  const generatedAt = process.env.SOURCE_TIMESTAMP || 
+    kbData.last_updated_at || 
+    new Date().toISOString();
+  
   const guidesFile = path.join(outputDir, 'public_guides.json');
   const guidesOutput = {
     $schema_version: '3.0.0',
-    generated_at: new Date().toISOString(),
+    generated_at: generatedAt,
     source_kb_version: kbData.data_version || 1,
     guides: publicGuides
   };
@@ -604,7 +609,7 @@ function main() {
   const indexFile = path.join(outputDir, 'public_guides_index.json');
   const indexOutput = {
     $schema_version: '3.0.0',
-    generated_at: new Date().toISOString(),
+    generated_at: generatedAt,
     source_kb_version: kbData.data_version || 1,
     entries: indexEntries
   };

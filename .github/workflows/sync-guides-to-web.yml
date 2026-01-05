@@ -1,0 +1,108 @@
+# Sync Published Guides to infobase-web
+#
+# This workflow automatically syncs the published guide artifacts from infobase-kb
+# to the infobase-web repository whenever they change.
+#
+# Required Secrets:
+#   WEB_REPO_PAT - A GitHub Personal Access Token with repo access to infobase-web
+#                  (Fine-grained token with Contents: Read/Write permission)
+
+name: Sync Guides to Web
+
+on:
+  # Trigger on push to master when published files change
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - 'kb/published/**'
+      - 'kb/bangladesh_government_services_kb_v3.json'
+      - 'scripts/build_public_guides.js'
+
+  # Daily backup sync at 6 AM UTC
+  schedule:
+    - cron: '0 6 * * *'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  sync-guides:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Checkout infobase-kb (this repo)
+      - name: Checkout infobase-kb
+        uses: actions/checkout@v4
+        with:
+          path: infobase-kb
+
+      # 2. Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: infobase-kb/package.json
+
+      # 3. Install dependencies and regenerate published files
+      - name: Build published guides
+        working-directory: infobase-kb
+        run: |
+          npm ci --ignore-scripts 2>/dev/null || npm install --ignore-scripts
+          npm run publish
+          npm run validate:published
+
+      # 4. Checkout infobase-web into a separate directory
+      - name: Checkout infobase-web
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/infobase-web
+          token: ${{ secrets.WEB_REPO_PAT }}
+          path: infobase-web
+
+      # 5. Ensure target directory exists
+      - name: Ensure data directory exists
+        run: mkdir -p infobase-web/src/data
+
+      # 6. Copy published files to infobase-web
+      - name: Copy published guides
+        run: |
+          cp infobase-kb/kb/published/public_guides.json infobase-web/src/data/public_guides.json
+          cp infobase-kb/kb/published/public_guides_index.json infobase-web/src/data/public_guides_index.json
+
+      # 7. Check for changes
+      - name: Check for changes
+        id: check_changes
+        working-directory: infobase-web
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No changes detected"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected:"
+            git diff --cached --stat
+          fi
+
+      # 8. Commit and push if there are changes
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        working-directory: infobase-web
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(data): sync published guides from infobase-kb"
+          git push
+
+      # 9. Summary
+      - name: Summary
+        run: |
+          if [ "${{ steps.check_changes.outputs.has_changes }}" == "true" ]; then
+            echo "✅ Successfully synced guides to infobase-web"
+          else
+            echo "ℹ️ No changes to sync - guides are already up to date"
+          fi
+

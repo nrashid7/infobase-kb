@@ -118,6 +118,14 @@ function getDateString() {
 // ============================================================================
 
 /**
+ * Download result with fetch method tracking
+ * @typedef {Object} DownloadResult
+ * @property {Buffer} buffer - The downloaded file content
+ * @property {string} fetched_via - "firecrawl" | "http_fallback"
+ * @property {string} [contentType] - MIME type from response
+ */
+
+/**
  * Download a file from URL using Firecrawl MCP
  * 
  * This function uses the firecrawl_mcp module which:
@@ -128,7 +136,7 @@ function getDateString() {
  * @param {string} url - The URL to download from
  * @param {Object} [options] - Download options
  * @param {boolean} [options.allowHttpFallback] - Override global HTTP fallback setting
- * @returns {Promise<Buffer>} - The downloaded file as a buffer
+ * @returns {Promise<DownloadResult>} - The downloaded file with fetch method
  * @throws {FirecrawlUnavailableError} if Firecrawl required but unavailable
  * @throws {HttpDownloadNotAllowedError} if HTTP fallback needed but not allowed
  */
@@ -148,7 +156,13 @@ async function downloadFile(url, options = {}) {
     }
     
     console.log(`    ✓ Downloaded ${result.buffer.length} bytes (${result.contentType})`);
-    return result.buffer;
+    
+    // Return with fetch method tracking
+    return {
+      buffer: result.buffer,
+      fetched_via: result.usedHttpFallback ? 'http_fallback' : 'firecrawl',
+      contentType: result.contentType,
+    };
     
   } catch (error) {
     // Re-throw Firecrawl-specific errors
@@ -412,8 +426,10 @@ async function downloadAndProcess(docUrl, domain, state, discoveredOnPage, optio
   try {
     console.log(`    📥 Downloading: ${docUrl}`);
     
-    // Download the file using Firecrawl MCP
-    const buffer = await downloadFile(docUrl, options);
+    // Download the file using Firecrawl MCP (returns object with buffer and fetched_via)
+    const downloadResult = await downloadFile(docUrl, options);
+    const buffer = downloadResult.buffer;
+    const fetchedVia = downloadResult.fetched_via || 'firecrawl';
     const contentHash = generateHash(buffer);
     
     // Check if we already have this content (different URL, same file)
@@ -421,12 +437,12 @@ async function downloadAndProcess(docUrl, domain, state, discoveredOnPage, optio
     if (fs.existsSync(existingFile)) {
       console.log('    ⏭️  Duplicate content (same hash)');
       state.documentHashes[docUrl] = contentHash;
-      return { skipped: true, hash: contentHash, duplicate: true };
+      return { skipped: true, hash: contentHash, duplicate: true, fetched_via: fetchedVia };
     }
     
     // Save the document
     fs.writeFileSync(existingFile, buffer);
-    console.log(`    💾 Saved: ${contentHash}${extension}`);
+    console.log(`    💾 Saved: ${contentHash}${extension} (via ${fetchedVia})`);
     
     // Extract text
     let textPath = null;
@@ -453,7 +469,7 @@ async function downloadAndProcess(docUrl, domain, state, discoveredOnPage, optio
       file_size: buffer.length,
       retrieved_at: new Date().toISOString(),
       discovered_on_page: discoveredOnPage,
-      fetch_method: 'firecrawl_mcp',  // Track that we used Firecrawl
+      fetched_via: fetchedVia,  // Track fetch method: "firecrawl" | "http_fallback"
       text_path: textPath ? `doc_text/${domain.replace(/[^a-z0-9.-]/gi, '_')}/${contentHash}.txt` : null,
       text_length: textLength,
       extraction_metadata: extractionMetadata,

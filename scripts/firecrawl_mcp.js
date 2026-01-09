@@ -128,14 +128,170 @@ function initialize(functions, options = {}) {
   if (functions.crawl) {
     firecrawlFunctions.crawl = functions.crawl;
   }
-  
+
   // Apply configuration overrides
   Object.assign(configOverrides, options);
-  
+
   console.log('✅ Firecrawl MCP initialized');
   console.log(`   - scrape: ${firecrawlFunctions.scrape ? 'available' : 'NOT available'}`);
   console.log(`   - map: ${firecrawlFunctions.map ? 'available' : 'NOT available'}`);
   console.log(`   - crawl: ${firecrawlFunctions.crawl ? 'available' : 'NOT available'}`);
+}
+
+/**
+ * Initialize Firecrawl with API key fallback (HTTP API calls)
+ * @param {string} apiKey - Firecrawl API key
+ * @param {Object} [options] - Configuration overrides
+ */
+function initializeWithApiKey(apiKey, options = {}) {
+  if (!apiKey) {
+    throw new Error('API key is required for Firecrawl API fallback');
+  }
+
+  // Apply configuration overrides
+  Object.assign(configOverrides, options);
+
+  // Set up scrape function that calls Firecrawl HTTP API
+  firecrawlFunctions.scrape = async function(url, scrapeOptions = {}) {
+    const https = require('https');
+    const querystring = require('querystring');
+
+    return new Promise((resolve, reject) => {
+      const postData = JSON.stringify({
+        url,
+        ...scrapeOptions
+      });
+
+      const options = {
+        hostname: 'api.firecrawl.dev',
+        port: 443,
+        path: '/v2/scrape',
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`,
+          'Content-Length': Buffer.byteLength(postData)
+        }
+      };
+
+      const req = https.request(options, (res) => {
+        let data = '';
+
+        res.on('data', (chunk) => {
+          data += chunk;
+        });
+
+        res.on('end', () => {
+          try {
+            const response = JSON.parse(data);
+
+            // Handle both wrapped and unwrapped responses
+            if (response.success === true && response.data) {
+              // Wrapped response: { success: true, data: { markdown, html, ... } }
+              resolve(response.data);
+            } else if (response.success === false) {
+              // Error response
+              reject(new Error(response.error || 'Firecrawl API error'));
+            } else if (response.markdown || response.html || response.rawHtml) {
+              // Unwrapped response: { markdown, html, ... }
+              resolve(response);
+            } else {
+              reject(new Error('Unexpected Firecrawl API response format'));
+            }
+          } catch (error) {
+            reject(new Error(`Failed to parse Firecrawl API response: ${error.message}`));
+          }
+        });
+      });
+
+      req.on('error', (error) => {
+        reject(new Error(`Firecrawl API request failed: ${error.message}`));
+      });
+
+      req.write(postData);
+      req.end();
+    });
+  };
+
+  // Set up map function that calls Firecrawl HTTP API
+  firecrawlFunctions.map = async function(url, mapOptions = {}) {
+    const https = require('https');
+    const querystring = require('querystring');
+
+    return new Promise((resolve, reject) => {
+      const postData = JSON.stringify({
+        url,
+        ...mapOptions
+      });
+
+      const options = {
+        hostname: 'api.firecrawl.dev',
+        port: 443,
+        path: '/v2/map',
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`,
+          'Content-Length': Buffer.byteLength(postData)
+        }
+      };
+
+      const req = https.request(options, (res) => {
+        let data = '';
+
+        res.on('data', (chunk) => {
+          data += chunk;
+        });
+
+        res.on('end', () => {
+          try {
+            const response = JSON.parse(data);
+
+            // Handle both wrapped and unwrapped responses
+            let urls = [];
+            if (response.success === true && response.data) {
+              // Wrapped response
+              urls = response.data;
+            } else if (response.success === false) {
+              // Error response
+              reject(new Error(response.error || 'Firecrawl API error'));
+              return;
+            } else if (Array.isArray(response)) {
+              // Unwrapped array response
+              urls = response;
+            } else if (response.links && Array.isArray(response.links)) {
+              // Response with links array (normalize to URLs)
+              urls = response.links.map(link =>
+                typeof link === 'string' ? link : link.url
+              ).filter(url => url);
+            } else if (response.urls && Array.isArray(response.urls)) {
+              // Response with urls array
+              urls = response.urls;
+            } else {
+              reject(new Error('Unexpected Firecrawl map API response format'));
+              return;
+            }
+
+            resolve(urls);
+          } catch (error) {
+            reject(new Error(`Failed to parse Firecrawl map API response: ${error.message}`));
+          }
+        });
+      });
+
+      req.on('error', (error) => {
+        reject(new Error(`Firecrawl map API request failed: ${error.message}`));
+      });
+
+      req.write(postData);
+      req.end();
+    });
+  };
+
+  console.log('✅ Firecrawl API fallback initialized');
+  console.log(`   - scrape: available (HTTP API)`);
+  console.log(`   - map: available (HTTP API)`);
+  console.log(`   - crawl: NOT available`);
 }
 
 /**
@@ -311,27 +467,31 @@ async function firecrawlMap(url, options = {}) {
   
   try {
     const result = await firecrawlFunctions.map(url, mapOptions);
-    
+
     // Validate result
     if (!result) {
       throw new Error('Firecrawl map returned null/undefined result');
     }
-    
-    // Handle different result formats
+
+    // Handle normalized responses (API functions already normalize to URL arrays)
     if (Array.isArray(result)) {
       return result;
     }
-    
+
+    // Handle MCP responses that may still need normalization
     if (result.links && Array.isArray(result.links)) {
-      return result.links;
+      // Normalize links objects to URLs
+      return result.links.map(link =>
+        typeof link === 'string' ? link : link.url
+      ).filter(url => url);
     }
-    
+
     if (result.urls && Array.isArray(result.urls)) {
       return result.urls;
     }
-    
+
     throw new Error('Firecrawl map returned unexpected format');
-    
+
   } catch (error) {
     const domain = new URL(url).hostname;
     throw new FirecrawlMapError(domain, error);
@@ -525,6 +685,7 @@ module.exports = {
   // Configuration
   CONFIG,
   initialize,
+  initializeWithApiKey,
   getConfig,
   setConfig,
   

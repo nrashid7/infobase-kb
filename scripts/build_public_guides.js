@@ -279,22 +279,48 @@ function buildPublicItem(item, claimsMap, sourcePagesMap) {
 
 /**
  * Build a public variant with resolved fee/time info
+ * For ePassport variants, fees should be derived from the canonical fee set
  */
-function buildPublicVariant(variant, claimsMap, sourcePagesMap) {
+function buildPublicVariant(variant, claimsMap, sourcePagesMap, canonicalFees = null) {
   const fees = [];
   const processingTimes = [];
-  
-  for (const claimId of (variant.fee_claim_ids || [])) {
-    const claim = claimsMap.get(claimId);
-    if (claim) {
+
+  // For ePassport, use canonical fees if provided, otherwise fall back to variant claims
+  if (canonicalFees && variant.variant_id) {
+    // Match canonical fees to this variant based on delivery type
+    const variantFees = canonicalFees.filter(canonicalFee => {
+      const deliveryType = extractFeeStructuredData(canonicalFee).delivery_type;
+      return deliveryType === variant.variant_id ||
+             (variant.variant_id === 'super_express' && deliveryType === 'super_express') ||
+             (variant.variant_id === 'express' && deliveryType === 'express') ||
+             (variant.variant_id === 'regular' && deliveryType === 'regular');
+    });
+
+    for (const canonicalFee of variantFees) {
       fees.push({
-        text: claim.text,
-        structured_data: claim.structured_data || null,
-        citations: resolveCitations(claim, sourcePagesMap)
+        text: canonicalFee.label,
+        structured_data: {
+          amount_bdt: extractAmountFromLabel(canonicalFee.label),
+          delivery_type: variant.variant_id,
+          ...extractFeeStructuredData(canonicalFee)
+        },
+        citations: canonicalFee.citations
       });
     }
+  } else {
+    // Default behavior for non-ePassport guides
+    for (const claimId of (variant.fee_claim_ids || [])) {
+      const claim = claimsMap.get(claimId);
+      if (claim) {
+        fees.push({
+          text: claim.text,
+          structured_data: claim.structured_data || null,
+          citations: resolveCitations(claim, sourcePagesMap)
+        });
+      }
+    }
   }
-  
+
   for (const claimId of (variant.processing_time_claim_ids || [])) {
     const claim = claimsMap.get(claimId);
     if (claim) {
@@ -305,7 +331,7 @@ function buildPublicVariant(variant, claimsMap, sourcePagesMap) {
       });
     }
   }
-  
+
   return {
     variant_id: variant.variant_id,
     label: variant.label,
@@ -315,104 +341,181 @@ function buildPublicVariant(variant, claimsMap, sourcePagesMap) {
 }
 
 /**
- * Deduplicate epassport fees by preferring fees from passport-fees URL with most recent retrieval
+ * Extract amount from fee label
  */
-function dedupeEpassportFees(fees) {
+function extractAmountFromLabel(label) {
+  if (!label) return null;
+  const match = label.match(/(\d{1,3}(?:,\d{3})*)/);
+  return match ? parseInt(match[1].replace(/,/g, '')) : null;
+}
+
+/**
+ * Canonical fee selector for ePassport at publish time
+ *
+ * Implements the requirements:
+ * - Gather ALL fee entries/claims that will feed the published guide for epassport
+ * - Group fees by stable key: delivery_type + pages + validity_years
+ * - Prefer fees with citations from "/instructions/passport-fees" URL
+ * - Prefer newest retrieved_at across citations
+ * - If VAT-inclusive schedule exists, drop legacy working-days schedule entirely
+ * - Output deterministic stable sort order: pages asc, validity_years asc, delivery_type order [regular, express, super_express]
+ */
+function canonicalEpassportFeeSelector(fees) {
   if (!fees || fees.length === 0) return fees;
 
-  // Group fees by their canonical source URL and retrieved_at timestamp
+  // Step 1: Group fees by stable key (delivery_type + pages + validity_years)
   const feeGroups = new Map();
 
   for (const fee of fees) {
     if (!fee.citations || fee.citations.length === 0) continue;
 
-    // Find the most recent citation from passport-fees URL
-    let bestCitation = null;
-    let bestRetrievedAt = null;
+    // Extract structured data from fee label or description
+    const structured = extractFeeStructuredData(fee);
+    const key = `${structured.delivery_type || 'unknown'}_${structured.pages || 'unknown'}_${structured.validity_years || 'unknown'}`;
 
-    for (const citation of fee.citations) {
-      if (citation.canonical_url && citation.canonical_url.includes('/instructions/passport-fees')) {
-        const retrievedAt = new Date(citation.retrieved_at);
-        if (!bestRetrievedAt || retrievedAt > bestRetrievedAt) {
-          bestCitation = citation;
-          bestRetrievedAt = retrievedAt;
-        }
-      }
+    if (!feeGroups.has(key)) {
+      feeGroups.set(key, []);
     }
-
-    // If no passport-fees citation found, use the most recent citation from any source
-    if (!bestCitation) {
-      for (const citation of fee.citations) {
-        const retrievedAt = new Date(citation.retrieved_at);
-        if (!bestRetrievedAt || retrievedAt > bestRetrievedAt) {
-          bestCitation = citation;
-          bestRetrievedAt = retrievedAt;
-        }
-      }
-    }
-
-    if (bestCitation) {
-      // Group by source URL + retrieved_at timestamp (to separate different crawls)
-      const sourceKey = `${bestCitation.canonical_url}|${bestCitation.retrieved_at}`;
-      if (!feeGroups.has(sourceKey)) {
-        feeGroups.set(sourceKey, []);
-      }
-      feeGroups.get(sourceKey).push({
-        fee,
-        citation: bestCitation,
-        retrievedAt: bestRetrievedAt
-      });
-    }
+    feeGroups.get(key).push({ fee, structured });
   }
 
-  // Select the most preferred fee set (prioritize passport-fees URL, then most recent)
-  let selectedFees = [];
+  // Step 2: For each group, select the best fee based on priority
+  const canonicalFees = [];
 
-  // Find all passport-fees groups and select the most recent one
-  const passportFeeGroups = Array.from(feeGroups.entries())
-    .filter(([key]) => key.includes('/instructions/passport-fees'))
-    .sort(([,a], [,b]) => {
-      const aMaxDate = Math.max(...a.map(item => item.retrievedAt));
-      const bMaxDate = Math.max(...b.map(item => item.retrievedAt));
-      return bMaxDate - aMaxDate; // Most recent first
-    });
+  for (const [groupKey, groupFees] of feeGroups) {
+    // Sort by priority within group
+    const sortedFees = groupFees.sort((a, b) => {
+      // Priority 1: Prefer citations from "/instructions/passport-fees"
+      const aHasPassportFees = a.fee.citations.some(c => c.canonical_url?.includes('/instructions/passport-fees'));
+      const bHasPassportFees = b.fee.citations.some(c => c.canonical_url?.includes('/instructions/passport-fees'));
 
-  if (passportFeeGroups.length > 0) {
-    // Take the most recent passport-fees group
-    const [, mostRecentFees] = passportFeeGroups[0];
-    selectedFees = mostRecentFees.map(item => item.fee);
-  } else {
-    // Fallback: take the most recent fee set from any source
-    const allGroups = Array.from(feeGroups.values());
-    allGroups.sort((a, b) => {
-      const aMaxDate = Math.max(...a.map(item => item.retrievedAt));
-      const bMaxDate = Math.max(...b.map(item => item.retrievedAt));
+      if (aHasPassportFees && !bHasPassportFees) return -1;
+      if (!aHasPassportFees && bHasPassportFees) return 1;
+
+      // Priority 2: Prefer newest retrieved_at
+      const aMaxDate = Math.max(...a.fee.citations.map(c => new Date(c.retrieved_at).getTime()));
+      const bMaxDate = Math.max(...b.fee.citations.map(c => new Date(c.retrieved_at).getTime()));
+
       return bMaxDate - aMaxDate;
     });
-    selectedFees = allGroups[0].map(item => item.fee);
+
+    canonicalFees.push(sortedFees[0]);
   }
 
-  // Ensure user-friendly labels and BDT currency, and keep only citations from the selected crawl
-  return selectedFees.map(fee => {
-    // Filter citations to only include those from the most recent crawl
-    const recentCitations = fee.citations.filter(citation =>
-      citation.canonical_url && citation.canonical_url.includes('/instructions/passport-fees') &&
-      new Date(citation.retrieved_at).getTime() >= new Date('2026-01-05T10:42:41.000Z').getTime()
-    );
+  // Step 3: Check if VAT-inclusive schedule exists using broader detection
+  const hasVatInclusive = canonicalFees.some(({ fee }) =>
+    fee.citations.some(c =>
+      // Check locator for VAT indicators
+      c.locator?.toLowerCase().includes('including 15% vat') ||
+      c.locator?.toLowerCase().includes('15% vat') ||
+      c.locator?.toLowerCase().includes('vat') && (c.locator?.toLowerCase().includes('inside bangladesh') || c.locator?.toLowerCase().includes('for inside bangladesh')) ||
+      // Check quoted_text for VAT indicators
+      c.quoted_text?.toLowerCase().includes('including 15% vat') ||
+      c.quoted_text?.toLowerCase().includes('15% vat') ||
+      c.quoted_text?.toLowerCase().includes('vat') && (c.quoted_text?.toLowerCase().includes('inside bangladesh') || c.quoted_text?.toLowerCase().includes('for inside bangladesh'))
+    )
+  );
 
-    // If no recent citations, keep the most recent one available
-    const citations = recentCitations.length > 0 ? recentCitations :
-      [fee.citations.reduce((latest, current) =>
-        new Date(current.retrieved_at) > new Date(latest.retrieved_at) ? current : latest
-      )];
+  // Step 4: If VAT-inclusive exists, drop legacy working-days schedule entirely
+  let finalFees = canonicalFees;
+  if (hasVatInclusive) {
+    finalFees = canonicalFees.filter(({ fee }) => {
+      // Check if this fee is from VAT-inclusive schedule
+      const hasVatCitation = fee.citations.some(c =>
+        // Check locator for VAT indicators
+        c.locator?.toLowerCase().includes('including 15% vat') ||
+        c.locator?.toLowerCase().includes('15% vat') ||
+        c.locator?.toLowerCase().includes('vat') && (c.locator?.toLowerCase().includes('inside bangladesh') || c.locator?.toLowerCase().includes('for inside bangladesh')) ||
+        // Check quoted_text for VAT indicators
+        c.quoted_text?.toLowerCase().includes('including 15% vat') ||
+        c.quoted_text?.toLowerCase().includes('15% vat') ||
+        c.quoted_text?.toLowerCase().includes('vat') && (c.quoted_text?.toLowerCase().includes('inside bangladesh') || c.quoted_text?.toLowerCase().includes('for inside bangladesh'))
+      );
 
-    return {
-      ...fee,
-      label: formatEpassportFeeLabel(fee.label),
-      description: fee.description ? fee.description.replace(/\bTK\b/gi, 'BDT') : null,
-      citations: citations
-    };
-  });
+      // Check if this is a legacy working-days schedule entry to be dropped
+      const isLegacyWorkingDays = fee.citations.some(c =>
+        // Legacy locator pattern
+        c.locator?.toLowerCase().includes('passport fees > e-passport fees') ||
+        // Working days in text
+        c.quoted_text?.toLowerCase().includes('working days') ||
+        // Specific working days patterns
+        /\(\d+\s*working\s*days?\)/i.test(c.quoted_text || '') ||
+        /\(15 working days\)/i.test(c.quoted_text || '') ||
+        /\(7 working days\)/i.test(c.quoted_text || '') ||
+        /\(2 working days\)/i.test(c.quoted_text || '')
+      );
+
+      // Keep VAT-inclusive fees, drop legacy working-days fees
+      return hasVatCitation && !isLegacyWorkingDays;
+    });
+  }
+
+  // Step 5: Sort deterministically and format
+  return finalFees
+    .sort((a, b) => {
+      // Pages ascending
+      const pagesA = a.structured.pages || 0;
+      const pagesB = b.structured.pages || 0;
+      if (pagesA !== pagesB) return pagesA - pagesB;
+
+      // Validity years ascending
+      const validityA = a.structured.validity_years || 0;
+      const validityB = b.structured.validity_years || 0;
+      if (validityA !== validityB) return validityA - validityB;
+
+      // Delivery type order: regular, express, super_express
+      const typeOrder = { 'regular': 0, 'express': 1, 'super_express': 2 };
+      const typeA = typeOrder[a.structured.delivery_type] ?? 3;
+      const typeB = typeOrder[b.structured.delivery_type] ?? 3;
+      return typeA - typeB;
+    })
+    .map(({ fee }) => {
+      // Normalize currency tokens at publish time
+      let normalizedLabel = fee.label || '';
+      let normalizedDescription = fee.description || '';
+
+      // Replace standalone "TK" or "Taka" with "BDT" (case-insensitive)
+      normalizedLabel = normalizedLabel.replace(/\bTK\b/gi, 'BDT').replace(/\bTaka\b/gi, 'BDT');
+      normalizedDescription = normalizedDescription.replace(/\bTK\b/gi, 'BDT').replace(/\bTaka\b/gi, 'BDT');
+
+      return {
+        ...fee,
+        label: normalizedLabel,
+        description: normalizedDescription,
+        // Keep only the most relevant citations (prefer passport-fees, newest)
+        citations: fee.citations
+          .filter(c => c.canonical_url?.includes('/instructions/passport-fees'))
+          .sort((a, b) => new Date(b.retrieved_at) - new Date(a.retrieved_at))
+          .slice(0, 1) // Keep only the newest one
+      };
+    })
+    .filter(fee => fee.citations.length > 0); // Ensure we have at least one citation
+}
+
+/**
+ * Extract structured data from fee label/description
+ */
+function extractFeeStructuredData(fee) {
+  const text = `${fee.label || ''} ${fee.description || ''}`.toLowerCase();
+
+  let delivery_type = null;
+  let pages = null;
+  let validity_years = null;
+
+  // Extract delivery type
+  if (text.includes('regular')) delivery_type = 'regular';
+  else if (text.includes('super express') || text.includes('super_express')) delivery_type = 'super_express';
+  else if (text.includes('express')) delivery_type = 'express';
+
+  // Extract pages (look for patterns like "48 pages", "48-page")
+  const pagesMatch = text.match(/(\d+)\s*(?:page|pages|পৃষ্ঠা)/i);
+  if (pagesMatch) pages = parseInt(pagesMatch[1]);
+
+  // Extract validity years (look for patterns like "5 years", "10 years")
+  const validityMatch = text.match(/(\d+)\s*(?:year|years|বছর)/i);
+  if (validityMatch) validity_years = parseInt(validityMatch[1]);
+
+  return { delivery_type, pages, validity_years };
 }
 
 /**
@@ -451,44 +554,49 @@ function formatEpassportFeeLabel(label) {
  */
 function buildPublicGuide(guide, lookups) {
   const { claims: claimsMap, sourcePages: sourcePagesMap, services: servicesMap, agencies: agenciesMap } = lookups;
-  
+
   // Get all claim IDs for this guide
   const claimIds = getGuideClaimIds(guide);
-  
+
   // Build public steps
   const steps = (guide.steps || []).map(step => buildPublicStep(step, claimsMap, sourcePagesMap));
-  
+
+  // Build public required_documents
+  const requiredDocuments = (guide.required_documents || []).map(item =>
+    buildPublicItem(item, claimsMap, sourcePagesMap)
+  );
+
+  // Build public fees with canonical selection for epassport
+  let fees = (guide.fees || []).map(item =>
+    buildPublicItem(item, claimsMap, sourcePagesMap)
+  );
+
+  // Special canonical fee selection for epassport
+  let canonicalFees = null;
+  if (guide.guide_id === 'guide.epassport' && fees.length > 0) {
+    const originalCount = fees.length;
+    canonicalFees = canonicalEpassportFeeSelector(fees);
+    fees = canonicalFees;
+    console.log(`  ✓ Canonical ePassport fees selected: ${originalCount} → ${fees.length}`);
+  }
+
   // Build public sections
   const sections = {};
   if (guide.sections) {
     for (const [key, items] of Object.entries(guide.sections)) {
       if (key === 'application_steps') {
         sections[key] = items.map(step => buildPublicStep(step, claimsMap, sourcePagesMap));
+      } else if (key === 'fees' && guide.guide_id === 'guide.epassport' && fees && fees.length > 0) {
+        // For ePassport sections.fees, use canonical fees (which are already processed)
+        sections[key] = fees;
       } else if (Array.isArray(items)) {
         sections[key] = items.map(item => buildPublicItem(item, claimsMap, sourcePagesMap));
       }
     }
   }
-  
-  // Build public variants
-  const variants = (guide.variants || []).map(v => buildPublicVariant(v, claimsMap, sourcePagesMap));
-  
-  // Build public required_documents
-  const requiredDocuments = (guide.required_documents || []).map(item => 
-    buildPublicItem(item, claimsMap, sourcePagesMap)
-  );
-  
-  // Build public fees with deduplication for epassport
-  let fees = (guide.fees || []).map(item =>
-    buildPublicItem(item, claimsMap, sourcePagesMap)
-  );
 
-  // Special deduplication logic for epassport fees
-  if (guide.guide_id === 'guide.epassport' && fees.length > 0) {
-    const originalCount = fees.length;
-    fees = dedupeEpassportFees(fees);
-    console.log(`  ✓ Deduplicated epassport fees: ${originalCount} → ${fees.length}`);
-  }
+  // Build public variants (pass canonical fees for ePassport consistency)
+  const variants = (guide.variants || []).map(v => buildPublicVariant(v, claimsMap, sourcePagesMap, canonicalFees));
 
   // Get agency info
   const agency = agenciesMap.get(guide.agency_id);

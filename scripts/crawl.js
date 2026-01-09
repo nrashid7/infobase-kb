@@ -585,15 +585,28 @@ async function main(mcpContext = null) {
   let firecrawlScrapeFunc = mcpContext?.scrape || null;
   let firecrawlMapFunc = mcpContext?.map || null;
   let bdgovlinksResult = mcpContext?.bdgovlinksResult || null;
-  
+  let firecrawlMode = 'none';
+
   // Try to get MCP functions from global scope (when run via Cursor MCP)
   if (!firecrawlScrapeFunc && typeof global.firecrawlScrape === 'function') {
     firecrawlScrapeFunc = global.firecrawlScrape;
     firecrawlMapFunc = global.firecrawlMap;
+    firecrawlMode = 'MCP (globals)';
   }
-  
-  // Initialize the firecrawl_mcp module if MCP functions are available
-  if (firecrawlScrapeFunc || firecrawlMapFunc) {
+
+  // If still no functions, try API key fallback
+  if (!firecrawlScrapeFunc && process.env.FIRECRAWL_API_KEY) {
+    firecrawlMcp.initializeWithApiKey(process.env.FIRECRAWL_API_KEY, {
+      firecrawlRequired: config.requireFirecrawl,
+      allowHttpDocDownload: config.allowHttpDocDownload,
+    });
+    firecrawlScrapeFunc = firecrawlMcp.firecrawlScrape;
+    firecrawlMapFunc = firecrawlMcp.firecrawlMap;
+    firecrawlMode = 'Firecrawl API fallback';
+  }
+
+  // Initialize the firecrawl_mcp module if MCP functions are available (not needed for API fallback)
+  if (firecrawlScrapeFunc && firecrawlMapFunc && firecrawlMode === 'MCP (globals)') {
     firecrawlMcp.initialize({
       scrape: firecrawlScrapeFunc,
       map: firecrawlMapFunc,
@@ -605,27 +618,28 @@ async function main(mcpContext = null) {
   
   // STRICT MODE: Validate Firecrawl availability at startup
   if (config.requireFirecrawl && !config.dryRun) {
-    console.log('🔒 Strict Mode: Validating Firecrawl MCP availability...');
-    
+    console.log('🔒 Strict Mode: Validating Firecrawl availability...');
+
     if (!firecrawlScrapeFunc || !firecrawlMapFunc) {
       const error = new FirecrawlUnavailableError(
         !firecrawlScrapeFunc ? 'scrape' : 'map'
       );
       console.error(`\n❌ FATAL: ${error.message}\n`);
-      
+
       // Generate failure report
       generateFailureReport(runStats, error, null, PATHS.runsDir);
-      
+
       throw error;
     }
-    
+
+    console.log(`   ✅ Mode: ${firecrawlMode}`);
     console.log('   ✅ firecrawlScrape: available');
     console.log('   ✅ firecrawlMap: available\n');
   } else if (firecrawlScrapeFunc || bdgovlinksResult) {
-    console.log('✅ Firecrawl MCP context available\n');
+    console.log(`✅ Firecrawl available (${firecrawlMode})\n`);
   } else {
-    console.log('⚠️  Firecrawl MCP not detected');
-    console.log('   This script requires Firecrawl MCP to perform actual crawling.');
+    console.log('⚠️  Firecrawl not detected');
+    console.log('   This script requires Firecrawl MCP or API key to perform actual crawling.');
     if (config.requireFirecrawl) {
       console.log('   In strict mode, this will fail at domain crawl time.');
     }

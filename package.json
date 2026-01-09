@@ -9,7 +9,8 @@
     "publish": "node scripts/build_public_guides.js",
     "validate:published": "node scripts/validate_published.js",
     "publish:validate": "npm run publish && npm run validate:published",
-    "pilot:epassport": "node scripts/_pilot/epassport_preflight_pilot.js"
+    "pilot:epassport": "node scripts/_pilot/epassport_preflight_pilot.js",
+    "pilot:preflight": "node scripts/_pilot/preflight_pilot.js"
   },
   "optionalDependencies": {
     "pdf-parse": "^1.1.1",

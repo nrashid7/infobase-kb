@@ -53,104 +53,39 @@ const PATHS = {
   publicGuidesPath: path.join(__dirname, '..', '..', 'kb', 'published', 'public_guides.json'),
 };
 
-// Pre-scraped data (from Firecrawl MCP)
-const SCRAPED_PAGES = [
-  {
-    url: 'https://www.epassport.gov.bd/instructions/passport-fees',
-    title: 'e-Passport Fees and Payment Options',
-    overrideApplied: true,
-    markdown: `# e-Passport Fees and Payment Options
+// Load pre-scraped data from MCP scrapes directory
+function loadScrapedPages() {
+  const scrapesDir = path.join(__dirname, '..', '..', 'kb', 'pilot_runs', '_mcp_scrapes');
+  const scrapedPages = [];
 
-Last updated: 1 July 2025
+  // Expected filenames based on URLs
+  const expectedFiles = [
+    'passport-fees.json',
+    'five-step-to-your-epassport.json',
+    'application-form.json',
+    'faqs.json'
+  ];
 
-## e-Passport Payment
+  for (const filename of expectedFiles) {
+    const filePath = path.join(scrapesDir, filename);
+    if (fs.existsSync(filePath)) {
+      const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+      scrapedPages.push({
+        url: data.url,
+        title: data.url, // Use URL as title since we don't have proper title extraction
+        overrideApplied: data.url.includes('passport-fees'), // Only fee page has override
+        markdown: data.markdown,
+        rawHtml: data.rawHtml,
+      });
+    } else {
+      console.log(`Warning: Expected scrape file not found: ${filePath}`);
+    }
+  }
 
-### e-Passport fees can be paid in the following ways:
+  return scrapedPages;
+}
 
-#### 1. **Online**: Through "ekpay" _(Payment option: VISA, Master Card, American Express, bKash, Nagad, Rocket, Upay, Dmoney, OK Wallet, Bank Asia, Brack Bank, EBL, City Bank, UCB, AB Bank, DBBL, Midland Bank, MBL Rainbow)_
-
-To check and download online payment slip(eChalan) [**Click Here**](https://ekpay.gov.bd/#/user/bill-history) **or** [**Click Here**](https://billpay.sonalibank.com.bd/Challan/Home)
-
-#### 2. Offline: Can be paid at any government or private banks through A-Challan (For Self payment [Click Here](https://www.achallan.gov.bd/acs/v2/general/challan-payment?id=1)).
-
-To check and download offline payment slip(aChalan) [**Click Here**](http://103.48.16.132/echalan/)
-
-**Note:**
-
-**Regular Delivery:** Within 15 Working days / 21 days from the biometric enrolment date.
-
-**Express Delivery:** Within 7 Working days / 10 days from the biometric enrolment date.
-
-**Super Express Delivery:** Within 2 Working days from the biometric enrolment date.
-
-### e-Passport fees for inside Bangladesh (Including 15% VAT)
-
-**e-Passport with 48 pages and 5 years validity**
-
-- Regular delivery: Taka 4,025
-- Express delivery: Taka 6,325
-- Super Express delivery: Taka 8,625
-
-**e-Passport with 48 pages and 10 years validity**
-
-- Regular delivery: Taka 5,750
-- Express delivery: Taka 8,050
-- Super Express delivery: Taka 10,350
-
-**e-Passport with 64 pages and 5 years validity**
-
-- Regular delivery: Taka 6,325
-- Express delivery: Taka 8,625
-- Super Express delivery: Taka 12,075
-
-**e-Passport with 64 pages and 10 years validity**
-
-- Regular delivery: Taka 8,050
-- Express delivery: Taka 10,350
-- Super Express delivery: Taka 13,800
-`,
-  },
-  {
-    url: 'https://www.epassport.gov.bd/instructions/application-form',
-    title: 'Application at RPO Bangladesh Secretariat',
-    overrideApplied: false,
-    markdown: `# Application at RPO Bangladesh Secretariat and Dhaka Cantonment
-
-Last updated: 12 September 2024
-
-This application form is applicable for applicants who are **applying for e-Passport at RPO Bangladesh Secretariat and Dhaka Cantonment.**
-
-[Download a PDF form](https://www.epassport.gov.bd/api/v1/registrations/download-offline-form)
-`,
-  },
-  {
-    url: 'https://www.epassport.gov.bd/instructions/instructions',
-    title: 'ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী',
-    overrideApplied: false,
-    markdown: `# ই-পাসপোর্ট ফরম পূরণের নির্দেশাবলী:
-
-Last updated: 5 May 2025
-
-১। ই-পাসপোর্টের আবেদনপত্র অনলাইনে পূরণ করা যাবে।
-
-২। ই-পাসপোর্ট আবেদনের ক্ষেত্রে কোন কাগজপত্র সত্যায়ন করার প্রয়োজন হবে না।
-
-৩। ই-পাসপোর্ট ফরমে কোন ছবি সংযোজন এবং তা সত্যায়নের প্রয়োজন হবে না।
-`,
-  },
-  {
-    url: 'https://www.epassport.gov.bd/landing/faqs',
-    title: 'Frequently Asked Questions',
-    overrideApplied: false,
-    markdown: `# Frequently Asked Questions
-
-Account & Account Settings
-
-- [I forgot the password of my online application account – what should I do?](https://www.epassport.gov.bd/landing/faqs/12)
-- [Can I change the mobile number registered in my online application account?](https://www.epassport.gov.bd/landing/faqs/14)
-`,
-  },
-];
+const SCRAPED_PAGES = loadScrapedPages();
 
 function runPilotPass(runNumber) {
   console.log(`\n${'═'.repeat(70)}`);

@@ -109,6 +109,30 @@ node kb/migrate_v1_to_v2.js v1_kb.json output_v2.json
 node kb/index_builder.js examples/bangladesh_government_services_kb_v2_example.json kb/indexes/
 ```
 
+### How to confirm Firecrawl MCP is active
+
+To verify that Firecrawl MCP tools are available in your Cursor Agent session:
+
+```bash
+node scripts/_pilot/mcp_smoke_check.js
+```
+
+#### Expected PASS output:
+```
+🔍 PHASE 0: Firecrawl MCP Smoke Check
+Testing Firecrawl MCP availability with single scrape...
+Target URL: https://www.epassport.gov.bd/instructions/five-step-to-your-epassport
+Requesting formats: ["markdown"], onlyMainContent: true
+✅ PASS: Firecrawl MCP available (1234ms)
+Markdown length: 5678 characters
+Overrides applied: false
+```
+
+#### Common FAIL causes:
+- **MCP not enabled**: Firecrawl MCP must be enabled in Cursor MCP settings
+- **Missing API key**: `FIRECRAWL_API_KEY` environment variable must be present
+- **Wrong agent profile**: Must run in Cursor Agent mode (not terminal) - terminal execution fails by design
+
 ---
 
 ## Core Concepts

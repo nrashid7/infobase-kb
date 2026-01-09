@@ -1,14 +1,14 @@
 {
   "run": 2,
-  "timestamp": "2026-01-05T10:42:43.199Z",
+  "timestamp": "2026-01-05T12:13:27.474Z",
   "summary": {
     "override_applied": true,
     "fees_extracted": 12,
     "fee_claims_written": 0,
     "doc_links_found": 2,
-    "public_guides_fee_count_for_epassport": 15,
+    "public_guides_fee_count_for_epassport": 3,
     "new_claims_added": 0,
-    "duplicates_skipped": 19,
+    "duplicates_skipped": 26,
     "auto_ids_remaining": 0,
     "build_success": true,
     "validation_success": true
@@ -18,20 +18,20 @@
     "fee_claims_written": 0,
     "doc_links_found": 2,
     "total_claims_written": 0,
-    "duplicates_skipped": 19,
+    "duplicates_skipped": 26,
     "fee_claim_ids": [
-      "claim.fee.epassport.0d115ef8cb9d1e60",
-      "claim.fee.epassport.3df2fdc4299ae3d6",
-      "claim.fee.epassport.3f1582acdfa3918e",
-      "claim.fee.epassport.ef2837da65d7ba24",
-      "claim.fee.epassport.c2d9f7f225f269cd",
-      "claim.fee.epassport.c9fd0c1135577e1f",
-      "claim.fee.epassport.a6680c73e9799963",
-      "claim.fee.epassport.c2d771ccefa4b117",
-      "claim.fee.epassport.33594a8408c99cb7",
-      "claim.fee.epassport.12474a655a47238f",
-      "claim.fee.epassport.071641919b7d8fde",
-      "claim.fee.epassport.bc3618edd958d815"
+      "claim.fee.epassport.250e7f7758bec94a",
+      "claim.fee.epassport.7deda1cb26d8dfbe",
+      "claim.fee.epassport.15f8ec29d1055c02",
+      "claim.fee.epassport.9781c47844f22394",
+      "claim.fee.epassport.8dc978e154a660a6",
+      "claim.fee.epassport.d0c21d649b827b86",
+      "claim.fee.epassport.fc7dcafe95124980",
+      "claim.fee.epassport.0af3262a74d65447",
+      "claim.fee.epassport.7964ec1ee668e743",
+      "claim.fee.epassport.1889b108fb6ba799",
+      "claim.fee.epassport.89979ad2f5cba00b",
+      "claim.fee.epassport.84304c4f5fc3ed81"
     ]
   }
 }

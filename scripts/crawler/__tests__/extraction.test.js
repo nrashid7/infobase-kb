@@ -527,6 +527,215 @@ test('real fixture extraction is deterministic', () => {
 });
 
 // ============================================================================
+// Publish Pipeline Tests (ePassport Fee Canonicalization)
+// ============================================================================
+
+console.log('\n🔹 Publish Pipeline Tests:');
+
+// Load build_public_guides module for testing
+const { buildPublicGuides } = require('../../build_public_guides');
+
+test('published ePassport fee labels contain neither "TK" nor "Taka"', () => {
+  // This test requires running the full publish pipeline
+  // We'll check if the published guides exist and validate the ePassport fees
+  const publicGuidesPath = path.join(__dirname, '..', '..', '..', 'kb', 'published', 'public_guides.json');
+
+  if (!fs.existsSync(publicGuidesPath)) {
+    console.log('    ⚠️  Skipping test: public_guides.json not found (run publish first)');
+    return;
+  }
+
+  const data = JSON.parse(fs.readFileSync(publicGuidesPath, 'utf-8'));
+  const epassportGuide = data.guides.find(g => g.guide_id === 'guide.epassport');
+
+  if (!epassportGuide) {
+    console.log('    ⚠️  Skipping test: guide.epassport not found in published guides');
+    return;
+  }
+
+  // Check all fee sources for TK/Taka
+  const allFees = [];
+
+  // From sections.fees
+  if (epassportGuide.sections?.fees) {
+    allFees.push(...epassportGuide.sections.fees);
+  }
+
+  // From top-level fees
+  if (epassportGuide.fees) {
+    allFees.push(...epassportGuide.fees);
+  }
+
+  // From variants
+  if (epassportGuide.variants) {
+    for (const variant of epassportGuide.variants) {
+      if (variant.fees) {
+        allFees.push(...variant.fees);
+      }
+    }
+  }
+
+  // Check that no fee labels contain TK or Taka
+  for (const fee of allFees) {
+    if (fee.label && (fee.label.includes('TK') || fee.label.includes('Taka'))) {
+      throw new Error(`Fee label contains TK/Taka: "${fee.label}"`);
+    }
+    if (fee.text && (fee.text.includes('TK') || fee.text.includes('Taka'))) {
+      throw new Error(`Fee text contains TK/Taka: "${fee.text}"`);
+    }
+    if (fee.description && (fee.description.includes('TK') || fee.description.includes('Taka'))) {
+      throw new Error(`Fee description contains TK/Taka: "${fee.description}"`);
+    }
+  }
+
+  assertGreater(allFees.length, 0, 'Should have at least one fee in published ePassport guide');
+});
+
+test('VAT-inclusive schedule exists, legacy working-days schedule is not present in published ePassport', () => {
+  const publicGuidesPath = path.join(__dirname, '..', '..', '..', 'kb', 'published', 'public_guides.json');
+
+  if (!fs.existsSync(publicGuidesPath)) {
+    console.log('    ⚠️  Skipping test: public_guides.json not found (run publish first)');
+    return;
+  }
+
+  const data = JSON.parse(fs.readFileSync(publicGuidesPath, 'utf-8'));
+  const epassportGuide = data.guides.find(g => g.guide_id === 'guide.epassport');
+
+  if (!epassportGuide) {
+    console.log('    ⚠️  Skipping test: guide.epassport not found in published guides');
+    return;
+  }
+
+  const allFees = [];
+
+  // From sections.fees
+  if (epassportGuide.sections?.fees) {
+    allFees.push(...epassportGuide.sections.fees);
+  }
+
+  // From top-level fees
+  if (epassportGuide.fees) {
+    allFees.push(...epassportGuide.fees);
+  }
+
+  // From variants
+  if (epassportGuide.variants) {
+    for (const variant of epassportGuide.variants) {
+      if (variant.fees) {
+        allFees.push(...variant.fees);
+      }
+    }
+  }
+
+  // Check if VAT-inclusive schedule exists (using broader detection)
+  const hasVatInclusive = allFees.some(fee =>
+    fee.citations?.some(citation =>
+      // Check locator for VAT indicators
+      citation.locator?.toLowerCase().includes('including 15% vat') ||
+      citation.locator?.toLowerCase().includes('15% vat') ||
+      citation.locator?.toLowerCase().includes('vat') && (citation.locator?.toLowerCase().includes('inside bangladesh') || citation.locator?.toLowerCase().includes('for inside bangladesh')) ||
+      // Check quoted_text for VAT indicators
+      citation.quoted_text?.toLowerCase().includes('including 15% vat') ||
+      citation.quoted_text?.toLowerCase().includes('15% vat') ||
+      citation.quoted_text?.toLowerCase().includes('vat') && (citation.quoted_text?.toLowerCase().includes('inside bangladesh') || citation.quoted_text?.toLowerCase().includes('for inside bangladesh'))
+    )
+  );
+
+  // Assert that VAT-inclusive fees exist
+  assert(hasVatInclusive, 'VAT-inclusive fees should be present in published ePassport guide');
+
+  // Assert no legacy working-days schedule is present when VAT fees exist
+  const hasLegacyWorkingDays = allFees.some(fee =>
+    fee.citations?.some(citation =>
+      // Legacy locator pattern
+      citation.locator?.toLowerCase().includes('passport fees > e-passport fees') ||
+      // Working days in text
+      citation.quoted_text?.toLowerCase().includes('working days') ||
+      // Specific working days patterns
+      /\(\d+\s*working\s*days?\)/i.test(citation.quoted_text || '') ||
+      /\(15 working days\)/i.test(citation.quoted_text || '') ||
+      /\(7 working days\)/i.test(citation.quoted_text || '') ||
+      /\(2 working days\)/i.test(citation.quoted_text || '')
+    )
+  );
+
+  assert(!hasLegacyWorkingDays, 'Legacy working-days schedule should not be present when VAT-inclusive schedule exists');
+
+  // Assert no legacy amounts (3450, 6900, 13800) are present when VAT fees exist
+  const hasLegacyAmounts = allFees.some(fee =>
+    fee.structured_data?.amount_bdt === 3450 ||
+    fee.structured_data?.amount_bdt === 6900 ||
+    fee.structured_data?.amount_bdt === 13800 ||
+    fee.label?.includes('3,450') ||
+    fee.label?.includes('6,900') ||
+    fee.label?.includes('13,800')
+  );
+
+  assert(!hasLegacyAmounts, 'Legacy fee amounts (3450, 6900, 13800) should not be present when VAT-inclusive schedule exists');
+});
+
+test('ePassport variants fees match canonical published fees', () => {
+  const publicGuidesPath = path.join(__dirname, '..', '..', '..', 'kb', 'published', 'public_guides.json');
+
+  if (!fs.existsSync(publicGuidesPath)) {
+    console.log('    ⚠️  Skipping test: public_guides.json not found (run publish first)');
+    return;
+  }
+
+  const data = JSON.parse(fs.readFileSync(publicGuidesPath, 'utf-8'));
+  const epassportGuide = data.guides.find(g => g.guide_id === 'guide.epassport');
+
+  if (!epassportGuide) {
+    console.log('    ⚠️  Skipping test: guide.epassport not found in published guides');
+    return;
+  }
+
+  // Get canonical fees (from sections.fees or top-level fees)
+  let canonicalFees = [];
+  if (epassportGuide.sections?.fees) {
+    canonicalFees = epassportGuide.sections.fees;
+  } else if (epassportGuide.fees) {
+    canonicalFees = epassportGuide.fees;
+  }
+
+  if (canonicalFees.length === 0) {
+    console.log('    ⚠️  Skipping test: no canonical fees found');
+    return;
+  }
+
+  // Check variants use same fee amounts/delivery types
+  if (epassportGuide.variants) {
+    for (const variant of epassportGuide.variants) {
+      if (variant.fees && variant.fees.length > 0) {
+        // Extract delivery type from variant ID
+        const expectedDeliveryType = variant.variant_id;
+
+        // Find corresponding canonical fee
+        const canonicalFee = canonicalFees.find(fee => {
+          const feeDeliveryType = fee.structured_data?.delivery_type ||
+            (fee.label?.toLowerCase().includes('regular') ? 'regular' :
+             fee.label?.toLowerCase().includes('express') && !fee.label?.toLowerCase().includes('super') ? 'express' :
+             fee.label?.toLowerCase().includes('super express') ? 'super_express' : null);
+          return feeDeliveryType === expectedDeliveryType;
+        });
+
+        if (canonicalFee) {
+          // Check amounts match
+          const variantAmount = variant.fees[0].structured_data?.amount_bdt;
+          const canonicalAmount = canonicalFee.structured_data?.amount_bdt;
+
+          if (variantAmount && canonicalAmount) {
+            assertEqual(variantAmount, canonicalAmount,
+              `Variant ${variant.variant_id} fee amount (${variantAmount}) should match canonical (${canonicalAmount})`);
+          }
+        }
+      }
+    }
+  }
+});
+
+// ============================================================================
 // Summary
 // ============================================================================
 
